@@ -1,10 +1,10 @@
 # Elements Samples
 
-This git repository contains the official sample suite for the RemObjects Elements compiler and tool chain, including all three languages (Oxygene, C# and Swift) and all three currently supported platforms (.NET, Cocoa and Java/Android).
+This git repository contains the official sample suite for the [RemObjects Elements](http://www.elementscompiler.com) compiler and tool chain, including all three languages (Oxygene, C# and Swift) and all three currently supported platforms (.NET, Cocoa and Java/Android).
 
-Most of these samples ship with and are installed by the Elements installer for Windows; this repository represents a complete super-set of those samples, and might contain newer versions. Fire provides the option to install these samples directly from the git repository.
+Most of these samples ship with and are installed by the Elements installer for Windows; this repository represents a complete super-set of those samples, and might contain newer versions. Fire 8.4 and later provides the option to install these samples directly from the git repository.
 
-Please refer to branch and tag names to know which version of the compiler samples are targeted at; the base level of samples works with Elements 8.3 and later.
+Please refer to branch and tag names to know which version of the compiler samples are targeted at; the base level of samples works with Elements 8.3 and later. The state of samples shipped with each release of Elements will me marked with a tag named `release-` plus the release month (e.g. `release-mar16` for the Elements 8.3 release shipped in March 2016).
 
 The official repository URL is [github.com/remobjects/ElementsSamples](https://github.com/remobjects/ElementsSamples); the latest versions of samples can always be found there, and pull requests and contributions are welcome!
 
@@ -23,7 +23,7 @@ Languages:
 Platforms:
 
 * **All** &ndash; cross-platform samples, spanning two or more platforms
-* **Echoes** &ndash; .NET, including all it stub-platforms such as Mono, WinRT, Windows Phone, Silverlight, Universal alls, and Xamarin
+* **Echoes** &ndash; .NET, including Mono, WinRT, Windows Phone, Silverlight, Universal apps, and Xamarin
 * **Cooper** &ndash; Java and Android
 * **Nougat** &ndash; Cocoa, including macOS, iOS, tvOS and watchOS
 * **Gotham** &ndash; Elements’ “Meta” platform for cross-platform libraries
