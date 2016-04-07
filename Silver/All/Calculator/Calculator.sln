@@ -1,0 +1,42 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Calculator.Engine", "Calculator.Engine\Calculator.Engine.elements", "{B34D333F-6C96-4918-BBA4-48620E214219}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Calculator.OSX", "Calculator.OSX\Calculator.OSX.elements", "{3B0FD974-84EE-4F25-9D41-0EBA3236619F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Calculator.WPF", "Calculator.WPF\Calculator.WPF.elements", "{C98FFDB7-8C2C-45CA-95D0-624050E9497E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Calculator.iOS", "Calculator.iOS\Calculator.iOS.elements", "{D71EA4E4-F36A-401C-A163-7A08D37B3425}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "calculator.android", "Calculator.Android\Calculator.Android.elements", "{64F5087A-8F8E-4048-AF33-33FAB9A13141}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B34D333F-6C96-4918-BBA4-48620E214219}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{B34D333F-6C96-4918-BBA4-48620E214219}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{3B0FD974-84EE-4F25-9D41-0EBA3236619F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{3B0FD974-84EE-4F25-9D41-0EBA3236619F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{3B0FD974-84EE-4F25-9D41-0EBA3236619F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{3B0FD974-84EE-4F25-9D41-0EBA3236619F}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{C98FFDB7-8C2C-45CA-95D0-624050E9497E}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C98FFDB7-8C2C-45CA-95D0-624050E9497E}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{C98FFDB7-8C2C-45CA-95D0-624050E9497E}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{C98FFDB7-8C2C-45CA-95D0-624050E9497E}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{D71EA4E4-F36A-401C-A163-7A08D37B3425}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{D71EA4E4-F36A-401C-A163-7A08D37B3425}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{D71EA4E4-F36A-401C-A163-7A08D37B3425}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{D71EA4E4-F36A-401C-A163-7A08D37B3425}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{64F5087A-8F8E-4048-AF33-33FAB9A13141}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{64F5087A-8F8E-4048-AF33-33FAB9A13141}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{64F5087A-8F8E-4048-AF33-33FAB9A13141}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{64F5087A-8F8E-4048-AF33-33FAB9A13141}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

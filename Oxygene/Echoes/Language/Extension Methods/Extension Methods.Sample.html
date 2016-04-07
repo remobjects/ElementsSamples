@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../../styles.css"/>
+</head>
+<body>
+<img src="../../oxygene.png" alt="" align="right"/>
+
+<!-------------------------------------------------------------------------->
+
+<p class="h1"><span>Extension Methods Sample</span></p>
+
+<h2>Purpose</h2>
+
+<p> 	The sample shows how to implement and call custom Extension Methods.</p>
+
+
+<h2>Examine the code</h2>
+
+<b>Extenson Methods</b> enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type.<br>
+Defining an extension method is done by applying an <b>[Extension]</b> attribute to a static class and its class method. <br>
+This attribute must be defined in the System.Runtime.CompilerServices namespace.<br>
+You have several ways to get the <b>Extension Attribute</b> class:
+<ul>
+<li> If you're sure that .NET 3.5 is installed on the target machine, you can reference the .NET frameworks's System.Core.dll. But remember: You don't need this version of the framework for extension methods.
+<li> You can take the System.Core.dll of the Mono framework, which runs on .NET 2.0, too.
+<li> You can define it on your own in a seperate assembly. 
+</ul>
+
+From <b>Program.pas</b> you can see extended with new methods Integer type and IEnumerable interface.
+
+<h2>Getting started</h2>
+<ul>
+<li>Compile the entire solution.</li> 
+<li>Run the application.</li> 
+<li>See the results of Extension Methods work.</li>
+</ul>
+<!-------------------------------------------------------------------------->
+</body>
+</html>

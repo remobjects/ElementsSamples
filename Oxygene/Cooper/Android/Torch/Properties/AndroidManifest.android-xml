@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="org.me.torch">
+  <application
+        android:label="@string/app_name"
+        android:icon="@drawable/icon">
+    <activity android:label="@string/main_activity_name" android:name="org.me.torch.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="@string/torch_activity_name" android:name="org.me.torch.TorchActivity" />
+  </application>
+  <uses-sdk android:minSdkVersion="4" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+</manifest>

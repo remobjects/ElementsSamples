@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ClockApplet", "ClockApplet.elements", "{972D2DCD-56DF-4E13-B4F5-C5E1696A782D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{972D2DCD-56DF-4E13-B4F5-C5E1696A782D}.Debug|Java.ActiveCfg = Debug
+		{972D2DCD-56DF-4E13-B4F5-C5E1696A782D}.Debug|Java.Build.0 = Debug
+		{972D2DCD-56DF-4E13-B4F5-C5E1696A782D}.Release|Java.ActiveCfg = Release
+		{972D2DCD-56DF-4E13-B4F5-C5E1696A782D}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

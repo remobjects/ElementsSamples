@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Environment1", "Environment Information 1\Environment1.elements", "{1918B527-173A-4095-9205-1FEFB5568FA7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Environment2", "Environment Information 2\Environment2.elements", "{46488835-4D04-4A64-928E-2A9DA5D80F42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1918B527-173A-4095-9205-1FEFB5568FA7}.Debug|Default.ActiveCfg = Debug
+		{1918B527-173A-4095-9205-1FEFB5568FA7}.Debug|Default.Build.0 = Debug
+		{1918B527-173A-4095-9205-1FEFB5568FA7}.Release|Default.ActiveCfg = Release
+		{1918B527-173A-4095-9205-1FEFB5568FA7}.Release|Default.Build.0 = Release
+		{46488835-4D04-4A64-928E-2A9DA5D80F42}.Debug|Default.ActiveCfg = Debug
+		{46488835-4D04-4A64-928E-2A9DA5D80F42}.Debug|Default.Build.0 = Debug
+		{46488835-4D04-4A64-928E-2A9DA5D80F42}.Release|Default.ActiveCfg = Release
+		{46488835-4D04-4A64-928E-2A9DA5D80F42}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

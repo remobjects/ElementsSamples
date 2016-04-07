@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "LinqToXML", "LinqToXML.elements", "{AAA990A4-3A2F-412E-8636-BED8FEC02779}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Debug|Default.ActiveCfg = Debug
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Debug|Default.Build.0 = Debug
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Release|Default.ActiveCfg = Release
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

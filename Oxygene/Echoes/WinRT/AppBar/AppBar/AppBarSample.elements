@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowLegacyWith>False</AllowLegacyWith>
+    <AllowUnsafeCode>False</AllowUnsafeCode>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon />
+    <AssemblyName>AppBarExample</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <Name>MetroAppBarSample</Name>
+    <OutputType>AppContainerExe</OutputType>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>bd5582d6-eeea-480a-aa36-9dd1aa3a4652</ProjectGuid>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{656346D9-4656-40DA-A068-22D5425D4639}</ProjectTypeGuids>
+    <RootNamespace>AppBarExample</RootNamespace>
+    <StartupClass />
+	<TargetPlatformVersion>8.1</TargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <CpuType>AnyCPU</CpuType>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <EnableAsserts>True</EnableAsserts>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <GenerateMDB>False</GenerateMDB>
+    <GeneratePDB>True</GeneratePDB>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <StartMode>Project</StartMode>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <CpuType>AnyCPU</CpuType>
+    <EnableAsserts>False</EnableAsserts>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <GenerateMDB>False</GenerateMDB>
+    <GeneratePDB>False</GeneratePDB>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <StartMode>Project</StartMode>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Folder Include="Assets" />
+    <Folder Include="Common" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.pas">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.pas">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Windows">
+      <HintPath>C:\Program Files (x86)\Windows Kits\8.0\Windows Metadata\Windows.winmd</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.png">
+      <SubType>Content</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SmallLogo.png">
+      <SubType>Content</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SplashScreen.png">
+      <SubType>Content</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\StoreLogo.png">
+      <SubType>Content</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\WideLogo.png">
+      <SubType>Content</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.WinRT.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

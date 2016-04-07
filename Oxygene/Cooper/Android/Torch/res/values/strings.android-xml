@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Torch</string>
+  <string name="main_activity_name">@string/app_name</string>
+  <string name="torch_activity_name">Torch</string>
+  <string name="torchButton_Text">Switch on torch</string>
+  <string name="torchButton_Toast">Turning on torch...</string>
+  <string name="torchDialog_Message">You want the torch turned on?</string>
+  <string name="torchMenuItem_Text">Switch off torch</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Device Info</string>
+  
+  <!-- InfoActivity.pas -->
+  <string name="info_activity">Device Information</string>
+  <string name="os_version">OS Version</string>
+  <string name="device_manufacturer">Manufacturer</string>
+  <string name="device_model">Model</string>
+  <string name="device_brand">Brand</string>
+  <string name="device_product">Product</string>
+  <string name="device_hardware">Hardware</string>
+  <string name="device_build_id">Build ID</string>
+  <string name="device_cpu_abi">Native instruction set</string>
+  <string name="device_bootloader">System bootloader version</string>
+  <string name="screen_resolution">Screen Resolution</string>
+  <string name="screen_density">Screen Density</string>
+
+</resources>

@@ -1,0 +1,67 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{FA121E3A-4689-4511-B50B-C162E5791E60}</ProjectGuid>
+    <RootNamespace>Memory42</RootNamespace>
+    <OutputType>winexe</OutputType>
+    <AssemblyName>Memory42</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyWith>False</AllowLegacyWith>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowUnsafeCode>False</AllowUnsafeCode>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <GeneratePDB>False</GeneratePDB>
+    <GenerateMDB>False</GenerateMDB>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WebDebugTarget>Cassini</WebDebugTarget>
+    <WebLaunchBrowser>False</WebLaunchBrowser>
+    <XmlDocAllMembers>False</XmlDocAllMembers>
+    <CodeFlowAnalysis>True</CodeFlowAnalysis>
+    <UseXmlDoc>False</UseXmlDoc>
+    <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <GeneratePDB>False</GeneratePDB>
+    <GenerateMDB>False</GenerateMDB>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WebDebugTarget>Cassini</WebDebugTarget>
+    <WebLaunchBrowser>False</WebLaunchBrowser>
+    <XmlDocAllMembers>False</XmlDocAllMembers>
+    <CodeFlowAnalysis>True</CodeFlowAnalysis>
+    <UseXmlDoc>False</UseXmlDoc>
+    <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddResource Include="App.ico" />
+    <Compile Include="Memory42.pas">
+      <DesignableClassName>Memory42.MemoryForm</DesignableClassName>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+
+</Project>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Anonymous Methods", "Anonymous Methods.elements", "{02A9B65D-8596-4654-B512-D0FFB2005607}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02A9B65D-8596-4654-B512-D0FFB2005607}.Debug|Default.ActiveCfg = Debug
+		{02A9B65D-8596-4654-B512-D0FFB2005607}.Debug|Default.Build.0 = Debug
+		{02A9B65D-8596-4654-B512-D0FFB2005607}.Release|Default.ActiveCfg = Release
+		{02A9B65D-8596-4654-B512-D0FFB2005607}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

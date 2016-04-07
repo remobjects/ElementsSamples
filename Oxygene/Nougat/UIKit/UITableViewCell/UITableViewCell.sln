@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "UITableViewCell", "UITableViewCell\UITableViewCell.elements", "{0382D60A-2407-4374-AEE8-8E627700BFC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0382D60A-2407-4374-AEE8-8E627700BFC6}.Debug|Default.ActiveCfg = Debug
+		{0382D60A-2407-4374-AEE8-8E627700BFC6}.Debug|Default.Build.0 = Debug
+		{0382D60A-2407-4374-AEE8-8E627700BFC6}.Release|Default.ActiveCfg = Release
+		{0382D60A-2407-4374-AEE8-8E627700BFC6}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Sorter", "Sorter.elements", "{DCF21B4F-334E-4194-88DD-2A394C869810}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCF21B4F-334E-4194-88DD-2A394C869810}.Debug|Default.ActiveCfg = Debug
+		{DCF21B4F-334E-4194-88DD-2A394C869810}.Debug|Default.Build.0 = Debug
+		{DCF21B4F-334E-4194-88DD-2A394C869810}.Release|Default.ActiveCfg = Release
+		{DCF21B4F-334E-4194-88DD-2A394C869810}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

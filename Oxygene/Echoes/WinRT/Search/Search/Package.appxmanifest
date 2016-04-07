@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="ee64f6b4-8a7f-463b-9e58-a0a0cd7434a1" Publisher="CN=RemObjects Software" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>MetroSearchApplication</DisplayName>
+    <PublisherDisplayName>RemObjects Software</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>MetroSearchApplication</Description>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="MetroSearchApplication.exe" EntryPoint="SearchSample.App">
+      <VisualElements DisplayName="Search Sample" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="The RemObjects Software Oxygene for .NET sample for Metro Search" ForegroundText="light" BackgroundColor="#222222">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>

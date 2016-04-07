@@ -1,0 +1,30 @@
+﻿<Page x:Class="MetroSearchApplication.MainPage"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MetroSearchApplication"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="768" d:DesignWidth="1366">
+    
+    <Grid x:Name="LayoutRoot" Background="#FF0C0C0C">
+        <TextBlock x:Name="SearchQuery" HorizontalAlignment="Left" Margin="10,320,0,0" TextWrapping="Wrap" Text="Your seach query appears here . . ." VerticalAlignment="Top" FontSize="24" Width="491"/>
+        <TextBlock Margin="0,10,20,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Height="275" Padding="10">
+        	<Span>
+        		<Run Text="Search is provided as an application contract &amp; extension to your app. By adding the &quot;windows.search&quot; Extension to your Package.appxmanifest your app lets Windows know it is searchable. Then it will show up when the search charm is selected (Win+C, Search or Win+Q). Windows can now activate your app when selected from the search pane, which calls the OnSearchActivated handler in App.xaml.pas. Additional event handlers can be registered for the search pane in which gives you app the ability to respond to searches and suggestion requests."/>
+        	</Span>
+        	<LineBreak/>
+        	<Span>
+        		<Run/>
+        	</Span>
+        	<LineBreak/>
+        	<Span>
+        		<Run Text="Press Win+Q to activate the Charms and select the search charm. Then type in the search box to interact with your app."/>
+        	</Span>
+        </TextBlock>
+        <Image Source="Images/SplashScreen.png" Margin="0" Stretch="None"/>
+
+    </Grid>
+    
+</Page>

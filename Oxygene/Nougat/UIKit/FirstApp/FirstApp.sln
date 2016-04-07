@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "FirstApp", "FirstApp\FirstApp.elements", "{2C692F26-3BC8-4C1B-968E-58156FFA57FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C692F26-3BC8-4C1B-968E-58156FFA57FF}.Debug|Default.ActiveCfg = Debug
+		{2C692F26-3BC8-4C1B-968E-58156FFA57FF}.Debug|Default.Build.0 = Debug
+		{2C692F26-3BC8-4C1B-968E-58156FFA57FF}.Release|Default.ActiveCfg = Release
+		{2C692F26-3BC8-4C1B-968E-58156FFA57FF}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

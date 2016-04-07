@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "AppBarSample", "AppBar\AppBarSample.elements", "{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}.Debug|Default.ActiveCfg = Debug
+		{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}.Debug|Default.Build.0 = Debug
+		{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}.Debug|Default.Deploy.0 = Debug
+		{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}.Release|Default.ActiveCfg = Release
+		{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}.Release|Default.Build.0 = Release
+		{BD5582D6-EEEA-480A-AA36-9DD1AA3A4652}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <OutputType>Library</OutputType>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Name>org.me.helloworld</Name>
+    <RootNamespace>org.me.helloworld</RootNamespace>
+    <ProjectGuid>{311d517f-f82a-4c5d-9bd4-8d63dcdaccdf}</ProjectGuid>
+    <AndroidPlatformName>
+    </AndroidPlatformName>
+    <AssemblyName>org.me.helloworld</AssemblyName>
+    <AndroidMinVersion>10</AndroidMinVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <SuppressWarnings />
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <FutureHelperClassName />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="res\" />
+    <Folder Include="res\drawable-hdpi\" />
+    <Folder Include="res\drawable-ldpi\" />
+    <Folder Include="res\drawable-mdpi\" />
+    <Folder Include="res\layout\" />
+    <Folder Include="res\values\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="res\values\strings.android-xml">
+      <SubType>Content</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidResource Include="res\drawable-hdpi\icon.png" />
+    <AndroidResource Include="res\drawable-mdpi\icon.png" />
+    <AndroidResource Include="res\drawable-ldpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="android.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\layout\main.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
+</Project>

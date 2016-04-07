@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "com.example.android.Wiktionary", "com.example.android.Wiktionary.elements", "{0FECDE7C-F4DB-4CB0-AA56-A52BA4807758}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FECDE7C-F4DB-4CB0-AA56-A52BA4807758}.Debug|Default.ActiveCfg = Debug
+		{0FECDE7C-F4DB-4CB0-AA56-A52BA4807758}.Debug|Default.Build.0 = Debug
+		{0FECDE7C-F4DB-4CB0-AA56-A52BA4807758}.Release|Default.ActiveCfg = Release
+		{0FECDE7C-F4DB-4CB0-AA56-A52BA4807758}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

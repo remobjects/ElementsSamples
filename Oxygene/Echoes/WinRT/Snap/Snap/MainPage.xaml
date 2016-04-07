@@ -1,0 +1,167 @@
+﻿<Page x:Class="SnapTileSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="768" d:DesignWidth="1366">
+
+    <Grid x:Name="LayoutRoot" Background="#FF0C0C0C">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+<!--App Orientation States-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="OrientationStates">
+                <VisualState x:Name="Portriat" />
+                <VisualState x:Name="Full"/>
+                <VisualState x:Name="Fill">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="DetailStackPanel"
+                            Storyboard.TargetProperty="(StackPanel.Orientation)" >
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Orientation>Horizontal</Orientation>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="LayoutRoot"
+                            Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Thickness>40,20,40,20</Thickness>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="DataGridView"
+                            Storyboard.TargetProperty="(FrameworkElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="DataListView"
+                            Storyboard.TargetProperty="(FrameworkElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="TextViewState"
+                            Storyboard.TargetProperty="(FrameworkElement.Width)">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="500">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="UnsnapButton"
+                            Storyboard.TargetProperty="(FrameworkElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="DetailStackPanel"
+                            Storyboard.TargetProperty="(StackPanel.Orientation)" >
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Orientation>Vertical</Orientation>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="LayoutRoot"
+                            Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Thickness>20,20,20,20</Thickness>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="DataGridView"
+                            Storyboard.TargetProperty="(FrameworkElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="UnsnapButton"
+                            Storyboard.TargetProperty="(FrameworkElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="DataListView"
+                            Storyboard.TargetProperty="(FrameworkElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames 
+                            Storyboard.TargetName="TextViewState"
+                            Storyboard.TargetProperty="(FrameworkElement.Width)">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="250">
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames> 
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+                
+        <StackPanel Grid.Row="0">
+            <TextBlock x:Name="TextViewState" Padding="20" TextWrapping="Wrap" Text="All apps can be snapped, but you can add event handlers so your app responds. Grab the top of the screen and drag to left or right to put in snap view." FontSize="24" Height="122" Width="Auto" VerticalAlignment="Top" Margin="0,0,10,0"/>
+            <Button x:Name="UnsnapButton" Content="Unsnap" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Center" Width="Auto" Click="UnsnapButton_Click"/>
+            <ListView x:Name="DataListView" Width="Auto" Height="300" 
+                Visibility="Collapsed"
+                HorizontalAlignment="Left"
+                Background="White"
+                ItemTemplate="{StaticResource StoreFrontTileTemplate}"
+                ItemContainerStyle="{StaticResource StoreFrontTileStyle}"
+                BorderBrush="LightGray" 
+                BorderThickness="1" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionMode="None"  
+                IsItemClickEnabled="True" ItemClick="Data_ItemClick"/>
+            <GridView x:Name="DataGridView" HorizontalAlignment="Center" Width="700" Height="300"
+                ItemTemplate="{StaticResource StoreFrontTileTemplate}"
+                ItemContainerStyle="{StaticResource StoreFrontTileStyle}"
+                ItemsPanel="{StaticResource StoreFrontGridItemsPanelTemplate}"
+                BorderBrush="LightGray" Background="White"
+                BorderThickness="1" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto" IsItemClickEnabled="True"
+                ItemClick="Data_ItemClick"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" x:Name="DetailStackPanel">
+                <Image x:Name="DetailsImage" Width="128" Height="128"/>
+                <StackPanel Orientation="Vertical" x:Name="DetailTextStackPanel" >
+                    <TextBlock x:Name="DetailsText" TextWrapping="Wrap" Text="Select an item above" FontSize="24"/>
+                    <TextBlock x:Name="DetailsDescription" TextWrapping="Wrap" Text="" FontSize="18"/>
+                    <HyperlinkButton x:Name="DetailsLink" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="HyperlinkButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock x:Name="PersistNote" Text="The selected item is persisted by SuspensionManager.pas, which is called from the App.xaml.pas." 
+                   TextWrapping="Wrap" TextAlignment="Center" Margin="10,0,10,10" FontSize="22" Height="0"  Grid.Row="1"/>
+    </Grid>
+
+</Page>

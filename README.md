@@ -1,0 +1,34 @@
+# Elements Samples
+
+This git repository contains the official sample suite for the RemObjects Elements compiler and tool chain, including all three languages (Oxygene, C# and Swift) and all three currently supported platforms (.NET, Cocoa and Java/Android).
+
+Most of these samples ship with and are installed by the Elements installer for Windows; this repository represents a complete super-set of those samples, and might contain newer versions. Fire provides the option to install these samples directly from the git repository.
+
+Please refer to branch and tag names to know which version of the compiler samples are targeted at; the base level of samples works with Elements 8.3 and later.
+
+The official repository URL is [github.com/remobjects/ElementsSamples](https://github.com/remobjects/ElementsSamples); the latest versions of samples can always be found there, and pull requests and contributions are welcome!
+
+## Structure
+
+Samples are grouped by language first, then by platform. Underneath each language/platform combo, samples may or may not be grouped by logical categories, depending own the scope and amount of samples in the section.
+
+The folder names use the language and platform code names:
+
+Languages:
+
+* **Oxygene** &ndash; the Oxygene (Object Pascal) Language
+* **Hydrogene** &ndash; RemObjects C#
+* **Silver** &ndash; RemObjects Swift
+
+Platforms:
+
+* **All** &ndash; cross-platform samples, spanning two or more platforms
+* **Echoes** &ndash; .NET, including all it stub-platforms such as Mono, WinRT, Windows Phone, Silverlight, Universal alls, and Xamarin
+* **Cooper** &ndash; Java and Android
+* **Nougat** &ndash; Cocoa, including macOS, iOS, tvOS and watchOS
+* **Gotham** &ndash; Elements’ “Meta” platform for cross-platform libraries
+* **Island** &ndash; Elements’ “Native” platform for Windows, Linux and Darwin
+
+Each sample ships with a .SLN file that can be opened in Fire and Visual Studio, and also built from the command line using MSBuild/xbuild.
+
+Enjoy!

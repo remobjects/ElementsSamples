@@ -1,0 +1,6 @@
+*.user
+*.ir
+*.suo
+bin
+obj
+

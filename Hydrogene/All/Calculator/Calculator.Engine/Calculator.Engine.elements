@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>28b911fa-c5cd-468f-a911-694eda98b1bb</ProjectGuid>
+  </PropertyGroup> 
+  <PropertyGroup>
+	<RootNamespace>Calculator.Engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="Calculator.Engine.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Oxygene\RemObjects.Elements.SharedProject.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "QueueAndStack", "QueueAndStack.elements", "{10194A05-7843-4D42-80D0-A93B4D4DD25D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10194A05-7843-4D42-80D0-A93B4D4DD25D}.Debug|Default.ActiveCfg = Debug
+		{10194A05-7843-4D42-80D0-A93B4D4DD25D}.Debug|Default.Build.0 = Debug
+		{10194A05-7843-4D42-80D0-A93B4D4DD25D}.Release|Default.ActiveCfg = Release
+		{10194A05-7843-4D42-80D0-A93B4D4DD25D}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

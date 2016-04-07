@@ -1,0 +1,6 @@
+bin
+obj
+xcuserdata
+*.user
+*.suo
+

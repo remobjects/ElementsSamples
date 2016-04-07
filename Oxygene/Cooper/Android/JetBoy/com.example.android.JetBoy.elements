@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <ProjectGuid>{00361858-5519-41be-b7a5-80d1b276afa1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <Name>com.example.android.jetboy</Name>
+    <RootNamespace>com.example.android.jetboy</RootNamespace>
+    <AndroidSDKPath />
+    <AndroidPlatformName />
+    <AndroidJavaResourcesFolder />
+    <AndroidNativeLibrariesFolder />
+    <AndroidMinVersion>8</AndroidMinVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="res\" />
+    <Folder Include="res\drawable\" />
+    <Folder Include="res\raw\" />
+    <Folder Include="res\values\" />
+    <Folder Include="res\layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="res\values\strings.android-xml">
+      <SubType>Content</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="android.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JETBOY_content_README.txt">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <None Include="NOTICE">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <None Include="Readme.txt">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <Content Include="res\drawable\asteroid01.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid02.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid03.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid04.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid05.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid06.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid07.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid08.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid09.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid10.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid11.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid12.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid_explode1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid_explode2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid_explode3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\asteroid_explode4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\background_a.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\background_b.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\intbeam_1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\intbeam_2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\intbeam_3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\intbeam_4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\int_timer.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\laser.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_hit_1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_hit_2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_hit_3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\ship2_hit_4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\title_bg_hori.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\title_hori.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\layout\main.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\raw\level1.jet">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\values\styles.android-xml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asteroid.pas" />
+    <Compile Include="Events.pas" />
+    <Compile Include="Explosion.pas" />
+    <Compile Include="JetBoy.pas" />
+    <Compile Include="JetBoyThread.pas" />
+    <Compile Include="JetBoyView.pas" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

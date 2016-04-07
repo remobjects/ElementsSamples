@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "AllLanguageFeatures", "AllLanguageFeatures.elements", "{5B37D2BA-8CC5-4C3E-B6C1-83B2580B64AC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B37D2BA-8CC5-4C3E-B6C1-83B2580B64AC}.Debug|Default.ActiveCfg = Debug
+		{5B37D2BA-8CC5-4C3E-B6C1-83B2580B64AC}.Debug|Default.Build.0 = Debug
+		{5B37D2BA-8CC5-4C3E-B6C1-83B2580B64AC}.Release|Default.ActiveCfg = Release
+		{5B37D2BA-8CC5-4C3E-B6C1-83B2580B64AC}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

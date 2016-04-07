@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "UsingGenerics", "UsingGenerics.elements", "{32F4F0E0-63E8-4824-A7BE-9E59625DB2B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32F4F0E0-63E8-4824-A7BE-9E59625DB2B6}.Debug|Default.ActiveCfg = Debug
+		{32F4F0E0-63E8-4824-A7BE-9E59625DB2B6}.Debug|Default.Build.0 = Debug
+		{32F4F0E0-63E8-4824-A7BE-9E59625DB2B6}.Release|Default.ActiveCfg = Release
+		{32F4F0E0-63E8-4824-A7BE-9E59625DB2B6}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

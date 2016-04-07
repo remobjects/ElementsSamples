@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "TicTacToe", "TicTacToe.elements", "{F01DDDAA-C382-4C3B-8209-5CA14EA7F011}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F01DDDAA-C382-4C3B-8209-5CA14EA7F011}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{F01DDDAA-C382-4C3B-8209-5CA14EA7F011}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{F01DDDAA-C382-4C3B-8209-5CA14EA7F011}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{F01DDDAA-C382-4C3B-8209-5CA14EA7F011}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

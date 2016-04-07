@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "com.remobjects.FirstAndroidApp", "com.remobjects.FirstAndroidApp\com.remobjects.FirstAndroidApp.elements", "{AF5547E2-3F6B-476A-95B8-CF79DAE557E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF5547E2-3F6B-476A-95B8-CF79DAE557E1}.Debug|Default.ActiveCfg = Debug
+		{AF5547E2-3F6B-476A-95B8-CF79DAE557E1}.Debug|Default.Build.0 = Debug
+		{AF5547E2-3F6B-476A-95B8-CF79DAE557E1}.Release|Default.ActiveCfg = Release
+		{AF5547E2-3F6B-476A-95B8-CF79DAE557E1}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">SQLite Sample</string>
+
+  <!-- DBActivity.pas -->
+  <string name="db_activity">SQLite</string>
+  <string name="no_records">No customers in the database</string>
+</resources>

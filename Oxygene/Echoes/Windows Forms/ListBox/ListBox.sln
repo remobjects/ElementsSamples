@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ListBox", "ListBox.elements", "{9943B3CE-C224-4F48-8B08-2B66BD39A0B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9943B3CE-C224-4F48-8B08-2B66BD39A0B3}.Debug|Default.ActiveCfg = Debug
+		{9943B3CE-C224-4F48-8B08-2B66BD39A0B3}.Debug|Default.Build.0 = Debug
+		{9943B3CE-C224-4F48-8B08-2B66BD39A0B3}.Release|Default.ActiveCfg = Release
+		{9943B3CE-C224-4F48-8B08-2B66BD39A0B3}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{7D652A62-E39F-4039-9CA7-9F228F3D39D8}</ProjectGuid>
+    <OutputType>exe</OutputType>
+    <AssemblyName>HelloMono</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Framework>{MONO}</Framework>
+    <GeneratePDB>True</GeneratePDB>
+    <GenerateMDB>True</GenerateMDB>	
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <Framework>{Mono}</Framework>
+    <EnableAsserts>False</EnableAsserts>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>$(Framework)\2.0\Mono.Security.dll</HintPath>
+      <Name>Mono.Security.dll</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>$(Framework)\2.0\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>$(Framework)\2.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>$(Framework)\2.0\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>$(Framework)\2.0\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.pas" />
+    <Compile Include="Main.pas" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+</Project>

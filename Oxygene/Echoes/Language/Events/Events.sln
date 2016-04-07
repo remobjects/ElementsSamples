@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Events", "Events.elements", "{47C12F15-1B8F-4709-A542-594F09F0149C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47C12F15-1B8F-4709-A542-594F09F0149C}.Debug|Default.ActiveCfg = Debug
+		{47C12F15-1B8F-4709-A542-594F09F0149C}.Debug|Default.Build.0 = Debug
+		{47C12F15-1B8F-4709-A542-594F09F0149C}.Release|Default.ActiveCfg = Release
+		{47C12F15-1B8F-4709-A542-594F09F0149C}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

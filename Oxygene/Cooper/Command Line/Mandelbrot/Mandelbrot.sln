@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "Mandelbrot", "Mandelbrot.elements", "{C4FB55A1-3179-404E-A817-09ADA663425C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4FB55A1-3179-404E-A817-09ADA663425C}.Debug|Java.ActiveCfg = Debug
+		{C4FB55A1-3179-404E-A817-09ADA663425C}.Debug|Java.Build.0 = Debug
+		{C4FB55A1-3179-404E-A817-09ADA663425C}.Release|Java.ActiveCfg = Release
+		{C4FB55A1-3179-404E-A817-09ADA663425C}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

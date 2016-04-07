@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = ".", ".", "{C30271EF-6C13-41AD-92CD-11DCD5485999}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Simple ASP.NET"
+		Debug.AspNetCompiler.PhysicalPath = "..\Simple ASP.NET 2.0\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Simple ASP.NET\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "true"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Simple ASP.NET"
+		Release.AspNetCompiler.PhysicalPath = "..\Simple ASP.NET 2.0\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Simple ASP.NET\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "true"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61977"
+		DefaultWebSiteLanguage = "Oxygene"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C30271EF-6C13-41AD-92CD-11DCD5485999}.Debug|.NET.ActiveCfg = Debug|.NET
+		{C30271EF-6C13-41AD-92CD-11DCD5485999}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{7C141628-34F3-4FA2-8F26-1432B9508D76}</ProjectGuid>
+    <RootNamespace>InterfacesSample</RootNamespace>
+    <OutputType>winexe</OutputType>
+    <AssemblyName>InterfacesSample</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyWith>False</AllowLegacyWith>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowUnsafeCode>False</AllowUnsafeCode>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <OutputPath>bin\Debug\</OutputPath>
+    <GeneratePDB>True</GeneratePDB>
+    <GenerateMDB>False</GenerateMDB>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WebDebugTarget>Cassini</WebDebugTarget>
+    <WebLaunchBrowser>False</WebLaunchBrowser>
+    <XmlDocAllMembers>False</XmlDocAllMembers>
+    <CodeFlowAnalysis>True</CodeFlowAnalysis>
+    <UseXmlDoc>False</UseXmlDoc>
+    <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <GeneratePDB>False</GeneratePDB>
+    <GenerateMDB>False</GenerateMDB>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WebDebugTarget>Cassini</WebDebugTarget>
+    <WebLaunchBrowser>False</WebLaunchBrowser>
+    <XmlDocAllMembers>False</XmlDocAllMembers>
+    <CodeFlowAnalysis>True</CodeFlowAnalysis>
+    <UseXmlDoc>False</UseXmlDoc>
+    <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.pas" />
+    <Compile Include="Main.pas">
+      <Subtype>Form</Subtype>
+      <DesignableClassName>InterfacesSample.MainForm</DesignableClassName>
+    </Compile>
+    <EmbeddResource Include="Main.resx" />
+    <Compile Include="SampleClasses.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

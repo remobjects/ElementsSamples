@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ListViewApp", "ListViewApp.elements", "{4AC0BE49-A13F-46E7-8096-99145D2B46E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AC0BE49-A13F-46E7-8096-99145D2B46E5}.Debug|Java.ActiveCfg = Debug
+		{4AC0BE49-A13F-46E7-8096-99145D2B46E5}.Debug|Java.Build.0 = Debug
+		{4AC0BE49-A13F-46E7-8096-99145D2B46E5}.Release|Java.ActiveCfg = Release
+		{4AC0BE49-A13F-46E7-8096-99145D2B46E5}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

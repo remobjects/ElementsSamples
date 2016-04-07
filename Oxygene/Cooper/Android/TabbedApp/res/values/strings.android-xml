@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Tabbed App</string>
+
+  <string name="tab_one_label">Tab One</string>
+  <string name="tab_one_title">One</string>
+  
+  <string name="tab_two_label">Tab Two</string>
+  <string name="tab_two_title">Two</string>
+
+  <string name="tab_three_label">Tab Three</string>
+  <string name="tab_three_title">Three</string>
+</resources>

@@ -1,0 +1,10 @@
+<Application x:Class="PictureViewer.App"
+    xmlns:pd="clr-namespace:PictureViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    Startup="AppStartup"
+    >
+  <Application.Resources>
+    <ObjectDataProvider x:Name="PicturesODP" x:Key="Images" ObjectType="{x:Type pd:ImageList}" />
+  </Application.Resources>
+</Application>

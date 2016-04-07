@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "CirrusCache", "CirrusCache\CirrusCache.elements", "{D4B5D90B-DFB3-4169-9288-7FAD9029D904}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "CirrusCacheAspectLibrary", "CirrusCacheAspectLibrary\CirrusCacheAspectLibrary.elements", "{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Debug|Any CPU.ActiveCfg = Debug
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Debug|Any CPU.Build.0 = Debug
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Release|Any CPU.ActiveCfg = Release
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Release|Any CPU.Build.0 = Release
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Debug|Any CPU.ActiveCfg = Debug
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Debug|Any CPU.Build.0 = Debug
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Release|Any CPU.ActiveCfg = Release
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

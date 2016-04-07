@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Oxygene for Java Applet Test Page</title>
+</head>
+<body>
+    <h1>
+        Oxygene for Java Keyboard applet test page</h1>
+    <p>
+        This page shows the Oxygene for Java Keyboard applet running in the browser, assuming
+        you have the Java Runtime Environment installed.</p>
+    <p>
+        Note that the <code>applet</code> tag used to display the applet uses the <code>codebase</code>
+        attribute to access the compiled .jar file in the <i>bin\Debug</i> folder. This
+        means it expects you to run it from the Debug configuration. If you wish to test
+        the release configuration you will need to update the <code>codebase</code> attribute
+        to point to the <i>bin\Release</i> folder instead.</p>
+    <p />
+    <p>
+        When deploying your applet, if it resides in the same folder as the web page that
+        refers to it then the <code>codebase</code> attribute is not required.</p>
+    <p>
+        Note also that Java applets have a tendency to be cached. This means that after
+        first displaying your applet, any further changes you make to the code and then
+        compile to a .jar will likely not be shown when you re-display the applet (for example
+        in this test page). To control the cache you can use the Java console. To show the
+        Java Console choose the Java option in Control Panel, switch to the Advanced tab,
+        expand the Java Console node in the tree of options and select 'Show console'. Whenever
+        a Java Platform applet is running the Java Console will now appear and you can press
+        X on the keyboard to clear the classloader cache.</p>
+    <p>
+        Click, type, and move the mouse.</p>
+    <center>
+        <applet archive="KeyboardApplet.jar" code="keyboardapplet/KeyboardApplet.class"
+            codebase="bin/Debug" width="300" height="300">
+            ( <font color="red">You need to enable Java to see this applet.</font> )
+        </applet>
+    </center>
+</body>
+</html>

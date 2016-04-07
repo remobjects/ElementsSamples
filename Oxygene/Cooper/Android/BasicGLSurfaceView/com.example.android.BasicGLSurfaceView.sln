@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "com.example.android.BasicGLSurfaceView", "com.example.android.BasicGLSurfaceView.elements", "{53353B6F-74E8-4DCF-9D8B-2CEA6D610D49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53353B6F-74E8-4DCF-9D8B-2CEA6D610D49}.Debug|Default.ActiveCfg = Debug
+		{53353B6F-74E8-4DCF-9D8B-2CEA6D610D49}.Debug|Default.Build.0 = Debug
+		{53353B6F-74E8-4DCF-9D8B-2CEA6D610D49}.Release|Default.ActiveCfg = Release
+		{53353B6F-74E8-4DCF-9D8B-2CEA6D610D49}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

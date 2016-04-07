@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "TreeViewDemo", "TreeViewDemo.elements", "{93F6EACD-BAFB-4D73-8ED8-CC2BCCD2CA0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93F6EACD-BAFB-4D73-8ED8-CC2BCCD2CA0D}.Debug|Default.ActiveCfg = Debug
+		{93F6EACD-BAFB-4D73-8ED8-CC2BCCD2CA0D}.Debug|Default.Build.0 = Debug
+		{93F6EACD-BAFB-4D73-8ED8-CC2BCCD2CA0D}.Release|Default.ActiveCfg = Release
+		{93F6EACD-BAFB-4D73-8ED8-CC2BCCD2CA0D}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

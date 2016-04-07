@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ColorApplet", "ColorApplet.elements", "{26FD8845-6F2D-4800-AFBF-27FBF095E3F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26FD8845-6F2D-4800-AFBF-27FBF095E3F6}.Debug|Java.ActiveCfg = Debug
+		{26FD8845-6F2D-4800-AFBF-27FBF095E3F6}.Debug|Java.Build.0 = Debug
+		{26FD8845-6F2D-4800-AFBF-27FBF095E3F6}.Release|Java.ActiveCfg = Release
+		{26FD8845-6F2D-4800-AFBF-27FBF095E3F6}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

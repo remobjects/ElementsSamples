@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SnapSample", "Snap\SnapSample.elements", "{961721AD-DE14-4F0F-AD0B-D44C98E25040}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{961721AD-DE14-4F0F-AD0B-D44C98E25040}.Debug|Default.ActiveCfg = Debug
+		{961721AD-DE14-4F0F-AD0B-D44C98E25040}.Debug|Default.Build.0 = Debug
+		{961721AD-DE14-4F0F-AD0B-D44C98E25040}.Debug|Default.Deploy.0 = Debug
+		{961721AD-DE14-4F0F-AD0B-D44C98E25040}.Release|Default.ActiveCfg = Release
+		{961721AD-DE14-4F0F-AD0B-D44C98E25040}.Release|Default.Build.0 = Release
+		{961721AD-DE14-4F0F-AD0B-D44C98E25040}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

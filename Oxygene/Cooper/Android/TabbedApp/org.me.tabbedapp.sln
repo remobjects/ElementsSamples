@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "org.me.tabbedapp", "org.me.tabbedapp.elements", "{42E9CB80-4A02-4EE4-8CE3-5A386D812F85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42E9CB80-4A02-4EE4-8CE3-5A386D812F85}.Debug|Default.ActiveCfg = Debug
+		{42E9CB80-4A02-4EE4-8CE3-5A386D812F85}.Debug|Default.Build.0 = Debug
+		{42E9CB80-4A02-4EE4-8CE3-5A386D812F85}.Release|Default.ActiveCfg = Release
+		{42E9CB80-4A02-4EE4-8CE3-5A386D812F85}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

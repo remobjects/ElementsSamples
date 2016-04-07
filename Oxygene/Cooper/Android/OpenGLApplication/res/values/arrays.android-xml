@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Used in MainActivity.pas -->
+  <string-array name="menu_titles">
+    <item>OpenGL square</item>
+    <item>OpenGL square with translucency</item>
+    <item>OpenGL cube</item>
+    <item>OpenGL cube with translucency</item>
+  </string-array>
+  <string-array name="menu_subtitles">
+    <item>A coloured square rotating on a grey background</item>
+    <item>A coloured square rotating on a translucent background</item>
+    <item>A textured transparent cube rotating</item>
+    <item>A textured transparent cube rotating on a translucent background</item>
+  </string-array>
+</resources>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "BasicWindowsApp", "BasicWindowsApp.elements", "{27900793-C304-4BFB-AFEC-2945648DCC37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27900793-C304-4BFB-AFEC-2945648DCC37}.Debug|Default.ActiveCfg = Debug
+		{27900793-C304-4BFB-AFEC-2945648DCC37}.Debug|Default.Build.0 = Debug
+		{27900793-C304-4BFB-AFEC-2945648DCC37}.Release|Default.ActiveCfg = Release
+		{27900793-C304-4BFB-AFEC-2945648DCC37}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

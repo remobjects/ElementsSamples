@@ -1,0 +1,20 @@
+﻿<Window x:Class="Sorter.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Sorter" Height="396" Width="817"
+    >
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FF404040" Offset="0"/>
+                <GradientStop Color="#FF080808" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Height="30" HorizontalAlignment="Left" Margin="9,9,0,0" VerticalAlignment="Top" Width="64" Click="Randomize">Randomize</Button>
+        <Button Name="btnGo" Height="30" HorizontalAlignment="Left" Margin="81,9,0,0" VerticalAlignment="Top" Width="64" Click="Sort">Sort</Button>
+        <Border Padding="10">
+            <Canvas Name="MainCanvas" VerticalAlignment="Bottom">
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>

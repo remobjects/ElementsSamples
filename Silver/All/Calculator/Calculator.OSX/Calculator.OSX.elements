@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+    <PropertyGroup>
+        <RootNamespace>Calculator.OSX</RootNamespace>
+        <ProjectGuid>{3b0fd974-84ee-4f25-9d41-0eba3236619f}</ProjectGuid>
+        <OutputType>executable</OutputType>
+        <AssemblyName>Calculator.OSX</AssemblyName>
+        <AllowGlobals>False</AllowGlobals>
+        <AllowLegacyWith>False</AllowLegacyWith>
+        <AllowLegacyOutParams>False</AllowLegacyOutParams>
+        <AllowLegacyCreate>False</AllowLegacyCreate>
+        <AllowUnsafeCode>False</AllowUnsafeCode>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <SDK>OS X</SDK>
+        <CreateAppBundle>True</CreateAppBundle>
+        <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+        <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
+        <MacIconFile>.\Resources\App.icns</MacIconFile>
+        <Name>Calculator.OSX</Name>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+        <OutputPath>.\bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;</DefineConstants>
+        <GenerateDebugInfo>True</GenerateDebugInfo>
+        <EnableAsserts>True</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+        <OutputPath>.\bin\Release</OutputPath>
+        <GenerateDebugInfo>False</GenerateDebugInfo>
+        <EnableAsserts>False</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Cocoa"/>
+        <Reference Include="libSugar">
+            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Nougat\OS X\libSugar.fx</HintPath>
+        </Reference>
+        <Reference Include="libxml2">
+            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Nougat\Libraries\libxml2\OS X\libxml2.fx</HintPath>
+        </Reference>
+        <Reference Include="rtl"/>
+        <Reference Include="libNougat"/>
+        <Reference Include="libSwift"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AppDelegate.swift"/>
+        <Compile Include="MainWindowController.swift"/>
+        <Compile Include="Program.swift"/>
+        <None Include="Resources\Entitlements.entitlements"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Resources\Info.plist"/>
+        <Content Include="Resources\App.icns"/>
+        <Xib Include="MainWindowController.xib">
+            <DependentUpon>MainWindowController.swift</DependentUpon>
+        </Xib>
+        <Xib Include="Resources\MainMenu.xib"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Nougat.targets"/>
+    <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
+</Project>

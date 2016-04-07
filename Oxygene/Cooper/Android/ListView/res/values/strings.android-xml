@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- AndroidManifest.xml -->
+  <string name="app_name">ListView App</string>
+
+  <!-- MainActivity.pas -->
+  <string name="main_activity">@string/app_name</string>
+  <string name="empty">Nothing to display</string>
+  <string name="about_menu">About Sample App</string>
+  <string name="back_pressed">Back button pressed, so we\'re done here.\n\n
+    This activity is now exiting.\n\n
+    KTHXBAI...</string>
+
+  <!-- AboutActivity.pas -->
+  <string name="about_activity">About SampleApp</string>
+  <string name="about_text">
+    This application shows a <i>ListView</i> in both an <i>Activity</i> and
+    a <i>ListActivity</i> with click and long
+    click handlers and a custom adapter for fast scrolling.\n\n
+    There\'s also a shared preference, which is used to store a global option,
+    and this can be edited by a shared preference activity or an options dialog.\n\n
+    The main activity has a menu showing an About box (a themed activity), and
+    each of the two list views use a menu to invoke one of the two shared
+    preference editing options.
+  </string>
+
+  <!-- ListViewActivity.pas and ListViewActivity2.pas -->
+  <string name="list_activity">ListView Activity</string>
+  <string name="list_activity2">ListView Activity 2</string>
+  <string name="countries_heading">Country List</string>
+
+  <!-- ListViewActivitySettingsActivity.pas -->
+  <string name="list_activity_settings_activity">Sample Application Preferences</string>
+  <string name="list_activity_settings_category">ListView Adapter Settings</string>
+  <string name="list_activity_settings">@string/list_activity_settings_activity</string>
+  <string name="title_custom_adapter_preference">Use custom adapter</string>
+  <string name="summary_on_custom_adapter_preference">Using indexed custom adapter</string>
+  <string name="summary_off_custom_adapter_preference">Using default array adapter</string>
+
+</resources>

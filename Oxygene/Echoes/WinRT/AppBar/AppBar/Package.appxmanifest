@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="6206384e-32ed-4f10-a068-d0ee49735ea0" Publisher="CN=RemObjects Software" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>AppBarExample</DisplayName>
+    <PublisherDisplayName>RemObjects Software</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>AppBarExample</Description>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application 
+    Id="App" 
+    Executable="AppBarExample.exe" 
+    EntryPoint="AppBarSample.App">
+      <VisualElements 
+      DisplayName="App Bar Sample" 
+      Logo="Assets\Logo.png" 
+      SmallLogo="Assets\SmallLogo.png" 
+      Description="The RemObjects Software Oxygene for .NET App Bar Sample" 
+      ForegroundText="light" 
+      BackgroundColor="#222222">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>

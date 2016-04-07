@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>TreeViewDemo</RootNamespace>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>TreeViewDemo</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <MacPackMode>WinForms</MacPackMode>
+    <MacIconFile>Properties\Tree.icns</MacIconFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{93F6EACD-BAFB-4D73-8ED8-CC2BCCD2CA0D}</ProjectGuid>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <ApplicationIcon>Properties\Tree.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <Framework>{MONO}</Framework>
+    <GeneratePDB>True</GeneratePDB>
+    <GenerateMDB>True</GenerateMDB>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\bin\Release</OutputPath>
+    <Framework>{MONO}</Framework>
+    <EnableAsserts>False</EnableAsserts>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>2.0\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>2.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>2.0\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>2.0\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>2.0\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>2.0\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.pas">
+      <Subtype>Form</Subtype>
+      <DesignableClassName>WinFormsApplication.AboutForm</DesignableClassName>
+    </Compile>
+    <Compile Include="AboutForm.Designer.pas">
+      <Subtype>Form</Subtype>
+      <DesignableClassName>WinFormsApplication.AboutForm</DesignableClassName>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx" />
+    <EmbeddedResource Include="images\Information.png" />
+    <EmbeddedResource Include="images\PrismLogo.png" />
+    <Compile Include="Main.pas">
+      <Subtype>Form</Subtype>
+      <DesignableClassName>WinFormsApplication.MainForm</DesignableClassName>
+    </Compile>
+    <Compile Include="Main.Designer.pas">
+      <Subtype>Form</Subtype>
+      <DesignableClassName>WinFormsApplication.MainForm</DesignableClassName>
+    </Compile>
+    <EmbeddedResource Include="Main.resx" />
+    <Compile Include="Program.pas" />
+    <Compile Include="Properties\AssemblyInfo.pas" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.pas" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+    <Compile Include="Properties\Settings.Designer.pas" />
+    <Content Include="Properties\Tree.icns" />
+    <EmbeddedResource Include="Properties\Tree.ico" />
+    <Compile Include="UpdateDialog.pas">
+      <Subtype>Form</Subtype>
+      <DesignableClassName>WinFormsApplication.UpdateDialog</DesignableClassName>
+    </Compile>
+    <Compile Include="UpdateDialog.Designer.pas">
+      <SubType>Form</SubType>
+      <DesignableClassName>WinFormsApplication.UpdateDialog</DesignableClassName>
+    </Compile>
+    <EmbeddedResource Include="UpdateDialog.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.MacPack.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

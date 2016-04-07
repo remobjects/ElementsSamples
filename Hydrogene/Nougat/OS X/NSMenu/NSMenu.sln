@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "NSMenu", "NSMenu\NSMenu.elements", "{C0E650C8-1EB2-4C51-B11B-85E330DC9D3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0E650C8-1EB2-4C51-B11B-85E330DC9D3C}.Debug|Default.ActiveCfg = Debug
+		{C0E650C8-1EB2-4C51-B11B-85E330DC9D3C}.Debug|Default.Build.0 = Debug
+		{C0E650C8-1EB2-4C51-B11B-85E330DC9D3C}.Release|Default.ActiveCfg = Release
+		{C0E650C8-1EB2-4C51-B11B-85E330DC9D3C}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

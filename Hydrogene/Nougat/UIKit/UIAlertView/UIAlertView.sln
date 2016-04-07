@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "UIAlertView", "UIAlertView\UIAlertView.elements", "{DAC6B136-09AA-465B-A4C7-C19573B662DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAC6B136-09AA-465B-A4C7-C19573B662DD}.Debug|Default.ActiveCfg = Debug
+		{DAC6B136-09AA-465B-A4C7-C19573B662DD}.Debug|Default.Build.0 = Debug
+		{DAC6B136-09AA-465B-A4C7-C19573B662DD}.Release|Default.ActiveCfg = Release
+		{DAC6B136-09AA-465B-A4C7-C19573B662DD}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <OutputType>Library</OutputType>
+    <Platform Condition="'$(Platform)' == ''">Java</Platform>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Name>com.example.android.AccelerometerPlay</Name>
+    <RootNamespace>com.example.android.accelerometerplay</RootNamespace>
+    <ProjectGuid>{305422fb-53e9-45e8-a520-701f03b7652d}</ProjectGuid>
+    <AssemblyName>com.example.android.accelerometerplay</AssemblyName>
+    <InternalAssemblyName />
+    <StartupClass />
+    <DefaultUses />
+    <ApplicationIcon />
+    <AndroidSDKPath />
+    <AndroidPlatformName>
+    </AndroidPlatformName>
+    <AndroidMinVersion>8</AndroidMinVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Java' ">
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <GeneratePDB>True</GeneratePDB>
+    <GenerateMDB>True</GenerateMDB>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <SuppressWarnings />
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <FutureHelperClassName />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Java' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GeneratePDB>False</GeneratePDB>
+    <GenerateMDB>False</GenerateMDB>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <AndroidSign>False</AndroidSign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="res\" />
+    <Folder Include="res\drawable-hdpi\" />
+    <Folder Include="res\drawable-ldpi\" />
+    <Folder Include="res\drawable-mdpi\" />
+    <Folder Include="res\values\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="res\values\strings.android-xml">
+      <SubType>Content</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="android.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccelerometerPlayActivity.pas" />
+    <Compile Include="Particle.pas" />
+    <Compile Include="ParticleSystem.pas" />
+    <Compile Include="SimulationView.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NOTICE">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <None Include="Readme.txt">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <Content Include="res\drawable-hdpi\ball.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-hdpi\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-hdpi\wood.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-ldpi\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-mdpi\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

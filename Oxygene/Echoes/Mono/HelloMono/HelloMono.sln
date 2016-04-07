@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "HelloMono", "HelloMono.elements", "{7D652A62-E39F-4039-9CA7-9F228F3D39D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D652A62-E39F-4039-9CA7-9F228F3D39D8}.Debug|Default.ActiveCfg = Debug
+		{7D652A62-E39F-4039-9CA7-9F228F3D39D8}.Debug|Default.Build.0 = Debug
+		{7D652A62-E39F-4039-9CA7-9F228F3D39D8}.Release|Default.ActiveCfg = Release
+		{7D652A62-E39F-4039-9CA7-9F228F3D39D8}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

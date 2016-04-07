@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="org.me.listviewapp">
+  <application 
+        android:label="@string/app_name"
+        android:icon="@drawable/icon">
+    <activity android:label="@string/app_name" android:name="org.me.listviewapp.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="@string/list_activity" android:name="org.me.listviewapp.ListViewActivity" />
+    <activity android:label="@string/list_activity2" android:name="org.me.listviewapp.ListViewActivity2" />
+    <activity android:label="@string/list_activity_settings_activity" android:name="org.me.listviewapp.ListViewActivitySettingsActivity" />
+    <activity android:label="@string/about_activity" android:name="org.me.listviewapp.AboutActivity" android:theme="@android:style/Theme.Dialog" />
+    </application>
+  <uses-sdk android:minSdkVersion="4" />
+</manifest>

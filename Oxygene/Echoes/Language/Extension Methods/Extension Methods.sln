@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Extension Methods", "Extension Methods.elements", "{DCE4DBDC-7400-44C4-9213-9848E524FC4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE4DBDC-7400-44C4-9213-9848E524FC4B}.Debug|Default.ActiveCfg = Debug
+		{DCE4DBDC-7400-44C4-9213-9848E524FC4B}.Debug|Default.Build.0 = Debug
+		{DCE4DBDC-7400-44C4-9213-9848E524FC4B}.Release|Default.ActiveCfg = Release
+		{DCE4DBDC-7400-44C4-9213-9848E524FC4B}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

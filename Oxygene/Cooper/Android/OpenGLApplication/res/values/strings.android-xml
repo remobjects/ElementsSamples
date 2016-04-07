@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">OpenGL Application</string>
+
+  <!-- MainActivity.pas -->
+  <string name="about_menu">About OpenGL Application</string>
+
+  <!-- AboutActivity.pas -->
+  <string name="about_activity">About SampleApp</string>
+  <string name="about_text">
+    This application shows some examples of using OpenGL ES
+    in an Android application.\n\n
+    One example is a simple 2D coloured square, rotating either
+    on the solid background of a standard activity, or on a
+    translucent background thereby showing the previously executing
+    activity.\n\n
+    Another example shows a textured cube rendered with transparency,
+    spinning either on the solid background of a standard
+    activity, or on a translucent background thereby showing the
+    previously executing activity.
+  </string>
+
+  <!-- OpenGLActivity.pas -->
+  <string name="openGL_activity">OpenGL activity</string>
+</resources>

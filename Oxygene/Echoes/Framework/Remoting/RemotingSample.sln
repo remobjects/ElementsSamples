@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Server", "Server.elements", "{A7E3EE0C-E300-4D1F-ACAB-3176E7FB2F9A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Client", "Client.elements", "{0959E3DE-89E7-4BD3-83A8-AE26B6594D61}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedModule", "SharedModule.elements", "{28837C97-778D-4AA7-87FE-4AE9299B8A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E3EE0C-E300-4D1F-ACAB-3176E7FB2F9A}.Debug|Default.ActiveCfg = Debug
+		{A7E3EE0C-E300-4D1F-ACAB-3176E7FB2F9A}.Debug|Default.Build.0 = Debug
+		{A7E3EE0C-E300-4D1F-ACAB-3176E7FB2F9A}.Release|Default.ActiveCfg = Release
+		{A7E3EE0C-E300-4D1F-ACAB-3176E7FB2F9A}.Release|Default.Build.0 = Release
+		{0959E3DE-89E7-4BD3-83A8-AE26B6594D61}.Debug|Default.ActiveCfg = Debug
+		{0959E3DE-89E7-4BD3-83A8-AE26B6594D61}.Debug|Default.Build.0 = Debug
+		{0959E3DE-89E7-4BD3-83A8-AE26B6594D61}.Release|Default.ActiveCfg = Release
+		{0959E3DE-89E7-4BD3-83A8-AE26B6594D61}.Release|Default.Build.0 = Release
+		{28837C97-778D-4AA7-87FE-4AE9299B8A6B}.Debug|Default.ActiveCfg = Debug
+		{28837C97-778D-4AA7-87FE-4AE9299B8A6B}.Debug|Default.Build.0 = Debug
+		{28837C97-778D-4AA7-87FE-4AE9299B8A6B}.Release|Default.ActiveCfg = Release
+		{28837C97-778D-4AA7-87FE-4AE9299B8A6B}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

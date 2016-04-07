@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">JetBoy</string>
+  <string name="start">START!</string>
+  <string name="retry">RETRY</string>
+  <string name="restart">RETURN</string>
+  <string name="helpText">Help JET BOY get through the asteroid field!
+    Blast the asteroids in time with the beat and listen to the music respond!
+    \n
+    \n
+    Use your FIRE button to explode each asteroid as it passes through the laser guide.</string>
+  <string name="winText">You win, You are the master of the Universe!
+  \n
+  \n
+  JETBOY by SONiVOX®
+  \n
+  \n
+  Produced by Jennifer Hruska
+  \n
+  Music by Eric Barlaan
+  \n
+  Graphics by Randy O’Connor
+  \n
+  Programming by MageTech</string>
+  <string name="loseText">Sorry, you lose.</string>
+  <string name="timer">1:12</string>
+</resources>

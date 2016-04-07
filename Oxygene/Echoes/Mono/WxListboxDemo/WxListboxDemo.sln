@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "WxListboxDemo", "WxListboxDemo.elements", "{F1DF4CD3-A222-4608-820C-153A4FE4B57B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1DF4CD3-A222-4608-820C-153A4FE4B57B}.Debug|Default.ActiveCfg = Debug
+		{F1DF4CD3-A222-4608-820C-153A4FE4B57B}.Debug|Default.Build.0 = Debug
+		{F1DF4CD3-A222-4608-820C-153A4FE4B57B}.Release|Default.ActiveCfg = Release
+		{F1DF4CD3-A222-4608-820C-153A4FE4B57B}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

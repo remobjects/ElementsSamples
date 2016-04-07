@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = ".", ".", "{3F635709-F97B-4820-A0FC-E78AC3AC8346}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Windows Live ID"
+		Debug.AspNetCompiler.PhysicalPath = "R:\Oxygene\Samples\ASP.NET\Windows Live ID\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Windows Live ID\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Windows Live ID"
+		Release.AspNetCompiler.PhysicalPath = "R:\Oxygene\Samples\ASP.NET\Windows Live ID\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Windows Live ID\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50431"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F635709-F97B-4820-A0FC-E78AC3AC8346}.Debug|.NET.ActiveCfg = Debug|.NET
+		{3F635709-F97B-4820-A0FC-E78AC3AC8346}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

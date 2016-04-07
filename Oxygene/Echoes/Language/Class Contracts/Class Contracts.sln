@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Stack", "Stack.elements", "{CF3D5895-37E6-4974-AF04-317F26D702E1}"
+EndProject
+Global
+	GlobalSection(ShellConfiguration) = preSolution
+		ShellSolution = True
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF3D5895-37E6-4974-AF04-317F26D702E1}.Debug|Default.ActiveCfg = Debug
+		{CF3D5895-37E6-4974-AF04-317F26D702E1}.Debug|Default.Build.0 = Debug
+		{CF3D5895-37E6-4974-AF04-317F26D702E1}.Release|Default.ActiveCfg = Release
+		{CF3D5895-37E6-4974-AF04-317F26D702E1}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

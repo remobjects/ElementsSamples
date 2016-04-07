@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Maps", "Maps.elements", "{C3D91371-92B5-426A-8AC8-FD8369DB5FFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3D91371-92B5-426A-8AC8-FD8369DB5FFA}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C3D91371-92B5-426A-8AC8-FD8369DB5FFA}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{C3D91371-92B5-426A-8AC8-FD8369DB5FFA}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{C3D91371-92B5-426A-8AC8-FD8369DB5FFA}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="Oxygene" AutoEventWireup="true" CodeFile="webauth-handler.aspx.pas" Inherits="WindowsLiveAuthHandler" %>

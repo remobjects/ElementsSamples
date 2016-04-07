@@ -1,0 +1,205 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:useDefaultMargins="true"
+    android:padding="16px">
+
+  <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <TextView
+        android:text=""
+        android:id="@+id/tbValue"
+        android:layout_span="4"
+        android:layout_column="0"
+
+        android:editable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+
+  <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <Button
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBackspace"
+        android:layout_column="0"
+        android:text="&lt;-"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_column="1"
+        android:text="X"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnEval"
+        android:layout_column="2"
+        android:layout_span="2"
+        android:text="Evaluate"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="2" />
+  </LinearLayout>
+
+  <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <Button
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn7"
+        android:layout_column="0"
+        android:text="7"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_column="1"
+        android:text="8"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_column="2"
+        android:text="9"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_column="3"
+        android:text="/"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+  </LinearLayout>
+
+  <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_column="0"
+        android:text="4"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_column="1"
+        android:text="5"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_column="2"
+        android:text="6"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_column="3"
+        android:text="*"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+  </LinearLayout>
+
+  <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_column="0"
+        android:text="1"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_column="1"
+        android:text="2"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_column="2"
+        android:text="3"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_column="3"
+        android:text="-"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+  </LinearLayout>
+
+  <LinearLayout android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_column="0"
+        android:layout_span="3"
+        android:text="0"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="3" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_column="3"
+        android:text="+"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1" />
+  </LinearLayout>
+
+
+
+</LinearLayout>

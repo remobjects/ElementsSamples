@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "LinqToObjects", "LinqToObjects\LinqToObjects.elements", "{EF9BDB9A-D097-4B6E-973B-775A2FD15900}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "LinqToSQL", "LinqToSQL\LinqToSQL.elements", "{08ADB2DC-858A-44D3-A3BC-608A581166C4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "LinqToXML", "LinqToXML\LinqToXML.elements", "{AAA990A4-3A2F-412E-8636-BED8FEC02779}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF9BDB9A-D097-4B6E-973B-775A2FD15900}.Debug|Default.ActiveCfg = Debug
+		{EF9BDB9A-D097-4B6E-973B-775A2FD15900}.Debug|Default.Build.0 = Debug
+		{EF9BDB9A-D097-4B6E-973B-775A2FD15900}.Release|Default.ActiveCfg = Release
+		{EF9BDB9A-D097-4B6E-973B-775A2FD15900}.Release|Default.Build.0 = Release
+		{08ADB2DC-858A-44D3-A3BC-608A581166C4}.Debug|Default.ActiveCfg = Debug
+		{08ADB2DC-858A-44D3-A3BC-608A581166C4}.Debug|Default.Build.0 = Debug
+		{08ADB2DC-858A-44D3-A3BC-608A581166C4}.Release|Default.ActiveCfg = Release
+		{08ADB2DC-858A-44D3-A3BC-608A581166C4}.Release|Default.Build.0 = Release
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Debug|Default.ActiveCfg = Debug
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Debug|Default.Build.0 = Debug
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Release|Default.ActiveCfg = Release
+		{AAA990A4-3A2F-412E-8636-BED8FEC02779}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

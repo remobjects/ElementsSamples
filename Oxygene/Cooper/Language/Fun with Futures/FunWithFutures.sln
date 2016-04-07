@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "FunWithFutures", "FunWithFutures.elements", "{62704506-1400-4705-BB1B-DC5269A24C96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62704506-1400-4705-BB1B-DC5269A24C96}.Debug|Default.ActiveCfg = Debug
+		{62704506-1400-4705-BB1B-DC5269A24C96}.Debug|Default.Build.0 = Debug
+		{62704506-1400-4705-BB1B-DC5269A24C96}.Release|Default.ActiveCfg = Release
+		{62704506-1400-4705-BB1B-DC5269A24C96}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

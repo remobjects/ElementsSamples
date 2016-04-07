@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "CirrusCache", "CirrusCache\CirrusCache.elements", "{D4B5D90B-DFB3-4169-9288-7FAD9029D904}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "CirrusCalculatorInterfaceAspectLibrary", "CirrusCalculatorInterfaceAspectLibrary\CirrusCalculatorInterfaceAspectLibrary.elements", "{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "CalculatorLibrary", "CalculatorLibrary\CalculatorLibrary.elements", "{AC43572C-4DB2-46F2-A606-44D2E60187FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B5D90B-DFB3-4169-9288-7FAD9029D904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC43572C-4DB2-46F2-A606-44D2E60187FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC43572C-4DB2-46F2-A606-44D2E60187FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC43572C-4DB2-46F2-A606-44D2E60187FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC43572C-4DB2-46F2-A606-44D2E60187FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

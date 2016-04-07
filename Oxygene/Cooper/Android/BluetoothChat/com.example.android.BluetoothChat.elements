@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <ProjectGuid>{f37f8b63-6a35-46f1-afe9-9d6056b35a80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <Name>com.example.android.BluetoothChat</Name>
+    <RootNamespace>com.example.android.bluetoothchat</RootNamespace>
+    <AndroidSDKPath />
+    <AndroidPlatformName />
+    <AndroidJavaResourcesFolder />
+    <AndroidNativeLibrariesFolder />
+    <DefaultUses />
+    <AndroidMinVersion>11</AndroidMinVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;API_11</DefineConstants>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <SuppressWarnings />
+    <FutureHelperClassName />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="res\" />
+    <Folder Include="res\drawable-hdpi\" />
+    <Folder Include="res\drawable\" />
+    <Folder Include="res\menu-v10\" />
+    <Folder Include="res\menu\" />
+    <Folder Include="res\values-v11" />
+    <Folder Include="res\values\" />
+    <Folder Include="res\layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="res\values\strings.android-xml">
+      <SubType>Content</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="android.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlueToothChat.pas" />
+    <Compile Include="BluetoothChatService.pas" />
+    <Compile Include="DeviceListActivity.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\menu-v10\option_menu.android-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\values-v11\styles.android-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\values\styles.android-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="NOTICE">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <Content Include="res\menu\option_menu.android-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="Readme.txt">
+      <SubType>Content</SubType>
+      <ExcludeFromBuild>True</ExcludeFromBuild>
+    </None>
+    <Content Include="res\drawable-hdpi\app_icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable\app_icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\layout\custom_title.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\layout\device_list.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\layout\device_name.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\layout\main.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\layout\message.layout-xml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

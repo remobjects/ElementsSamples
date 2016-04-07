@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "com.remobjects.actionbar", "com.remobjects.actionbar\com.remobjects.actionbar.elements", "{152043C1-C634-42B7-9051-F3001CB33873}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{152043C1-C634-42B7-9051-F3001CB33873}.Debug|Default.ActiveCfg = Debug
+		{152043C1-C634-42B7-9051-F3001CB33873}.Debug|Default.Build.0 = Debug
+		{152043C1-C634-42B7-9051-F3001CB33873}.Release|Default.ActiveCfg = Release
+		{152043C1-C634-42B7-9051-F3001CB33873}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

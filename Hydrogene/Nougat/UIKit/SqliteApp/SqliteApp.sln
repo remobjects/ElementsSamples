@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SqliteApp", "SqliteApp.elements", "{50B6EF81-9D66-41EB-92C9-E11958E614A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B6EF81-9D66-41EB-92C9-E11958E614A3}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{50B6EF81-9D66-41EB-92C9-E11958E614A3}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{50B6EF81-9D66-41EB-92C9-E11958E614A3}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{50B6EF81-9D66-41EB-92C9-E11958E614A3}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

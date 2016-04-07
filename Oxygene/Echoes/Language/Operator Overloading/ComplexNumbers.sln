@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ComplexNumbers", "ComplexNumbers.elements", "{E8B7DD53-5665-419E-89A3-FCADA662FDFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8B7DD53-5665-419E-89A3-FCADA662FDFC}.Debug|Default.ActiveCfg = Debug
+		{E8B7DD53-5665-419E-89A3-FCADA662FDFC}.Debug|Default.Build.0 = Debug
+		{E8B7DD53-5665-419E-89A3-FCADA662FDFC}.Release|Default.ActiveCfg = Release
+		{E8B7DD53-5665-419E-89A3-FCADA662FDFC}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

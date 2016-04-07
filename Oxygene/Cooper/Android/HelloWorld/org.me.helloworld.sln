@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "org.me.helloworld", "org.me.helloworld.elements", "{311D517F-F82A-4C5D-9BD4-8D63DCDACCDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{311D517F-F82A-4C5D-9BD4-8D63DCDACCDF}.Debug|Java.ActiveCfg = Debug
+		{311D517F-F82A-4C5D-9BD4-8D63DCDACCDF}.Debug|Java.Build.0 = Debug
+		{311D517F-F82A-4C5D-9BD4-8D63DCDACCDF}.Release|Java.ActiveCfg = Release
+		{311D517F-F82A-4C5D-9BD4-8D63DCDACCDF}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

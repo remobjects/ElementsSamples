@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ArchimedianSpiralApplet", "ArchimedianSpiralApplet.elements", "{1A2C3D5A-AB7A-4AFA-9DC8-84730B0FF21E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2C3D5A-AB7A-4AFA-9DC8-84730B0FF21E}.Debug|Java.ActiveCfg = Debug
+		{1A2C3D5A-AB7A-4AFA-9DC8-84730B0FF21E}.Debug|Java.Build.0 = Debug
+		{1A2C3D5A-AB7A-4AFA-9DC8-84730B0FF21E}.Release|Java.ActiveCfg = Release
+		{1A2C3D5A-AB7A-4AFA-9DC8-84730B0FF21E}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

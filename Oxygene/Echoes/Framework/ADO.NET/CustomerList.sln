@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "CustomerList", "CustomerList.elements", "{EDC8140F-3A92-4AF4-B624-719BEB82BFD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDC8140F-3A92-4AF4-B624-719BEB82BFD4}.Debug|Default.ActiveCfg = Debug
+		{EDC8140F-3A92-4AF4-B624-719BEB82BFD4}.Debug|Default.Build.0 = Debug
+		{EDC8140F-3A92-4AF4-B624-719BEB82BFD4}.Release|Default.ActiveCfg = Release
+		{EDC8140F-3A92-4AF4-B624-719BEB82BFD4}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

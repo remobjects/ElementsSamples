@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory
+          android:title="@string/list_activity_settings_category">
+
+    <CheckBoxPreference
+          android:key="use_custom_adapter_preference"
+          android:title="@string/title_custom_adapter_preference"
+          android:summaryOn="@string/summary_on_custom_adapter_preference"
+          android:summaryOff="@string/summary_off_custom_adapter_preference" />
+
+  </PreferenceCategory>
+
+</PreferenceScreen>

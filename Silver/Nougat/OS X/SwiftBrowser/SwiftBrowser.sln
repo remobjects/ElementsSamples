@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SwiftBrowser", "SwiftBrowser.elements", "{6E9FC5E2-5CCA-4C42-B7CE-F34FAF925AC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E9FC5E2-5CCA-4C42-B7CE-F34FAF925AC1}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{6E9FC5E2-5CCA-4C42-B7CE-F34FAF925AC1}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{6E9FC5E2-5CCA-4C42-B7CE-F34FAF925AC1}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{6E9FC5E2-5CCA-4C42-B7CE-F34FAF925AC1}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

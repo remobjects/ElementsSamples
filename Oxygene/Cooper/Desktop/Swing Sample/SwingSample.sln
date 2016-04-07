@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SwingSample", "SwingSample.elements", "{5D5262E8-C2D6-4C6A-9F56-C36F5457B828}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D5262E8-C2D6-4C6A-9F56-C36F5457B828}.Debug|Java.ActiveCfg = Debug
+		{5D5262E8-C2D6-4C6A-9F56-C36F5457B828}.Debug|Java.Build.0 = Debug
+		{5D5262E8-C2D6-4C6A-9F56-C36F5457B828}.Release|Java.ActiveCfg = Release
+		{5D5262E8-C2D6-4C6A-9F56-C36F5457B828}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

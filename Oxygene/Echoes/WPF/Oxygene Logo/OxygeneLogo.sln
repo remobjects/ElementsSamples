@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "OxygeneLogo", "OxygeneLogo.elements", "{92048C2D-9176-4DB2-A8C6-DE2C57414585}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92048C2D-9176-4DB2-A8C6-DE2C57414585}.Debug|Default.ActiveCfg = Debug
+		{92048C2D-9176-4DB2-A8C6-DE2C57414585}.Debug|Default.Build.0 = Debug
+		{92048C2D-9176-4DB2-A8C6-DE2C57414585}.Release|Default.ActiveCfg = Release
+		{92048C2D-9176-4DB2-A8C6-DE2C57414585}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

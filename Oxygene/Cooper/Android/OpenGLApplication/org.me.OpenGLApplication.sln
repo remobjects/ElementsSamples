@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "org.me.OpenGLApplication", "org.me.OpenGLApplication.elements", "{926B01E0-CBA4-4FD6-917A-5FB73CCCE91F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Java = Debug|Java
+		Release|Java = Release|Java
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{926B01E0-CBA4-4FD6-917A-5FB73CCCE91F}.Debug|Java.ActiveCfg = Debug
+		{926B01E0-CBA4-4FD6-917A-5FB73CCCE91F}.Debug|Java.Build.0 = Debug
+		{926B01E0-CBA4-4FD6-917A-5FB73CCCE91F}.Release|Java.ActiveCfg = Release
+		{926B01E0-CBA4-4FD6-917A-5FB73CCCE91F}.Release|Java.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "org.me.ServiceApp", "org.me.ServiceApp.elements", "{19E9BE6C-5B7D-435F-ACD9-AE327DD94A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19E9BE6C-5B7D-435F-ACD9-AE327DD94A22}.Debug|Default.ActiveCfg = Debug
+		{19E9BE6C-5B7D-435F-ACD9-AE327DD94A22}.Debug|Default.Build.0 = Debug
+		{19E9BE6C-5B7D-435F-ACD9-AE327DD94A22}.Release|Default.ActiveCfg = Release
+		{19E9BE6C-5B7D-435F-ACD9-AE327DD94A22}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

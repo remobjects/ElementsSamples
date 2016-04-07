@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Hello World, Manual UI</string>
+  <string name="activity_name">@string/app_name</string>
+  <string name="hello_button_text">Click Me!</string>
+  <string name="hello_button_text_2">Click Me Again!</string>
+  <string name="hello_dialog_button_text">OK</string>
+  <string name="hello_dialog_message">Hello world!</string>
+  <string name="hello_dialog_message_2">Hello world at:\u0020</string>
+</resources>

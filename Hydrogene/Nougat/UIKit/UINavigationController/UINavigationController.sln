@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "UINavigationController", "UINavigationController\UINavigationController.elements", "{29A6F2A4-5B5B-4A73-99D0-C5963B160B53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29A6F2A4-5B5B-4A73-99D0-C5963B160B53}.Debug|Default.ActiveCfg = Debug
+		{29A6F2A4-5B5B-4A73-99D0-C5963B160B53}.Debug|Default.Build.0 = Debug
+		{29A6F2A4-5B5B-4A73-99D0-C5963B160B53}.Release|Default.ActiveCfg = Release
+		{29A6F2A4-5B5B-4A73-99D0-C5963B160B53}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

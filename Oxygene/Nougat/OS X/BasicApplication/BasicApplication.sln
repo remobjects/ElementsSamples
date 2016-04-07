@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "BasicApplication", "BasicApplication\BasicApplication.elements", "{2365F8E4-B1D2-4D57-9B79-2D6B9F87F8BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2365F8E4-B1D2-4D57-9B79-2D6B9F87F8BA}.Debug|Default.ActiveCfg = Debug
+		{2365F8E4-B1D2-4D57-9B79-2D6B9F87F8BA}.Debug|Default.Build.0 = Debug
+		{2365F8E4-B1D2-4D57-9B79-2D6B9F87F8BA}.Release|Default.ActiveCfg = Release
+		{2365F8E4-B1D2-4D57-9B79-2D6B9F87F8BA}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
