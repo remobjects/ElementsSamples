@@ -41,14 +41,14 @@
         <Reference Include="CoreGraphics"/>
         <Reference Include="Foundation"/>
         <Reference Include="libSugar">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Nougat\iOS\libSugar.fx</HintPath>
+            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\iOS\libSugar.fx</HintPath>
         </Reference>
         <Reference Include="libxml2">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Nougat\Libraries\libxml2\iOS\libxml2.fx</HintPath>
+            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\iOS\libxml2.fx</HintPath>
         </Reference>
         <Reference Include="UIKit"/>
         <Reference Include="rtl"/>
-        <Reference Include="libNougat"/>
+        <Reference Include="libToffee"/>
         <Reference Include="libSwift"/>
     </ItemGroup>
     <ItemGroup>
@@ -90,6 +90,6 @@
         <Folder Include="Resources\App Icons\"/>
         <Folder Include="Resources\Launch Images\"/>
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Nougat.targets"/>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
     <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
 </Project>

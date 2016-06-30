@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
     <PropertyGroup>
-        <RootNamespace>Calculator.iOS</RootNamespace>
-        <ProjectGuid>{d71ea4e4-f36a-401c-a163-7a08d37b3425}</ProjectGuid>
-        <OutputType>executable</OutputType>
-        <AssemblyName>Calculator.iOS</AssemblyName>
+        <RootNamespace>SqliteApp</RootNamespace>
+        <ProjectGuid>17869fb8-689b-4008-a7b4-d465c42fcec4</ProjectGuid>
+        <OutputType>Executable</OutputType>
+        <AssemblyName>SqliteApp</AssemblyName>
         <AllowGlobals>False</AllowGlobals>
         <AllowLegacyWith>False</AllowLegacyWith>
         <AllowLegacyOutParams>False</AllowLegacyOutParams>
@@ -14,7 +14,8 @@
         <SDK>iOS</SDK>
         <CreateAppBundle>True</CreateAppBundle>
         <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
-        <Name>Calculator.iOS</Name>
+        <Name>SqliteApp</Name>
+        <CreateHeaderFile>False</CreateHeaderFile>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -29,8 +30,7 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
         <OutputPath>.\bin\Release</OutputPath>
-        <GenerateDebugInfo>True</GenerateDebugInfo>
-        <GenerateDSym>True</GenerateDSym>
+        <GenerateDebugInfo>False</GenerateDebugInfo>
         <EnableAsserts>False</EnableAsserts>
         <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
         <CaptureConsoleOutput>False</CaptureConsoleOutput>
@@ -40,36 +40,32 @@
     <ItemGroup>
         <Reference Include="CoreGraphics"/>
         <Reference Include="Foundation"/>
-        <Reference Include="libSugar">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\iOS\libSugar.fx</HintPath>
-        </Reference>
-        <Reference Include="libxml2">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\iOS\libxml2.fx</HintPath>
+        <Reference Include="libsqlite3">
+            <HintPath>..\..\git\oxygene\Frameworks\libsqlite3\iOS\libsqlite3.fx</HintPath>
         </Reference>
         <Reference Include="UIKit"/>
-        <Reference Include="rtl"/>
-        <Reference Include="libToffee"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="AppDelegate.cs"/>
-        <Compile Include="Program.cs"/>
-        <Compile Include="RootViewController.cs"/>
+        <Compile Include="AppDelegate.pas"/>
+        <Compile Include="DetailViewController.pas"/>
+        <Compile Include="MasterViewController.pas"/>
+        <Compile Include="Program.pas"/>
     </ItemGroup>
     <ItemGroup>
         <Content Include="Resources\Info.plist"/>
         <AppResource Include="Resources\App Icons\App-29.png"/>
-        <AppResource Include="Resources\App Icons\App-40.png"/>
         <AppResource Include="Resources\App Icons\App-48.png"/>
         <AppResource Include="Resources\App Icons\App-57.png"/>
         <AppResource Include="Resources\App Icons\App-58.png"/>
         <AppResource Include="Resources\App Icons\App-72.png"/>
-        <AppResource Include="Resources\App Icons\App-76.png"/>
-        <AppResource Include="Resources\App Icons\App-80.png"/>
         <AppResource Include="Resources\App Icons\App-96.png"/>
         <AppResource Include="Resources\App Icons\App-114.png"/>
-        <AppResource Include="Resources\App Icons\App-120.png"/>
         <AppResource Include="Resources\App Icons\App-144.png"/>
-        <AppResource Include="Resources\App Icons\App-152.png"/>
+        <AppResource Include="Resources\PCTrade.sqlite.db">
+            <SubType>Content</SubType>
+        </AppResource>
+        <Storyboard Include="Resources\MainStoryboard~iPad.storyboard"/>
+        <Storyboard Include="Resources\MainStoryboard~iPhone.storyboard"/>
         <None Include="Resources\App Icons\App-512.png"/>
         <None Include="Resources\App Icons\App-1024.png"/>
         <AppResource Include="Resources\Launch Images\Default.png"/>
@@ -81,14 +77,12 @@
         <AppResource Include="Resources\Launch Images\Default-Landscape@2x.png"/>
     </ItemGroup>
     <ItemGroup>
-        <Xib Include="RootViewController~ipad.xib"/>
-        <Xib Include="RootViewController~iphone.xib"/>
-    </ItemGroup>
-    <ItemGroup>
         <Folder Include="Resources\"/>
         <Folder Include="Resources\App Icons\"/>
         <Folder Include="Resources\Launch Images\"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
-    <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>

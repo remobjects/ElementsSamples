@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
     <PropertyGroup>
-        <RootNamespace>Calculator.OSX</RootNamespace>
-        <ProjectGuid>{3b0fd974-84ee-4f25-9d41-0eba3236619f}</ProjectGuid>
-        <OutputType>executable</OutputType>
-        <AssemblyName>Calculator.OSX</AssemblyName>
+        <RootNamespace>ToDoManager</RootNamespace>
+        <ProjectGuid>{8ba55c91-f372-46be-b5e4-b611cd0c356a}</ProjectGuid>
+        <OutputType>Executable</OutputType>
+        <AssemblyName>ToDoManager</AssemblyName>
         <AllowGlobals>False</AllowGlobals>
         <AllowLegacyWith>False</AllowLegacyWith>
         <AllowLegacyOutParams>False</AllowLegacyOutParams>
@@ -16,7 +16,8 @@
         <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
         <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
         <MacIconFile>.\Resources\App.icns</MacIconFile>
-        <Name>Calculator.OSX</Name>
+        <Name>ToDoManager</Name>
+        <CreateHeaderFile>False</CreateHeaderFile>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -39,33 +40,48 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="Cocoa"/>
-        <Reference Include="libSugar">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\OS X\libSugar.fx</HintPath>
-        </Reference>
-        <Reference Include="libxml2">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\OS X\libxml2.fx</HintPath>
-        </Reference>
+        <Reference Include="Foundation"/>
         <Reference Include="rtl"/>
         <Reference Include="libToffee"/>
-        <Reference Include="libSwift"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppDelegate.cs"/>
+        <Compile Include="DataLayer.cs"/>
+        <Compile Include="Helpers.cs"/>
         <Compile Include="MainWindowController.cs"/>
         <Compile Include="Program.cs"/>
+        <Compile Include="TaskEditorController.cs"/>
+        <Compile Include="TaskModel.cs"/>
         <None Include="Resources\Entitlements.entitlements"/>
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources"/>
     </ItemGroup>
     <ItemGroup>
+        <AppResource Include="Resources\add_32x32.png">
+            <SubType>Content</SubType>
+        </AppResource>
+        <AppResource Include="Resources\edit_32x32.png">
+            <SubType>Content</SubType>
+        </AppResource>
         <Content Include="Resources\Info.plist"/>
         <Content Include="Resources\App.icns"/>
+        <AppResource Include="Resources\refresh_32x32.png">
+            <SubType>Content</SubType>
+        </AppResource>
+        <AppResource Include="Resources\remove_32x32.png">
+            <SubType>Content</SubType>
+        </AppResource>
         <Xib Include="MainWindowController.xib">
             <DependentUpon>MainWindowController.cs</DependentUpon>
         </Xib>
         <Xib Include="Resources\MainMenu.xib"/>
+        <Xib Include="TaskEditorController.xib">
+            <DependentUpon>TaskEditorController.cs</DependentUpon>
+        </Xib>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
-    <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>

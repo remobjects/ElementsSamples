@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
     <PropertyGroup>
-        <RootNamespace>Calculator.OSX</RootNamespace>
-        <ProjectGuid>{3b0fd974-84ee-4f25-9d41-0eba3236619f}</ProjectGuid>
-        <OutputType>executable</OutputType>
-        <AssemblyName>Calculator.OSX</AssemblyName>
+        <RootNamespace>TBCircularSlider</RootNamespace>
+        <ProjectGuid>d6339f1d-fddd-4e15-8d0c-131e59283956</ProjectGuid>
+        <OutputType>StaticLibrary</OutputType>
+        <AssemblyName>TBCircularSlider</AssemblyName>
         <AllowGlobals>False</AllowGlobals>
         <AllowLegacyWith>False</AllowLegacyWith>
         <AllowLegacyOutParams>False</AllowLegacyOutParams>
         <AllowLegacyCreate>False</AllowLegacyCreate>
         <AllowUnsafeCode>False</AllowUnsafeCode>
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-        <SDK>OS X</SDK>
-        <CreateAppBundle>True</CreateAppBundle>
-        <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
-        <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
-        <MacIconFile>.\Resources\App.icns</MacIconFile>
-        <Name>Calculator.OSX</Name>
+        <SDK>iOS</SDK>
+        <CreateHeaderFile>True</CreateHeaderFile>
+        <Name>TBCircularSlider</Name>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -38,34 +35,17 @@
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Cocoa"/>
-        <Reference Include="libSugar">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\OS X\libSugar.fx</HintPath>
-        </Reference>
-        <Reference Include="libxml2">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\OS X\libxml2.fx</HintPath>
-        </Reference>
+        <Reference Include="CoreGraphics"/>
+        <Reference Include="Foundation"/>
+        <Reference Include="UIKit"/>
         <Reference Include="rtl"/>
-        <Reference Include="libToffee"/>
-        <Reference Include="libSwift"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="AppDelegate.cs"/>
-        <Compile Include="MainWindowController.cs"/>
-        <Compile Include="Program.cs"/>
-        <None Include="Resources\Entitlements.entitlements"/>
+        <Compile Include="TBCircularSlider.pas"/>
     </ItemGroup>
-    <ItemGroup>
-        <Folder Include="Resources"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="Resources\Info.plist"/>
-        <Content Include="Resources\App.icns"/>
-        <Xib Include="MainWindowController.xib">
-            <DependentUpon>MainWindowController.cs</DependentUpon>
-        </Xib>
-        <Xib Include="Resources\MainMenu.xib"/>
-    </ItemGroup>
+    <ItemGroup/>
     <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
-    <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>

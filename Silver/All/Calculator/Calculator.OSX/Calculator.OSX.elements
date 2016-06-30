@@ -40,13 +40,13 @@
     <ItemGroup>
         <Reference Include="Cocoa"/>
         <Reference Include="libSugar">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Nougat\OS X\libSugar.fx</HintPath>
+            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\OS X\libSugar.fx</HintPath>
         </Reference>
         <Reference Include="libxml2">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Nougat\Libraries\libxml2\OS X\libxml2.fx</HintPath>
+            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\OS X\libxml2.fx</HintPath>
         </Reference>
         <Reference Include="rtl"/>
-        <Reference Include="libNougat"/>
+        <Reference Include="libToffee"/>
         <Reference Include="libSwift"/>
     </ItemGroup>
     <ItemGroup>
@@ -66,6 +66,6 @@
         </Xib>
         <Xib Include="Resources\MainMenu.xib"/>
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Nougat.targets"/>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
     <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
 </Project>

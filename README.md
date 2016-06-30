@@ -25,7 +25,7 @@ Platforms:
 * **All** &ndash; cross-platform samples, spanning two or more platforms
 * **Echoes** &ndash; .NET, including Mono, WinRT, Windows Phone, Silverlight, Universal apps, and Xamarin
 * **Cooper** &ndash; Java and Android
-* **Nougat** &ndash; Cocoa, including macOS, iOS, tvOS and watchOS
+* **Toffee** &ndash; Cocoa, including macOS, iOS, tvOS and watchOS
 * **Gotham** &ndash; Elements’ “Meta” platform for cross-platform libraries
 * **Island** &ndash; Elements’ “Native” platform for Windows, Linux and Darwin
 

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
     <PropertyGroup>
-        <RootNamespace>Calculator.OSX</RootNamespace>
-        <ProjectGuid>{3b0fd974-84ee-4f25-9d41-0eba3236619f}</ProjectGuid>
+        <RootNamespace>UITableView</RootNamespace>
+        <ProjectGuid>{7844cd5b-6baa-4afe-a932-f0f163ebc9c5}</ProjectGuid>
         <OutputType>executable</OutputType>
-        <AssemblyName>Calculator.OSX</AssemblyName>
+        <AssemblyName>UITableView</AssemblyName>
         <AllowGlobals>False</AllowGlobals>
         <AllowLegacyWith>False</AllowLegacyWith>
         <AllowLegacyOutParams>False</AllowLegacyOutParams>
         <AllowLegacyCreate>False</AllowLegacyCreate>
         <AllowUnsafeCode>False</AllowUnsafeCode>
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-        <SDK>OS X</SDK>
+        <SDK>iOS</SDK>
         <CreateAppBundle>True</CreateAppBundle>
         <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
-        <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
-        <MacIconFile>.\Resources\App.icns</MacIconFile>
-        <Name>Calculator.OSX</Name>
+        <Name>UITableView</Name>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -36,36 +34,44 @@
         <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
         <CaptureConsoleOutput>False</CaptureConsoleOutput>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <CreateIPA>True</CreateIPA>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Cocoa"/>
-        <Reference Include="libSugar">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\OS X\libSugar.fx</HintPath>
-        </Reference>
-        <Reference Include="libxml2">
-            <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\OS X\libxml2.fx</HintPath>
-        </Reference>
+        <Reference Include="CoreGraphics"/>
+        <Reference Include="Foundation"/>
+        <Reference Include="UIKit"/>
         <Reference Include="rtl"/>
         <Reference Include="libToffee"/>
-        <Reference Include="libSwift"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppDelegate.cs"/>
-        <Compile Include="MainWindowController.cs"/>
         <Compile Include="Program.cs"/>
-        <None Include="Resources\Entitlements.entitlements"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Folder Include="Resources"/>
+        <Compile Include="RootViewController.cs"/>
     </ItemGroup>
     <ItemGroup>
         <Content Include="Resources\Info.plist"/>
-        <Content Include="Resources\App.icns"/>
-        <Xib Include="MainWindowController.xib">
-            <DependentUpon>MainWindowController.cs</DependentUpon>
-        </Xib>
-        <Xib Include="Resources\MainMenu.xib"/>
+        <AppResource Include="Resources\App Icons\App-29.png"/>
+        <AppResource Include="Resources\App Icons\App-48.png"/>
+        <AppResource Include="Resources\App Icons\App-57.png"/>
+        <AppResource Include="Resources\App Icons\App-58.png"/>
+        <AppResource Include="Resources\App Icons\App-96.png"/>
+        <AppResource Include="Resources\App Icons\App-114.png"/>
+        <None Include="Resources\App Icons\App-512.png"/>
+        <None Include="Resources\App Icons\App-1024.png"/>
+        <AppResource Include="Resources\Launch Images\Default.png"/>
+        <AppResource Include="Resources\Launch Images\Default@2x.png"/>
+        <AppResource Include="Resources\Launch Images\Default-568h@2x.png"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Xib Include="RootViewController.xib"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\"/>
+        <Folder Include="Resources\App Icons\"/>
+        <Folder Include="Resources\Launch Images\"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
-    <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>
