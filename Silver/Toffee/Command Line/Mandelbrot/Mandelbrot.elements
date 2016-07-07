@@ -32,9 +32,7 @@
         <Reference Include="Foundation"/>
         <Reference Include="rtl"/>
         <Reference Include="libToffee"/>
-        <Reference Include="libSwift">
-            <HintPath>\Users\mh\Code\git\SwiftBaseLibrary\Source\bin\Debug\OS X\libSwift.fx</HintPath>
-        </Reference>
+        <Reference Include="libSwift"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Program.swift"/>
