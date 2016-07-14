@@ -21,7 +21,7 @@ while im <= maxIm
 		var n = -1
 		while n < maxIter-1
 		{
-			n++
+			n += 1
 			var a = zr * zr
 			var b = zi * zi
 			if a + b > 4.0 { break }
