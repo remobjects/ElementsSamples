@@ -44,7 +44,7 @@ public class ConsoleApp
 				re += (maxRe - minRe) / (Double)cols;
 			}
 			writeLn();
-			im += (maxIm - minIm) / (Double)cols;
+			im += (maxIm - minIm) / (Double)lines;
 		}
 	}
 }
