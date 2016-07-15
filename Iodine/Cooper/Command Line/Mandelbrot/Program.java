@@ -41,10 +41,10 @@ public class ConsoleApp
 					zr = a - b + re;
 				}
 				write(chars[n]);
-				re += (maxRe - minRe) / Double(cols);
+				re += (maxRe - minRe) / (Double)cols;
 			}
 			writeLn();
-			im += (maxIm - minIm) / Double(lines);
+			im += (maxIm - minIm) / (Double)cols;
 		}
 	}
 }
