@@ -17,7 +17,7 @@ public class MainActivity: Activity {
 		}
 	}
 
-	func btnExecute(v: View!) {
+	func btnExecute(_ v: View!) {
 		__try {
 			var eval = Evaluator()
 			var res = eval.Evaluate(TbValue.Text.toString())
@@ -31,15 +31,15 @@ public class MainActivity: Activity {
 		}
 	}
 
-	func btnExit(v: View!) {
+	func btnExit(_ v: View!) {
 		finish();
 	}
 
-	func btnChar(v: View!) {
+	func btnChar(_ v: View!) {
 		TbValue.Text = TbValue.Text.toString() + (v as! Button).Text.toString()
 	}
 
-	public override func onCreate(savedInstanceState: Bundle!) {
+	public override func onCreate(_ savedInstanceState: Bundle!) {
 		super.onCreate(savedInstanceState)
 		ContentView = R.layout.main
 		TbValue = findViewById(R.id.tbValue)as!TextView
@@ -60,6 +60,5 @@ public class MainActivity: Activity {
 		(findViewById(R.id.btnSub)as!Button).OnClickListener = btnChar
 		(findViewById(R.id.btnDiv)as!Button).OnClickListener = btnChar
 		(findViewById(R.id.btnMul)as!Button).OnClickListener = btnChar
-
 	}
 }

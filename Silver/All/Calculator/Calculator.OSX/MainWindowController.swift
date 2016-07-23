@@ -1,4 +1,4 @@
-import AppKit
+﻿import AppKit
 
 @IBObject public class MainWindowController : NSWindowController {
 
@@ -19,7 +19,7 @@ import AppKit
 	}
 
 	@IBAction
-	public func pressBackButton(sender: id!) {
+	public func pressBackButton(_ sender: id!) {
 		var s = edValue.stringValue
 		if s.length > 0 {
 			s = s.substringToIndex(s.length - 1)
@@ -28,12 +28,12 @@ import AppKit
 	}
 
 	@IBAction
-	public func pressExitButton(sender: id!) {
+	public func pressExitButton(_ sender: id!) {
 		close()
 	}
 
 	@IBAction
-	public func pressEvaluateButton(sender: id!) {
+	public func pressEvaluateButton(_ sender: id!) {
 		__try {
 			var eval = Evaluator()
 			edValue.stringValue = "" + eval.Evaluate(edValue.stringValue)
@@ -45,7 +45,7 @@ import AppKit
 	}
 
 	@IBAction
-	public func pressCharButton(sender: id!) {
+	public func pressCharButton(_ sender: id!) {
 		edValue.stringValue += (sender as! NSButton).title
 	}
 }

@@ -52,7 +52,6 @@
     <ItemGroup>
         <Compile Include="AppDelegate.swift"/>
         <Compile Include="MainWindowController.swift"/>
-        <Compile Include="Program.swift"/>
         <None Include="Resources\Entitlements.entitlements"/>
     </ItemGroup>
     <ItemGroup>

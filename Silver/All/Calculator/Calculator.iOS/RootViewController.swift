@@ -23,7 +23,7 @@
 	}
 
 	@IBAction
-	public func pressBackButton(sender: id!) {
+	public func pressBackButton(_ sender: id!) {
 		var s = edValue.text
 		if let s = s where s.length > 0 {
 			edValue.text = s.substringToIndex(s.length - 1)
@@ -31,12 +31,12 @@
 	}
 	
 	@IBAction
-	public func pressExitButton(sender: id!) {
+	public func pressExitButton(_ sender: id!) {
 		dismissViewControllerAnimated(true, completion:{ });
 	}
 
 	@IBAction
-	public func pressEvaluateButton(sender: id!) {
+	public func pressEvaluateButton(_ sender: id!) {
 		__try {
 			var eval = Evaluator()
 			edValue.text = "" + eval.Evaluate(edValue.text as! Sugar.String)
@@ -47,7 +47,7 @@
 	}
 
 	@IBAction
-	public func pressCharButton(sender: id!) {
+	public func pressCharButton(_ sender: id!) {
 		edValue.text += (sender as! UIButton).titleLabel?.text
 	}
 }

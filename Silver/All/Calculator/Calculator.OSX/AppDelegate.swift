@@ -1,10 +1,10 @@
-import AppKit
+﻿import AppKit
 
-@IBObject class AppDelegate : INSApplicationDelegate {
+@NSApplicationMain @IBObject class AppDelegate : INSApplicationDelegate {
 
 	var mainWindowController: MainWindowController?
 
-	public func applicationDidFinishLaunching(notification: NSNotification!) {
+	@objc public func applicationDidFinishLaunching(_ notification: NSNotification!) {
 
 		mainWindowController = MainWindowController();
 		mainWindowController?.showWindow(nil);

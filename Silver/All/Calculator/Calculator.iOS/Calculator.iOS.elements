@@ -53,7 +53,6 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppDelegate.swift"/>
-        <Compile Include="Program.swift"/>
         <Compile Include="RootViewController.swift"/>
     </ItemGroup>
     <ItemGroup>
