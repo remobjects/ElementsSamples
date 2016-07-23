@@ -77,10 +77,10 @@ begin
   var res: Resources := aContext.Resources;
   var monthNames: array of String := res.StringArray[R.&array.month_names];
   //  Find current month and day
-  var today: Time := new Time;
+  var today: Time := new Time();
   today.setToNow;
   //  Build today's page title, like "Wiktionary:Word of the day/March 21"
-  var pageName: String := res.String[R.string.template_wotd_title, monthNames[today.month], today.monthDay];
+  var pageName: String := res.getString(R.string.template_wotd_title, monthNames[today.month], today.monthDay);
   var updateViews: RemoteViews := nil;
   var pageContent: String := '';
   try
@@ -104,9 +104,9 @@ begin
     updateViews.setTextViewText(R.id.word_type, matcher.&group(2));
     updateViews.setTextViewText(R.id.definition, matcher.&group(3).trim);
     //  When user clicks on widget, launch to Wiktionary definition page
-    var definePage: String := res.String[R.string.template_define_url, Uri.encode(wordTitle)];
+    var definePage: String := res.getString(R.string.template_define_url, Uri.encode(wordTitle));
     var defineIntent: Intent := new Intent(Intent.ACTION_VIEW, Uri.parse(definePage));
-    var pendingIntent: PendingIntent := pendingIntent.Activity[aContext, 0, defineIntent, 0];
+    var pendingIntent: PendingIntent := pendingIntent.getActivity(aContext, 0, defineIntent, 0);
     updateViews.setOnClickPendingIntent(R.id.widget, pendingIntent);
   end
   else

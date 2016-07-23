@@ -142,7 +142,7 @@ begin
   if sUserAgent = nil then
     raise new ApiException('User-Agent string must be prepared');
   //  Create client and set our specific user-agent string
-  var client: HttpClient := new DefaultHttpClient;
+  var client: HttpClient := new DefaultHttpClient();
   var request: HttpGet := new HttpGet(url);
   request.setHeader('User-Agent', sUserAgent);
   try

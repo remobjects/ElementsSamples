@@ -81,10 +81,10 @@ begin
   var res: Resources := aContext.Resources;
   var monthNames: array of String := res.StringArray[R.&array.month_names];
   //  Find current month and day
-  var today: Time := new Time;
+  var today: Time := new Time();
   today.setToNow;
   //  Build the page title for today, such as "March 21"
-  var pageName: String := res.String[R.string.template_wotd_title, monthNames[today.month], today.monthDay];
+  var pageName: String := res.getString(R.string.template_wotd_title, monthNames[today.month], today.monthDay);
   var pageContent: String := nil;
   try
     //  Try querying the Wiktionary API for today's word
@@ -110,7 +110,7 @@ begin
     //  When user clicks on widget, launch to Wiktionary definition page
     var definePage: String := WideString.format('%s://%s/%s', ExtendedWikiHelper.WIKI_AUTHORITY, ExtendedWikiHelper.WIKI_LOOKUP_HOST, wordTitle);
     var defineIntent: Intent := new Intent(Intent.ACTION_VIEW, Uri.parse(definePage));
-    var lPendingIntent: PendingIntent := PendingIntent.Activity[aContext, 0, defineIntent, 0];
+    var lPendingIntent: PendingIntent := PendingIntent.getActivity(aContext, 0, defineIntent, 0);
     views.setOnClickPendingIntent(R.id.widget, lPendingIntent)
   end
   else

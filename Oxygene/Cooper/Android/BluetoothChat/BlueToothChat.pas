@@ -349,9 +349,9 @@ begin
           BluetoothChatService.STATE_CONNECTED: 
           begin
             if Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB then
-              setStatus(String[R.string.title_connected_to, mConnectedDeviceName])
+              setStatus(getString(R.string.title_connected_to, mConnectedDeviceName))
             else
-              mTitle.Text := String[R.string.title_connected_to, mConnectedDeviceName];
+              mTitle.Text := getString(R.string.title_connected_to, mConnectedDeviceName);
             mConversationArrayAdapter.clear
           end;
           BluetoothChatService.STATE_CONNECTING:

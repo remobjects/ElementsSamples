@@ -1,152 +1,151 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <PropertyGroup>
-    <ProductVersion>3.5</ProductVersion>
-    <ProjectGuid>{0fecde7c-f4db-4cb0-aa56-a52ba4807758}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <AllowLegacyCreate>False</AllowLegacyCreate>
-    <Name>com.example.android.simplewiktionary</Name>
-    <RootNamespace>com.example.android.wiktionary</RootNamespace>
-    <DefaultUses />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;TRACE;</DefineConstants>
-    <GenerateDebugInfo>True</GenerateDebugInfo>
-    <EnableAsserts>True</EnableAsserts>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <CaptureConsoleOutput>False</CaptureConsoleOutput>
-    <StartMode>Project</StartMode>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <CpuType>anycpu</CpuType>
-    <RuntimeVersion>v25</RuntimeVersion>
-    <XmlDoc>False</XmlDoc>
-    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
-    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release</OutputPath>
-    <GenerateDebugInfo>False</GenerateDebugInfo>
-    <EnableAsserts>False</EnableAsserts>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <CaptureConsoleOutput>False</CaptureConsoleOutput>
-    <StartMode>Project</StartMode>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <CpuType>anycpu</CpuType>
-    <RuntimeVersion>v25</RuntimeVersion>
-    <XmlDoc>False</XmlDoc>
-    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
-    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
-    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-  </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-    <Folder Include="res\" />
-    <Folder Include="res\anim\" />
-    <Folder Include="res\drawable" />
-    <Folder Include="res\menu\" />
-    <Folder Include="res\xml" />
-    <Folder Include="res\values\" />
-    <Folder Include="res\layout\" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
-      <SubType>Content</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="android.jar" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="NOTICE">
-      <SubType>Content</SubType>
-      <ExcludeFromBuild>True</ExcludeFromBuild>
-    </None>
-    <None Include="Readme.txt">
-      <SubType>Content</SubType>
-      <ExcludeFromBuild>True</ExcludeFromBuild>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="res\anim\slide_in.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\anim\slide_out.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\app_icon.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\ic_menu_shuffle.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\logo_overlay.9.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\lookup_bg.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\progress_spin.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\star_logo.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\widget_bg.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\widget_bg_normal.9.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\widget_bg_pressed.9.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\drawable\widget_bg_selected.9.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\layout\about.layout-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\layout\lookup.layout-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\layout\widget_message.layout-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\layout\widget_word.layout-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\menu\lookup.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\values\styles.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\values\themes.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\xml\searchable.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\xml\widget_word.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ExtendedWikiHelper.pas" />
-    <Compile Include="LookupActivity.pas" />
-    <Compile Include="SimpleWikiHelper.pas" />
-    <Compile Include="WordWidget.pas" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
-  <PropertyGroup>
-    <PreBuildEvent />
-  </PropertyGroup>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+    <PropertyGroup>
+        <ProductVersion>3.5</ProductVersion>
+        <ProjectGuid>{0fecde7c-f4db-4cb0-aa56-a52ba4807758}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <AllowLegacyCreate>False</AllowLegacyCreate>
+        <Name>com.example.android.simplewiktionary</Name>
+        <RootNamespace>com.example.android.wiktionary</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+        <OutputPath>.\bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;</DefineConstants>
+        <GenerateDebugInfo>True</GenerateDebugInfo>
+        <EnableAsserts>True</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <StartMode>Project</StartMode>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <CpuType>anycpu</CpuType>
+        <RuntimeVersion>v25</RuntimeVersion>
+        <XmlDoc>False</XmlDoc>
+        <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+        <OutputPath>.\bin\Release</OutputPath>
+        <GenerateDebugInfo>False</GenerateDebugInfo>
+        <EnableAsserts>False</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <StartMode>Project</StartMode>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <CpuType>anycpu</CpuType>
+        <RuntimeVersion>v25</RuntimeVersion>
+        <XmlDoc>False</XmlDoc>
+        <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+        <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="Properties\"/>
+        <Folder Include="res\"/>
+        <Folder Include="res\anim\"/>
+        <Folder Include="res\drawable"/>
+        <Folder Include="res\menu\"/>
+        <Folder Include="res\xml"/>
+        <Folder Include="res\values\"/>
+        <Folder Include="res\layout\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="res\values\strings.android-xml">
+            <SubType>Content</SubType>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="android"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="NOTICE">
+            <SubType>Content</SubType>
+            <ExcludeFromBuild>True</ExcludeFromBuild>
+        </None>
+        <None Include="Readme.txt">
+            <SubType>Content</SubType>
+            <ExcludeFromBuild>True</ExcludeFromBuild>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="res\anim\slide_in.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\anim\slide_out.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\app_icon.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\ic_menu_shuffle.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\logo_overlay.9.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\lookup_bg.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\progress_spin.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\star_logo.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\widget_bg.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\widget_bg_normal.9.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\widget_bg_pressed.9.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\drawable\widget_bg_selected.9.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\layout\about.layout-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\layout\lookup.layout-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\layout\widget_message.layout-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\layout\widget_word.layout-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\menu\lookup.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\values\styles.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\values\themes.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\xml\searchable.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\xml\widget_word.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="ExtendedWikiHelper.pas"/>
+        <Compile Include="LookupActivity.pas"/>
+        <Compile Include="SimpleWikiHelper.pas"/>
+        <Compile Include="WordWidget.pas"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>

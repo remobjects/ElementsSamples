@@ -55,7 +55,7 @@ begin
   lstView.FastScrollEnabled := True;
   var countries := Resources.StringArray[R.array.countries];
   //Check if shared preference indicates we need a custom adapter
-  sharedPrefs := PreferenceManager.DefaultSharedPreferences[Self];
+  sharedPrefs := PreferenceManager.getDefaultSharedPreferences(self);
   useCustomAdapter := sharedPrefs.Boolean[ListViewActivitySettingsActivity.AdapterPreference, False];
   if useCustomAdapter then
     lstView.Adapter := new ArrayAdapterWithSections(self, R.layout.listitem_twolines, Android.R.id.text1, countries)

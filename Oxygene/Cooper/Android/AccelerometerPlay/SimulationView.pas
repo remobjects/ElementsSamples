@@ -81,7 +81,7 @@ begin
   mParticleSystem := new ParticleSystem(Self);
   mAccelerometer := AccelerometerPlayActivity(mContext).SensorMgr.DefaultSensor[Sensor.TYPE_ACCELEROMETER];
   var dispMetrics: DisplayMetrics := new DisplayMetrics();
-  AccelerometerPlayActivity(mContext).WindowManager.DefaultDisplay.Metrics[dispMetrics];
+  AccelerometerPlayActivity(mContext).WindowManager.DefaultDisplay.getMetrics(dispMetrics);
   mXDpi := dispMetrics.xdpi;
   mYDpi := dispMetrics.ydpi;
   mMetersToPixelsX := mXDpi / MetersPerInch;
