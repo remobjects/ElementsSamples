@@ -8,7 +8,7 @@ import android.widget
 
 public class SettingsActivity : Activity {
 
-	public override func onCreate(savedInstanceState: Bundle!) {
+	public override func onCreate(_ savedInstanceState: Bundle!) {
 		
 		super.onCreate(savedInstanceState);
 			

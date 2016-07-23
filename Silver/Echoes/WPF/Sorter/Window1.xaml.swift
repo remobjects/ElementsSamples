@@ -27,7 +27,7 @@ public class Window1 {
 		FillGrid();
 	}
 	
-	func Sort(sender: System.Object!, e: System.Windows.RoutedEventArgs!) {
+	func Sort(_ sender: System.Object!, e: System.Windows.RoutedEventArgs!) {
 		var lDelay = 0;
 		Sort(0, fRectangles.Length - 1, &lDelay);
 	}
@@ -38,7 +38,7 @@ public class Window1 {
 		fPositions = Double[](50);
 		
 		var lWidth = Width / 52.0;
-		for var i = 0; i < 50; ++i {
+		for i in 0 ..< 50 {
 			var r = Rectangle();
 			r.HorizontalAlignment = HorizontalAlignment.Stretch;
 			r.VerticalAlignment = VerticalAlignment.Bottom;
@@ -57,20 +57,20 @@ public class Window1 {
 		}
 	}
 
-	private func Sort(aLeft: Integer, _ aRight: Integer, inout _ aDelay: Integer) {
-        var aLeft = aLeft;		
-        while aLeft < aRight {
+	private func Sort(_ aLeft: Integer, _ aRight: Integer, inout _ aDelay: Integer) {
+		var aLeft = aLeft;		
+		while aLeft < aRight {
 			var L = aLeft - 1;
 			var R = aRight + 1;
 			var Pivot = fRectangles[(aLeft + aRight) / 2].Height;
 			
 			while true {
 				repeat {
-					--R;
+					R -= 1;
 				} while fRectangles[R].Height > Pivot;
 	
 				repeat {
-					++L;
+					L += 1;
 				} while fRectangles[L].Height < Pivot;
 	
 				if L < R {
@@ -88,7 +88,7 @@ public class Window1 {
 		}
 	}
 	
-	private func Switch(aOne: Integer, _ aTwo: Integer, _ aDelay: Integer) {
+	private func Switch(_ aOne: Integer, _ aTwo: Integer, _ aDelay: Integer) {
 		var lDuration = Duration(TimeSpan(0, 0, 0, 0, 200)) // 0.5 second
 		var lStartDelay = TimeSpan(0, 0, 0, aDelay / 4, (aDelay % 4) * 250); // 0.5 second
 	

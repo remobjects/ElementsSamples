@@ -36,14 +36,13 @@ public class Snake : Activity {
 	var _snakeView: SnakeView!
 
 	// Called when Activity is first created. Turns off the title bar, sets up the content views, and fires up the SnakeView.
-	public override func onCreate(savedInstanceState: Bundle!) {
+	public override func onCreate(_ savedInstanceState: Bundle!) {
 		super.onCreate(savedInstanceState)
 
 		setContentView(R.layout.snake_layout)
 
 		_snakeView = findViewById(R.id.snake) as! SnakeView
-		_snakeView.setDependentViews(findViewById(R.id.text) as! TextView,
-				arrowView: findViewById(R.id.arrowContainer)!, backgroundView: findViewById(R.id.background)!)
+		_snakeView.setDependentViews(msgView: findViewById(R.id.text) as! TextView, arrowView: findViewById(R.id.arrowContainer)!, backgroundView: findViewById(R.id.background)!)
 
 		if (savedInstanceState == nil) {
 			// We were just launched -- set up a new game
@@ -87,7 +86,7 @@ public class Snake : Activity {
 		_snakeView.setMode(.PAUSE)
 	}
 
-	public override func onSaveInstanceState(outState: Bundle!) {
+	public override func onSaveInstanceState(_ outState: Bundle!) {
 		outState.putBundle(ICICLE_KEY, _snakeView.saveState())
 	}
 

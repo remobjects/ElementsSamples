@@ -8,7 +8,7 @@ import android.widget
 
 public class MainActivity: Activity {
 	
-	public override func onCreate(savedInstanceState: Bundle!) {
+	public override func onCreate(_ savedInstanceState: Bundle!) {
 
 		super.onCreate(savedInstanceState);
 
@@ -16,14 +16,14 @@ public class MainActivity: Activity {
 		ContentView = R.layout.main;
 	}
 
-	public override func onCreateOptionsMenu(menu: Menu!) -> Bool {
+	public override func onCreateOptionsMenu(_ menu: Menu!) -> Bool {
 		
 		let inflater = getMenuInflater();
 		inflater.inflate(R.menu.main_activity_actions, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
-	public override func onOptionsItemSelected(item: MenuItem!) -> Bool {
+	public override func onOptionsItemSelected(_ item: MenuItem!) -> Bool {
 		switch (item.getItemId())
 		{
 			case R.id.action_search:

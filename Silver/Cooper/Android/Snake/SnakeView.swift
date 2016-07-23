@@ -129,12 +129,12 @@ public class SnakeView : TileView {
 			self.outer = outer;
 		}
 
-		public override func handleMessage(msg: Message!) {
+		public override func handleMessage(_ msg: Message!) {
 			outer.update()
 			outer.invalidate()
 		}
 
-		func sleep(delayMillis: Int) {
+		func sleep(milliseconds delayMillis: Int) {
 			removeMessages(0)
 			sendMessageDelayed(obtainMessage(0), delayMillis)
 		}
@@ -156,7 +156,7 @@ public class SnakeView : TileView {
 		initSnakeView(context)
 	}
 
-	func initSnakeView(context: Context) {
+	func initSnakeView(_ context: Context) {
 
 		setFocusable(true)
 
@@ -164,10 +164,9 @@ public class SnakeView : TileView {
 
 		resetTiles(4)
 		
-		loadTile(r.getDrawable(R.drawable.redstar)!, key: .RED_STAR)
-		loadTile(r.getDrawable(R.drawable.yellowstar)!, key: .YELLOW_STAR)
-		loadTile(r.getDrawable(R.drawable.greenstar)!, key: .GREEN_STAR)
-
+		loadTile(tile: r.getDrawable(R.drawable.redstar)!, key: .RED_STAR)
+		loadTile(tile: r.getDrawable(R.drawable.yellowstar)!, key: .YELLOW_STAR)
+		loadTile(tile: r.getDrawable(R.drawable.greenstar)!, key: .GREEN_STAR)
 	}
 
 	func initNewGame() {
@@ -201,7 +200,7 @@ public class SnakeView : TileView {
 	 * @return : a simple array containing the x/y values of the coordinates as
 	 *		 [x1,y1,x2,y2,x3,y3...]
 	 */
-	func coordArrayListToArray(cvec: ArrayList<Coordinate>) -> Int32[]! {
+	func coordArrayListToArray(_ cvec: ArrayList<Coordinate>) -> Int32[]! {
 
 		var rawArray = Int32[]!(cvec.size() * 2)
 
@@ -240,7 +239,7 @@ public class SnakeView : TileView {
 	 * @param rawArray : [x1,y1,x2,y2,...]
 	 * @return a ArrayList of Coordinates
 	 */
-	func coordArrayToArrayList(rawArray: Int32[]!) -> ArrayList<Coordinate> {
+	func coordArrayToArrayList(_ rawArray: Int32[]!) -> ArrayList<Coordinate> {
 		let coordArrayList = ArrayList<Coordinate>()
 
 		let coordCount = rawArray.length
@@ -256,7 +255,7 @@ public class SnakeView : TileView {
 	 *
 	 * @param icicle a Bundle containing the game state
 	 */
-	func restoreState(icicle: Bundle) {
+	func restoreState(_ icicle: Bundle) {
 		setMode(.PAUSE)
 
 		_appleList = coordArrayToArrayList(icicle.getIntArray("_appleList"))
@@ -273,7 +272,7 @@ public class SnakeView : TileView {
 	 *
 	 * @param direction The desired direction of movement
 	 */
-	func moveSnake(direction: Move) {
+	func moveSnake(_ direction: Move) {
 
 		if (direction == Move.MOVE_UP) {
 			if (_mode == Mode.READY || _mode == Mode.LOSE) {
@@ -343,7 +342,7 @@ public class SnakeView : TileView {
 	 *
 	 * @param newMode
 	 */
-	func setMode(newMode: Mode) {
+	func setMode(_ newMode: Mode) {
 		let oldMode = _mode
 		_mode = newMode
 
@@ -393,7 +392,7 @@ public class SnakeView : TileView {
 	 * leave discovery of this prize to a truly excellent snake-player.
 	 */
 	func addRandomApple() {
-		var newCoord: Coordinate?
+		var newCoord: Coordinate? = nil
 		var found = false
 		while (!found) {
 			// Choose a new location for our apple
@@ -404,7 +403,7 @@ public class SnakeView : TileView {
 			// Make sure it's not already under the snake
 			var collision = false
 			let snakelength = _snakeTrail.size()
-			for var index = 0; index < snakelength; index++ {
+			for index in 0 ..< snakelength {
 				if (_snakeTrail.get(index).equals(newCoord)) {
 					collision = true
 				}
@@ -435,7 +434,7 @@ public class SnakeView : TileView {
 				updateApples()
 				_lastMove = now
 			}
-			_redrawHandler.sleep(_moveDelay)
+			_redrawHandler.sleep(milliseconds: _moveDelay)
 		}
 
 	}
@@ -444,11 +443,11 @@ public class SnakeView : TileView {
 	 * Draws some walls.
 	 */
 	func updateWalls() {
-		for var x = 0; x < XTileCount; x++ {
+		for x in 0 ..< XTileCount {
 			setTile(.GREEN_STAR, x: x, y: 0)
 			setTile(.GREEN_STAR, x: x, y: YTileCount - 1)
 		}
-		for var y = 1; y < YTileCount - 1; y++ {
+		for y in 1 ..< YTileCount-1 {
 			setTile(.GREEN_STAR, x: 0, y: y)
 			setTile(.GREEN_STAR, x: XTileCount - 1, y: y)
 		}
@@ -506,7 +505,7 @@ public class SnakeView : TileView {
 
 		// Look for collisions with itself
 		let snakelength = _snakeTrail.size()
-		for var snakeindex = 0; snakeindex < snakelength; snakeindex++ {
+		for snakeindex in 0 ..< snakelength {
 			let c = _snakeTrail.get(snakeindex)
 			if c == newHead {
 				setMode(.LOSE)
@@ -516,13 +515,13 @@ public class SnakeView : TileView {
 
 		// Look for apples
 		let applecount = _appleList.size()
-		for var appleindex = 0; appleindex < applecount; appleindex++ {
+		for appleindex in 0 ..< applecount {
 			let c = _appleList.get(appleindex)
 			if c == newHead {
 				_appleList.remove(c)
 				addRandomApple()
 
-				_score++
+				_score += 1
 				_moveDelay = Int(Double(_moveDelay) * 0.9)
 
 				growSnake = true
@@ -543,7 +542,7 @@ public class SnakeView : TileView {
 			} else {
 				setTile(.RED_STAR, x: c.X, y: c.Y)
 			}
-			index++
+			index += 1
 		}
 
 	}

@@ -48,13 +48,13 @@ public class BackgroundView : View {
 		a.recycle()
 	}
 
-	public override func onDraw(canvas: Canvas!) {
+	public override func onDraw(_ canvas: Canvas!) {
 		assert(_vertexPoints != nil)
 
 		// Colors for each vertex
 		var fillColors = Int32[]!(_vertexPoints.length);
 
-		for var triangle = 0; triangle < _colors.length; triangle++ {
+		for triangle in 0 ..< _colors.length {
 			// Set color for all vertex points to current triangle color
 			Arrays.fill(fillColors, _colors[triangle])
 

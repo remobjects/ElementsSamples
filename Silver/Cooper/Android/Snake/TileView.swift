@@ -71,8 +71,8 @@ public class TileView : View {
 
 	// Resets all tiles to 0 (empty)
 	func clearTiles() {
-		for var x = 0; x < XTileCount; x++ {
-			for var y = 0; y < YTileCount; y++ {
+		for x in 0 ..< XTileCount {
+			for y in 0 ..< YTileCount {
 				setTile(.NONE, x: x, y: y)
 			}
 		}
@@ -93,10 +93,10 @@ public class TileView : View {
 		_tileArray[key] = bitmap
 	}
 
-	public override func onDraw(canvas: Canvas!) {
+	public override func onDraw(_ canvas: Canvas!) {
 		super.onDraw(canvas)
-		for var x = 0; x < XTileCount; x++ {
-			for var y = 0; y < YTileCount; y++ {
+		for x in 0 ..< XTileCount {
+			for y in 0 ..< YTileCount {
 				if (_tileGrid[x][y] > 0) {
 					canvas.drawBitmap(_tileArray[_tileGrid[x][y]], _XOffset! + x * _tileSize!, _YOffset! + y * _tileSize!, _paint)
 				}
@@ -111,7 +111,7 @@ public class TileView : View {
 	 *
 	 * @param tilecount
 	 */
-	func resetTiles(tilecount: Int) {
+	func resetTiles(_ tilecount: Int) {
 		_tileArray = Bitmap[](tilecount)
 	}
 
@@ -123,7 +123,7 @@ public class TileView : View {
 	 * @param x
 	 * @param y
 	 */
-	func setTile(tileindex: Star, x: Int, y: Int) {
+	func setTile(_ tileindex: Star, x: Int, y: Int) {
 		_tileGrid[x][y] = tileindex
 	}
 
@@ -135,7 +135,7 @@ public class TileView : View {
 		_YOffset = ((h - (_tileSize! * YTileCount!)) / 2)
 
 		_tileGrid = Star[][](XTileCount)
-		for var i = 0; i < XTileCount; i++ { 
+		for i in 0 ..< XTileCount { 
 			_tileGrid[i] = Star[](YTileCount) 
 		}
 		clearTiles()
