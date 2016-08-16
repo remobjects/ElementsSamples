@@ -1,68 +1,67 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <PropertyGroup>
-    <RootNamespace>NSTableView</RootNamespace>
-    <ProjectGuid>{74052caf-1d57-4255-85ec-1e6f39296941}</ProjectGuid>
-    <OutputType>executable</OutputType>
-    <AssemblyName>NSTableView</AssemblyName>
-    <AllowGlobals>False</AllowGlobals>
-    <AllowLegacyWith>False</AllowLegacyWith>
-    <AllowLegacyOutParams>False</AllowLegacyOutParams>
-    <AllowLegacyCreate>False</AllowLegacyCreate>
-    <AllowUnsafeCode>False</AllowUnsafeCode>
-    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <SDK>OS X</SDK>
-    <CreateAppBundle>True</CreateAppBundle>
-    <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
-    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
-    <MacIconFile>.\Resources\App.icns</MacIconFile>
-    <Name>NSTableView</Name>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;TRACE;</DefineConstants>
-    <GenerateDebugInfo>True</GenerateDebugInfo>
-    <EnableAsserts>True</EnableAsserts>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <CaptureConsoleOutput>False</CaptureConsoleOutput>
-    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release</OutputPath>
-    <GenerateDebugInfo>False</GenerateDebugInfo>
-    <EnableAsserts>False</EnableAsserts>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <CaptureConsoleOutput>False</CaptureConsoleOutput>
-    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Cocoa.fx" />
-    <Reference Include="rtl.fx" />
-    <Reference Include="libToffee.fx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="MainWindowController.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Program.cs" />
-    <None Include="Resources\Entitlements.entitlements" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-    <Folder Include="Resources" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Info.plist" />
-    <Content Include="Resources\App.icns" />
-    <Xib Include="MainWindowController.xib">
-      <DependentUpon>MainWindowController.cs</DependentUpon>
-    </Xib>
-    <Xib Include="Resources\MainMenu.xib" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
-  <PropertyGroup>
-    <PreBuildEvent />
-  </PropertyGroup>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+    <PropertyGroup>
+        <RootNamespace>NSTableView</RootNamespace>
+        <ProjectGuid>{74052caf-1d57-4255-85ec-1e6f39296941}</ProjectGuid>
+        <OutputType>executable</OutputType>
+        <AssemblyName>NSTableView</AssemblyName>
+        <AllowGlobals>False</AllowGlobals>
+        <AllowLegacyWith>False</AllowLegacyWith>
+        <AllowLegacyOutParams>False</AllowLegacyOutParams>
+        <AllowLegacyCreate>False</AllowLegacyCreate>
+        <AllowUnsafeCode>False</AllowUnsafeCode>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <SDK>OS X</SDK>
+        <CreateAppBundle>True</CreateAppBundle>
+        <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+        <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
+        <MacIconFile>.\Resources\App.icns</MacIconFile>
+        <Name>NSTableView</Name>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+        <OutputPath>.\bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;</DefineConstants>
+        <GenerateDebugInfo>True</GenerateDebugInfo>
+        <EnableAsserts>True</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+        <OutputPath>.\bin\Release</OutputPath>
+        <GenerateDebugInfo>False</GenerateDebugInfo>
+        <EnableAsserts>False</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Cocoa"/>
+        <Reference Include="rtl"/>
+        <Reference Include="libToffee"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AppDelegate.cs"/>
+        <Compile Include="MainWindowController.cs"/>
+        <Compile Include="Person.cs"/>
+        <Compile Include="Program.cs"/>
+        <None Include="Resources\Entitlements.entitlements"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Resources\Info.plist"/>
+        <Content Include="Resources\App.icns"/>
+        <Xib Include="MainWindowController.xib">
+            <DependentUpon>MainWindowController.cs</DependentUpon>
+        </Xib>
+        <Xib Include="Resources\MainMenu.xib"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>

@@ -1,7 +1,7 @@
-﻿namespace NSTableView
-{
-	using AppKit;
+﻿using AppKit;
 
+namespace NSTableView
+{
 	[IBObject]
 	public class AppDelegate : INSApplicationDelegate
 	{
@@ -12,6 +12,5 @@
 			mainWindowController = new MainWindowController();
 			mainWindowController.showWindow(null);
 		}
-		
 	}
 }
