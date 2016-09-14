@@ -46,13 +46,13 @@ begin
   //Set up a list header
   ListView.addHeaderView(LayoutInflater.inflate(R.layout.listview_header, nil));
   //Add a divider between the header and the list
-  ListView.HeaderDividersEnabled := True;
+  ListView.HeaderDividersEnabled := true;
   //Add in the fast-scroll 'thumb bar' button
-  ListView.FastScrollEnabled := True;
+  ListView.FastScrollEnabled := true;
   var countries := Resources.StringArray[R.array.countries];
   //Check if shared preference indicates we need a custom adapter
   sharedPrefs := PreferenceManager.getDefaultSharedPreferences(Self);
-  useCustomAdapter := sharedPrefs.Boolean[ListViewActivitySettingsActivity.AdapterPreference, False];
+  useCustomAdapter := sharedPrefs.getBoolean(ListViewActivitySettingsActivity.AdapterPreference, false);
   if useCustomAdapter then
     ListView.Adapter := new ArrayAdapterWithSections(self, R.layout.listitem_twolines, Android.R.id.text1, countries)
   else
@@ -66,7 +66,7 @@ begin
   var item := menu.add(0, SETTINGS_ID, 0, R.string.list_activity_settings);
   //Options menu items support icons
   item.Icon := Android.R.drawable.ic_menu_preferences;
-  Result := True;
+  Result := true;
 end;
 
 method ListViewActivity2.onOptionsItemSelected(item: MenuItem): Boolean;
@@ -76,9 +76,9 @@ begin
   begin
     //... invoke the settings activity, which will return us a result
     startActivityForResult(new Intent(Self, typeOf(ListViewActivitySettingsActivity)), SETTINGS_ID);
-    exit True
+    exit true
   end;
-  exit False;
+  exit false;
 end;
 
 method ListViewActivity2.onActivityResult(requestCode, resultCode: Integer; data: Intent);
@@ -88,7 +88,7 @@ begin
   if requestCode = SETTINGS_ID then
   begin
     //Check setting and restart activity if necessary
-    var newUseCustomAdapter := sharedPrefs.Boolean[ListViewActivitySettingsActivity.AdapterPreference, False];
+    var newUseCustomAdapter := sharedPrefs.getBoolean(ListViewActivitySettingsActivity.AdapterPreference, false);
     if newUseCustomAdapter <> useCustomAdapter then
     begin
       finish;

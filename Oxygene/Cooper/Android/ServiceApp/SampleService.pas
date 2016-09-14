@@ -97,7 +97,7 @@ begin
     //Now get the service thread up and running
     running := true;
     //Extract information passed along to the service
-    startValue := startIntent.IntExtra[ID_INT_START_VALUE, 1];
+    startValue := startIntent.getIntExtra(ID_INT_START_VALUE, 1);
     //Kickstart the service worker thread
     var myThread := new ServiceThread(self);
     myThread.start;
@@ -143,7 +143,7 @@ end;
 //If the broadcast receiver receives a stop command then stop the worker thread and the service
 method SampleService.ServiceReceiver.onReceive(ctx: Context; receivedIntent: Intent);
 begin
-  var cmd := receivedIntent.IntExtra[ID_INT_COMMAND, 0];
+  var cmd := receivedIntent.getIntExtra(ID_INT_COMMAND, 0);
   if cmd = CMD_STOP_SERVICE then
   begin
     owningService.running := false;

@@ -1,99 +1,99 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <PropertyGroup>
-    <ProductVersion>3.5</ProductVersion>
-    <ProjectGuid>{cedb4bc5-414d-4d51-a312-b4bf1a119d93}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <AllowLegacyCreate>False</AllowLegacyCreate>
-    <Name>com.example.android.livecubes</Name>
-    <RootNamespace>com.example.android.livecubes</RootNamespace>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;TRACE;</DefineConstants>
-    <GenerateDebugInfo>True</GenerateDebugInfo>
-    <EnableAsserts>True</EnableAsserts>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <CaptureConsoleOutput>False</CaptureConsoleOutput>
-    <StartMode>Project</StartMode>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <CpuType>anycpu</CpuType>
-    <RuntimeVersion>v25</RuntimeVersion>
-    <XmlDoc>False</XmlDoc>
-    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
-    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release</OutputPath>
-    <GenerateDebugInfo>False</GenerateDebugInfo>
-    <EnableAsserts>False</EnableAsserts>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <CaptureConsoleOutput>False</CaptureConsoleOutput>
-    <StartMode>Project</StartMode>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <CpuType>anycpu</CpuType>
-    <RuntimeVersion>v25</RuntimeVersion>
-    <XmlDoc>False</XmlDoc>
-    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
-    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
-    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-  </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="cube1" />
-    <Folder Include="cube2" />
-    <Folder Include="Properties\" />
-    <Folder Include="res\" />
-    <Folder Include="res\drawable" />
-    <Folder Include="res\values\" />
-    <Folder Include="res\xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
-      <SubType>Content</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="android.jar" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="NOTICE">
-      <SubType>Content</SubType>
-      <ExcludeFromBuild>True</ExcludeFromBuild>
-    </None>
-    <None Include="Readme.txt">
-      <SubType>Content</SubType>
-      <ExcludeFromBuild>True</ExcludeFromBuild>
-    </None>
-    <Content Include="res\drawable\ic_launcher_wallpaper.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\values\shapes.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\xml\cube1.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\xml\cube2.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="res\xml\cube2_settings.android-xml">
-      <SubType>Content</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="cube1\CubeWallpaper1.pas" />
-    <Compile Include="cube2\Cubewallpaper2.pas" />
-    <Compile Include="cube2\CubeWallpaper2Settings.pas" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
-  <PropertyGroup>
-    <PreBuildEvent />
-  </PropertyGroup>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+    <PropertyGroup>
+        <ProductVersion>3.5</ProductVersion>
+        <ProjectGuid>{cedb4bc5-414d-4d51-a312-b4bf1a119d93}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <AllowLegacyCreate>False</AllowLegacyCreate>
+        <Name>com.example.android.livecubes</Name>
+        <RootNamespace>com.example.android.livecubes</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+        <OutputPath>.\bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;</DefineConstants>
+        <GenerateDebugInfo>True</GenerateDebugInfo>
+        <EnableAsserts>True</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <StartMode>Project</StartMode>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <CpuType>anycpu</CpuType>
+        <RuntimeVersion>v25</RuntimeVersion>
+        <XmlDoc>False</XmlDoc>
+        <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+        <OutputPath>.\bin\Release</OutputPath>
+        <GenerateDebugInfo>False</GenerateDebugInfo>
+        <EnableAsserts>False</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <StartMode>Project</StartMode>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <CpuType>anycpu</CpuType>
+        <RuntimeVersion>v25</RuntimeVersion>
+        <XmlDoc>False</XmlDoc>
+        <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+        <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="cube1"/>
+        <Folder Include="cube2"/>
+        <Folder Include="Properties\"/>
+        <Folder Include="res\"/>
+        <Folder Include="res\drawable"/>
+        <Folder Include="res\values\"/>
+        <Folder Include="res\xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="res\values\strings.android-xml">
+            <SubType>Content</SubType>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="android"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="NOTICE">
+            <SubType>Content</SubType>
+            <ExcludeFromBuild>True</ExcludeFromBuild>
+        </None>
+        <None Include="Readme.txt">
+            <SubType>Content</SubType>
+            <ExcludeFromBuild>True</ExcludeFromBuild>
+        </None>
+        <Content Include="res\drawable\ic_launcher_wallpaper.png">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\values\shapes.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\xml\cube1.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\xml\cube2.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+        <Content Include="res\xml\cube2_settings.android-xml">
+            <SubType>Content</SubType>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="cube1\CubeWallpaper1.pas"/>
+        <Compile Include="cube2\Cubewallpaper2.pas"/>
+        <Compile Include="cube2\CubeWallpaper2Settings.pas"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
 </Project>

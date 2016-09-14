@@ -78,7 +78,7 @@ begin
   //Specifically <= type depth-testing
   gl.glDepthFunc(GL10.GL_LEQUAL);
   //Set clearing colour to grey if we're not in traslucent mode
-  if not (ctx as Activity).Intent.BooleanExtra[OpenGLActivity.IsTranslucent, false] then
+  if not (ctx as Activity).Intent.getBooleanExtra(OpenGLActivity.IsTranslucent, false) then
     gl.glClearColor(0.5, 0.5, 0.5, 1);
 
   // Optional: disable dither to boost performance

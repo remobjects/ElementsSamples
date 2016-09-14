@@ -87,7 +87,7 @@ begin
   try
     //  Read package name and version number from manifest
     var manager: PackageManager := aContext.PackageManager;
-    var info: PackageInfo := manager.PackageInfo[aContext.PackageName, 0];
+    var info: PackageInfo := manager.getPackageInfo(aContext.PackageName, 0);
     sUserAgent := String.format(aContext.String[R.string.template_user_agent], info.packageName, info.versionName);
   except
     on e: PackageManager.NameNotFoundException do 

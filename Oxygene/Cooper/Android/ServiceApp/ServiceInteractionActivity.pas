@@ -1,4 +1,4 @@
-namespace org.me.serviceapp;
+﻿namespace org.me.serviceapp;
 
 //Sample app by Brian Long (http://blong.com)
 
@@ -116,8 +116,8 @@ end;
 //Receive messages from the service and display a toast describing the passed information
 method ServiceInteractionActivity.ActivityReceiver.onReceive(ctx: Context; receivedIntent: Intent);
 begin
-  var iteration := receivedIntent.IntExtra[SampleService.ID_INT_ITERATION, 0];
-  var calculatedValue := receivedIntent.IntExtra[SampleService.ID_INT_CALCULATED_VALUE, 0];
+  var iteration := receivedIntent.getIntExtra(SampleService.ID_INT_ITERATION, 0);
+  var calculatedValue := receivedIntent.getIntExtra(SampleService.ID_INT_CALCULATED_VALUE, 0);
   Toast.makeText(owningActivity, 
     'Received call ' + String.valueOf(iteration) + ' from service'#10 +
     'with calculated value ' + String.valueOf(calculatedValue), Toast.LENGTH_SHORT).show

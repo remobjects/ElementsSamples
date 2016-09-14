@@ -1,4 +1,4 @@
-namespace org.me.openglapplication;
+﻿namespace org.me.openglapplication;
 
 //Multi-purpose activity that initiates OpenGL surface views
 //Expects 2 values to be passed in Intent's extras:
@@ -32,7 +32,7 @@ implementation
 method OpenGLActivity.onCreate(savedInstanceState: Bundle);
 begin
   inherited;
-  if Intent.BooleanExtra[IsTranslucent, False] then
+  if Intent.getBooleanExtra(IsTranslucent, False) then
     //Title bar can't be re-added in code, but can be removed
     //So the manifest sets a translucent theme with a title bar, and here we disable the title bar if necessary
     requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -44,7 +44,7 @@ begin
   var view := new GLSurfaceView(Self);
   //view.DebugFlags := GLSurfaceView.DEBUG_CHECK_GL_ERROR or GLSurfaceView.DEBUG_LOG_GL_CALLS;
   
-  if Intent.BooleanExtra[IsTranslucent, False] then
+  if Intent.getBooleanExtra(IsTranslucent, False) then
   begin
     // We want an 8888 pixel format because that's required for a translucent window.
     // And we want a depth buffer.

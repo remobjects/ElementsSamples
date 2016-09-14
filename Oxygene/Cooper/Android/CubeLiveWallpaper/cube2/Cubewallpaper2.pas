@@ -102,7 +102,7 @@ begin
   mPaint.StrokeCap := Paint.Cap.ROUND;
   mPaint.Style := Paint.Style.STROKE;
   mStartTime := SystemClock.elapsedRealtime;
-  mPrefs := mWallpaperService.SharedPreferences[SHARED_PREFS_NAME, 0];
+  mPrefs := mWallpaperService.getSharedPreferences(SHARED_PREFS_NAME, 0);
   mPrefs.registerOnSharedPreferenceChangeListener(self);
   onSharedPreferenceChanged(mPrefs, nil);
 end;

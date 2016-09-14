@@ -56,7 +56,7 @@ begin
   var countries := Resources.StringArray[R.array.countries];
   //Check if shared preference indicates we need a custom adapter
   sharedPrefs := PreferenceManager.getDefaultSharedPreferences(self);
-  useCustomAdapter := sharedPrefs.Boolean[ListViewActivitySettingsActivity.AdapterPreference, False];
+  useCustomAdapter := sharedPrefs.getBoolean(ListViewActivitySettingsActivity.AdapterPreference, false);
   if useCustomAdapter then
     lstView.Adapter := new ArrayAdapterWithSections(self, R.layout.listitem_twolines, Android.R.id.text1, countries)
   else
@@ -83,7 +83,7 @@ begin
     showDialog(SETTINGS_DLG);
     exit True
   end;
-  exit False;
+  exit false;
 end;
 
 //On first invocation of a dialog, this method creates it

@@ -1,4 +1,4 @@
-namespace org.me.listviewapp;
+﻿namespace org.me.listviewapp;
 
 //Sample app by Brian Long (http://blong.com)
 
@@ -97,7 +97,7 @@ begin
     startActivity(new Intent(Self, typeOf(AboutActivity)));
     exit True
   end;
-  exit False;
+  exit false;
 end;
 
 method MainActivity.onListItemClick(l: ListView; v: View; position: Integer; id: Int64);
