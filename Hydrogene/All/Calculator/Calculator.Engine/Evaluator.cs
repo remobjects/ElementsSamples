@@ -105,7 +105,7 @@ namespace Calculator.Engine
 				case EvaluatorTokenType.EOF:
 					throw new EvaluatorError("Unexected end of expression");
 				default:
-					throw new EvaluatorError("Unknown value at offset " + Current.Offset);
+					throw new EvaluatorError($"Unknown value at offset {Current.Offset}");
 			}
 		}
 

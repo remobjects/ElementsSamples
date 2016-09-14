@@ -99,7 +99,7 @@ public class Evaluator {
 			case EvaluatorTokenType.EOF:
 				__throw EvaluatorError("Unexected end of expression")
 			default:
-				__throw EvaluatorError("Unknown value at offset " + Current.Offset)
+				__throw EvaluatorError("Unknown value at offset \(Current.Offset)")
 			
 		}
 	}

@@ -25,7 +25,7 @@
 	@IBAction
 	public func pressBackButton(_ sender: id!) {
 		var s = edValue.text
-		if let s = s where s.length > 0 {
+		if let s = s, s.length > 0 {
 			edValue.text = s.substringToIndex(s.length - 1)
 		}
 	}
