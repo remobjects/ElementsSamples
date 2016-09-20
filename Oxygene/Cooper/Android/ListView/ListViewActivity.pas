@@ -58,7 +58,7 @@ begin
   sharedPrefs := PreferenceManager.getDefaultSharedPreferences(self);
   useCustomAdapter := sharedPrefs.getBoolean(ListViewActivitySettingsActivity.AdapterPreference, false);
   if useCustomAdapter then
-    lstView.Adapter := new ArrayAdapterWithSections(self, R.layout.listitem_twolines, Android.R.id.text1, countries)
+    lstView.Adapter := new ArrayAdapterWithSections<String>(self, R.layout.listitem_twolines, Android.R.id.text1, countries)
   else
     lstView.Adapter := new ArrayAdapter(self, R.layout.listitem_twolines, Android.R.id.text1, countries);
   lstView.OnItemClickListener := new interface AdapterView.OnItemClickListener(onItemClick := @listView_ItemClick);
