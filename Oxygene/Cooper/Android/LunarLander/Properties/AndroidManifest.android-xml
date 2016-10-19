@@ -6,8 +6,7 @@
   <!-- the android:debuggable="true" attribute is overwritten by the compiler when the debug info option is set -->
   <application 
         android:label="@string/app_name"
-        android:icon="@drawable/app_lunar_lander"
-        android:debuggable="true">
+        android:icon="@drawable/app_lunar_lander">
     <activity android:name=".LunarLander"
               android:theme="@android:style/Theme.NoTitleBar" >
       <intent-filter>

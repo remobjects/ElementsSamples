@@ -59,7 +59,10 @@
         <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Reference Include="android"/>
+    <Reference Include="android" />
+    <Reference Include="org.apache.http.legacy.jar">
+      <Private>true</Private>
+    </Reference>
     </ItemGroup>
     <ItemGroup>
         <None Include="NOTICE">

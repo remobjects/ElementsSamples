@@ -6,8 +6,7 @@
   <!-- the android:debuggable="true" attribute is overwritten by the compiler when the debug info option is set -->
   <application 
         android:label="@string/wallpapers"
-        android:icon="@drawable/ic_launcher_wallpaper"
-        android:debuggable="true">
+        android:icon="@drawable/ic_launcher_wallpaper">
 
     <service
         android:label="@string/wallpaper_cube1"

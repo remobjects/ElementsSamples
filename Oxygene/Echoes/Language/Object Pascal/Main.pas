@@ -292,7 +292,7 @@ begin
   for each int : integer in intarray do
     s := s+int.ToString+' ';
     
-  MessageBox.Show(intarray.ToString+': '+s);
+  MessageBox.Show('Fixed length array: '+s);
   
   { Dynamic array - Notice how its first element starts from 3 rather than 0 } 
   s := '';
@@ -302,7 +302,7 @@ begin
     s := s+int.ToString+' ';
   end;
     
-  MessageBox.Show(dynarray.ToString+': '+s);
+  MessageBox.Show('Dynamic array: '+s);
   
   { Inline array assignment }
   s := '';
@@ -310,7 +310,7 @@ begin
   for each mystr: string in strarray do
     s := s+mystr+' ';
     
-  MessageBox.Show(strarray.ToString+': '+s);
+  MessageBox.Show('Inline array: '+s);
 end;
 
 end.

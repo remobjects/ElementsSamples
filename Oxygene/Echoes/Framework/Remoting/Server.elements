@@ -12,7 +12,7 @@
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.\bin\Debug</OutputPath>
     <GeneratePDB>False</GeneratePDB>
     <GenerateMDB>False</GenerateMDB>
     <EnableAsserts>True</EnableAsserts>
@@ -31,7 +31,7 @@
     <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.\bin\Release</OutputPath>
     <GeneratePDB>False</GeneratePDB>
     <GenerateMDB>False</GenerateMDB>
     <EnableAsserts>True</EnableAsserts>

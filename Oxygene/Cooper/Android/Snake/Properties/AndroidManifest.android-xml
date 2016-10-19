@@ -5,8 +5,7 @@
           android:versionName="1.0.0">
   <!-- the android:debuggable="true" attribute is overwritten by the compiler when the debug info option is set -->
   <application 
-        android:label="Snake on a Phone"
-        android:debuggable="true">
+        android:label="Snake on a Phone">
     <activity android:name=".Snake"
               android:theme="@android:style/Theme.NoTitleBar"
               android:screenOrientation="portrait"
