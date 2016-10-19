@@ -19,6 +19,7 @@ Languages:
 * **Oxygene** &ndash; the Oxygene (Object Pascal) Language
 * **Hydrogene** &ndash; RemObjects C#
 * **Silver** &ndash; RemObjects Swift
+* **Iodine** &ndash; RemObjects Java
 
 Platforms:
 
@@ -29,6 +30,6 @@ Platforms:
 * **Gotham** &ndash; Elements’ “Meta” platform for cross-platform libraries
 * **Island** &ndash; Elements’ “Native” platform for Windows, Linux and Darwin
 
-Each sample ships with a .SLN file that can be opened in Fire and Visual Studio, and also built from the command line using MSBuild/xbuild.
+Each sample ships with a .SLN file that can be opened in both Fire and Visual Studio (where applicable), and also built from the command line using MSBuild/xbuild.
 
 Enjoy!
