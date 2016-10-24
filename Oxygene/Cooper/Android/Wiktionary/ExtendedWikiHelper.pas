@@ -52,7 +52,7 @@ type
     // like those, usually because they have ":" or other punctuation.
     class var sInvalidWord: Pattern := Pattern.compile('[^A-Za-z0-9 ]'); readonly;
     // Uri to use when requesting a random page.
-    const WIKTIONARY_RANDOM = 'http://en.wiktionary.org/w/api.php?action=query&list=random&format=json';
+    const WIKTIONARY_RANDOM = 'https://en.wiktionary.org/w/api.php?action=query&list=random&format=json';
     // Fake section to insert at the bottom of a wiki response before parsing.
     // This ensures that sSectionSplit will always catch the last
     // section, as it uses section headers in its searching.

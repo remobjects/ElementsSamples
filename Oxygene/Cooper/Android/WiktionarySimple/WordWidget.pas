@@ -85,7 +85,6 @@ begin
   var pageContent: String := '';
   try
     //  Try querying the Wiktionary API for today's word
-    SimpleWikiHelper.prepareUserAgent(aContext);
     pageContent := SimpleWikiHelper.getPageContent(pageName, false);
   except
     on e: SimpleWikiHelper.ApiException do 

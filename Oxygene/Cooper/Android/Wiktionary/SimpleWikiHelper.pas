@@ -19,16 +19,13 @@
 interface
 
 uses
-  org.apache.http,
-  org.apache.http.client,
-  org.apache.http.client.methods,
-  org.apache.http.impl.client,
   org.json,
   android.content,
   android.content.pm,
   android.net,
   android.util,
-  java.io;
+  java.io,
+  java.net;
 
 type
   /// <summary>
@@ -43,7 +40,7 @@ type
     // Wiktionary page. Use String.format(String, Object...) to insert
     // the desired page title after escaping it as needed.
     const WIKTIONARY_PAGE =
-      'http://en.wiktionary.org/w/api.php?action=query&prop=revisions&titles=%s&' +
+      'https://en.wiktionary.org/w/api.php?action=query&prop=revisions&titles=%s&' +
       'rvprop=content&format=json%s';
     // Partial URL to append to WIKTIONARY_PAGE when you want to expand
     // any templates found on the requested page. This is useful when browsing
@@ -54,14 +51,10 @@ type
     // Shared buffer used by getUrlContent(String) when reading results
     // from an API request.
     class var sBuffer: array of SByte := new SByte[512];
-    // User-agent string to use when making requests. Should be filled using
-    // prepareUserAgent(Context) before making any other calls.
-    class var sUserAgent: String := nil;
   protected
     const TAG = 'SimpleWikiHelper';
     class method getUrlContent(url: String): String; locked; 
   public
-    class method prepareUserAgent(aContext: Context);
     class method getPageContent(title: String; expandTemplates: Boolean): String;
   end;
 
@@ -82,19 +75,6 @@ type
 
 implementation
 
-class method SimpleWikiHelper.prepareUserAgent(aContext: Context);
-begin
-  try
-    //  Read package name and version number from manifest
-    var manager: PackageManager := aContext.PackageManager;
-    var info: PackageInfo := manager.getPackageInfo(aContext.PackageName, 0);
-    sUserAgent := String.format(aContext.String[R.string.template_user_agent], info.packageName, info.versionName);
-  except
-    on e: PackageManager.NameNotFoundException do 
-      Log.e(TAG, 'Couldn''t find package information in PackageManager', e)
-  end
-end;
-
 /// <summary>
 /// Read and return the content for a specific Wiktionary page. This makes a
 /// lightweight API call, and trims out just the page content returned.
@@ -110,7 +90,7 @@ class method SimpleWikiHelper.getPageContent(title: String; expandTemplates: Boo
 begin
   Log.i(TAG, 'Looking for ' + title);
   //  Encode page title and expand templates if requested
-  var encodedTitle: String := Uri.encode(title);
+  var encodedTitle: String := android.net.Uri.encode(title);
   var expandClause: String := if expandTemplates then WIKTIONARY_EXPAND_TEMPLATES else '';
   //  Query the API for content
   var content: String := getUrlContent(String.format(WIKTIONARY_PAGE, encodedTitle, expandClause));
@@ -139,21 +119,11 @@ end;
 /// <returns>The raw content returned by the server.</returns>
 class method SimpleWikiHelper.getUrlContent(url: String): String;
 begin
-  if sUserAgent = nil then
-    raise new ApiException('User-Agent string must be prepared');
-  //  Create client and set our specific user-agent string
-  var client: HttpClient := new DefaultHttpClient();
-  var request: HttpGet := new HttpGet(url);
-  request.setHeader('User-Agent', sUserAgent);
+  var _url := new URL(url);
+  var urlConnection: HttpURLConnection := HttpURLConnection(_url.openConnection());
+  urlConnection.connect();
   try
-    var response: HttpResponse := client.execute(request);
-    //  Check if server response is valid
-    var status: StatusLine := response.StatusLine;
-    if (status.getStatusCode() <> HTTP_STATUS_OK) then
-      raise new ApiException('Invalid response from server: ' + status.toString);
-    //  Pull content stream from response
-    var entity: HttpEntity := response.Entity;
-    var inputStream: InputStream := entity.Content;
+    var inputStream: InputStream := new BufferedInputStream(urlConnection.getInputStream());
     var content: ByteArrayOutputStream := new ByteArrayOutputStream;
     //  Read response into a buffered stream
     var readBytes: Integer := 0;
@@ -167,7 +137,9 @@ begin
   except
     on e: IOException do 
       raise new ApiException('Problem communicating with API', e)
-  end
+  finally
+    urlConnection.disconnect();
+  end;
 end;
 
 constructor SimpleWikiHelper.ApiException(detailMessage: String; throwable: Throwable);

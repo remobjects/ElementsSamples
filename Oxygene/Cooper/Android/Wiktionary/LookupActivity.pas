@@ -110,8 +110,6 @@ begin
   mWebView := WebView(findViewById(R.id.webview));
   //  Make the view transparent to show background
   mWebView.BackgroundColor := 0;//Color.TRANSPARENT;
-  //  Prepare User-Agent string for wiki actions
-  ExtendedWikiHelper.prepareUserAgent(self);
   //  Handle incoming intents as possible searches or links
   onNewIntent(Intent)
 end;
