@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "BasicWindowsApp", "BasicWindowsApp.elements", "{186BBBBD-FEB0-4658-92A8-6CA339FD27BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{186BBBBD-FEB0-4658-92A8-6CA339FD27BB}.Debug|Default.ActiveCfg = Debug
+		{186BBBBD-FEB0-4658-92A8-6CA339FD27BB}.Debug|Default.Build.0 = Debug
+		{186BBBBD-FEB0-4658-92A8-6CA339FD27BB}.Release|Default.ActiveCfg = Release
+		{186BBBBD-FEB0-4658-92A8-6CA339FD27BB}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
