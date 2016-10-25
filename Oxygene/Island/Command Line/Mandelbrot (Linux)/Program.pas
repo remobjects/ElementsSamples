@@ -1,4 +1,4 @@
-﻿namespace Mandelbrot;
+﻿namespace mandelbrot;
 
 // Sample app by Brian Long (http://blong.com)
 
@@ -44,15 +44,12 @@ begin
         zi := 2 * zr * zi + im;
         zr := a - b + re;
       end;
-      write(chars[n]);
+      &write(chars[n]);
       re := re + ((maxRe - minRe) / cols);
     end;
     writeLn();
     im := im + ((maxIm - minIm) / lines)
   end;
-  //Press ENTER to continue
-  writeLn("Press ENTER to exit");
-  getchar(); 
 end;
 
 end.

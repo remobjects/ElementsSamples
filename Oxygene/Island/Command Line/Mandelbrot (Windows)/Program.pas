@@ -1,4 +1,4 @@
-﻿namespace Mandelbrot;
+﻿namespace mandelbrot;
 
 // Sample app by Brian Long (http://blong.com)
 
@@ -52,7 +52,7 @@ begin
   end;
   //Press ENTER to continue
   writeLn("Press ENTER to exit");
-  getchar(); 
+  Console.ReadLine(); 
 end;
 
 end.
