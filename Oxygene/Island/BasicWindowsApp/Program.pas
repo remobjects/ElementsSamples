@@ -6,9 +6,9 @@ type
   public
     class var szTitle: LPCWSTR := 'RemObjects Island Windows Sample';
     class var szWindowClass: LPCWSTR := 'RemObjectsIslandWindowsSample';
-    class var lOkBtn: ^__struct_HKEY__;
+    class var lOkBtn: HWND;
     [CallingConvention(CallingConvention.Stdcall)]
-    class method WndProc(hwnd: ^__struct_HKEY__; message: UINT; wparam: WPARAM; lparam: LPARAM): Integer;
+    class method WndProc(hwnd: HWND; message: UINT; wparam: WPARAM; lparam: LPARAM): Integer;
     begin
       case message of 
         WM_COMMAND:
