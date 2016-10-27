@@ -60,6 +60,7 @@ begin
     try
       var cls := &Class.forName(targetRendererClass);
       var con := cls.getDeclaredConstructor([typeOf(Context)]);
+      view.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
       view.Renderer := con.newInstance(Self) as GLSurfaceView.Renderer ;
     except
       on E: Throwable do
