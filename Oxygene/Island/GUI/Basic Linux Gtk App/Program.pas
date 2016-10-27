@@ -1,10 +1,13 @@
 ﻿// based on https://developer.gnome.org/gtk3/stable/gtk-getting-started.html
+
 namespace BasicGtkApp;
+
 uses
   atk,
   gobject,
   gio,
   gtk;
+  
 type
   Program = class
   public
@@ -14,7 +17,7 @@ type
     begin 
       var dialog := ^GtkDialog(gtk_message_dialog_new (nil,
                                  GtkDialogFlags.GTK_DIALOG_DESTROY_WITH_PARENT,
-                                 gtkmessagetype.GTK_MESSAGE_INFO,
+                                 GtkMessageType.GTK_MESSAGE_INFO,
                                  GtkButtonsType.GTK_BUTTONS_OK,
                                  'hello world'));
       gtk_dialog_run (dialog);
@@ -31,7 +34,7 @@ type
       gtk_container_add(^GtkContainer(window), button_box);
 
       var button := gtk_button_new_with_label('Hello World');
-      g_signal_connect_data(glib.gpointer(button), 'clicked', glib.GVoidFunc(^void(@clicked)), nil, nil, GConnectFlags(0));
+      g_signal_connect_data(glib.gpointer(button), 'clicked', glib.GVoidFunc(^Void(@clicked)), nil, nil, GConnectFlags(0));
       gtk_container_add(^GtkContainer(button_box), button);
       gtk_widget_show_all(window);
     end;
@@ -39,7 +42,7 @@ type
     class method Main(args: array of String): Int32;
     begin
       var app := gtk_application_new ('org.gtk.example', gio.GApplicationFlags.G_APPLICATION_FLAGS_NONE);
-      g_signal_connect_data(glib.gpointer(app), "activate", glib.GVoidFunc(^void(@activate)), nil, nil, GConnectFlags(0));
+      g_signal_connect_data(glib.gpointer(app), "activate", glib.GVoidFunc(^Void(@activate)), nil, nil, GConnectFlags(0));
       var status := g_application_run (app, ExternalCalls.nargs, ExternalCalls.args);
       g_object_unref(glib.gpointer(app));
 
