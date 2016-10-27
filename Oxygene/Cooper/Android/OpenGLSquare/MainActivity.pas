@@ -31,6 +31,7 @@ begin
   inherited;
   var view := new GLSurfaceView(Self);
   //view.DebugFlags := GLSurfaceView.DEBUG_CHECK_GL_ERROR or GLSurfaceView.DEBUG_LOG_GL_CALLS;
+  view.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
   view.Renderer := new GLSquareRenderer;
   ContentView := view;
 end;
