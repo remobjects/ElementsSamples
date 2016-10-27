@@ -54,7 +54,17 @@ type
       // Create the Window
       //
       
-      var lWindow := CreateWindowExW(0, szWindowClass, szTitle, WS_OVERLAPPED or WS_CAPTION or WS_SYSMENU, CW_USEDEFAULT, CW_USEDEFAULT, 400, 300, nil, nil, lWindowClass.hInstance, nil);
+      var lWindow := CreateWindowExW(0,
+                                     szWindowClass,
+                                     szTitle,
+                                     WS_OVERLAPPED or WS_CAPTION or WS_SYSMENU,
+                                     CW_USEDEFAULT,
+                                     CW_USEDEFAULT,
+                                     400, 300,
+                                     nil,
+                                     nil,
+                                     lWindowClass.hInstance,
+                                     nil);
       if lWindow = nil then begin 
         MessageBox(nil, 'Call to CreateWindowExW failed', szTitle, 0);
         exit 0;

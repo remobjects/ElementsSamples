@@ -48,7 +48,17 @@ class Program {
         // Create the Window
         //
       
-        var window = CreateWindowExW(0, szWindowClass, szTitle, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, CW_USEDEFAULT, CW_USEDEFAULT, 400, 300, nil, nil, windowClass.hInstance, nil)
+        var window = CreateWindowExW(0,
+                                     szWindowClass,
+                                     szTitle,
+                                     WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU,
+                                     CW_USEDEFAULT,
+                                     CW_USEDEFAULT,
+                                     400, 300,
+                                     nil,
+                                     nil,
+                                     windowClass.hInstance,
+                                     nil)
         if window == nil {
             MessageBox(nil, "Call to CreateWindowExW failed", szTitle, 0)
             return false

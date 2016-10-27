@@ -61,7 +61,17 @@ namespace BasicWindowsApp
 			// Create the Window
 			//
 	  
-			var window = CreateWindowExW(0, szWindowClass, szTitle, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, CW_USEDEFAULT, CW_USEDEFAULT, 400, 300, null, null, windowClass.hInstance, null);
+			var window = CreateWindowExW(0,
+										 szWindowClass,
+										 szTitle,
+										 WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU,
+										 CW_USEDEFAULT,
+										 CW_USEDEFAULT,
+										 400, 300,
+										 null,
+										 null,
+										 windowClass.hInstance,
+										 null);
 			if (window == null) {
 				MessageBox(null, "Call to CreateWindowExW failed", szTitle, 0);
 				return 1;
