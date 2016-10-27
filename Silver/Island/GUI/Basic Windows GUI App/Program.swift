@@ -4,7 +4,7 @@ public class Program {
   
     static let szTitle: LPCWSTR = "RemObjects Elements — Island Windows Sample"
     static let  szWindowClass: LPCWSTR = "IslandWindowsSample"
-    static var button: HWND
+    static var button: HWND = 0
     
     @CallingConvention(CallingConvention.Stdcall)
     static func WndProc(_ hWnd: HWND, _ message: UINT, _ wParam: WPARAM, _ lParam: LPARAM) -> Integer {
@@ -26,16 +26,16 @@ public class Program {
         // Set up and Register the Windows Class
         //
       
-        let windowClass: WNDCLASSEX
+        var windowClass: WNDCLASSEX
         windowClass.cbSize = sizeOf(WNDCLASSEX)
         windowClass.style = CS_HREDRAW | CS_VREDRAW
-        windowClass.lpfnWndProc = &WndProc
+        windowClass.lpfnWndProc = WndProc
         windowClass.cbClsExtra = 0
         windowClass.cbWndExtra = 0
         windowClass.hInstance = rtl.GetModuleHandleW(nil)
         windowClass.hIcon = LoadIcon(windowClass.hInstance, LPCWSTR(IDI_APPLICATION))
         windowClass.hCursor = LoadCursor(nil, LPCWSTR(IDC_ARROW))
-        windowClass.hbrBackground = ^Void(COLOR_WINDOW + 1)
+        windowClass.hbrBackground = (COLOR_WINDOW + 1) as! UnsafePointer<Void>
         windowClass.lpszMenuName = nil
         windowClass.lpszClassName = szWindowClass
       
@@ -77,6 +77,7 @@ public class Program {
       
         ShowWindow(window, SW_SHOW)
         UpdateWindow(window)
+        return true
     }
                                
 }
@@ -89,8 +90,8 @@ if !Program.SetupWindow() {
 // Finally, run the main Windows message loop
 //
 
-var msg: MSG
-while GetMessage(&msg, nil, 0, 0) {
+var msg: MSG = `default`(MSG)
+while GetMessage((&msg), nil, 0, 0) {
     TranslateMessage(&msg)
     DispatchMessage(&msg)
 }
