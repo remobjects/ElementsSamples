@@ -1,6 +1,6 @@
 ﻿import rtl
 
-public class Program {
+class Program {
   
     static let szTitle: LPCWSTR = "RemObjects Elements — Island Windows Sample"
     static let  szWindowClass: LPCWSTR = "IslandWindowsSample"
