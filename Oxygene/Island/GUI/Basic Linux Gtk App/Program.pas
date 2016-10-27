@@ -11,7 +11,7 @@ uses
 type
   Program = class
   public
-    class var window :^GtkWindow;
+    class var window: ^GtkWindow;
 
     class method clicked(app: ^GtkApplication; userdata: ^Void);
     begin 
