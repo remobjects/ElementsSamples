@@ -21,7 +21,7 @@ class Program {
 
     static func activate(_ app: UnsafePointer<GtkApplication>, _ userdata: UnsafePointer<Void>) {
         window = gtk_application_window_new(app) as! UnsafePointer<GtkWindow>
-        gtk_window_set_title(window, "RemObjects Elements GTK Sample")
+        gtk_window_set_title(window, "RemObjects Elements - Island GTK Sample")
         gtk_window_set_default_size(window, 200, 200)
 
         var button_box = gtk_button_box_new(GtkOrientation.GTK_ORIENTATION_HORIZONTAL)
@@ -43,5 +43,3 @@ class Program {
 }
 
 return Program.Run()
-
-
