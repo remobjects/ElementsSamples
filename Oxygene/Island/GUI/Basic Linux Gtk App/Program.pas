@@ -28,10 +28,10 @@ type
     begin 
       window := ^GtkWindow(gtk_application_window_new(app));
       gtk_window_set_title(window, 'RemObjects Elements GTK Sample');
-      gtk_window_set_default_size(^GtkWindow(window), 200, 200);
+      gtk_window_set_default_size(window, 200, 200);
 
       var button_box := gtk_button_box_new(GtkOrientation.GTK_ORIENTATION_HORIZONTAL);
-      gtk_container_add(^GtkContainer(window), button_box);
+      gtk_container_add(window, button_box);
 
       var button := gtk_button_new_with_label('Hello World');
       g_signal_connect_data(glib.gpointer(button), 'clicked', glib.GVoidFunc(^Void(@clicked)), nil, nil, GConnectFlags(0));

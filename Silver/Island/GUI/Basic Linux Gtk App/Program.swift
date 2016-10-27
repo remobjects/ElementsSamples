@@ -28,14 +28,14 @@ class Program {
         gtk_container_add(window, button_box)
 
         var button = gtk_button_new_with_label("Hello World")
-        g_signal_connect_data(glib.gpointer(button), "clicked", glib.GVoidFunc(clicked as! UnsafePointer<Void>, nil, nil, GConnectFlags(0)))
+        g_signal_connect_data(glib.gpointer(button), "clicked", glib.GVoidFunc(clicked as! UnsafePointer<Void>), nil, nil, GConnectFlags(0))
         gtk_container_add(button_box as! UnsafePointer<GtkContainer>, button)
         gtk_widget_show_all(window)
     }
     
     static func Run() -> Int32 {
         var app = gtk_application_new ("org.gtk.example", gio.GApplicationFlags.G_APPLICATION_FLAGS_NONE)
-        g_signal_connect_data(glib.gpointer(app), "activate", glib.GVoidFunc(activate as! UnsafePointer<Void>, nil, nil, GConnectFlags(0)))
+        g_signal_connect_data(glib.gpointer(app), "activate", glib.GVoidFunc(activate as! UnsafePointer<Void>), nil, nil, GConnectFlags(0))
         var status = g_application_run (app, ExternalCalls.nargs, ExternalCalls.args)
         g_object_unref(glib.gpointer(app))
         return status
