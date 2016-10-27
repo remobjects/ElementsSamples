@@ -5,9 +5,11 @@ using gobject;
 using gio;
 using gtk;
 
-namespace BasicGtkApp {
+namespace BasicGtkApp
+{
   
-	class Program {
+	class Program
+	{
 
 		static GtkWindow *window; 
 

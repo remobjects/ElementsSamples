@@ -3,14 +3,14 @@
 class Program {
   
     static let szTitle: LPCWSTR = "RemObjects Elements — Island Windows Sample"
-    static let  szWindowClass: LPCWSTR = "IslandWindowsSample"
+    static let szWindowClass: LPCWSTR = "IslandWindowsSample"
     static var button: HWND = 0
     
     @CallingConvention(CallingConvention.Stdcall)
     static func WndProc(_ hWnd: HWND, _ message: UINT, _ wParam: WPARAM, _ lParam: LPARAM) -> Integer {
         switch message {
             case WM_COMMAND:
-                if wParam == BN_CLICKED && lParam == rtl.LPARAM(button) {
+                if wParam == BN_CLICKED && lParam == button as! rtl.LPARAM {
                     MessageBox(hWnd, "You clicked, hello there!", szTitle, 0)
                 }
             case WM_CLOSE:
@@ -33,8 +33,8 @@ class Program {
         windowClass.cbClsExtra = 0
         windowClass.cbWndExtra = 0
         windowClass.hInstance = rtl.GetModuleHandleW(nil)
-        windowClass.hIcon = LoadIcon(windowClass.hInstance, LPCWSTR(IDI_APPLICATION))
-        windowClass.hCursor = LoadCursor(nil, LPCWSTR(IDC_ARROW))
+        windowClass.hIcon = LoadIcon(windowClass.hInstance, IDI_APPLICATION as! LPCWSTR)
+        windowClass.hCursor = LoadCursor(nil, IDC_ARROW as! LPCWSTR)
         windowClass.hbrBackground = (COLOR_WINDOW + 1) as! UnsafePointer<Void>
         windowClass.lpszMenuName = nil
         windowClass.lpszClassName = szWindowClass
