@@ -22,7 +22,7 @@ type
     method prepareForSegue(segue: not nullable UIStoryboardSegue) sender(sender: id); override;
 
     {$REGION Table view data source}
-    method numberOfSectionsInTableView(tableView: UITableView): Integer;
+    method numberOfSectionsInTableView(tableView: UITableView): NSInteger;
     method tableView(tableView: UITableView) canMoveRowAtIndexPath(indexPath: NSIndexPath): RemObjects.Oxygene.System.Boolean;
     method tableView(tableView: UITableView) moveRowAtIndexPath(fromIndexPath: NSIndexPath) toIndexPath(toIndexPath: NSIndexPath);
     method tableView(tableView: UITableView) commitEditingStyle(editingStyle: UITableViewCellEditingStyle) forRowAtIndexPath(indexPath: NSIndexPath);
@@ -65,7 +65,7 @@ begin
     
     end);
 
-  var lDatabase: ^sqlite3_ := nil;
+  var lDatabase: ^sqlite3 := nil;
   if sqlite3_open(lDatabaseName.cStringUsingEncoding(NSStringEncoding.NSUTF8StringEncoding), @lDatabase) = SQLITE_OK then begin
 
     var lStatement: ^sqlite3_stmt;
@@ -96,7 +96,7 @@ end;
 
 {$REGION Table view data source}
 
-method MasterViewController.numberOfSectionsInTableView(tableView: UITableView): Integer;
+method MasterViewController.numberOfSectionsInTableView(tableView: UITableView): NSInteger;
 begin
   result := 1;
 end;

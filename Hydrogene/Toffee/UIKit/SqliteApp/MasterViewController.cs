@@ -31,7 +31,7 @@
 			string lDatabaseName = NSBundle.mainBundle.pathForResource("PCTrade.sqlite") ofType("db");
 			NSLog("%@", lDatabaseName);
 	
-			sqlite3_ *lDatabase = null;
+			sqlite3 *lDatabase = null;
 			if (sqlite3_open(lDatabaseName.cStringUsingEncoding(NSStringEncoding.NSUTF8StringEncoding), &lDatabase) == SQLITE_OK)
 			{
 	
@@ -73,7 +73,7 @@
 		}
 
 		#region Table view data source
-		public Integer numberOfSectionsInTableView(UITableView tableView)
+		public NSInteger numberOfSectionsInTableView(UITableView tableView)
 		{
 			return 1;
 		}

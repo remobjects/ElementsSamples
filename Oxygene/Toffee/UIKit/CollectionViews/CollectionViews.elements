@@ -69,7 +69,6 @@
         <AppResource Include="Resources\Launch Images\Default-Landscape@2x.png"/>
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="Properties\"/>
         <Folder Include="Resources\"/>
         <Folder Include="Resources\App Icons\"/>
         <Folder Include="Resources\Launch Images\"/>

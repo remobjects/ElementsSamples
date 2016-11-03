@@ -19,7 +19,7 @@ type
   protected
 
     {$REGION Collection view data source}
-    method numberOfSectionsInCollectionView(collectionView: UICollectionView): Integer;
+    method numberOfSectionsInCollectionView(collectionView: UICollectionView): NSInteger;
     method collectionView(collectionView: UICollectionView) numberOfItemsInSection(section: NSInteger): NSInteger;
     method collectionView(collectionView: UICollectionView) cellForItemAtIndexPath(indexPath: NSIndexPath): UICollectionViewCell;
     method collectionView(collectionView: UICollectionView) layout(aCollectionViewLayout: UICollectionViewLayout) sizeForItemAtIndexPath(indexPath: NSIndexPath): CGSize;
@@ -28,7 +28,7 @@ type
     {$ENDREGION}
 
     {$REGION Collection view delegate}
-    method collectionView(collectionView: UICollectionView) didSelectItemAtIndexPath(indexPath: NSIndexPath): Boolean;
+    method collectionView(collectionView: UICollectionView) didSelectItemAtIndexPath(indexPath: NSIndexPath);
     {$ENDREGION}
 
   public
@@ -96,7 +96,7 @@ end;
 
 {$REGION Collection view data source}
 
-method RootViewController.numberOfSectionsInCollectionView(collectionView: UICollectionView): Integer;
+method RootViewController.numberOfSectionsInCollectionView(collectionView: UICollectionView): NSInteger;
 begin
   if assigned(fData) then result := fData.count;
 end;
@@ -150,7 +150,7 @@ begin
   result.addSubview(lLabel);
 end;
 
-method RootViewController.collectionView(collectionView: UICollectionView) didSelectItemAtIndexPath(indexPath: NSIndexPath): Boolean;
+method RootViewController.collectionView(collectionView: UICollectionView) didSelectItemAtIndexPath(indexPath: NSIndexPath);
 begin
   // add code here to handle when a cell gets selected.
 end;

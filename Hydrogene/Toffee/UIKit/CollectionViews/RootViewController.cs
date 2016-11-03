@@ -129,7 +129,7 @@
 		#endregion
 
 		#region Collection view delegate
-		public Boolean collectionView(UICollectionView collectionView) didSelectItemAtIndexPath(NSIndexPath indexPath)
+		public void collectionView(UICollectionView collectionView) didSelectItemAtIndexPath(NSIndexPath indexPath)
 		{
 			// add code here to handle when a cell gets selected.
 		}
