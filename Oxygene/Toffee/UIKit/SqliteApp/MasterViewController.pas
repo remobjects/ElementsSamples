@@ -28,7 +28,7 @@ type
     method tableView(tableView: UITableView) commitEditingStyle(editingStyle: UITableViewCellEditingStyle) forRowAtIndexPath(indexPath: NSIndexPath);
     method tableView(tableView: UITableView) canEditRowAtIndexPath(indexPath: NSIndexPath): RemObjects.Oxygene.System.Boolean;
     method tableView(tableView: UITableView) cellForRowAtIndexPath(indexPath: NSIndexPath): UITableViewCell;
-    method tableView(tableView: UITableView) numberOfRowsInSection(section: Integer): Integer;
+    method tableView(tableView: UITableView) numberOfRowsInSection(section: NSInteger): NSInteger;
     {$ENDREGION}
 
     {$REGION Table view delegate}
@@ -101,7 +101,7 @@ begin
   result := 1;
 end;
 
-method MasterViewController.tableView(tableView: UITableView) numberOfRowsInSection(section: Integer): Integer;
+method MasterViewController.tableView(tableView: UITableView) numberOfRowsInSection(section: NSInteger): NSInteger;
 begin
   //result := fObjects:count;
   result := if assigned(fObjects) then fObjects.count else 0; //59096: Toffee: Compiler NRE when jusing ":" on a simple type

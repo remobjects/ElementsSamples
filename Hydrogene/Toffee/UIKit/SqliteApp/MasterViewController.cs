@@ -78,7 +78,7 @@
 			return 1;
 		}
 
-		public Integer tableView(UITableView tableView) numberOfRowsInSection(NSInteger section)
+		public NSInteger tableView(UITableView tableView) numberOfRowsInSection(NSInteger section)
 		{
 			 return _objects != null ? _objects.count : 0;
 		}
