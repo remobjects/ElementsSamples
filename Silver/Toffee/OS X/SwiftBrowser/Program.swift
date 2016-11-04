@@ -15,7 +15,7 @@ window.title = "Minimal Swift WebKit Browser"
 window.makeKeyAndOrderFront(window)
 
 class WindowDelegate: NSObject, INSWindowDelegate {
-	func windowWillClose(notification: NSNotification?) {
+	func windowWillClose(_ notification: NSNotification?) {
 		NSApplication.sharedApplication().terminate(0)
 	}
 }
@@ -28,7 +28,7 @@ class ApplicationDelegate: NSObject, INSApplicationDelegate {
 	init(window: NSWindow) {
 		self._window = window
 	}
-	func applicationDidFinishLaunching(notification: NSNotification?) {
+	func applicationDidFinishLaunching(_ notification: NSNotification?) {
 		let webView = WebView(frame: self._window.contentView.frame)
 		self._window.contentView.addSubview(webView)
 		webView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.elementscompiler.com/elements/silver")))
