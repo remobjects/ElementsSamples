@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>IBOutlet</RootNamespace>
     <ProjectGuid>{99e5a23e-d96b-4521-ba47-bf9d77a8e315}</ProjectGuid>
@@ -37,11 +37,11 @@
     <CreateIPA>True</CreateIPA>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CoreGraphics.fx" />
-    <Reference Include="Foundation.fx" />
-    <Reference Include="UIKit.fx" />
-    <Reference Include="rtl.fx" />
-    <Reference Include="libToffee.fx" />
+    <Reference Include="CoreGraphics" />
+    <Reference Include="Foundation" />
+    <Reference Include="UIKit" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

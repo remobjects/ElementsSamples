@@ -32,8 +32,6 @@ begin
                  'Garmisch-Partenkirchen', 'Tokyo', 'Sapporo', "Cortina d'Ampezzo", 'Oslo', 'Helsinki',  'Melbourne', 'Stockholm', 'Squaw Valley', 'Rome',
                  'Innsbruck'  , 'Mexico City', 'Grenoble'  ,'Sapporo' ,'Munich', 'Montreal', 'Moscow', 'Lake Placid', 'Sarajevo', 'Seoul', 'Calgary', 'Barcelona', 'Albertville',
                  'Lillehammer', 'Atlanta', 'Nagano', 'Sydney', 'Salt Lake City', 'Turin', 'Beijing', 'Vancouver', 'Sochi','Rio de Janero', 'Pyeongchang'];
-
-
   end;
   result := self;
 end;
@@ -65,7 +63,5 @@ begin
  var message := new UIAlertView withTitle("City Selected") message(text) &delegate(nil) cancelButtonTitle("OK") otherButtonTitles(nil);
   message.show();
 end;
-
-
 
 end.

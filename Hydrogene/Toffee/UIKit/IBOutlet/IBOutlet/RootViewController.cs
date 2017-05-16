@@ -6,8 +6,8 @@
 	class RootViewController : UIViewController
 	{
 
-    [IBOutlet]
-    public UILabel label;
+		[IBOutlet]
+		public UILabel label;
 
 		public override id init()
 		{
@@ -23,7 +23,7 @@
 		{
 			base.viewDidLoad();
 			this.label.textColor = UIColor.redColor;
-      this.label.text = "IBOutlet Demo Text";
+			this.label.text = "IBOutlet Demo Text";
 		}
 
 	}
