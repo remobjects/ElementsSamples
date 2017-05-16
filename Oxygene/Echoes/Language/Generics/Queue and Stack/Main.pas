@@ -94,7 +94,7 @@ begin
   // 
   self.PopStringButton.Location := new System.Drawing.Point(326, 62);
   self.PopStringButton.Name := 'PopStringButton';
-  self.PopStringButton.Size := new System.Drawing.Size(75, 23);
+  self.PopStringButton.Size := new System.Drawing.Size(88, 23);
   self.PopStringButton.TabIndex := 2;
   self.PopStringButton.Text := 'Pop String';
   self.PopStringButton.Click += new System.EventHandler(@self.PopStringButton_Click);
@@ -103,7 +103,7 @@ begin
   // 
   self.PopIntegerButton.Location := new System.Drawing.Point(326, 12);
   self.PopIntegerButton.Name := 'PopIntegerButton';
-  self.PopIntegerButton.Size := new System.Drawing.Size(75, 23);
+  self.PopIntegerButton.Size := new System.Drawing.Size(88, 23);
   self.PopIntegerButton.TabIndex := 5;
   self.PopIntegerButton.Text := 'Pop Integer';
   self.PopIntegerButton.Click += new System.EventHandler(@self.PopIntegerButton_Click);
@@ -130,7 +130,7 @@ begin
   // 
   self.PushIntegerButton.Location := new System.Drawing.Point(222, 12);
   self.PushIntegerButton.Name := 'PushIntegerButton';
-  self.PushIntegerButton.Size := new System.Drawing.Size(75, 23);
+  self.PushIntegerButton.Size := new System.Drawing.Size(88, 23);
   self.PushIntegerButton.TabIndex := 7;
   self.PushIntegerButton.Text := 'Push Integer';
   self.PushIntegerButton.Click += new System.EventHandler(@self.PushIntegerButton_Click);
@@ -139,7 +139,7 @@ begin
   // 
   self.PushStringButton.Location := new System.Drawing.Point(222, 62);
   self.PushStringButton.Name := 'PushStringButton';
-  self.PushStringButton.Size := new System.Drawing.Size(75, 23);
+  self.PushStringButton.Size := new System.Drawing.Size(88, 23);
   self.PushStringButton.TabIndex := 6;
   self.PushStringButton.Text := 'Push String';
   self.PushStringButton.Click += new System.EventHandler(@self.PushStringButton_Click);
@@ -150,7 +150,7 @@ begin
   self.ListBox.IntegralHeight := false;
   self.ListBox.Location := new System.Drawing.Point(29, 91);
   self.ListBox.Name := 'ListBox';
-  self.ListBox.Size := new System.Drawing.Size(372, 243);
+  self.ListBox.Size := new System.Drawing.Size(384, 243);
   self.ListBox.TabIndex := 8;
   // 
   // CountStringsButton
