@@ -62,7 +62,7 @@ begin
   var averageAge: future Integer := -> SumAge / persons.Count;
 
   printOut('');
-  printTwoStrings('The agerage age is: ', averageAge.ToString);
+  printTwoStrings('The average age is: ', averageAge.ToString);
 
   {Lambda expressions are most notable used with the Query Operators}
   var youngPersons := persons.Where(p -> p.Age < 30).OrderBy(p -> p.Age);
