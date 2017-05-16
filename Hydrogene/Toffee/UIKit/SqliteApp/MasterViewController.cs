@@ -22,37 +22,37 @@
 		public override void viewDidLoad()
 		{
 			base.viewDidLoad();
-			
+
 			if (splitViewController != null)
 				detailViewController = (DetailViewController)(splitViewController.viewControllers().lastObject().topViewController);
-				
+
 			_objects = new NSMutableArray();
 
 			string lDatabaseName = NSBundle.mainBundle.pathForResource("PCTrade.sqlite") ofType("db");
 			NSLog("%@", lDatabaseName);
-	
+
 			sqlite3 *lDatabase = null;
 			if (sqlite3_open(lDatabaseName.cStringUsingEncoding(NSStringEncoding.NSUTF8StringEncoding), &lDatabase) == SQLITE_OK)
 			{
-	
+
 				sqlite3_stmt *lStatement;
 				if (sqlite3_prepare_v2(lDatabase, "select * from Customers", -1, &lStatement, null) == SQLITE_OK)
 				{
-		  
+
 					while (sqlite3_step(lStatement) == SQLITE_ROW)
 					{
-	
+
 						var lName = (AnsiChar *)(sqlite3_column_text(lStatement, 1));
 						_objects.addObject(NSString.stringWithUTF8String(lName));
 						NSLog("row: %s", lName);
 					}
-	
+
 				}
 				sqlite3_close(lDatabase);
 			}
 			tableView.reloadData();
 
-		}  
+		}
 
 		public override void didReceiveMemoryWarning()
 		{
@@ -87,10 +87,10 @@
 		{
 			var cellIdentifier = "MasterCell";
 			var result = tableView.dequeueReusableCellWithIdentifier(cellIdentifier);
-			
+
 			if (result == null)
 				result = new UITableViewCell withStyle(UITableViewCellStyle.UITableViewCellStyleDefault) reuseIdentifier(cellIdentifier);
-			
+
 			var obj = _objects[indexPath.row];
 			result.textLabel.text = obj.description;
 

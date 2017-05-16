@@ -3,10 +3,10 @@
 interface
 
 uses
-  Foundation, 
+  Foundation,
   UIKit,
   libsqlite3;
-  
+
 
 type
   MasterViewController = public class (UITableViewController)
@@ -62,7 +62,7 @@ begin
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), method begin
       NSLog('async!');
       NSLog('self: %@', self);
-    
+
     end);
 
   var lDatabase: ^sqlite3 := nil;
@@ -70,7 +70,7 @@ begin
 
     var lStatement: ^sqlite3_stmt;
     if sqlite3_prepare_v2(lDatabase, 'select * from Customers', -1, @lStatement, nil) = SQLITE_OK then begin
-      
+
       while sqlite3_step(lStatement) = SQLITE_ROW do begin
 
         var lName := ^AnsiChar(sqlite3_column_text(lStatement, 1));
@@ -111,13 +111,12 @@ method MasterViewController.tableView(tableView: UITableView) cellForRowAtIndexP
 begin
   var CellIdentifier := "Cell";
   result := tableView.dequeueReusableCellWithIdentifier(CellIdentifier);
-  
+
   // this is required if you are targetting iOS 5.1 or lower, only
   if not assigned(result) then
     result := new UITableViewCell withStyle(UITableViewCellStyle.UITableViewCellStyleDefault) reuseIdentifier(CellIdentifier);
 
-  //var lObject := fObjects[indexPath.row]; // 59210: Toffee: object subscripting support on older deployment targets
-  var lObject := fObjects.objectAtIndex(indexPath.row);
+  var lObject := fObjects[indexPath.row];
   result.textLabel.text := lObject.description;
 end;
 
@@ -134,23 +133,22 @@ begin
   if (editingStyle = UITableViewCellEditingStyle.UITableViewCellEditingStyleDelete) then begin
     // Delete the row from the data source
     fObjects.removeObjectAtIndex(indexPath.row);
-    //tableView.deleteRowsAtIndexPaths([indexPath]) withRowAnimation(UITableViewRowAnimation.UITableViewRowAnimationFade);  // we dont have inline arrays yet
-    tableView.deleteRowsAtIndexPaths(NSArray.arrayWithObject(indexPath)) withRowAnimation(UITableViewRowAnimation.UITableViewRowAnimationFade);
+    tableView.deleteRowsAtIndexPaths([indexPath]) withRowAnimation(UITableViewRowAnimation.UITableViewRowAnimationFade);
   end
   else if (editingStyle = UITableViewCellEditingStyle.UITableViewCellEditingStyleInsert) then begin
     // Create a new instance of the appropriabte class, insert it into the array, and add a new row to the table view
   end;
 end;
 
-method MasterViewController.tableView(tableView: UITableView) moveRowAtIndexPath(fromIndexPath: NSIndexPath) toIndexPath(toIndexPath: NSIndexPath);
-begin
-end;
-
 // Override to support conditional rearranging of the table view.
 method MasterViewController.tableView(tableView: UITableView) canMoveRowAtIndexPath(indexPath: NSIndexPath): RemObjects.Oxygene.System.Boolean;
 begin
-    // Return NO if you do not want the item to be re-orderable.
-    result := true;
+  // Return NO if you do not want the item to be re-orderable.
+  result := true;
+end;
+
+method MasterViewController.tableView(tableView: UITableView) moveRowAtIndexPath(fromIndexPath: NSIndexPath) toIndexPath(toIndexPath: NSIndexPath);
+begin
 end;
 
 {$ENDREGION}
@@ -160,9 +158,8 @@ end;
 method MasterViewController.tableView(tableView: UITableView) didSelectRowAtIndexPath(indexPath: NSIndexPath);
 begin
   if UIDevice.currentDevice.userInterfaceIdiom = UIUserInterfaceIdiom.UIUserInterfaceIdiomPad then begin
-    //var lObject := fObjects[indexPath.row]; // 59210: Toffee: object subscripting support on older deployment targets
-    var lObject := fObjects.objectAtIndex(indexPath.row);
-      detailViewController.detailItem := lObject;
+    var lObject := fObjects[indexPath.row];
+    detailViewController.detailItem := lObject;
   end;
 end;
 
@@ -175,7 +172,7 @@ begin
 
     //var lObject := fObjects[lIndexPath.row]; // 59210: Toffee: object subscripting support on older deployment targets
     var lObject := fObjects.objectAtIndex(lIndexPath.row);
-    
+
    // segue.destinationViewController.setDetailItem(lObject); //59090: Toffee: cannot access members defined in project, on "id"
     (segue.destinationViewController as  DetailViewController).setDetailItem(lObject);
   end;
