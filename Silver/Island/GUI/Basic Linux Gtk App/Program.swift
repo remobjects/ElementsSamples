@@ -4,7 +4,13 @@ import atk
 import gobject
 import gio
 import gtk
-  
+
+/*
+  !!! Please note: in order to run this sample, you need to manually copy it to a Linux PC or VM with an active GUI, and run it.
+  !!!
+  !!! GUI applications cannot be run via SSH or CrossBox 2, and they are also not supported on "Bash on Windows".
+*/
+
 class Program {
 
 	static var window: UnsafePointer<GtkWindow>
@@ -32,7 +38,7 @@ class Program {
 		gtk_container_add(button_box as! UnsafePointer<GtkContainer>, button)
 		gtk_widget_show_all(window)
 	}
-	
+
 	static func Run() -> Int32 {
 		var app = gtk_application_new ("org.gtk.example", gio.GApplicationFlags.G_APPLICATION_FLAGS_NONE)
 		g_signal_connect_data(app as! glib.gpointer, "activate", (activate as! UnsafePointer<Void>) as! glib.GVoidFunc, nil, nil, 0 as! GConnectFlags)

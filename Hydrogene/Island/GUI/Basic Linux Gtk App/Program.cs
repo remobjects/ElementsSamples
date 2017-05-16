@@ -5,13 +5,19 @@ using gobject;
 using gio;
 using gtk;
 
+/*
+  !!! Please note: in order to run this sample, you need to manually copy it to a Linux PC or VM with an active GUI, and run it.
+  !!!
+  !!! GUI applications cannot be run via SSH or CrossBox 2, and they are also not supported on "Bash on Windows".
+*/
+
 namespace BasicGtkApp
 {
-  
+
 	class Program
 	{
 
-		static GtkWindow *window; 
+		static GtkWindow *window;
 
 		static void clicked(GtkApplication app, Void *userdata)
 		{
@@ -38,7 +44,7 @@ namespace BasicGtkApp
 			gtk_container_add((GtkContainer *)button_box, button);
 			gtk_widget_show_all(window);
 		}
-	
+
 		static Int32 Main(string[] args)
 		{
 			var app = gtk_application_new ("org.gtk.example", gio.GApplicationFlags.G_APPLICATION_FLAGS_NONE);

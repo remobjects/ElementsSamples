@@ -7,14 +7,20 @@ uses
   gobject,
   gio,
   gtk;
-  
+
+/*
+  !!! Please note: in order to run this sample, you need to manually copy it to a Linux PC or VM with an active GUI, and run it.
+  !!!
+  !!! GUI applications cannot be run via SSH or CrossBox 2, and they are also not supported on "Bash on Windows".
+*/
+
 type
   Program = class
   public
     class var window: ^GtkWindow;
 
     class method clicked(app: ^GtkApplication; userdata: ^Void);
-    begin 
+    begin
       var dialog := ^GtkDialog(gtk_message_dialog_new(nil,
                                                       GtkDialogFlags.GTK_DIALOG_DESTROY_WITH_PARENT,
                                                       GtkMessageType.GTK_MESSAGE_INFO,
@@ -25,7 +31,7 @@ type
     end;
 
     class method activate(app: ^GtkApplication; userdata: ^Void);
-    begin 
+    begin
       window := ^GtkWindow(gtk_application_window_new(app));
       gtk_window_set_title(window, 'RemObjects Elements - Island GTK Sample');
       gtk_window_set_default_size(window, 200, 200);
@@ -47,7 +53,7 @@ type
       g_object_unref(glib.gpointer(app));
       exit status;
     end;
-    
+
   end;
 
 end.
