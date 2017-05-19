@@ -7,7 +7,7 @@
 	<RootNamespace>Calculator.Engine</RootNamespace>
   </PropertyGroup>
   <Import Project="Calculator.Engine.projitems" Label="Shared" />
-  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Oxygene\RemObjects.Elements.SharedProject.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.SharedProject.targets" />
   <PropertyGroup>
     <PreBuildEvent />
   </PropertyGroup>
