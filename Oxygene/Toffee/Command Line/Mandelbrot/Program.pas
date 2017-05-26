@@ -18,7 +18,7 @@ type
 implementation
 
 class method ConsoleApp.Main(args: array of String);
-const 
+const
   cols = 78;
   lines = 30;
   chars = " .,`':;=|+ihIHEOQSB#$";
@@ -37,10 +37,10 @@ begin
       var n: Integer := -1;
       while n < maxIter-1 do begin
         inc(n);
-        var a := zr * zr; 
+        var a := zr * zr;
         var b := zi * zi;
         if a + b > 4.0 then
-          Break;
+          break;
         zi := 2 * zr * zi + im;
         zr := a - b + re;
       end;
@@ -52,7 +52,7 @@ begin
   end;
   //Press ENTER to continue
   writeLn("Press ENTER to exit");
-  getchar(); 
+  getchar();
 end;
 
 end.
