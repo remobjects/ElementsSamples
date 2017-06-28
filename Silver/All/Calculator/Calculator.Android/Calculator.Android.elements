@@ -79,12 +79,6 @@
         <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Reference Include="android-support-v4">
-            <HintPath>..\..\..\..\..\..\..\adt-bundle-windows-x86\sdk\extras\android\support\v7\appcompat\libs\android-support-v4.jar</HintPath>
-        </Reference>
-        <Reference Include="android-support-v7-appcompat">
-            <HintPath>..\..\..\..\..\..\..\adt-bundle-windows-x86\sdk\extras\android\support\v7\appcompat\libs\android-support-v7-appcompat.jar</HintPath>
-        </Reference>
         <Reference Include="android"/>
         <Reference Include="sugar">
             <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Cooper\Android\sugar.jar</HintPath>
