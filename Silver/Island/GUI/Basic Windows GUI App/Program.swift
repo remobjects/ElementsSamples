@@ -1,11 +1,11 @@
 ﻿import rtl
 
 class Program {
-  
+
     static let szTitle: LPCWSTR = "RemObjects Elements — Island Windows Sample"
     static let szWindowClass: LPCWSTR = "IslandWindowsSample"
-    static var button: HWND = 0
-    
+    static var button: HWND = nil
+
     @CallingConvention(CallingConvention.Stdcall)
     static func WndProc(_ hWnd: HWND, _ message: UINT, _ wParam: WPARAM, _ lParam: LPARAM) -> Integer {
         switch message {
@@ -19,13 +19,13 @@ class Program {
         }
         return DefWindowProc(hWnd, message, wParam, lParam)
     }
-    
+
     static func SetupWindow() -> Bool {
-      
+
         //
         // Set up and Register the Windows Class
         //
-      
+
         var windowClass: WNDCLASSEX
         windowClass.cbSize = sizeOf(WNDCLASSEX)
         windowClass.style = CS_HREDRAW | CS_VREDRAW
@@ -38,16 +38,16 @@ class Program {
         windowClass.hbrBackground = (COLOR_WINDOW + 1) as! UnsafePointer<Void>
         windowClass.lpszMenuName = nil
         windowClass.lpszClassName = szWindowClass
-      
+
         if RegisterClassEx(&windowClass) == 0 {
             MessageBox(nil, "Call to RegisterClassEx failed", szTitle, 0)
             return false
         }
-      
+
         //
         // Create the Window
         //
-      
+
         var window = CreateWindowExW(0,
                                      szWindowClass,
                                      szTitle,
@@ -63,33 +63,33 @@ class Program {
             MessageBox(nil, "Call to CreateWindowExW failed", szTitle, 0)
             return false
         }
-      
+
         //
         // Add a button to it
         //
-      
-        button = CreateWindowEx(0, 
-                                "BUTTON",   // Predefined class Unicode assumed 
-                                "Click Me", // Button text 
-                                WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles 
-                                130,        // x position 
-                                70,         // y position 
+
+        button = CreateWindowEx(0,
+                                "BUTTON",   // Predefined class Unicode assumed
+                                "Click Me", // Button text
+                                WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles
+                                130,        // x position
+                                70,         // y position
                                 100,        // Button width
                                 25,         // Button height
                                 window,    // Parent window
                                 nil,        // No menu.
-                                windowClass.hInstance, 
+                                windowClass.hInstance,
                                 nil)       // Pointer not needed.
-                      
+
         //
         // Show the Window
         //
-      
+
         ShowWindow(window, SW_SHOW)
         UpdateWindow(window)
         return true
     }
-                               
+
 }
 
 if !Program.SetupWindow() {

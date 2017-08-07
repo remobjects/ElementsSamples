@@ -52,6 +52,5 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.Windows.targets" />
 </Project>
