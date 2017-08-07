@@ -1,4 +1,4 @@
-namespace Calculator.OSX
+﻿namespace Calculator.OSX
 {
 	using AppKit;
 
@@ -11,6 +11,6 @@ namespace Calculator.OSX
 		{
 			mainWindowController = new MainWindowController();
 			mainWindowController.showWindow(null);
-		}		
+		}
 	}
 }

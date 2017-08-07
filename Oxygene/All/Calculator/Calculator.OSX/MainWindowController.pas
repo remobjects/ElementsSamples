@@ -1,4 +1,4 @@
-namespace Calculator.OSX;
+﻿namespace Calculator.OSX;
 
 interface
 
@@ -35,7 +35,7 @@ method MainWindowController.windowDidLoad;
 begin
   inherited windowDidLoad();
   // Implement this method to handle any initialization after your window controller's
-	// window has been loaded from its nib file.
+  // window has been loaded from its nib file.
 end;
 
 method MainWindowController.pressBackButton(sender: id);

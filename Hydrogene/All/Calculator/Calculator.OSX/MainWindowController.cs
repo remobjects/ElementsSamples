@@ -1,4 +1,4 @@
-using AppKit;
+﻿using AppKit;
 using Calculator.Engine;
 
 namespace Calculator.OSX
@@ -8,10 +8,10 @@ namespace Calculator.OSX
 
 		[IBOutlet]
 		__weak NSTextField edValue;
-		
+
 		public override instancetype init()
-		{			
-			base.initWithWindowNibName("MainWindowController");			
+		{
+			base.initWithWindowNibName("MainWindowController");
 			// Custom initialization
 		}
 
@@ -24,7 +24,7 @@ namespace Calculator.OSX
 		}
 
 		[IBAction]
-		public void pressBackButton(id sender) 
+		public void pressBackButton(id sender)
 		{
 			var s = edValue.stringValue;
 			if (s.length > 0)
@@ -35,20 +35,20 @@ namespace Calculator.OSX
 		}
 
 		[IBAction]
-		public void pressExitButton(id sender) 
+		public void pressExitButton(id sender)
 		{
 			close();
 		}
 
 		[IBAction]
-		public void pressEvaluateButton(id sender) 
+		public void pressEvaluateButton(id sender)
 		{
 			try
 			{
 				var eval = new Evaluator();
 				edValue.stringValue = "" + eval.Evaluate(edValue.stringValue);
-			} 
-			catch (EvaluatorError e) 
+			}
+			catch (EvaluatorError e)
 			{
 				var alert = new NSAlert();
 				alert.messageText = "Error evaluating: " + e.reason;
@@ -57,7 +57,7 @@ namespace Calculator.OSX
 		}
 
 		[IBAction]
-		public void pressCharButton(id sender) 
+		public void pressCharButton(id sender)
 		{
 			edValue.stringValue += ((NSButton)sender).title;
 		}

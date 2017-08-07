@@ -9,9 +9,9 @@ uses
 type
   [IBObject]
   RootViewController = private class(UIViewController)
-    [IBOutlet] 
-	  var edValue: weak UITextField;
-  public 
+    [IBOutlet]
+    var edValue: weak UITextField;
+  public
     method init: instancetype; override;
     method viewDidLoad; override;
     method didReceiveMemoryWarning; override;
@@ -64,7 +64,7 @@ begin
   try
     var eval := new Evaluator();
     edValue.text := '' + eval.Evaluate(edValue.text);
-  except 
+  except
     on e: EvaluatorError do begin
       var alert := new UIAlertView withTitle("Calculator") message("Error evaluation: " + e.reason) &delegate(nil) cancelButtonTitle("OK") otherButtonTitles(nil);
       alert.show();

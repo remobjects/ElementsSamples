@@ -9,23 +9,23 @@ using Calculator.Engine;
 
 namespace org.remobjects.calculator
 {
-	public class MainActivity: Activity 
+	public class MainActivity: Activity
 	{
 		private TextView TbValue;
 
-		void btnBackspace(View v) 
+		void btnBackspace(View v)
 		{
 			var s = TbValue.Text.toString();
-			if (s.length() > 0) 
+			if (s.length() > 0)
 			{
 				s = s.substring(0, s.length() - 1);
 				TbValue.Text = s;
 			}
 		}
 
-		void btnExecute(View v) 
+		void btnExecute(View v)
 		{
-			try 
+			try
 			{
 				var eval = new Evaluator();
 				var res = eval.Evaluate(TbValue.Text.toString());
@@ -41,17 +41,17 @@ namespace org.remobjects.calculator
 			}
 		}
 
-		void btnExit(View v) 
+		void btnExit(View v)
 		{
 			finish();
 		}
 
-		void btnChar(View v) 
+		void btnChar(View v)
 		{
 			TbValue.Text = TbValue.Text.toString() + ((Button)v).Text.toString();
 		}
 
-		public override void onCreate(Bundle savedInstanceState) 
+		public override void onCreate(Bundle savedInstanceState)
 		{
 			base.onCreate(savedInstanceState);
 			ContentView = R.layout.main;

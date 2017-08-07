@@ -3,25 +3,25 @@ using Sugar.Collections;
 
 namespace Calculator.Engine
 {
-	enum EvaluatorTokenType: int 
+	enum EvaluatorTokenType: int
 	{
 		EOF, Number, Op_Add, Op_Sub, Op_Mul, Op_Div, Error
 	}
 
-	class EvaluatorError: Exception 
+	class EvaluatorError: Exception
 	{
 	}
 
-	class EvaluatorToken 
+	class EvaluatorToken
 	{
-		public EvaluatorToken(EvaluatorTokenType token, string value, int offset) 
+		public EvaluatorToken(EvaluatorTokenType token, string value, int offset)
 		{
 			this.Token = token;
 			this.Value = value;
 			this.Offset = offset;
 		}
 
-		public EvaluatorTokenType Token; 
+		public EvaluatorTokenType Token;
 		public string Value;
 		public int Offset;
 	}
@@ -35,11 +35,11 @@ namespace Calculator.Engine
 
 		// returns the current token, or EOF if at the end
 		private EvaluatorToken Current
-		{ 
-			get 
+		{
+			get
 			{
 				if (Tokens != null && Index < Tokens.Count)
-					return Tokens[Index]; 
+					return Tokens[Index];
 				return EOF;
 			}
 		}
@@ -53,7 +53,7 @@ namespace Calculator.Engine
 			return ParseAdditionExpression();
 		}
 
-		// Parses + and - expressions, this is split from * and / so that 
+		// Parses + and - expressions, this is split from * and / so that
 		// + and - have a lower prescendence than * and /
 		private double ParseAdditionExpression()
 		{
@@ -63,7 +63,7 @@ namespace Calculator.Engine
 				var sub = Current.Token == EvaluatorTokenType.Op_Sub;
 				Index++;
 				var r = ParseMultiplicationExpression();
-				if (sub) 
+				if (sub)
 					l = l - r;
 				else
 					l = l + r;
@@ -71,16 +71,16 @@ namespace Calculator.Engine
 			return l;
 		}
 
-		// Parse * and / 
+		// Parse * and /
 		private double ParseMultiplicationExpression()
-		{			
+		{
 			var l = ParseValueExpression();
 			while (Current.Token == EvaluatorTokenType.Op_Mul || Current.Token == EvaluatorTokenType.Op_Div)
 			{
 				var mul = Current.Token == EvaluatorTokenType.Op_Mul;
 				Index++;
 				var r = ParseValueExpression();
-				if (mul) 
+				if (mul)
 					l = l * r;
 				else
 					l = l / r;
@@ -88,7 +88,7 @@ namespace Calculator.Engine
 			return l;
 		}
 
-		private double ParseValueExpression() 
+		private double ParseValueExpression()
 		{
 			switch (Current.Token)
 			{
@@ -110,13 +110,13 @@ namespace Calculator.Engine
 		}
 
 		// Splits the string into parts; skipping whitespace
-		private static List<EvaluatorToken> Tokenize(String input) 
-		{		
+		private static List<EvaluatorToken> Tokenize(String input)
+		{
 			var res = new List<EvaluatorToken>();
-		
+
 			// for parsing convenience so look ahead won't throw exceptions.
 			input = input + "\0\0";
-		
+
 			var i = 0;
 			while (i < input.Length) {
 				int c = i;
@@ -125,46 +125,46 @@ namespace Calculator.Engine
 					case '\0':
 						i = input.Length;
 						break;
-					case '0': case '1': case '2': case '3': case '4': case '5': 
+					case '0': case '1': case '2': case '3': case '4': case '5':
 					case '6': case '7': case '8': case '9': case '.':
 						c = i + 1;
 						var gotDot = input[i] == '.';
 						while (true)
 						{
 							var ch = input[c];
-							if ((ch == '0') || (ch ==  '1') || (ch == '2') || (ch == '3') || (ch == '4') || (ch == '5') || 
-							   (ch == '6') || (ch == '7') || (ch == '8') || (ch == '9') || (!gotDot && ch == '.')) 
+							if ((ch == '0') || (ch ==  '1') || (ch == '2') || (ch == '3') || (ch == '4') || (ch == '5') ||
+							   (ch == '6') || (ch == '7') || (ch == '8') || (ch == '9') || (!gotDot && ch == '.'))
 							{
 								c++;
 								if (ch == '.')
 									gotDot = true;
 							}
-							else 
+							else
 								break;
 						}
 						res.Add(new EvaluatorToken(token: EvaluatorTokenType.Number, value: input.Substring(i, c-i), offset: i));
 						i = c;
 						break;
-					case '+': 
+					case '+':
 						res.Add(new EvaluatorToken(token: EvaluatorTokenType.Op_Add, value: "+", offset: i));
 						i++;
 						break;
-					case '-': 
+					case '-':
 						res.Add(new EvaluatorToken(token: EvaluatorTokenType.Op_Sub, value: "-", offset: i));
 						i++;
 						break;
-					case '*': 
+					case '*':
 						res.Add(new EvaluatorToken(token: EvaluatorTokenType.Op_Mul, value: "*", offset: i));
 						i++;
 						break;
-					case '/': 
+					case '/':
 						res.Add(new EvaluatorToken(token: EvaluatorTokenType.Op_Div, value: "/", offset: i));
 						i++;
 						break;
 					case ' ': case '\t': case '\r': case '\n':
 						i++;
 						break;
-					default: 
+					default:
 						res.Add(new EvaluatorToken(token: EvaluatorTokenType.Error, value: "" + input[i], offset: i));
 						i++;
 						break;

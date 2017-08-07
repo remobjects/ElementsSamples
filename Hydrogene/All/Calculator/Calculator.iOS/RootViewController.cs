@@ -4,9 +4,9 @@ using Calculator.Engine;
 namespace Calculator.iOS
 {
 	[IBObject]
-	class RootViewController : UIViewController 
+	class RootViewController : UIViewController
 	{
-		[IBOutlet] 
+		[IBOutlet]
 		__weak UITextField edValue;
 
 		public override instancetype init()
@@ -15,20 +15,20 @@ namespace Calculator.iOS
 			title = "Calculator.iOS";
 		}
 
-		public override void viewDidLoad() 
+		public override void viewDidLoad()
 		{
 			base.viewDidLoad();
 			// Do any additional setup after loading the view.
 		}
 
-		public override void didReceiveMemoryWarning() 
+		public override void didReceiveMemoryWarning()
 		{
 			base.didReceiveMemoryWarning();
 			// Dispose of any resources that can be recreated.
 		}
 
 		[IBAction]
-		public void pressBackButton(id sender) 
+		public void pressBackButton(id sender)
 		{
 			var s = edValue.text;
 			if (s.length > 0)
@@ -39,20 +39,20 @@ namespace Calculator.iOS
 		}
 
 		[IBAction]
-		public void pressExitButton(id sender) 
+		public void pressExitButton(id sender)
 		{
 			this.dismissViewControllerAnimated(true) completion(null);
 		}
 
 		[IBAction]
-		public void pressEvaluateButton(id sender) 
+		public void pressEvaluateButton(id sender)
 		{
-			try 
+			try
 			{
 				var eval = new Evaluator();
 				edValue.text = "" + eval.Evaluate(edValue.text);
-			} 
-			catch (EvaluatorError e)  
+			}
+			catch (EvaluatorError e)
 			{
 				var alert = new UIAlertView withTitle("Calculator") message("Error evaluation: " + e.reason) @delegate(null) cancelButtonTitle("OK") otherButtonTitles(null);
 				alert.show();
@@ -60,7 +60,7 @@ namespace Calculator.iOS
 		}
 
 		[IBAction]
-		public void pressCharButton(id sender) 
+		public void pressCharButton(id sender)
 		{
 			edValue.text += ((UIButton)sender).titleLabel.text;
 		}

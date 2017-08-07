@@ -1,4 +1,4 @@
-namespace Calculator.OSX;
+﻿namespace Calculator.OSX;
 
 interface
 
