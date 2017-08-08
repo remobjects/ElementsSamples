@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -8,8 +8,6 @@
     <RootNamespace>keyboardapplet</RootNamespace>
     <ProjectGuid>{8602dfde-2750-4663-90d5-9044d28d42f0}</ProjectGuid>
     <AssemblyName>keyboardapplet</AssemblyName>
-    <StartupClass />
-    <DefaultUses />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -47,7 +45,7 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt.jar" />
+    <Reference Include="rt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KeyboardApplet.pas" />

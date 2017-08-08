@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -8,10 +8,6 @@
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <Name>com.example.android.basicglsurfaceview</Name>
     <RootNamespace>com.example.android.basicglsurfaceview</RootNamespace>
-    <AndroidSDKPath />
-    <AndroidPlatformName />
-    <AndroidJavaResourcesFolder />
-    <AndroidNativeLibrariesFolder />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -73,7 +69,7 @@
     <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="android.jar" />
+    <Reference Include="android" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicGLSurfaceView.pas" />

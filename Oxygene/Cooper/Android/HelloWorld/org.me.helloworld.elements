@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -7,8 +7,6 @@
     <Name>org.me.helloworld</Name>
     <RootNamespace>org.me.helloworld</RootNamespace>
     <ProjectGuid>{311d517f-f82a-4c5d-9bd4-8d63dcdaccdf}</ProjectGuid>
-    <AndroidPlatformName>
-    </AndroidPlatformName>
     <AssemblyName>org.me.helloworld</AssemblyName>
     <AndroidMinVersion>10</AndroidMinVersion>
   </PropertyGroup>
@@ -23,9 +21,7 @@
     <XmlDoc>False</XmlDoc>
     <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
-    <SuppressWarnings />
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-    <FutureHelperClassName />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <Optimize>true</Optimize>
@@ -62,7 +58,7 @@
     <AndroidResource Include="res\drawable-ldpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="android.jar" />
+    <Reference Include="android" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.pas" />

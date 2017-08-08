@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0" DefaultTargets="Build">
-    <PropertyGroup Label="Globals">
-        <ProjectGuid>b34d333f-6c96-4918-bba4-48620e214219</ProjectGuid>
-    </PropertyGroup>
-    <PropertyGroup>
-        <RootNamespace>Calculator.Engine</RootNamespace>
-    </PropertyGroup>
-    <Import Project="Calculator.Engine.projitems" Label="Shared"/>
-    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.SharedProject.targets"/>
-    <PropertyGroup>
-        <PreBuildEvent/>
-    </PropertyGroup>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Build">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>b34d333f-6c96-4918-bba4-48620e214219</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Calculator.Engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="Calculator.Engine.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.SharedProject.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
 </Project>

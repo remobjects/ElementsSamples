@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -8,8 +8,6 @@
     <Name>SwingSample</Name>
     <RootNamespace>swingsample</RootNamespace>
     <ProjectGuid>{5d5262e8-c2d6-4c6a-9f56-c36f5457b828}</ProjectGuid>
-    <StartupClass />
-    <DefaultUses />
     <AssemblyName>swingsample</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -48,7 +46,7 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt.jar" />
+    <Reference Include="rt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SwingSample.pas" />

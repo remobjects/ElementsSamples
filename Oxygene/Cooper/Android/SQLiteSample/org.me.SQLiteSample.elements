@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -8,11 +8,7 @@
     <Name>org.me.sqlitesample</Name>
     <RootNamespace>org.me.sqlitesample</RootNamespace>
     <ProjectGuid>{22855f18-3433-438a-93bc-032e2a30e525}</ProjectGuid>
-    <AndroidSDKPath />
-    <AndroidPlatformName />
     <AssemblyName>org.me.sqlitesample</AssemblyName>
-    <StartupClass />
-    <DefaultUses />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -78,7 +74,7 @@
     <Compile Include="DBActivity.pas" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="android.jar" />
+    <Reference Include="android" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -7,14 +7,8 @@
     <Name>org.me.openglsquare</Name>
     <RootNamespace>org.me.openglsquare</RootNamespace>
     <ProjectGuid>{9dd274cd-121a-4084-8be9-e6ebd9978d09}</ProjectGuid>
-    <InternalAssemblyName />
-    <StartupClass />
-    <DefaultUses />
-    <ApplicationIcon />
     <AssemblyName>org.me.openglsquare</AssemblyName>
     <AndroidPackageName>org.me.openglsquare</AndroidPackageName>
-    <AndroidSDKPath>
-    </AndroidSDKPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>False</Optimize>
@@ -29,9 +23,7 @@
     <XmlDoc>False</XmlDoc>
     <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
-    <SuppressWarnings />
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
-    <FutureHelperClassName />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <Optimize>true</Optimize>
@@ -70,7 +62,7 @@
     <AndroidResource Include="res\drawable-ldpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="android.jar" />
+    <Reference Include="android" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GLSquareRenderer.pas">

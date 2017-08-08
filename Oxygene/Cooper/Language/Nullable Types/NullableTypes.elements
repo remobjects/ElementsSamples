@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>nullabletypes</RootNamespace>
@@ -13,8 +13,6 @@
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <ProjectGuid>{EC8E70C4-618C-4AD7-AF7A-CB48487AAD2E}</ProjectGuid>
     <AssemblyDelaySign>False</AssemblyDelaySign>
-    <StartupClass />
-    <DefaultUses />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
@@ -33,9 +31,7 @@
     <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
     <RunCodeAnalysis>False</RunCodeAnalysis>
-    <SuppressWarnings />
     <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
-    <FutureHelperClassName />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>.\bin\Release</OutputPath>
@@ -59,7 +55,7 @@
     <RunCodeAnalysis>False</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt.jar" />
+    <Reference Include="rt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.pas" />

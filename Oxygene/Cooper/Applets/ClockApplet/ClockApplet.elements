@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -8,8 +8,6 @@
     <RootNamespace>clockapplet</RootNamespace>
     <ProjectGuid>{972d2dcd-56df-4e13-b4f5-c5e1696a782d}</ProjectGuid>
     <AssemblyName>clockapplet</AssemblyName>
-    <StartupClass />
-    <DefaultUses />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -47,7 +45,7 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt.jar" />
+    <Reference Include="rt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClockApplet.pas" />

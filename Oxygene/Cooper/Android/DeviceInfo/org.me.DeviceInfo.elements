@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -9,8 +9,6 @@
     <RootNamespace>org.me.deviceinfo</RootNamespace>
     <ProjectGuid>{1d0cd9b7-55aa-4d39-82e9-a504eeebbfbf}</ProjectGuid>
     <AssemblyName>org.me.deviceinfo</AssemblyName>
-    <StartupClass />
-    <DefaultUses />
     <AndroidMinVersion>8</AndroidMinVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -73,7 +71,7 @@
     <AndroidResource Include="res\drawable-ldpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="android.jar" />
+    <Reference Include="android" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InfoActivity.pas" />
