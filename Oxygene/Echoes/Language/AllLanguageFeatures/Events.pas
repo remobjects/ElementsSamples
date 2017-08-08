@@ -18,41 +18,41 @@ type
     event Foo: OnFoo;
     event Bar: OnBar delegate fBar; virtual; final;
     event Bar2: OnBar add AddBar remove RemoveBar;
-    
+
     event FooFoo: OnFoo; abstract; { no virtual needed for abstarct, in Oxygene }
-    
+
     { Oxygene only: }
     event BarFoo: OnBar raise;
-    event Full: OnBar public add AddBar remove RemoveBar public raise RaiseBar;
+    event Full: OnBar add AddBar remove RemoveBar public raise RaiseBar;
   end;
-  
+
   Events2 = assembly sealed class(Events)
   public
     event Bar2: OnBar; reintroduce; { reintroduce supported for non-method members }
     event FooFoo: OnFoo; override; { no virtual needed! }
   end;
-  
+
   OnFoo = public delegate;
   OnBar = assembly delegate(aString: string);
-  
+
   { backward compatibility }
-  OnOld = delegate(x: integer) of object; 
-  OnOld2 = procedure(x: integer); 
-  OnOld3 = function(x: integer): string; 
-  OnOld4 = function(x: integer): string of object; 
+  OnOld = delegate(x: integer) of object;
+  OnOld2 = procedure(x: integer);
+  OnOld3 = function(x: integer): string;
+  OnOld4 = function(x: integer): string of object;
 
 
 implementation
 
-method Events.AddBar(aEvent: OnBar); 
+method Events.AddBar(aEvent: OnBar);
 begin
 end;
 
-method Events.RemoveBar(aEvent: OnBar); 
+method Events.RemoveBar(aEvent: OnBar);
 begin
 end;
 
-method Events.RaiseBar(aString: String); 
+method Events.RaiseBar(aString: String);
 begin
 end;
 

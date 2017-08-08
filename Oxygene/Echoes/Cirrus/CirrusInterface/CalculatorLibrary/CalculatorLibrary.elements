@@ -12,7 +12,7 @@
     <AllowUnsafeCode>False</AllowUnsafeCode>
     <ApplicationIcon />
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Name>CalculatorLibrary</Name>
     <ProjectGuid>{ac43572c-4db2-46f2-a606-44d2e60187fc}</ProjectGuid>
   </PropertyGroup>

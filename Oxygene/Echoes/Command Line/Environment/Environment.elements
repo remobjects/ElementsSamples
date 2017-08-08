@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>ConsoleApplication1</RootNamespace>
@@ -41,6 +41,9 @@
     </Reference>
     <Reference Include="System.Xml">
       <HintPath>System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Elements">
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

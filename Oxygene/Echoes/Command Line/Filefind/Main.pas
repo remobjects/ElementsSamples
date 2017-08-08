@@ -2,7 +2,7 @@
 
 { RemObjects Oxygene Sample application
 
-  This application lists all files in the current directory and 
+  This application lists all files in the current directory and
   in all subdirectories of current directory, that satisfy to the given mask.
 }
 
@@ -29,7 +29,7 @@ begin
   Console.Write(Shorten(aFolderName));
 
   try
-    
+
     lFiles := Directory.GetFiles(aFolderName, aMask);
     for each f in lFiles do begin
       Console.WriteLine();
@@ -37,9 +37,9 @@ begin
     end;
 
     lFiles := Directory.GetDirectories(aFolderName);
-	  for each d in lFiles do begin
-	    ProcessFolder(d, aMask);
-	  end;
+    for each d in lFiles do begin
+      ProcessFolder(d, aMask);
+    end;
   except
     on E: DirectoryNotFoundException, UnauthorizedAccessException do begin
       //Console.WriteLine('  '+E.Message);
@@ -53,7 +53,7 @@ begin
   Console.WriteLine('RemObjects Oxygene Filefind utility.');
   Console.WriteLine('Free and unsupported, use at your own risk.');
   Console.WriteLine();
-  
+
   if length(args) = 1 then begin
     ProcessFolder(System.Environment.CurrentDirectory, args[0]);
     Console.WriteLine();
@@ -66,22 +66,22 @@ begin
     Console.WriteLine();
     exit;
   end;
-  
+
 end;
 
 class method ConsoleApp.Shorten(aFolderName: string): string;
 begin
   var lWidth := Console.WindowWidth-1;
-  
+
   if aFolderName.Length > lWidth then begin
-    var lStart := aFolderName.IndexOf('\',2);
-    if (lStart > 40) or (lStart = -1) then lStart := aFolderName.IndexOf('\');
-    
-    result := aFolderName.Substring(1, lStart)+'�\';
+    var lStart := aFolderName.IndexOf(Path.DirectorySeparatorChar, 2);
+    if (lStart > 40) or (lStart = -1) then lStart := aFolderName.IndexOf(Path.DirectorySeparatorChar);
+
+    result := aFolderName.Substring(1, lStart)+'...'+Path.DirectorySeparatorChar;
     result := result+aFolderName.Substring(lWidth-result.Length);
   end
   else result := aFolderName;
-  
+
   if result.Length < lWidth then
     result := result.PadRight(lWidth);
 end;

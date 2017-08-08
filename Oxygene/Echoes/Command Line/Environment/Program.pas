@@ -26,32 +26,17 @@ implementation
 
 class method ConsoleApp.IsWindows: Boolean;
 begin
-  Result := System.IO.Path.DirectorySeparatorChar = '\'
+  result := RemObjects.Elements.RTL.Environment.OS = RemObjects.Elements.RTL.OperatingSystem.Windows;
 end;
 
 class method ConsoleApp.IsLinux: Boolean;
 begin
-  if IsWindows then
-    
-    exit False;
-  var buf: Mono.Unix.Native.Utsname;
-  
-  if Mono.Unix.Native.Syscall.uname(out buf) = 0 then
-    
-    exit string.Compare(buf.sysname, 'linux', True) = 0;
-  Result := false;
+  result := RemObjects.Elements.RTL.Environment.OS = RemObjects.Elements.RTL.OperatingSystem.Linux;
 end;
 
 class method ConsoleApp.IsOSX: Boolean;
 begin
-  if IsWindows then
-    exit False;
-  
-  var buf: Mono.Unix.Native.Utsname;
-  if Mono.Unix.Native.Syscall.uname(out buf) = 0 then
-    exit string.Compare(buf.sysname, 'darwin', True) = 0;
-  
-  Result := false;
+  result := RemObjects.Elements.RTL.Environment.OS = RemObjects.Elements.RTL.OperatingSystem.macOS;
 end;
 
 class method ConsoleApp.IsMono: Boolean;
@@ -97,7 +82,7 @@ begin
   Console.WriteLine(String.Format('My Pictures folder: {0}', Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)));
   Console.WriteLine(String.Format('My Music folder: {0}', Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)));
   Console.WriteLine(String.Format('Personal folder: {0}', Environment.GetFolderPath(Environment.SpecialFolder.Personal)));
-  Console.ReadLine();  
+  Console.ReadLine();
 end;
 
 end.
