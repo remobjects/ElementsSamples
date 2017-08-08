@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{1F544C5F-6354-4C22-8A9C-8AD999671687}</ProjectGuid>
     <RootNamespace>AsyncSample</RootNamespace>
@@ -52,14 +52,9 @@
     <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="mscorlib">
-      <Name>mscorlib</Name>
-    </Reference>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Core">
-    </Reference>
+    <Reference Include="mscorlib"></Reference>
+    <Reference Include="System"></Reference>
+    <Reference Include="System.Core"></Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.pas" />

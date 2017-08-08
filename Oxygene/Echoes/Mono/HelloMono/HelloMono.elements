@@ -1,4 +1,5 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{7D652A62-E39F-4039-9CA7-9F228F3D39D8}</ProjectGuid>
     <OutputType>exe</OutputType>
@@ -14,7 +15,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <Framework>{MONO}</Framework>
     <GeneratePDB>True</GeneratePDB>
-    <GenerateMDB>True</GenerateMDB>	
+    <GenerateMDB>True</GenerateMDB>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>

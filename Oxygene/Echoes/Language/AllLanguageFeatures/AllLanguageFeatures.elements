@@ -1,12 +1,8 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{5B37D2BA-8CC5-4C3E-B6C1-83B2580B64AC}</ProjectGuid>
-    <ApplicationIcon />
-    <StartPage />
-    <DefaultUses />
-    <InternalAssemblyName />
     <RootNamespace>AllLanguageFeatures</RootNamespace>
-    <StartupClass />
     <OutputType>library</OutputType>
     <AssemblyName>AllLanguageFeatures</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
@@ -14,12 +10,6 @@
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <AllowLegacyOutParams>True</AllowLegacyOutParams>
     <AllowUnsafeCode>False</AllowUnsafeCode>
-    <SCCProjectName />
-    <SCCAuxPath />
-    <SCCLocalPath />
-    <SCCProvider />
-    <ServerPath />
-    <ProjectTypeGuids />
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -63,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
-    <Reference Include="System"/>
+    <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -88,5 +78,4 @@
     <Compile Include="Properties.pas" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
-
 </Project>

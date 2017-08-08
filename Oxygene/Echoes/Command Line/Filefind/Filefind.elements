@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}</ProjectGuid>
     <RootNamespace>Filefind</RootNamespace>
@@ -60,6 +60,5 @@
     <Compile Include="AssemblyInfo.pas" />
     <Compile Include="Main.pas" />
   </ItemGroup>
-  <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
 </Project>

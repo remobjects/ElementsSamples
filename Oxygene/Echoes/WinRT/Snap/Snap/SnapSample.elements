@@ -1,9 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <RootNamespace>SnapTileSample</RootNamespace>
     <ProjectGuid>961721ad-de14-4f0f-ad0b-d44c98e25040</ProjectGuid>
-    <StartupClass />
     <OutputType>AppContainerExe</OutputType>
     <AssemblyName>SnapTileSample</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
@@ -12,15 +11,11 @@
     <AllowLegacyOutParams>False</AllowLegacyOutParams>
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <AllowUnsafeCode>False</AllowUnsafeCode>
-    <ApplicationIcon />
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{656346D9-4656-40DA-A068-22D5425D4639}</ProjectTypeGuids>
     <Name>MetroSnapSample</Name>
-    <DefaultUses />
-    <InternalAssemblyName />
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
-    <TargetFrameworkVersion />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>

@@ -1,4 +1,5 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{E7BE2ACB-85AE-4F99-A027-D3BE25B014D5}</ProjectGuid>
     <RootNamespace>HorseRace</RootNamespace>
@@ -54,13 +55,9 @@
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
   <ItemGroup>
     <Reference Include="mscorlib" />
-    <Reference Include="System"/>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing"></Reference>
+    <Reference Include="System.Windows.Forms"></Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
