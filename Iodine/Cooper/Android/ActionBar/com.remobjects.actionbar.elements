@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <ProjectGuid>{152043c1-c634-42b7-9051-f3001cb33873}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <Name>com.remobjects.actionbar</Name>
+    <RootNamespace>com.remobjects.actionbar</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <StartMode>Project</StartMode>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <CpuType>anycpu</CpuType>
+    <RuntimeVersion>v25</RuntimeVersion>
+    <XmlDoc>False</XmlDoc>
+    <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="res\" />
+    <Folder Include="res\drawable-hdpi\" />
+    <Folder Include="res\drawable-ldpi\" />
+    <Folder Include="res\drawable-mdpi\" />
+    <Folder Include="res\drawable-xhdpi\" />
+    <Folder Include="res\menu" />
+    <Folder Include="res\values\" />
+    <Folder Include="res\layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="res\values\strings.android-xml">
+      <SubType>Content</SubType>
+    </AndroidResource>
+    <AndroidResource Include="res\layout\main.layout-xml">
+      <SubType>Content</SubType>
+    </AndroidResource>
+    <None Include="res\drawable-hdpi\icon.png">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="res\drawable-mdpi\icon.png">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="res\drawable-ldpi\icon.png">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="res\drawable-xhdpi\icon.png">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.java" />
+    <Compile Include="SearchActivity.java" />
+    <Compile Include="SettingsActivity.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\drawable-hdpi\ic_action_search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-ldpi\ic_action_search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-mdpi\ic_action_search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\drawable-xhdpi\ic_action_search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="res\menu\main_activity_actions.xml">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="res\values\themes.xml">
+      <SubType>Form</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

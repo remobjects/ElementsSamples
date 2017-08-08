@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "com.remobjects.actionbar", "com.remobjects.actionbar.elements", "{152043C1-C634-42B7-9051-F3001CB33873}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{152043C1-C634-42B7-9051-F3001CB33873}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{152043C1-C634-42B7-9051-F3001CB33873}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{152043C1-C634-42B7-9051-F3001CB33873}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{152043C1-C634-42B7-9051-F3001CB33873}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

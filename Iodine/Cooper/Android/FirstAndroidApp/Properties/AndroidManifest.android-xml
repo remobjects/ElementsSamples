@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.me.firstandroidapp">
+  <!-- the android:debuggable="true" attribute is overwritten by the compiler when the debug info option is set -->
+  <application android:label="@string/app_name" android:icon="@drawable/icon">
+    
+    <activity android:label="@string/app_name" android:name="org.me.firstandroidapp.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    
+    <activity 
+      android:label="DisplayMessageActivity"
+      android:name="org.me.firstandroidapp.DisplayMessageActivity"
+      android:parentActivityName="org.me.firstandroidapp.MainActivity">
+    </activity>
+  </application>
+  <uses-sdk android:minSdkVersion="4" />
+</manifest>
