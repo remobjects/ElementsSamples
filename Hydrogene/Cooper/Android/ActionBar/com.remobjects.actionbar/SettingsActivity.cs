@@ -8,19 +8,19 @@ using android.widget;
 
 namespace com.remobjects.actionbar
 {
-    public class SettingsActivity : Activity
-    {
+	public class SettingsActivity : Activity
+	{
 		public override void onCreate(Bundle savedInstanceState)
 		{
 			base.onCreate(savedInstanceState);
-			
-			TextView textView = new TextView(this);
-      textView.TextSize = 40;
-      textView.Text = "Settings Activity";
-      ContentView = textView;
 
-      getActionBar().setDisplayHomeAsUpEnabled(true);
+			TextView textView = new TextView(this);
+			textView.TextSize = 40;
+			textView.Text = "Settings Activity";
+			ContentView = textView;
+
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		}
-    }
+	}
 }

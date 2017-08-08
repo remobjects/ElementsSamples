@@ -8,21 +8,21 @@ using android.widget;
 
 namespace org.me.firstandroidapp
 {
-    public class DisplayMessageActivity : Activity
-    {
-		
+	public class DisplayMessageActivity : Activity
+	{
+
 		public override void onCreate(Bundle savedInstanceState)
 		{
 			base.onCreate(savedInstanceState);
-			
-      Intent intent = getIntent();
-      string message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
-      TextView textView = new TextView(this);
-      textView.TextSize = 40;
-      textView.Text = message;
-      ContentView = textView;
+			Intent intent = getIntent();
+			string message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+
+			TextView textView = new TextView(this);
+			textView.TextSize = 40;
+			textView.Text = message;
+			ContentView = textView;
 		}
 
-    }
+	}
 }

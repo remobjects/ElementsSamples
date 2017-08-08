@@ -8,9 +8,9 @@ using android.widget;
 
 namespace com.remobjects.actionbar
 {
-	public class MainActivity: Activity
+	public class MainActivity : Activity
 	{
-	
+
 
 		public override void onCreate(Bundle savedInstanceState)
 		{
@@ -20,40 +20,40 @@ namespace com.remobjects.actionbar
 			ContentView = R.layout.main;
 		}
 
-    public override bool onCreateOptionsMenu(Menu menu)
-    {
-     MenuInflater  inflater = getMenuInflater();
-     inflater.inflate(R.menu.main_activity_actions, menu);
-     return base.onCreateOptionsMenu(menu);
-     }
+		public override bool onCreateOptionsMenu(Menu menu)
+		{
+			MenuInflater  inflater = getMenuInflater();
+			inflater.inflate(R.menu.main_activity_actions, menu);
+			return base.onCreateOptionsMenu(menu);
+		}
 
-     public override bool onOptionsItemSelected(MenuItem item)
-     {
-        switch (item.getItemId())
-        {
-          case R.id.action_search:
-            this.openSearch();
-            return true;
-          case R.id.action_settings:
-            this.openSettings();
-            return true;
-          default: 
-              return base.onOptionsItemSelected(item);
-        }
-	   }
+		public override bool onOptionsItemSelected(MenuItem item)
+		{
+			switch (item.getItemId())
+			{
+				case R.id.action_search:
+					this.openSearch();
+					return true;
+				case R.id.action_settings:
+					this.openSettings();
+					return true;
+				default:
+					return base.onOptionsItemSelected(item);
+			}
+		}
 
-    public void openSearch()
-    {
-        Intent intent = new Intent(this, typeof(SearchActivity));
-        startActivity(intent);
-    }
+		public void openSearch()
+		{
+			Intent intent = new Intent(this, typeof(SearchActivity));
+			startActivity(intent);
+		}
 
-    public void openSettings()
-    {
-        Intent intent = new Intent(this, typeof(SettingsActivity));
-        startActivity(intent);
-    }
+		public void openSettings()
+		{
+			Intent intent = new Intent(this, typeof(SettingsActivity));
+			startActivity(intent);
+		}
 
-	
+
 	}
 }
