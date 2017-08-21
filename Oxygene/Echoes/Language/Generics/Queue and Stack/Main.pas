@@ -179,6 +179,7 @@ begin
   self.MaximizeBox := false;
   self.Name := 'MainForm';
   self.Text := 'QueueAndStack Sample';
+  self.AutoScaleMode := System.Windows.Forms.AutoScaleMode.Font;
   self.ResumeLayout(false);
   self.PerformLayout();
 end;
