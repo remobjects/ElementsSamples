@@ -2,3 +2,7 @@ bin
 obj
 *.fire.cache
 *.user
+
+*.cache
+
+Oxygene/Echoes/Language/Generics/\.vs/Generics/v15/\.suo
