@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "ZipTest", ".\ZipTest.elements", "{C3132483-F22E-48BA-B945-6121D688433D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3132483-F22E-48BA-B945-6121D688433D}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C3132483-F22E-48BA-B945-6121D688433D}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{C3132483-F22E-48BA-B945-6121D688433D}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{C3132483-F22E-48BA-B945-6121D688433D}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
