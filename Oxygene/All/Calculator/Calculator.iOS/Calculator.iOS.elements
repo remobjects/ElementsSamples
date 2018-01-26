@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>Calculator.iOS</RootNamespace>
@@ -40,8 +40,8 @@
   <ItemGroup>
     <Reference Include="CoreGraphics" />
     <Reference Include="Foundation" />
-    <Reference Include="libSugar">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Sugar\Toffee\iOS\libSugar.fx</HintPath>
+    <Reference Include="libElements.fx">
+      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Reference Libraries\iOS\libElements.fx</HintPath>
     </Reference>
     <Reference Include="libxml2">
       <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\iOS\libxml2.fx</HintPath>
@@ -85,6 +85,7 @@
     <Xib Include="RootViewController~iphone.xib" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\App Icons\" />
     <Folder Include="Resources\Launch Images\" />

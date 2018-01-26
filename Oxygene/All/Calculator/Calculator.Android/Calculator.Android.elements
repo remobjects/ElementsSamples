@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -51,8 +51,8 @@
     <Folder Include="res\drawable-ldpi\" />
     <Folder Include="res\drawable-mdpi\" />
     <Folder Include="res\drawable-xhdpi\" />
-    <Folder Include="res\values\" />
     <Folder Include="res\layout\" />
+    <Folder Include="res\values\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="res\values\strings.android-xml">
@@ -82,7 +82,8 @@
     <Reference Include="android">
       <Private>True</Private>
     </Reference>
-    <Reference Include="sugar">
+    <Reference Include="elements.jar">
+      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Cooper\Reference Archives\elements.jar</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="cooper">

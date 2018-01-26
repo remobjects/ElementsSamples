@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -51,13 +51,13 @@
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elements">
+      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Echoes\Reference Assemblies\Elements.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ReachFramework" />
-    <Reference Include="Sugar">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -92,13 +92,13 @@
     <None Include="Properties\App.ico" />
     <Compile Include="Properties\AssemblyInfo.pas" />
     <Compile Include="Properties\Resources.Designer.pas">
-      <DependentUpon>Properties\Resources.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <Compile Include="Properties\Settings.Designer.pas">
-      <DependentUpon>Properties\Settings.settings</DependentUpon>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
