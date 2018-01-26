@@ -1,17 +1,17 @@
 ﻿namespace GlHelper;
 
 interface
- uses
- rtl,
+uses
+  rtl,
  {$IF TOFFEE}
  Foundation,
 {$ELSEIF ISLAND}
- Remobjects.Elements.System,
+Remobjects.Elements.System,
  {$ENDIF}
  RemObjects.Elements.RTL;
 
 
- type
+type
   Pointer = ^Void;
 
   glImageData = public record
@@ -25,7 +25,7 @@ interface
   glStringHelper = static class
   private
   public
-     method toPansichar(const Value : String) : ^AnsiChar;
+    method toPansichar(const Value : String) : ^AnsiChar;
   end;
 
 
@@ -33,14 +33,13 @@ implementation
 
 method glStringHelper.toPansichar(const Value: String): ^AnsiChar;
 begin
-  {$IF TOFFEE}
-   exit   NSString(Value).cStringUsingEncoding(NSStringEncoding.NSUTF8StringEncoding);
-  {$ELSEIF ISLAND}
-    exit     @Remobjects.Elements.System.String(Value).ToAnsiChars(true)[0];
-  {$ELSEIF}
-  exit nil;
+  IF defined('TOFFEE') then
+    exit   NSString(Value).cStringUsingEncoding(NSStringEncoding.NSUTF8StringEncoding)
+  else if defined('ISLAND') then
+    exit     @Remobjects.Elements.System.String(Value).ToAnsiChars(true)[0]
+  else
+    exit nil;
 
-  {$ENDIF}
 end;
 
 

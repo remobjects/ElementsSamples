@@ -1,5 +1,5 @@
 ﻿namespace GlHelper;
-
+{$DEFINE USEINLINE}
 interface
 
 type
@@ -8,7 +8,7 @@ type
 
     }
 
-{$DEFINE USEINLINE}
+
  TMatrix4 = public record
   private
 
