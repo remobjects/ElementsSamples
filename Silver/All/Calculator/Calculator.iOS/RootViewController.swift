@@ -39,7 +39,7 @@
 	public func pressEvaluateButton(_ sender: id!) {
 		__try {
 			var eval = Evaluator()
-			edValue.text = "" + eval.Evaluate(edValue.text as! Sugar.String)
+			edValue.text = "" + eval.Evaluate(edValue.text as! String)
 		} __catch e: EvaluatorError {
 			var alert = UIAlertView(title: "Calculator", message: "Error evaluation: " + e.reason , delegate:  nil, cancelButtonTitle:  "OK", otherButtonTitles:  nil)
 			alert.show()

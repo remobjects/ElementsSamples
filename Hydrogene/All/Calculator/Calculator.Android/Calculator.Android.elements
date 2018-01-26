@@ -51,8 +51,8 @@
     <Folder Include="res\drawable-ldpi\" />
     <Folder Include="res\drawable-mdpi\" />
     <Folder Include="res\drawable-xhdpi\" />
-    <Folder Include="res\values\" />
     <Folder Include="res\layout\" />
+    <Folder Include="res\values\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="res\values\strings.android-xml">
@@ -82,10 +82,11 @@
     <Reference Include="android">
       <Private>True</Private>
     </Reference>
-    <Reference Include="sugar">
+    <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
-    <Reference Include="cooper">
+    <Reference Include="elements.jar">
+      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Cooper\Reference Archives\elements.jar</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

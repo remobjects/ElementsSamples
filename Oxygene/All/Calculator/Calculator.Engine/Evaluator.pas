@@ -3,8 +3,7 @@
 interface
 
 uses
-  Sugar,
-  Sugar.Collections;
+  RemObjects.Elements.RTL;
 
 type
   EvaluatorTokenType = private enum (
