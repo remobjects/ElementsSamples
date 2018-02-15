@@ -12,7 +12,7 @@ type
     class var fButton: HWND;
 
     [CallingConvention(CallingConvention.Stdcall)]
-    class method WndProc(hWnd: HWND; message: UINT; wParam: WPARAM; lParam: LPARAM): Integer;
+    class method WndProc(hWnd: HWND; message: UINT; wParam: WPARAM; lParam: LPARAM): LRESULT;
     begin
       case message of
         WM_COMMAND:
