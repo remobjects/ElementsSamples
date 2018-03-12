@@ -1,8 +1,8 @@
 ﻿namespace PlayLister;
 
-{ RemObjects Oxygene Sample application 
+{ RemObjects Oxygene Sample application
 
-  This application loops over all mp3 files in a given folder hierarchy 
+  This application loops over all mp3 files in a given folder hierarchy
   and creates recursive .m3u playlist files }
 
 interface
@@ -12,57 +12,57 @@ uses System.*;
 type
   ConsoleApp = class
   private
-    class var 
+    class var
       fFiles: ArrayList;
-      fMusicFolder, fOutFolder, fPrefix: string;
-    class method ProcessFolder(aName: string);
+      fMusicFolder, fOutFolder, fPrefix: String;
+    class method ProcessFolder(aName: String);
   public
-    class method Main(args: array of string);
+    class method Main(args: array of String);
   end;
 
 implementation
 
 class method ConsoleApp.ProcessFolder(aName: string);
 var
-  lFiles: array of string;
-  lFilename: string;
+  lFiles: array of String;
+  lFilename: String;
 begin
   //Console.WriteLine('Folder :'+ aName);
-  
+
   lFiles := Directory.GetFiles(aName);
-    
+
   if aName = fMusicFolder then
     lFilename := 'All.m3u'
   else
     lFilename := aName.SubString(length(fMusicFolder)+1).Replace('\','-')+'.m3u';
-    
+
   Console.WriteLine(lFilename);
-  
-  { Notice the use of the "using" block, which ensures that the method IDisposable.Dispose will 
+
+  { Notice the use of the "using" block, which ensures that the method IDisposable.Dispose will
     be called at the end of the block. FileStream supports IDisposable. }
   using lFile: FileStream := new FileStream(fOutFolder+'\'+lFilename, FileMode.&Create) do begin
-  
+
     using lWriter: StreamWriter := new StreamWriter(lFile) do begin
-	    fFiles.Add(lWriter);
-    
-	    lWriter.WriteLine('#EXTM3U');
-    
-      for f: string in lFiles do begin
+      fFiles.Add(lWriter);
+
+      lWriter.WriteLine('#EXTM3U');
+
+      for f: String in lFiles do begin
         if Path.GetExtension(f) = '.mp3' then begin
-	        lFilename := fPrefix+f.SubString(length(fMusicFolder));
-	        for w: StreamWriter in fFiles do begin
-		        w.WriteLine(lFilename);
-	        end;
+          lFilename := fPrefix+f.SubString(length(fMusicFolder));
+          for w: StreamWriter in fFiles do begin
+            w.WriteLine(lFilename);
+          end;
         end;
       end;
 
-	    lFiles := Directory.GetDirectories(aName);
-	    for f: string in lFiles do begin
-		  ProcessFolder(f);
-	    end;
-    
-	    fFiles.Remove(lWriter);
-	  end;
+      lFiles := Directory.GetDirectories(aName);
+      for f: String in lFiles do begin
+      ProcessFolder(f);
+      end;
+
+      fFiles.Remove(lWriter);
+    end;
   end;
 end;
 
@@ -71,21 +71,21 @@ begin
   Console.WriteLine('Oxygene mp3 Playlist Maker');
   Console.WriteLine('Free and unsupported, use at your own risk.');
   Console.WriteLine();
-  
+
   fFiles := new ArrayList();
   fPrefix := '..\Music';
   fMusicFolder := 'g:\Music';
-  fOutfolder := 'g:\Playlists';
-  
+  fOutFolder := 'g:\Playlists';
+
   if length(args) = 1 then begin
     fMusicFolder := Path.Combine(args[0],'Music');
-    fOutfolder := Path.Combine(args[0],'Playlists');
+    fOutFolder := Path.Combine(args[0],'Playlists');
   end
   else if length(args) > 1 then begin
-	fMusicFolder := args[0];
-	fOutfolder := args[1];
-	if length(args) >= 3 then
-		fPrefix := args[2];
+  fMusicFolder := args[0];
+  fOutFolder := args[1];
+  if length(args) >= 3 then
+    fPrefix := args[2];
   end
   else begin
     Console.WriteLine('Syntax');
@@ -105,12 +105,12 @@ begin
     Console.WriteLine;
     exit;
   end;
-  
+
   Console.WriteLine('Music folder:    '+ fMusicFolder);
   Console.WriteLine('Playlist folder: '+ fOutFolder);
-  
+
   ProcessFolder(fMusicFolder);
-  
+
   //Console.ReadLine();
 end;
 

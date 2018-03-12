@@ -1,18 +1,18 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "PlayLister", "PlayLister.elements", "{834EDCB6-4259-4CC6-A84F-646A9531D114}"
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "PlayLister", "PlayLister.elements", "{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Default = Debug|Default
-		Release|Default = Release|Default
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{834EDCB6-4259-4CC6-A84F-646A9531D114}.Debug|Default.ActiveCfg = Debug
-		{834EDCB6-4259-4CC6-A84F-646A9531D114}.Debug|Default.Build.0 = Debug
-		{834EDCB6-4259-4CC6-A84F-646A9531D114}.Release|Default.ActiveCfg = Release
-		{834EDCB6-4259-4CC6-A84F-646A9531D114}.Release|Default.Build.0 = Release
+		{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}.Release|AnyCPU.Build.0 = Release|AnyCPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

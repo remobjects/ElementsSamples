@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cocoa" />
-    <Reference Include="libElements.fx">
+    <Reference Include="libElements">
       <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Reference Libraries\macOS\libElements.fx</HintPath>
     </Reference>
     <Reference Include="libxml2">
