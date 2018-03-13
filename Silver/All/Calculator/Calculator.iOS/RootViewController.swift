@@ -29,7 +29,7 @@
 			edValue.text = s.substringToIndex(s.length - 1)
 		}
 	}
-	
+
 	@IBAction
 	public func pressExitButton(_ sender: id!) {
 		dismissViewControllerAnimated(true, completion:{ });
@@ -41,8 +41,8 @@
 			var eval = Evaluator()
 			edValue.text = "" + eval.Evaluate(edValue.text as! String)
 		} __catch e: EvaluatorError {
-			var alert = UIAlertView(title: "Calculator", message: "Error evaluation: " + e.reason , delegate:  nil, cancelButtonTitle:  "OK", otherButtonTitles:  nil)
-			alert.show()
+			var alert = UIAlertController(title: "Calculator!", message: "Error evaluation: "+e.reason, preferredStyle: .Alert)
+			presentViewController(alert, animated: true, completion: nil)
 		}
 	}
 

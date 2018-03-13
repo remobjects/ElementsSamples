@@ -66,8 +66,8 @@ begin
     edValue.text := '' + eval.Evaluate(edValue.text);
   except
     on e: EvaluatorError do begin
-      var alert := new UIAlertView withTitle("Calculator") message("Error evaluation: " + e.reason) &delegate(nil) cancelButtonTitle("OK") otherButtonTitles(nil);
-      alert.show();
+      var alert := UIAlertController.alertControllerWithTitle("Calculator!") message("Error evaluation: "+e.reason) preferredStyle(UIAlertControllerStyle.Alert);
+      presentViewController(alert) animated (true) completion(nil);
     end;
   end;
 end;

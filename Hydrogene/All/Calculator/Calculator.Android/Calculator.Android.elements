@@ -85,7 +85,7 @@
     <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
-    <Reference Include="elements.jar">
+    <Reference Include="elements">
       <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Cooper\Reference Archives\elements.jar</HintPath>
       <Private>True</Private>
     </Reference>

@@ -54,8 +54,8 @@ namespace Calculator.iOS
 			}
 			catch (EvaluatorError e)
 			{
-				var alert = new UIAlertView withTitle("Calculator") message("Error evaluation: " + e.reason) @delegate(null) cancelButtonTitle("OK") otherButtonTitles(null);
-				alert.show();
+				var alert = UIAlertController.alertControllerWithTitle("Calculator!") message("Error evaluation: "+e.reason) preferredStyle(UIAlertControllerStyle.Alert);
+				presentViewController(alert) animated (true) completion(null);
 			}
 		}
 

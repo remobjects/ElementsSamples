@@ -39,15 +39,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cocoa" />
-    <Reference Include="libElements">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Reference Libraries\macOS\libElements.fx</HintPath>
-    </Reference>
-    <Reference Include="libxml2">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\OS X\libxml2.fx</HintPath>
-    </Reference>
+    <Reference Include="libElements"></Reference>
     <Reference Include="rtl" />
     <Reference Include="libToffee" />
-    <Reference Include="libSwift" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.swift" />
