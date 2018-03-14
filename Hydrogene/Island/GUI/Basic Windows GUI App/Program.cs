@@ -46,7 +46,7 @@ namespace BasicWindowsApp
 			windowClass.hInstance = rtl.GetModuleHandleW(null);
 			windowClass.hIcon = LoadIcon(windowClass.hInstance, (LPCWSTR)IDI_APPLICATION);
 			windowClass.hCursor = LoadCursor(null, (LPCWSTR)IDC_ARROW);
-			windowClass.hbrBackground = (void *)(COLOR_WINDOW + 1);
+			windowClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
 			windowClass.lpszMenuName = null;
 			windowClass.lpszClassName = szWindowClass;
 

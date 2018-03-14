@@ -41,7 +41,7 @@ type
       lWindowClass.hInstance := rtl.GetModuleHandleW(nil);
       lWindowClass.hIcon := LoadIcon(lWindowClass.hInstance, LPCWSTR(IDI_APPLICATION));
       lWindowClass.hCursor := LoadCursor(nil, LPCWSTR(IDC_ARROW));
-      lWindowClass.hbrBackground := ^Void(COLOR_WINDOW + 1);
+      lWindowClass.hbrBackground := HBRUSH(COLOR_WINDOW + 1);
       lWindowClass.lpszMenuName := nil;
       lWindowClass.lpszClassName := szWindowClass;
 
