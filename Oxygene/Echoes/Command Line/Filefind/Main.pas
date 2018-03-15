@@ -13,17 +13,17 @@ uses System.*;
 type
   ConsoleApp = static class
   private
-    class method Shorten(aFolderName: string): string;
-    class method ProcessFolder(aFolderName, aMask: string);
+    class method Shorten(aFolderName: String): String;
+    class method ProcessFolder(aFolderName, aMask: String);
   public
-    class method Main(args: array of string);
+    class method Main(args: array of String);
   end;
 
 implementation
 
 class method ConsoleApp.ProcessFolder(aFolderName, aMask: string);
 var
-  lFiles: array of string;
+  lFiles: array of String;
 begin
   Console.CursorLeft := 0;
   Console.Write(Shorten(aFolderName));
