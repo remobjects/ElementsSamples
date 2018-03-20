@@ -76,16 +76,16 @@ var
 begin
   if First then begin
     First := False;
-    Inc(Turns);
+    inc(Turns);
     Text := String.Format(Caption, Turns);
-    Tag := (Sender as Button).Tag;
-    (Sender as Button).Text := Tag.ToString
+    Tag := (sender as Button).Tag;
+    (sender as Button).Text := Tag.ToString
   end
-  else { second button } if (Sender as Button).Text = '?' then begin { not used before }
-    First := True; 
-    (Sender as Button).Text := (Sender as Button).Tag.ToString;
+  else { second button } if (sender as Button).Text = '?' then begin { not used before }
+    First := True;
+    (sender as Button).Text := (sender as Button).Tag.ToString;
     Update;
-    if (Sender as Button).Tag.ToString = Tag.ToString then begin
+    if (sender as Button).Tag.ToString = Tag.ToString then begin
       { the same }
       for i:=1 to MaxX do
         for j:=1 to MaxY do

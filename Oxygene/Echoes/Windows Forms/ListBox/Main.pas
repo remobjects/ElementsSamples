@@ -17,7 +17,7 @@ type
     method InitializeComponent;
   {$ENDREGION}
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
@@ -49,33 +49,33 @@ begin
   self.ed_Text := new System.Windows.Forms.TextBox();
   self.lb_List := new System.Windows.Forms.ListBox();
   self.SuspendLayout();
-  // 
+  //
   // btn_Add
-  // 
+  //
   self.btn_Add.Location := new System.Drawing.Point(208, 8);
   self.btn_Add.Name := 'btn_Add';
   self.btn_Add.Size := new System.Drawing.Size(75, 23);
   self.btn_Add.TabIndex := 0;
   self.btn_Add.Text := '&Add';
   self.btn_Add.Click += new System.EventHandler(@self.btn_Add_Click);
-  // 
+  //
   // ed_Text
-  // 
+  //
   self.ed_Text.Location := new System.Drawing.Point(8, 10);
   self.ed_Text.Name := 'ed_Text';
   self.ed_Text.Size := new System.Drawing.Size(192, 20);
   self.ed_Text.TabIndex := 1;
   self.ed_Text.Text := 'Oxygene Bubbles';
-  // 
+  //
   // lb_List
-  // 
+  //
   self.lb_List.Location := new System.Drawing.Point(8, 40);
   self.lb_List.Name := 'lb_List';
   self.lb_List.Size := new System.Drawing.Size(275, 251);
   self.lb_List.TabIndex := 2;
-  // 
+  //
   // MainForm
-  // 
+  //
   self.AutoScaleBaseSize := new System.Drawing.Size(5, 13);
   self.ClientSize := new System.Drawing.Size(292, 300);
   self.Controls.Add(self.lb_List);
