@@ -3,7 +3,7 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing,
   OxygeneQueue, OxygeneStack;
 
@@ -30,13 +30,13 @@ type
     method InitializeComponent;
   {$ENDREGION}
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
   private
   var
-    StringStack: Stack<String> := new Stack<String>; 
+    StringStack: Stack<String> := new Stack<String>;
     IntegerQueue: Queue<Integer> := new Queue<Integer>;
   end;
 
@@ -72,98 +72,98 @@ begin
   self.ListBox := new System.Windows.Forms.ListBox();
   self.CountStringsButton := new System.Windows.Forms.Button();
   self.SuspendLayout();
-  // 
+  //
   // label1
-  // 
+  //
   self.label1.AutoSize := true;
   self.label1.Location := new System.Drawing.Point(32, 67);
   self.label1.Name := 'label1';
   self.label1.Size := new System.Drawing.Size(34, 13);
   self.label1.TabIndex := 0;
   self.label1.Text := 'String';
-  // 
+  //
   // StringBox
-  // 
+  //
   self.StringBox.Location := new System.Drawing.Point(115, 64);
   self.StringBox.Name := 'StringBox';
   self.StringBox.Size := new System.Drawing.Size(83, 20);
   self.StringBox.TabIndex := 1;
   self.StringBox.Text := 'new string';
-  // 
+  //
   // PopStringButton
-  // 
+  //
   self.PopStringButton.Location := new System.Drawing.Point(326, 62);
   self.PopStringButton.Name := 'PopStringButton';
   self.PopStringButton.Size := new System.Drawing.Size(88, 23);
   self.PopStringButton.TabIndex := 2;
   self.PopStringButton.Text := 'Pop String';
   self.PopStringButton.Click += new System.EventHandler(@self.PopStringButton_Click);
-  // 
+  //
   // PopIntegerButton
-  // 
+  //
   self.PopIntegerButton.Location := new System.Drawing.Point(326, 12);
   self.PopIntegerButton.Name := 'PopIntegerButton';
   self.PopIntegerButton.Size := new System.Drawing.Size(88, 23);
   self.PopIntegerButton.TabIndex := 5;
   self.PopIntegerButton.Text := 'Pop Integer';
   self.PopIntegerButton.Click += new System.EventHandler(@self.PopIntegerButton_Click);
-  // 
+  //
   // IntegerBox
-  // 
+  //
   self.IntegerBox.Location := new System.Drawing.Point(115, 14);
   self.IntegerBox.Name := 'IntegerBox';
   self.IntegerBox.Size := new System.Drawing.Size(83, 20);
   self.IntegerBox.TabIndex := 4;
   self.IntegerBox.Text := '999';
   self.IntegerBox.TextAlign := System.Windows.Forms.HorizontalAlignment.Right;
-  // 
+  //
   // label2
-  // 
+  //
   self.label2.AutoSize := true;
   self.label2.Location := new System.Drawing.Point(26, 17);
   self.label2.Name := 'label2';
   self.label2.Size := new System.Drawing.Size(40, 13);
   self.label2.TabIndex := 3;
   self.label2.Text := 'Integer';
-  // 
+  //
   // PushIntegerButton
-  // 
+  //
   self.PushIntegerButton.Location := new System.Drawing.Point(222, 12);
   self.PushIntegerButton.Name := 'PushIntegerButton';
   self.PushIntegerButton.Size := new System.Drawing.Size(88, 23);
   self.PushIntegerButton.TabIndex := 7;
   self.PushIntegerButton.Text := 'Push Integer';
   self.PushIntegerButton.Click += new System.EventHandler(@self.PushIntegerButton_Click);
-  // 
+  //
   // PushStringButton
-  // 
+  //
   self.PushStringButton.Location := new System.Drawing.Point(222, 62);
   self.PushStringButton.Name := 'PushStringButton';
   self.PushStringButton.Size := new System.Drawing.Size(88, 23);
   self.PushStringButton.TabIndex := 6;
   self.PushStringButton.Text := 'Push String';
   self.PushStringButton.Click += new System.EventHandler(@self.PushStringButton_Click);
-  // 
+  //
   // ListBox
-  // 
+  //
   self.ListBox.FormattingEnabled := true;
   self.ListBox.IntegralHeight := false;
   self.ListBox.Location := new System.Drawing.Point(29, 91);
   self.ListBox.Name := 'ListBox';
   self.ListBox.Size := new System.Drawing.Size(384, 243);
   self.ListBox.TabIndex := 8;
-  // 
+  //
   // CountStringsButton
-  // 
+  //
   self.CountStringsButton.Location := new System.Drawing.Point(29, 33);
   self.CountStringsButton.Name := 'CountStringsButton';
   self.CountStringsButton.Size := new System.Drawing.Size(75, 23);
   self.CountStringsButton.TabIndex := 11;
   self.CountStringsButton.Text := 'Counts';
   self.CountStringsButton.Click += new System.EventHandler(@self.CountStringsButton_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.ClientSize := new System.Drawing.Size(429, 346);
   self.Controls.Add(self.CountStringsButton);
   self.Controls.Add(self.ListBox);

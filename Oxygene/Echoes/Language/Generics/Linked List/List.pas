@@ -9,24 +9,24 @@ type
   List<T> = public class
     where T is Object;
   private
-    method AppendToString(aBuilder: StringBuilder); 
+    method AppendToString(aBuilder: StringBuilder);
   public
     constructor(aData: T);
     constructor(aData: T; aNext: List<T>);
     property Next: List<T>;
     property Data: T;
-    
-    method ToString: string; override;
+
+    method ToString: String; override;
   end;
-  
+
 implementation
 
-constructor List<T>(aData: T); 
+constructor List<T>(aData: T);
 begin
   Data := aData;
 end;
 
-constructor List<T>(aData: T; aNext: List<T>); 
+constructor List<T>(aData: T; aNext: List<T>);
 begin
   constructor(aData);
   Next := aNext;
@@ -40,13 +40,13 @@ begin
   end;
 end;
 
-method List<T>.AppendToString(aBuilder: StringBuilder); 
+method List<T>.AppendToString(aBuilder: StringBuilder);
 begin
   if assigned(Data) then
     aBuilder.Append(Data.ToString)
   else
     aBuilder.Append('nil');
-    
+
   if assigned(Next) then begin
     aBuilder.Append(', ');
     Next.AppendToString(aBuilder);

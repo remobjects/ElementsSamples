@@ -5,11 +5,11 @@ uses
   System.Linq,
   System.Text, System.ServiceModel;
 
-type 
+type
   [System.Diagnostics.DebuggerStepThroughAttribute()]
   [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]
   [System.Runtime.Serialization.DataContractAttribute(Name :="Operands")]
-Operands = public partial class (object, System.Runtime.Serialization.IExtensibleDataObject)
+Operands = public partial class (Object, System.Runtime.Serialization.IExtensibleDataObject)
 
 private
   var
@@ -21,7 +21,7 @@ public
 
     [System.Runtime.Serialization.DataMemberAttribute(Order := 0)]
     property operand1 : Decimal read firstOperand write firstOperand;
-    
+
     [System.Runtime.Serialization.DataMemberAttribute(Order := 1)]
     property operand2 : Decimal read secondOperand write secondOperand;
 
@@ -39,10 +39,10 @@ type
     method Calculate(request : CalculationMessage) : CalculationMessage;
   end;
 
-type 
+type
   [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
   IndigoServiceChannel = public interface (IndigoService, System.ServiceModel.IClientChannel)
-    
+
   end;
 
 type
@@ -50,7 +50,7 @@ type
   [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
   IndigoServiceClient = public partial class (System.ServiceModel.ClientBase<IndigoService>, IndigoService)
 
-  public 
+  public
     method GetServerTime() : DateTime;
     method Calculate(request : CalculationMessage) : CalculationMessage;
   end;
@@ -59,24 +59,24 @@ type
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 [System.ServiceModel.MessageContractAttribute(WrapperName := "CalculationMessage", WrapperNamespace := "http://tempuri.org/", IsWrapped := true)]
-CalculationMessage = public partial class 
+CalculationMessage = public partial class
 
 private
 public
-  var 
+  var
     [System.ServiceModel.MessageHeaderAttribute]
     Operation : String;
-    
+
     [System.ServiceModel.MessageBodyMemberAttribute(Order := 1)]
     Numbers : Operands;
-    
+
     [System.ServiceModel.MessageBodyMemberAttribute(Order := 2)]
     Res : Decimal;
-    
+
     constructor (); empty;
-        
+
     constructor (O : String; Nums : Operands; R : Decimal);
-    
+
 end;
 
 

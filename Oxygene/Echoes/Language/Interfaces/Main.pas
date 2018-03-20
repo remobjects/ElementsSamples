@@ -3,7 +3,7 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing,
   InterfacesSample.SampleClasses;
 
@@ -22,10 +22,10 @@ type
   protected
     fButtonWithInfo: SampleButton;
     fTextBoxWithInfo: SampleTextBox;
-    
-    method Dispose(aDisposing: boolean); override;
-    
-    method GetVersionInfoString(aVersionInfo: IVersionInfo): string;
+
+    method Dispose(aDisposing: Boolean); override;
+
+    method GetVersionInfoString(aVersionInfo: IVersionInfo): String;
   public
     constructor;
     class method Main;
@@ -57,34 +57,34 @@ begin
   self.button2 := new System.Windows.Forms.Button();
   self.textBox1 := new System.Windows.Forms.TextBox();
   self.SuspendLayout();
-  // 
+  //
   // button1
-  // 
+  //
   self.button1.Location := new System.Drawing.Point(8, 12);
   self.button1.Name := 'button1';
   self.button1.Size := new System.Drawing.Size(136, 23);
   self.button1.TabIndex := 0;
   self.button1.Text := 'Display Version Info';
   self.button1.Click += new System.EventHandler(@self.button1_Click);
-  // 
+  //
   // button2
-  // 
+  //
   self.button2.Location := new System.Drawing.Point(8, 41);
   self.button2.Name := 'button2';
   self.button2.Size := new System.Drawing.Size(136, 23);
   self.button2.TabIndex := 1;
   self.button2.Text := 'Regular Button';
-  // 
+  //
   // textBox1
-  // 
+  //
   self.textBox1.Location := new System.Drawing.Point(150, 43);
   self.textBox1.Name := 'textBox1';
   self.textBox1.Size := new System.Drawing.Size(130, 20);
   self.textBox1.TabIndex := 2;
   self.textBox1.Text := 'Regular TextBox';
-  // 
+  //
   // MainForm
-  // 
+  //
   self.AutoScaleBaseSize := new System.Drawing.Size(5, 13);
   self.ClientSize := new System.Drawing.Size(292, 79);
   self.Controls.Add(self.textBox1);
@@ -121,14 +121,14 @@ method MainForm.MainForm_Load(sender: System.Object; e: System.EventArgs);
 begin
   { Creates the button and textbox that support IVersionInfo }
   SuspendLayout();
-  try    
+  try
     fButtonWithInfo := new SampleButton();
     fButtonWithInfo.Location := new System.Drawing.Point(70, 80);
     fButtonWithInfo.Name := 'ButtonWithInfo';
     fButtonWithInfo.Text := 'Button with VersionInfo';
     fButtonWithInfo.Width := 150;
     Controls.Add(fButtonWithInfo);
- 
+
     fTextBoxWithInfo := new SampleTextBox();
     fTextBoxWithInfo.Location := new System.Drawing.Point(70, 120);
     fTextBoxWithInfo.Name := 'TextBoxWithInfo';
@@ -141,44 +141,44 @@ begin
 end;
 
 method MainForm.button1_Click(sender: System.Object; e: System.EventArgs);
-const 
+const
   CRLF = #13#10;
-var 
-  lInfo: string := 'The following controls support IVersionInfo:'+CRLF;
+var
+  lInfo: String := 'The following controls support IVersionInfo:'+CRLF;
 begin
-  { Iterates through all the controls in the form that support IVersionInfo 
+  { Iterates through all the controls in the form that support IVersionInfo
     and calls GetVersionInfoString on each of them.
-    
+
     Notice how the regular Button and TextBox are not included in this for each loop,
     as they don't implement IVersionInfo. }
   for each matching lVersionInfo: IVersionInfo in Controls do
-    lInfo := lInfo+GetVersionInfoString(lVersionInfo)+CRLF; 
-           
+    lInfo := lInfo+GetVersionInfoString(lVersionInfo)+CRLF;
+
   MessageBox.Show(lInfo);
 end;
 
-method MainForm.GetVersionInfoString(aVersionInfo: IVersionInfo): string; 
+method MainForm.GetVersionInfoString(aVersionInfo: IVersionInfo): string;
 begin
   { This method is a key example why the use of interfaces is essential in OO programming.
-    
+
     Without the use of interfaces, we could not have treated Button and TextBox descendants
     as a unique type (IVersionInfo in this case) and we would have needed to write code such as:
-    
+
     method GetVersionInfoString(aControl : Control) : string;
     begin
-      if (aControl is SampleControl) 
+      if (aControl is SampleControl)
         then <use property (aControl as SampleControl).VersionInfo>
       else if (aControl is SampleTextBox)
         then <use property (aControl as SampleTextBox).VersionInfo>
       etc.
     end;
-    
+
     Interfaces break the dependencies with ancestors and allow us to treat objects as if they
     were of the same type, regardless of their position in the class hierarchy.
   }
-  result := String.Format('{0}: {1}, Version {2}.{3}', 
-              [aVersionInfo.Name, 
-               aVersionInfo.Description, 
+  result := String.Format('{0}: {1}, Version {2}.{3}',
+              [aVersionInfo.Name,
+               aVersionInfo.Description,
                aVersionInfo.MajVersion.ToString,
                aVersionInfo.MinVersion.ToString]);
 end;

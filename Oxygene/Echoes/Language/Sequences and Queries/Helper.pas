@@ -15,12 +15,12 @@ type
     class method FillQueries: sequence of String;
     class method FillDescriptions: sequence of String;
   end;
-  
+
 implementation
 
 class method Helper.FillCustomers: sequence of Customer;
 begin
-  result := [new Customer('10001', 'Reggiani Caseifici', 'Strada Provinciale 124', 'Reggio Emilia', 'Italy', FillOrders(0)), 
+  result := [new Customer('10001', 'Reggiani Caseifici', 'Strada Provinciale 124', 'Reggio Emilia', 'Italy', FillOrders(0)),
              new Customer('10002', 'North/South', 'South House 300 Queensbridge', 'London', 'UK', FillOrders(2)),
              new Customer('10003', 'Rattlesnake Canyon Grocery', '2817 London Street', 'Albuquerque', 'USA', FillOrders(2)),
              new Customer('10004', 'The Cracker Box', '55 Grizzly Peak Rd.', 'Butte', 'USA', FillOrders(3)),
@@ -44,7 +44,7 @@ begin
 
   for i : Integer := 0 to ordersCount-1 do
     list.Add(new Orders(12001 + i + number, DateTime.Now.Date.AddDays(i + number), i + number));
-    
+
   result := list;
 end;
 
@@ -68,9 +68,9 @@ end;
 
 class method Helper.FillDescriptions: sequence of String;
 begin
-  result := ['Select customers located in London.', 'Order initial data by CompanyName descending.', 'Reverce all initial data.', 
-             'Take first 7 customers.', 'Take data, skipping 7 customers.', 'Select CustomerId with it"s location.', 
-             'Get customers located in London and sorted by first OrderDate ascending.', 'Group customers by country.', 
+  result := ['Select customers located in London.', 'Order initial data by CompanyName descending.', 'Reverce all initial data.',
+             'Take first 7 customers.', 'Take data, skipping 7 customers.', 'Select CustomerId with it"s location.',
+             'Get customers located in London and sorted by first OrderDate ascending.', 'Group customers by country.',
              'Get customer"s CompanyName with city and contact person.', 'Get customers living in London, and on London Street.'];
 end;
 

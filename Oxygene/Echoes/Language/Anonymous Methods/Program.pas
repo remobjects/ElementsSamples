@@ -11,7 +11,7 @@ type
   public
     class method Main;
   end;
-  
+
 implementation
 
 /// <summary>
@@ -22,9 +22,9 @@ class method Program.Main;
 begin
   Application.EnableVisualStyles();
   Application.SetCompatibleTextRenderingDefault(false);
-  
+
   // Default exception handler - using an anonymous method.
-  Application.ThreadException += method (sender: Object; e: ThreadExceptionEventArgs); 
+  Application.ThreadException += method (sender: Object; e: ThreadExceptionEventArgs);
     begin
       MessageBox.Show(e.Exception.Message);
     end;
@@ -32,5 +32,5 @@ begin
   using lMainForm := new MainForm do
     Application.Run(lMainForm);
 end;
-  
+
 end.

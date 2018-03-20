@@ -3,7 +3,7 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing,
   Events.EventClasses;
 
@@ -18,17 +18,17 @@ type
     method InitializeComponent;
   {$ENDREGION}
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
-    
-    { The following method will be assigned to an instance of 
-      SimpleClassWithEvents and will provide an implementation for 
+
+    { The following method will be assigned to an instance of
+      SimpleClassWithEvents and will provide an implementation for
       the delegate OnSetName }
-    method MyCustomSetName(Sender: SimpleClassWithEvents; var aNewName: string);
+    method MyCustomSetName(Sender: SimpleClassWithEvents; var aNewName: String);
   end;
-  
+
 implementation
 
 {$REGION Construction and Disposition}
@@ -53,18 +53,18 @@ begin
   var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeOf(MainForm));
   self.button1 := new System.Windows.Forms.Button();
   self.SuspendLayout();
-  // 
+  //
   // button1
-  // 
+  //
   self.button1.Location := new System.Drawing.Point(47, 50);
   self.button1.Name := 'button1';
   self.button1.Size := new System.Drawing.Size(150, 23);
   self.button1.TabIndex := 0;
   self.button1.Text := 'Test Events';
   self.button1.Click += new System.EventHandler(@self.button1_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.AutoScaleBaseSize := new System.Drawing.Size(5, 13);
   self.ClientSize := new System.Drawing.Size(244, 122);
   self.Controls.Add(self.button1);
@@ -97,21 +97,21 @@ method MainForm.button1_Click(sender: System.Object; e: System.EventArgs);
 var dummy : SimpleClassWithEvents;
 begin
   dummy := new SimpleClassWithEvents;
-  
-  { Notice the += operator used to assign delegates. Each event can 
+
+  { Notice the += operator used to assign delegates. Each event can
     have multiple handler hooked up to it, and += is used to add one event
     to the list. Conversely, -= could be used to remove a particular
     handler. }
-  dummy.OnSetName += MyCustomSetName; 
-  
-  { If you un-comment this line, MyCustomSetName will be called twice when 
+  dummy.OnSetName += MyCustomSetName;
+
+  { If you un-comment this line, MyCustomSetName will be called twice when
     we set a value to dummy.Name. }
-  //dummy.OnSetName += MyCustomSetName; 
-  
+  //dummy.OnSetName += MyCustomSetName;
+
   dummy.Name := 'Jack London';
 end;
 
-method MainForm.MyCustomSetName(Sender: SimpleClassWithEvents; var aNewName: string); 
+method MainForm.MyCustomSetName(Sender: SimpleClassWithEvents; var aNewName: string);
 begin
   MessageBox.Show('Setting Name from '+Sender.Name+' to '+aNewName);
 end;

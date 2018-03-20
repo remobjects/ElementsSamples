@@ -25,23 +25,23 @@ type
     method takeData: sequence of Customer;
     method skipData: sequence of Customer;
     method drillIntoDetails: sequence of Customer;
-    method distinctData (seq : sequence of Customer) : sequence of Customer; 
+    method distinctData (seq : sequence of Customer) : sequence of Customer;
     method selectSubset;
     method useIntermediateVariable : sequence of Customer;
     method joinData;
     method groupData;
-    method showGroup;    
-  
+    method showGroup;
+
     method buttonNext_Click(sender: System.Object; e: System.EventArgs);
     method buttonPrev_Click(sender: System.Object; e: System.EventArgs);
     method listBoxQueries_SelectedIndexChanged(sender: System.Object; e: System.EventArgs);
   protected
     method Dispose(disposing: Boolean); override;
-  var 
-    MyCustomers: sequence of Customer; 
+  var
+    MyCustomers: sequence of Customer;
     groupIndex: Integer;
     Descriptions : sequence of String;
-    
+
   public
     constructor;
   end;
@@ -72,7 +72,7 @@ type
     property CompanyName: String;
     property ContactName: String;
     property ContactTitle: String;
-    
+
     constructor (setCompanyName: String; setContactName: String; setContactTitle: String);
   end;
 implementation
@@ -134,11 +134,11 @@ end;
 
 method MainForm.MainForm_Load(sender: System.Object; e: System.EventArgs);
 begin
-  LoadData();
+  loadData();
 
   Descriptions := Helper.FillDescriptions;
-  listBoxQueries.DataSource := Helper.FillQueries();  
-end; 
+  listBoxQueries.DataSource := Helper.FillQueries();
+end;
 
 method MainForm.buttonExecute_Click(sender: System.Object; e: System.EventArgs);
 begin
@@ -147,20 +147,20 @@ begin
 
   case listBoxQueries.SelectedIndex of
     -1 : MessageBox.Show('Please, select query.', 'Query', MessageBoxButtons.OK, MessageBoxIcon.Warning);
-    0  : dataGridViewData.DataSource := filterData.ToArray; 
-    1  : dataGridViewData.DataSource := orderData.ToArray; 
-    2  : dataGridViewData.DataSource := reverseData.ToArray; 
-    3  : dataGridViewData.DataSource := takeData.ToArray; 
-    4  : dataGridViewData.DataSource := skipData.ToArray; 
-    5  : selectSubset; 
-    6  : dataGridViewData.DataSource := distinctData(drillIntoDetails).ToArray; 
-    7  : groupData; 
-    8  : joinData; 
-    9  : dataGridViewData.DataSource := useIntermediateVariable.ToArray; 
+    0  : dataGridViewData.DataSource := filterData.ToArray;
+    1  : dataGridViewData.DataSource := orderData.ToArray;
+    2  : dataGridViewData.DataSource := reverseData.ToArray;
+    3  : dataGridViewData.DataSource := takeData.ToArray;
+    4  : dataGridViewData.DataSource := skipData.ToArray;
+    5  : selectSubset;
+    6  : dataGridViewData.DataSource := distinctData(drillIntoDetails).ToArray;
+    7  : groupData;
+    8  : joinData;
+    9  : dataGridViewData.DataSource := useIntermediateVariable.ToArray;
   end;
 
   try
-    dataGridViewData.Columns['OrdersList'].Visible := false;  
+    dataGridViewData.Columns['OrdersList'].Visible := false;
   except
   end;
 end;
@@ -184,7 +184,7 @@ end;
 method MainForm.buttonPrev_Click(sender: System.Object; e: System.EventArgs);
 begin
   groupIndex := groupIndex - 1;
-  showGroup;  
+  showGroup;
 end;
 
 method MainForm.showGroup;
@@ -192,12 +192,12 @@ begin
   var groupList := from c in MyCustomers group by c.Country;
 
   dataGridViewData.DataSource := groupList.ElementAt(groupIndex).ToArray;
-  if groupIndex <> groupList.Count-1 then 
+  if groupIndex <> groupList.Count-1 then
     buttonNext.Enabled := true
   else
     buttonNext.Enabled := false;
 
-  if groupIndex <> 0 then 
+  if groupIndex <> 0 then
     buttonPrev.Enabled := true
   else
     buttonPrev.Enabled := false;
@@ -208,44 +208,44 @@ begin
   MyCustomers := Helper.FillCustomers();
 
   dataGridViewData.DataSource := MyCustomers.ToArray;
-  dataGridViewData.Columns['OrdersList'].Visible := false;  
+  dataGridViewData.Columns['OrdersList'].Visible := false;
 
   buttonNext.Visible := false;
   buttonPrev.Visible := false;
 end;
 
 method MainForm.filterData: sequence of Customer;
-begin 
+begin
   result := from c in MyCustomers where c.City = 'London';
 end;
 
 method MainForm.orderData: sequence of Customer;
-begin 
+begin
   result := from c in MyCustomers order by c.CompanyName desc;
 end;
 
 method MainForm.reverseData: sequence of Customer;
-begin 
+begin
   result := from c in MyCustomers reverse;
 end;
 
 method MainForm.takeData: sequence of Customer;
-begin 
+begin
   result := from c in MyCustomers take 7;
 end;
 
 method MainForm.skipData: sequence of Customer;
-begin 
+begin
   result := from c in MyCustomers skip 7;
 end;
 
 method MainForm.groupData;
-begin 
+begin
   groupIndex := 0;
 
   buttonNext.Visible := true;
   buttonPrev.Visible := true;
-  
+
   showGroup;
 end;
 
@@ -267,7 +267,7 @@ end;
 method MainForm.joinData;
 begin
   var Companies := Helper.FillCompanies;
-  dataGridViewData.DataSource := (from cust in MyCustomers join comp in Companies on cust.CompanyName equals comp.CompanyName 
+  dataGridViewData.DataSource := (from cust in MyCustomers join comp in Companies on cust.CompanyName equals comp.CompanyName
                                    select new class (cust.CompanyName, cust.City, Contact:= comp.ContactName + ', ' + comp.ContactTitle)).ToArray;
 end;
 
