@@ -44,7 +44,7 @@ begin
   InitializeComponent();
 end;
 
-method MainForm.Dispose(aDisposing: boolean);
+method MainForm.Dispose(aDisposing: Boolean);
 begin
   if aDisposing then begin
     if assigned(components) then
