@@ -42,6 +42,7 @@
     <Reference Include="libElements"></Reference>
     <Reference Include="rtl" />
     <Reference Include="libToffee" />
+    <Reference Include="libSwift" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.swift" />
