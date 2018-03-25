@@ -49,7 +49,7 @@
     <Compile Include="RootViewController.pas" />
   </ItemGroup>
   <ItemGroup>
-    <AppResource Include="Resources\301-alien-ship%402x.png">
+    <AppResource Include="Resources\301-alien-ship@2x.png">
       <SubType>Content</SubType>
     </AppResource>
     <AppResource Include="Resources\301-alien-ship.png">
@@ -79,7 +79,6 @@
     <Xib Include="RootViewController~iphone.xib" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\App Icons\" />
     <Folder Include="Resources\Launch Images\" />
