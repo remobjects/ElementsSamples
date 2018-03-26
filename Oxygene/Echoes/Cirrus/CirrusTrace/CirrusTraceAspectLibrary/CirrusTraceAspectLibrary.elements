@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -9,7 +9,6 @@
     <AllowLegacyOutParams>False</AllowLegacyOutParams>
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Name>CirrusTraceAspectLibrary</Name>
     <ProjectGuid>{12049D5C-55F6-4D1B-B1B1-B2B7F9B099A1}</ProjectGuid>
     <RunPostBuildEvent>⿺</RunPostBuildEvent>
@@ -26,8 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
-    <Reference Include="RemObjects.Elements.Cirrus">
-    </Reference>
+    <Reference Include="RemObjects.Elements.Cirrus"></Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <HintPath>$(ProgramFiles)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll</HintPath>

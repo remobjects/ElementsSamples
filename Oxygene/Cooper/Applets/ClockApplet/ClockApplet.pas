@@ -31,14 +31,14 @@ type
     method stop; override;
     method run;
   end;
-  
+
 implementation
 
 method ClockApplet.init();
 begin
   width := Size.width;
   height := Size.height;
-  Background := Color.black;
+  Background := Color.BLACK;
 end;
 
 method ClockApplet.stop;
@@ -48,7 +48,7 @@ end;
 
 method ClockApplet.start;
 begin
-  if t = nil then 
+  if t = nil then
   begin
     t := new Thread(self);
     t.setPriority(Thread.MIN_PRIORITY);
@@ -127,11 +127,11 @@ end;
 
 method ClockApplet.paint(g: Graphics);
 begin
-  g.setColor(Color.gray);
+  g.setColor(Color.GRAY);
   drawWedge(2 * Math.PI * hours / 12, width / 5, g);
   drawWedge(2 * Math.PI * minutes / 60, width / 3, g);
   drawHand(2 * Math.PI * seconds / 60, width / 2, g);
-  g.setColor(Color.white);
+  g.setColor(Color.WHITE);
   g.drawString(timeString, 10, height - 10)
 end;
 

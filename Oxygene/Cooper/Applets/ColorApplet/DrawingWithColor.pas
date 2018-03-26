@@ -28,7 +28,7 @@ method ColorApplet.init();
 begin
   width := Size.width;
   height := Size.height;
-  Background := Color.black;
+  Background := Color.BLACK;
   spectrum := new Color[N];
   // Generate the colors and store them in the array.
   for i: Integer := 0 to N - 1 do

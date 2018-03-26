@@ -34,12 +34,12 @@ type
     method mouseMoved(e: MouseEvent);
     method mouseDragged(e: MouseEvent);
   end;
-  
+
 implementation
 
 method KeyboardApplet.init();
 begin
-  Background := Color.black;
+  Background := Color.BLACK;
   spectrum := new Color[N];
   for i: Integer := 0 to N - 1 do
     spectrum[i] := new Color(Color.HSBtoRGB(i / Double(N), 1, 1));

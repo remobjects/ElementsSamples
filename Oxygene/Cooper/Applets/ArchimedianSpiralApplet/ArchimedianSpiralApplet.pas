@@ -21,15 +21,15 @@ type
     method init(); override;
     method paint(g: Graphics); override;
   end;
-  
+
 implementation
 
 method ArchimedianSpiralApplet.init();
 begin
   width := Size.width;
   height := Size.height;
-  Background := Color.black;
-  Foreground := Color.green;
+  Background := Color.BLACK;
+  Foreground := Color.GREEN;
 end;
 
 method ArchimedianSpiralApplet.paint(g: Graphics);
