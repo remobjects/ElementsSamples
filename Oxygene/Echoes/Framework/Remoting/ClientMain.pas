@@ -3,7 +3,7 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing,
   System.Runtime.Remoting,
   System.Runtime.Remoting.Channels,
@@ -24,7 +24,7 @@ type
     fChannel : HttpChannel;
     fRemoteService : IRemoteService;
 
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
@@ -54,18 +54,18 @@ begin
   var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeOf(MainForm));
   self.bSum := new System.Windows.Forms.Button();
   self.SuspendLayout();
-  // 
+  //
   // bSum
-  // 
+  //
   self.bSum.Location := new System.Drawing.Point(47, 50);
   self.bSum.Name := 'bSum';
   self.bSum.Size := new System.Drawing.Size(150, 23);
   self.bSum.TabIndex := 0;
   self.bSum.Text := 'Sum 1+2';
   self.bSum.Click += new System.EventHandler(@self.bSum_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.ClientSize := new System.Drawing.Size(244, 122);
   self.Controls.Add(self.bSum);
   self.FormBorderStyle := System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -104,8 +104,8 @@ begin
 
   // Creates a proxy
   fRemoteService := Activator.GetObject(
-    typeof(IRemoteService),
-    'http://localhost:'+DefaultPort+'/RemoteService.soap') as IRemoteService;   
+    typeOf(IRemoteService),
+    'http://localhost:'+DefaultPort+'/RemoteService.soap') as IRemoteService;
 end;
 
 method MainForm.bSum_Click(sender: System.Object; e: System.EventArgs);

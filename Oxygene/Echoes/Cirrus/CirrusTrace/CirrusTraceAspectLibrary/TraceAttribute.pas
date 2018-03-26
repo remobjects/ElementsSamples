@@ -16,12 +16,12 @@ type
   TraceAttribute = public class(Attribute, RemObjects.Elements.Cirrus.IMethodImplementationDecorator)
   public
     [Aspect:RemObjects.Elements.Cirrus.AutoInjectIntoTarget]
-    method WriteLine(aEnter: Boolean; aName: String; Args: Array of object); 
+    method WriteLine(aEnter: Boolean; aName: String; Args: Array of Object);
 
     method HandleImplementation(Services: RemObjects.Elements.Cirrus.IServices; aMethod: RemObjects.Elements.Cirrus.IMethodDefinition);
   end;
 
-  
+
 implementation
 
 
@@ -50,11 +50,11 @@ end;
 method TraceAttribute.WriteLine(aEnter: Boolean; aName: String; Args: Array of object);
 begin
   var lMessage: String := 'Trace:  ' + iif(aEnter, 'Entering ', 'Exiting ') + aName;
-  
+
   if  (aEnter  and  (assigned(Args)))  then  begin
     lMessage := lMessage + ' with arguments';
-    for  I: Int32  :=  0  to  Length(Args)-1  do
-      lMessage := lMessage + String.Format(' {0}', Args[i]);
+    for  I: Int32  :=  0  to  length(Args)-1  do
+      lMessage := lMessage + String.Format(' {0}', Args[I]);
   end;
 
   Console.WriteLine(lMessage);

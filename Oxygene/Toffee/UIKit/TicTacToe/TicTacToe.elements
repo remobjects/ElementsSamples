@@ -56,13 +56,13 @@
         <Compile Include="RootViewController.pas"/>
     </ItemGroup>
     <ItemGroup>
-        <AppResource Include="Resources\Game Images\Grid%402x.png">
+        <AppResource Include="Resources\Game Images\Grid@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\Grid.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\Paper%402x.png">
+        <AppResource Include="Resources\Game Images\Paper@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\Paper.png">
@@ -71,58 +71,58 @@
         <AppResource Include="Resources\Game Images\O1.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\O1%402x.png">
+        <AppResource Include="Resources\Game Images\O1@2x.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\X1%402x.png">
+        <AppResource Include="Resources\Game Images\X1@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\X1.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\O2%402x.png">
+        <AppResource Include="Resources\Game Images\O2@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\O2.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\O3%402x.png">
+        <AppResource Include="Resources\Game Images\O3@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\O3.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\O4%402x.png">
+        <AppResource Include="Resources\Game Images\O4@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\O4.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\O5%402x.png">
+        <AppResource Include="Resources\Game Images\O5@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\O5.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\X2%402x.png">
+        <AppResource Include="Resources\Game Images\X2@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\X2.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\X3%402x.png">
+        <AppResource Include="Resources\Game Images\X3@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\X3.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\X4%402x.png">
+        <AppResource Include="Resources\Game Images\X4@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\X4.png">
             <SubType>Content</SubType>
         </AppResource>
-        <AppResource Include="Resources\Game Images\X5%402x.png">
+        <AppResource Include="Resources\Game Images\X5@2x.png">
             <SubType>Content</SubType>
         </AppResource>
         <AppResource Include="Resources\Game Images\X5.png">

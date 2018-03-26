@@ -5,7 +5,7 @@ interface
 type
   { IRemoteService }
   IRemoteService = public interface
-    method Sum(A, B : integer): integer;
+    method Sum(A, B : Integer): Integer;
   end;
 
 implementation
