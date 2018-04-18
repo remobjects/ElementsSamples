@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Basic WebAssembly GUI Controls App", "Basic WebAssembly GUI Controls App.elements", "{6504EE4F-8322-4DD3-B545-8A4AEF790424}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6504EE4F-8322-4DD3-B545-8A4AEF790424}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{6504EE4F-8322-4DD3-B545-8A4AEF790424}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{6504EE4F-8322-4DD3-B545-8A4AEF790424}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{6504EE4F-8322-4DD3-B545-8A4AEF790424}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
