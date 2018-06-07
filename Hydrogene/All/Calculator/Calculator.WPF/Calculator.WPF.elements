@@ -51,16 +51,11 @@
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Elements">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Echoes\Reference Assemblies\Elements.dll</HintPath>
-    </Reference>
+    <Reference Include="Elements" />
     <Reference Include="mscorlib" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ReachFramework" />
-    <Reference Include="Sugar">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />

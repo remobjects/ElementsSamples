@@ -3,7 +3,7 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing,
   VirtualProperties.VirtualPropertiesClasses;
 
@@ -17,7 +17,7 @@ type
     method InitializeComponent;
   {$ENDREGION}
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
@@ -47,18 +47,18 @@ begin
   var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeOf(MainForm));
   self.button1 := new System.Windows.Forms.Button();
   self.SuspendLayout();
-  // 
+  //
   // button1
-  // 
+  //
   self.button1.Location := new System.Drawing.Point(42, 45);
   self.button1.Name := 'button1';
   self.button1.Size := new System.Drawing.Size(150, 23);
   self.button1.TabIndex := 0;
   self.button1.Text := 'Test Virtual Property';
   self.button1.Click += new System.EventHandler(@self.button1_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.ClientSize := new System.Drawing.Size(234, 112);
   self.Controls.Add(self.button1);
   self.FormBorderStyle := System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -87,23 +87,23 @@ end;
 {$ENDREGION}
 
 method MainForm.button1_Click(sender: System.Object; e: System.EventArgs);
-var 
+var
   //base: BaseClass;
   first: FirstDescendant;
   second: SecondDescendant;
 begin
   { Cannot create this class because it has abstract properties }
   //base := new BaseClass;
-  //base.Name := 'Jack'; 
-  
+  //base.Name := 'Jack';
+
   first := new FirstDescendant;
   first.Name := 'John';
-  
+
   MessageBox.Show('first.Name is '+first.Name);
-  
+
   second := new SecondDescendant;
   second.Name := 'Claire';
-  
+
   MessageBox.Show('second.Name is '+(second as IHasName).Name);
 end;
 

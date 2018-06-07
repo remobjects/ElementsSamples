@@ -24,15 +24,15 @@ begin
   // After this simple statistics is displayed
   var lRndGenerator: Random := new Random();
   var lArgumentArray: array of Int32 := new Int32[100];
-  for  I: Int32  :=  0  to  Length(lArgumentArray)-1  do
+  for  I: Int32  :=  0  to  length(lArgumentArray)-1  do
      lArgumentArray[I] := lRndGenerator.Next(40);
 
   var lFibonacciCalculator: Calculator := new FibonacciNumberCalculator();
 
   Console.WriteLine('Non-cached calculations started');
   var lCalculationsStart: DateTime := DateTime.Now;
-  
-  for  I: Int32  :=  0  to  Length(lArgumentArray)-1  do
+
+  for  I: Int32  :=  0  to  length(lArgumentArray)-1  do
     lFibonacciCalculator.Calculate(lArgumentArray[I]);
 
   var lCalculationsEnd: DateTime := DateTime.Now;
@@ -48,7 +48,7 @@ begin
   Console.WriteLine('Cached calculations started');
   lCalculationsStart := DateTime.Now;
 
-  for  I: Int32  :=  0  to  Length(lArgumentArray)-1  do
+  for  I: Int32  :=  0  to  length(lArgumentArray)-1  do
     lFibonacciCalculator.Calculate(lArgumentArray[I]);
 
   lCalculationsEnd := DateTime.Now;

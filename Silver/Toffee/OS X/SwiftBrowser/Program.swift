@@ -7,9 +7,9 @@ import WebKit
 let application = NSApplication.sharedApplication()
 application.setActivationPolicy(.Regular)
 let window = NSWindow(contentRect: NSMakeRect(0, 0, 1000, 600),
-					  styleMask:  NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask, 
+					  styleMask:  NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask,
 					  backing: .Buffered, // note: this needs NSBackingStoreBuffered if building for 10.9 or earlier
-					  `defer`: false) 
+					  `defer`: false)
 window.center()
 window.title = "Minimal Swift WebKit Browser"
 window.makeKeyAndOrderFront(window)

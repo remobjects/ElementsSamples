@@ -6,20 +6,20 @@ type
   QueueItem<T> = class
   public
     property Data: T;
-    property Next: QueueItem<T>;    
-  end;  
+    property Next: QueueItem<T>;
+  end;
 
   Queue<T> = public class
   private
-    property First: QueueItem<T>;    
-  public  
-    method Count: integer;
+    property First: QueueItem<T>;
+  public
+    method Count: Integer;
     method Pop: T;
     method Push(aData: T);
   end;
 
 implementation
-  
+
 method Queue<T>.Pop: T;
 begin
   if First=nil then Result := default(T)
@@ -28,7 +28,7 @@ begin
     First := First.Next;
   end;
 end;
-  
+
 method Queue<T>.Push(aData: T);
 var last: QueueItem<T>;
 begin
@@ -44,16 +44,16 @@ begin
   end;
 end;
 
-method Queue<T>.Count: integer; 
+method Queue<T>.Count: integer;
 var last: QueueItem<T>;
 begin
   if First = nil then exit(0);
-  
+
   last := First;
   repeat
     inc(Result);
     last := last.Next;
-  until last = nil;  
+  until last = nil;
 end;
 
 end.

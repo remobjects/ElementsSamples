@@ -30,6 +30,6 @@ Platforms:
 * **Gotham** &ndash; Elements’ “Meta” platform for cross-platform libraries
 * **Island** &ndash; Elements’ “Native” platform for Windows, Linux and Darwin
 
-Each sample ships with a .SLN file that can be opened in both Fire and Visual Studio (where applicable), and also built from the command line using MSBuild/xbuild.
+Each sample ships with a .SLN file that can be opened in both Fire, Water and Visual Studio (where applicable), and also built from the command line using EBuild or MSBuild/xbuild.
 
 Enjoy!

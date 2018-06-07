@@ -29,7 +29,7 @@ type
   public
     constructor;
   end;
-  
+
 implementation
 
 constructor Window1;
@@ -37,8 +37,8 @@ begin
   InitializeComponent();
   FillGrid;
 end;
-  
-method Window1.Sort(aSender: Object; aArgs: RoutedEventArgs); 
+
+method Window1.Sort(aSender: Object; aArgs: RoutedEventArgs);
 var
   lDelay: Integer := 0;
 begin
@@ -59,10 +59,10 @@ begin
   lAnim2.Duration := lDuration;
   lAnim2.BeginTime := lStartDelay;
   lAnim2.To := fPositions[aOne];
-  
+
   fRectangles[aOne].BeginAnimation(Canvas.LeftProperty, lAnim1, HandoffBehavior.Compose);
   fRectangles[aTwo].BeginAnimation(Canvas.LeftProperty, lAnim2, HandoffBehavior.Compose);
-  
+
   var r: Rectangle := fRectangles[aOne];
   fRectangles[aOne] := fRectangles[aTwo];
   fRectangles[aTwo] := r;
@@ -75,7 +75,7 @@ begin
   fPositions := new Double[50];
   var lWidth: Double := Width / 52.0;
   for i: Int32 := 0 to 49 do begin
-    
+
     //MainGrid.ColumnDefinitions.Add(new ColumnDefinition());
     var r := new Rectangle();
     r.HorizontalAlignment := HorizontalAlignment.Stretch;
@@ -93,36 +93,36 @@ begin
 
     MainCanvas.Children.Add(r);
   end;
-  
+
 end;
 
-method Window1.Randomize(aSender: Object; aArgs: RoutedEventArgs); 
+method Window1.Randomize(aSender: Object; aArgs: RoutedEventArgs);
 begin
   FillGrid;
 end;
 
-method Window1.Sort(aLeft, aRight: Integer; var aDelay: Integer); 
+method Window1.Sort(aLeft, aRight: Integer; var aDelay: Integer);
 begin
   while aLeft < aRight do begin
     var L: Integer := aLeft - 1;
     var R: Integer := aRight + 1;
     var Pivot: Double := fRectangles[(aLeft + aRight) div 2].Height;
-      
+
     loop begin
-      repeat 
-        Dec(R);
-      until fRectangles[R].Height <= Pivot;
-      
       repeat
-        Inc(L);
+        dec(R);
+      until fRectangles[R].Height <= Pivot;
+
+      repeat
+        inc(L);
       until fRectangles[L].Height >= Pivot;
-      
+
       if L < R then begin
         Switch(L, R, aDelay);
         aDelay := aDelay + 1;
       end else break;
     end;
-    
+
     if aLeft < R then Sort(aLeft, R, var aDelay);
     aLeft := R + 1;
   end;

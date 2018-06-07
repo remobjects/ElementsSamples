@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5aab692a-bfb3-4c71-8bca-f7249fc3a6ca</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GlHelper</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)glAssets.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glCamera.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glGlobals.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glMatrix3.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glMatrix4.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glQuaternation.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glShader.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glTexture.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glvec2.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glVec3.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glVec4.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glVertexArrays.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glTypes.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glImage.Toffee.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glImage.Island.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glShape.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)glShapeReader.pas" />
+  </ItemGroup>
+</Project>

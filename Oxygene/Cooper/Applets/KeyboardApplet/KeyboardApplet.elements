@@ -50,9 +50,7 @@
   <ItemGroup>
     <Compile Include="KeyboardApplet.pas" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <ItemGroup>
     <Content Include="TestPage.html">
       <SubType>Content</SubType>

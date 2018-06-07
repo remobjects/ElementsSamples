@@ -10,10 +10,10 @@ uses
 
 type
   App = public partial class(System.Windows.Application)
-  public 
-    method AppStartup(sender: object; args: StartupEventArgs);
+  public
+    method AppStartup(sender: Object; args: StartupEventArgs);
   end;
-  
+
 implementation
 
 method App.AppStartup(sender: object; args: StartupEventArgs);
@@ -22,7 +22,7 @@ begin
   mainWindow.Show();
 
   mainWindow.Images := ((Self.Resources['Images'] as System.Windows.Data.ObjectDataProvider).Data as ImageList);
-  mainWindow.Images.Path := '..\..\Images';  
+  mainWindow.Images.Path := '..\..\Images';
 end;
-  
+
 end.

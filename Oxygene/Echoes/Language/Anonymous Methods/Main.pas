@@ -37,17 +37,17 @@ type
     method MainForm_Load(sender: System.Object; e: System.EventArgs);
     method btnUsingInThreads_Click(sender: System.Object; e: System.EventArgs);
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
   end;
-  
+
   ThreadSafeTextBox = public class(System.Windows.Forms.TextBox)
   public
     constructor;
     method AppendLine(aText: String);
   end;
-  
+
   Customer = public class
   private
     fAge: Integer;
@@ -59,9 +59,9 @@ type
     property ID: Integer read fID write fID;
     property Name: String read fName write fName;
     property Age: Integer read fAge write fAge;
-    
+
   end;
-  
+
 
 implementation
 
@@ -110,9 +110,9 @@ begin
   self.gbLog.SuspendLayout();
   self.groupBox1.SuspendLayout();
   self.SuspendLayout();
-  // 
+  //
   // gbLog
-  // 
+  //
   self.gbLog.Controls.Add(self.label1);
   self.gbLog.Controls.Add(self.btnUsingInThreads);
   self.gbLog.Location := new System.Drawing.Point(12, 12);
@@ -121,11 +121,11 @@ begin
   self.gbLog.TabIndex := 0;
   self.gbLog.TabStop := false;
   self.gbLog.Text := 'Using with Threads';
-  // 
+  //
   // label1
-  // 
-  self.label1.Anchor := ((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom) 
-        or System.Windows.Forms.AnchorStyles.Left) 
+  //
+  self.label1.Anchor := ((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom)
+        or System.Windows.Forms.AnchorStyles.Left)
         or System.Windows.Forms.AnchorStyles.Right) as System.Windows.Forms.AnchorStyles);
   self.label1.Location := new System.Drawing.Point(6, 50);
   self.label1.Name := 'label1';
@@ -133,9 +133,9 @@ begin
   self.label1.TabIndex := 1;
   self.label1.Text := 'TextBox below provides AppendLine method that is thread-safe';
   self.label1.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
-  // 
+  //
   // btnUsingInThreads
-  // 
+  //
   self.btnUsingInThreads.Location := new System.Drawing.Point(6, 19);
   self.btnUsingInThreads.Name := 'btnUsingInThreads';
   self.btnUsingInThreads.Size := new System.Drawing.Size(196, 23);
@@ -143,20 +143,20 @@ begin
   self.btnUsingInThreads.Text := 'Run Threads';
   self.btnUsingInThreads.UseVisualStyleBackColor := true;
   self.btnUsingInThreads.Click += new System.EventHandler(@self.btnUsingInThreads_Click);
-  // 
+  //
   // lbCustomers
-  // 
-  self.lbCustomers.Anchor := ((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom) 
-        or System.Windows.Forms.AnchorStyles.Left) 
+  //
+  self.lbCustomers.Anchor := ((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom)
+        or System.Windows.Forms.AnchorStyles.Left)
         or System.Windows.Forms.AnchorStyles.Right) as System.Windows.Forms.AnchorStyles);
   self.lbCustomers.FormattingEnabled := true;
   self.lbCustomers.Location := new System.Drawing.Point(6, 19);
   self.lbCustomers.Name := 'lbCustomers';
   self.lbCustomers.Size := new System.Drawing.Size(222, 121);
   self.lbCustomers.TabIndex := 0;
-  // 
+  //
   // btnSort
-  // 
+  //
   self.btnSort.Location := new System.Drawing.Point(6, 148);
   self.btnSort.Name := 'btnSort';
   self.btnSort.Size := new System.Drawing.Size(222, 23);
@@ -164,9 +164,9 @@ begin
   self.btnSort.Text := 'Sort Customers by Age';
   self.btnSort.UseVisualStyleBackColor := true;
   self.btnSort.Click += new System.EventHandler(@self.btnSort_Click);
-  // 
+  //
   // btnFindByName
-  // 
+  //
   self.btnFindByName.Location := new System.Drawing.Point(145, 177);
   self.btnFindByName.Name := 'btnFindByName';
   self.btnFindByName.Size := new System.Drawing.Size(83, 23);
@@ -174,9 +174,9 @@ begin
   self.btnFindByName.Text := 'Find By Name';
   self.btnFindByName.UseVisualStyleBackColor := true;
   self.btnFindByName.Click += new System.EventHandler(@self.btnFindByName_Click);
-  // 
+  //
   // groupBox1
-  // 
+  //
   self.groupBox1.Controls.Add(self.txtName);
   self.groupBox1.Controls.Add(self.btnRestore);
   self.groupBox1.Controls.Add(self.lbCustomers);
@@ -188,18 +188,18 @@ begin
   self.groupBox1.TabIndex := 1;
   self.groupBox1.TabStop := false;
   self.groupBox1.Text := 'Working with Collections';
-  // 
+  //
   // txtName
-  // 
+  //
   self.txtName.Location := new System.Drawing.Point(6, 179);
   self.txtName.Name := 'txtName';
   self.txtName.Size := new System.Drawing.Size(133, 20);
   self.txtName.TabIndex := 2;
   self.txtName.Text := 'Alex';
   self.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(@self.txtName_KeyDown);
-  // 
+  //
   // btnRestore
-  // 
+  //
   self.btnRestore.Location := new System.Drawing.Point(6, 206);
   self.btnRestore.Name := 'btnRestore';
   self.btnRestore.Size := new System.Drawing.Size(222, 23);
@@ -207,9 +207,9 @@ begin
   self.btnRestore.Text := 'Restore List';
   self.btnRestore.UseVisualStyleBackColor := true;
   self.btnRestore.Click += new System.EventHandler(@self.btnRestore_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.ClientSize := new System.Drawing.Size(483, 271);
   self.Controls.Add(self.groupBox1);
   self.Controls.Add(self.gbLog);
@@ -232,8 +232,8 @@ end;
 method MainForm.CreateThreadSafeTextBox;
 begin
   self.threadSafeTextBox := new Anonymous_Methods.ThreadSafeTextBox();
-  self.threadSafeTextBox.Anchor := ((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom) 
-        or System.Windows.Forms.AnchorStyles.Left) 
+  self.threadSafeTextBox.Anchor := ((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom)
+        or System.Windows.Forms.AnchorStyles.Left)
         or System.Windows.Forms.AnchorStyles.Right) as System.Windows.Forms.AnchorStyles);
   self.threadSafeTextBox.Location := new System.Drawing.Point(6, 80);
   self.threadSafeTextBox.Multiline := true;
@@ -268,14 +268,14 @@ method ThreadSafeTextBox.AppendLine(aText: String);
 begin
   if(Self.InvokeRequired) then begin
     Invoke(
-      method; 
-      begin 
+      method;
+      begin
         Self.Text := Self.Text + aText + Environment.NewLine;
-        Self.SelectionStart := Self.Text.Length;   
+        Self.SelectionStart := Self.Text.Length;
         Self.ScrollToCaret();
       end
-    );      
-  end else 
+    );
+  end else
     inherited Text := inherited Text + aText;
 end;
 
@@ -287,20 +287,20 @@ end;
 
 
 method MainForm.btnUsingInThreads_Click(sender: System.Object; e: System.EventArgs);
-var 
+var
   lThreadCount: Integer := 5;
 begin
   var lMyParam: String := 'Hello from thread #{0}. i={1}';
 
-  for i: Integer := 0 to lThreadCount - 1 do begin       
+  for i: Integer := 0 to lThreadCount - 1 do begin
        new Thread(
-           method(); 
+           method();
            begin
-             var lThreadID: Int32 := Thread.CurrentThread.ManagedThreadId; 
+             var lThreadID: Int32 := Thread.CurrentThread.ManagedThreadId;
              threadSafeTextBox.AppendLine(String.Format(lMyParam, lThreadID, i));
            end
-       ).Start();      
-   end;   
+       ).Start();
+   end;
 end;
 
 method MainForm.MainForm_Load(sender: System.Object; e: System.EventArgs);
@@ -315,7 +315,7 @@ begin
   fCustomers.Sort(
      method(c1: Customer; c2: Customer): Integer;
      begin
-      exit(c1.Age.CompareTo(c2.Age));      
+      exit(c1.Age.CompareTo(c2.Age));
      end
    );
   lbCustomers.DataSource :=  fCustomers;
@@ -324,20 +324,20 @@ end;
 method MainForm.btnFindByName_Click(sender: System.Object; e: System.EventArgs);
 begin
   var lPattern: String := txtName.Text;
-  lbCustomers.DataSource :=  
+  lbCustomers.DataSource :=
   fCustomers.FindAll(
     method(c: Customer): Boolean;
     begin
       exit(c.Name.ToLower.Contains(lPattern.ToLower()));
     end
   );
-  
+
 end;
 
 method MainForm.btnRestore_Click(sender: System.Object; e: System.EventArgs);
 begin
   lbCustomers.DataSource :=  nil;
-  fCustomers.Clear();  
+  fCustomers.Clear();
   fCustomers.Add(new Customer(1, 'Antonio Moreno', 32));
   fCustomers.Add(new Customer(2, 'Elizabeth Lincoln', 41));
   fCustomers.Add(new Customer(3, 'Aria Cruz', 37));
@@ -345,7 +345,7 @@ begin
   fCustomers.Add(new Customer(5, 'Philip Cramer', 34));
   fCustomers.Add(new Customer(6, 'Alexander Feuer', 30));
   fCustomers.Add(new Customer(7, 'Michael Holz', 45));
-   
+
   lbCustomers.DataSource := fCustomers;
 end;
 

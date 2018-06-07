@@ -10,11 +10,11 @@ type
     class method Main;
     method loopsTesting;
     method fillData : sequence of Country;
-  var 
+  var
     Countries : sequence of Country;
   end;
 
-type 
+type
   Country = public class
   public
     property Name : String;
@@ -37,7 +37,7 @@ method ConsoleApp.loopsTesting;
 begin
   {---------------------------------}
   {"for" loop, taking every 5th item}
-  for i : Int32 :=0 to 50 step 5 do 
+  for i : Int32 :=0 to 50 step 5 do
   begin
     Console.Write(i); Console.Write(' ');
   end;
@@ -54,11 +54,11 @@ begin
   Console.WriteLine(); Console.WriteLine();
 
   Countries := fillData;
-  
+
   {---------------------------------}
   {loop with defined "index" variable, which will count from 0 through the number of elements looped}
   Console.WriteLine('Countries: ');
-  for each c in Countries index num do 
+  for each c in Countries index num do
     Console.WriteLine(Convert.ToString(num + 1) + ') ' + c.Name);
 
   Console.WriteLine();
@@ -71,7 +71,7 @@ begin
   loop
   begin
     Console.WriteLine(Countries.ElementAt(ind).Capital);
-    Inc(ind);
+    inc(ind);
     if ind = Countries.Count then break;
   end;
 
@@ -88,9 +88,9 @@ begin
   Console.WriteLine('Cities: ');
 
   {"repeat ... until" loop}
-  repeat 
+  repeat
     Console.WriteLine(Countries.ElementAt(ind).Capital);
-    Inc(ind);
+    inc(ind);
   until ind = Countries.Count;
 
   Console.WriteLine();
@@ -103,7 +103,7 @@ begin
   while ind < Countries.Count do
   begin
     Console.WriteLine(Countries.ElementAt(ind).Name);
-    Inc(ind);
+    inc(ind);
   end;
 
   Console.ReadLine();
@@ -111,9 +111,9 @@ end;
 
 method ConsoleApp.fillData: sequence of Country;
 begin
-  result := [new Country('UK', 'London'), new Country('USA', 'Washington'), new Country('Germany', 'Berlin'), 
+  result := [new Country('UK', 'London'), new Country('USA', 'Washington'), new Country('Germany', 'Berlin'),
              new Country('Ukraine', 'Kyiv'), new Country('Russia', 'Moscow'), new Country('France', 'Paris')];
-             
+
 end;
 
 constructor Country (setName :String; setCapital: String);

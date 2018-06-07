@@ -4,17 +4,17 @@ interface
 
 uses
   System,
-  RemotingSample.Interfaces;  
+  RemotingSample.Interfaces;
 
 type
   { RemoteService }
   RemoteService = public class(MarshalByRefObject, IRemoteService)
   private
   protected
-    method Sum(A, B : integer) : integer;
+    method Sum(A, B : Integer) : Integer;
   public
   end;
-   
+
 implementation
 
 method RemoteService.Sum(A, B : integer) : integer;

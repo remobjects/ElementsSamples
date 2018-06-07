@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Basic WebAssembly GUI App", "Basic WebAssembly GUI App.elements", "{672DAEAD-36E1-47F7-94C1-D0734E78797D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{672DAEAD-36E1-47F7-94C1-D0734E78797D}.Debug|Default.ActiveCfg = Debug
+		{672DAEAD-36E1-47F7-94C1-D0734E78797D}.Debug|Default.Build.0 = Debug
+		{672DAEAD-36E1-47F7-94C1-D0734E78797D}.Release|Default.ActiveCfg = Release
+		{672DAEAD-36E1-47F7-94C1-D0734E78797D}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33BC08F0-C300-4A51-BF73-4E1AB4D6E5C9}
+	EndGlobalSection
+EndGlobal

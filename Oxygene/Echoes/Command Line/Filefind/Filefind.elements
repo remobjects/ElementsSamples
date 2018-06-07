@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{D9480ED1-1F88-4A21-8D59-315E4F34F6B2}</ProjectGuid>
     <RootNamespace>Filefind</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Exe</OutputType>
     <AssemblyName>Filefind</AssemblyName>
     <AllowGlobals>True</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

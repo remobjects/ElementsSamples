@@ -13,7 +13,7 @@ type
   public
     class method Main;
   end;
-  
+
 implementation
 
 /// <summary>
@@ -36,5 +36,5 @@ class method Program.OnThreadException(sender: Object; e: ThreadExceptionEventAr
 begin
   MessageBox.Show(e.Exception.Message);
 end;
-  
+
 end.

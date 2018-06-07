@@ -13,6 +13,7 @@
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <ProjectGuid>{EC8E70C4-618C-4AD7-AF7A-CB48487AAD2E}</ProjectGuid>
     <AssemblyDelaySign>False</AssemblyDelaySign>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
@@ -33,7 +34,6 @@
     <CodeFlowAnalysis>True</CodeFlowAnalysis>
     <UseXmlDoc>False</UseXmlDoc>
     <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
-    <WarnOnCaseMismatch>False</WarnOnCaseMismatch>
     <RunCodeAnalysis>False</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -54,7 +54,6 @@
     <CodeFlowAnalysis>True</CodeFlowAnalysis>
     <UseXmlDoc>False</UseXmlDoc>
     <XmlDocWarning>WarningOnPublicMembers</XmlDocWarning>
-    <WarnOnCaseMismatch>False</WarnOnCaseMismatch>
     <RunCodeAnalysis>False</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>

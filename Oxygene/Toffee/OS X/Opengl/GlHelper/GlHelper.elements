@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>5aab692a-bfb3-4c71-8bca-f7249fc3a6ca</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>GlHelper</RootNamespace>
+  </PropertyGroup>
+  <Import Project="GlHelper.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.SharedProject.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

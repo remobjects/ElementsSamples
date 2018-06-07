@@ -3,7 +3,7 @@
 interface
 uses System.Collections.Generic,
      System.Linq;
-     
+
 
 type
   ConsoleApp = class
@@ -24,7 +24,7 @@ type
       constructor (setName: String; setAge: Integer);
     end;
 
-  
+
 implementation
 
 class method ConsoleApp.Main;
@@ -69,12 +69,12 @@ begin
 
   printOut('');
   printOut('People, younger then 30, sorted by age:');
-  
+
   for each p in youngPersons do
      printTwoStrings(p.Name, ' ('+p.Age.ToString+')');
 end;
 
-method ConsoleApp.SumAge: Int32;
+method ConsoleApp.SumAge: Integer;
 begin
   var sum : Integer :=0;
   for each p in persons do
@@ -91,7 +91,7 @@ end;
 method ConsoleApp.FillPersons;
 begin
   persons := new List<Person>;
-  persons.AddRange([new Person('John Smith', 35), new Person('Lara Croft', 33), new Person ('Nancy Davolio', 22), 
+  persons.AddRange([new Person('John Smith', 35), new Person('Lara Croft', 33), new Person ('Nancy Davolio', 22),
                     new Person ('Andrew Fuller', 30), new Person ('Janet Leverling', 26), new Person ('Margareth Peacock', 18),
                     new Person ('Steven Buchanan', 19), new Person ('Laura Callahan', 55), new Person ('James Bond', 29)]);
 end;

@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Basic_WebAssembly_GUI_Controls_App Test Page</title>
+		<script lang="javascript" src="wasm/RemObjectsElements.js"></script>
+		<script lang="javascript" src="wasm/Basic_WebAssembly_GUI_Controls_App.js"></script>
+	</head>
+	<body>
+	<h1>Basic_WebAssembly_GUI_Controls_App Test Page</h1>
+	<div id="helloWorld"/>
+	<script lang="javascript">
+		Basic_WebAssembly_GUI_Controls_App.instantiate("wasm/Basic_WebAssembly_GUI_Controls_App.wasm").then(function (result) {
+			console.log("WebAssembly file Basic_WebAssembly_GUI_Controls_App.wasm has been loaded.");
+			var program = result.Program();
+			program.HelloWorld();
+		});
+	</script>
+	</body>
+</html>

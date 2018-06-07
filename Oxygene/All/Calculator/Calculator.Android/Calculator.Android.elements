@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -82,7 +82,7 @@
     <Reference Include="android">
       <Private>True</Private>
     </Reference>
-    <Reference Include="elements.jar">
+    <Reference Include="elements">
       <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Cooper\Reference Archives\elements.jar</HintPath>
       <Private>True</Private>
     </Reference>

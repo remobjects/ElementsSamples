@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="android" />
-    <Reference Include="elements.jar">
+    <Reference Include="elements">
       <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Cooper\Reference Archives\elements.jar</HintPath>
       <Private>True</Private>
     </Reference>

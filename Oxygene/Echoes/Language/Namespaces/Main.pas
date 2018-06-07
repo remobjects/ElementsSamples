@@ -18,7 +18,7 @@ type
     method InitializeComponent;
   {$ENDREGION}
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
@@ -48,18 +48,18 @@ begin
   var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeOf(MainForm));
   self.button1 := new System.Windows.Forms.Button();
   self.SuspendLayout();
-  // 
+  //
   // button1
-  // 
+  //
   self.button1.Location := new System.Drawing.Point(47, 50);
   self.button1.Name := 'button1';
   self.button1.Size := new System.Drawing.Size(150, 23);
   self.button1.TabIndex := 0;
   self.button1.Text := 'Test Classes';
   self.button1.Click += new System.EventHandler(@self.button1_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.AutoScaleBaseSize := new System.Drawing.Size(5, 13);
   self.ClientSize := new System.Drawing.Size(244, 122);
   self.Controls.Add(self.button1);
@@ -95,16 +95,16 @@ var
 begin
   lPresident  := new President;
   lEmployee   := new Employee;
-  
+
   { The following code will perform a few type tests to verify everything works as expected }
-  if (lPresident is Employee) 
+  if (lPresident is Employee)
     then MessageBox.Show('President is an Employee');
-    
-  if (lEmployee is Person) 
+
+  if (lEmployee is Person)
     then MessageBox.Show('Employee is a Person');
-  
-  if (lEmployee is not President) 
-    then MessageBox.Show('Employee is not a President');  
+
+  if (lEmployee is not President)
+    then MessageBox.Show('Employee is not a President');
 end;
 
 end.

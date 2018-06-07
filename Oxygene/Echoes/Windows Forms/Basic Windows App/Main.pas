@@ -3,7 +3,7 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing;
 
 type
@@ -16,7 +16,7 @@ type
     method InitializeComponent;
   {$ENDREGION}
   protected
-    method Dispose(aDisposing: boolean); override;
+    method Dispose(aDisposing: Boolean); override;
   public
     constructor;
     class method Main;
@@ -46,18 +46,18 @@ begin
   var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeOf(MainForm));
   self.bHelloWorld := new System.Windows.Forms.Button();
   self.SuspendLayout();
-  // 
+  //
   // bHelloWorld
-  // 
+  //
   self.bHelloWorld.Location := new System.Drawing.Point(47, 50);
   self.bHelloWorld.Name := 'bHelloWorld';
   self.bHelloWorld.Size := new System.Drawing.Size(150, 23);
   self.bHelloWorld.TabIndex := 0;
   self.bHelloWorld.Text := 'Say HelloWorld!';
   self.bHelloWorld.Click += new System.EventHandler(@self.bHelloWorld_Click);
-  // 
+  //
   // MainForm
-  // 
+  //
   self.AutoScaleBaseSize := new System.Drawing.Size(5, 13);
   self.ClientSize := new System.Drawing.Size(244, 122);
   self.Controls.Add(self.bHelloWorld);
@@ -92,7 +92,7 @@ begin
   { This method doesn't do much, but you can set a break point here and
     watch the value of the string "s" }
   s := 'Hello World!';
-  
+
   { Try code completion by pressing CTRL+SPACE after "Message." }
   MessageBox.Show(s);
 end;

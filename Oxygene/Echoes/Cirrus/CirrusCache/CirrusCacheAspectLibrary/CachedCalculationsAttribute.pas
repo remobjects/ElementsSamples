@@ -1,4 +1,4 @@
-namespace CirrusCacheAspectLibrary;
+﻿namespace CirrusCacheAspectLibrary;
 
 interface
 
@@ -9,7 +9,7 @@ type
   // This attribute will be transformed into RemObjects Cirrus Aspect later.
   // Note how RemObjects.Elements.Cirrus.IMethodDefinition and RemObjects.Elements.Cirrus.ITypeImplementationDecorator
   // interfaces are implemented
-  // 
+  //
   // Also note how GetItemFromCache and AddItemToCache method declarations are marked. These methods will be injected into target
   // class of aspect
   //
@@ -35,7 +35,7 @@ implementation
 
 method CachedCalculationsAttribute.HandleImplementation(Services: RemObjects.Elements.Cirrus.IServices; aMethod: RemObjects.Elements.Cirrus.IMethodDefinition);
 begin
-  // Here target class constructor is modified. 
+  // Here target class constructor is modified.
   // Note how added thru this aspect private field fCache is accessed nad initialized
   if  (String.Equals(aMethod.Name, '.ctor', StringComparison.OrdinalIgnoreCase))  then  begin
     aMethod.SetBody(Services,
@@ -48,7 +48,7 @@ begin
   end;
 
   if  (not String.Equals(aMethod.Name, 'Calculate', StringComparison.OrdinalIgnoreCase))  then  exit;
-  
+
   // Only method with name Calculate will be modified
   // Note how field fCache is accessed
   // Also note how target method is modified and caching capatibilies are added there
@@ -85,10 +85,10 @@ end;
 // It returns value stored in cache, if this is possible or nil otherwise
 class method CachedCalculationsAttribute.GetItemFromCache(aArguments: array of Object; aCache: System.Collections.Hashtable): Object;
 begin
-  if  (not assigned(aArguments))  then 
+  if  (not assigned(aArguments))  then
     exit  (nil);
 
-  if  (Length(aArguments) <> 1)  then 
+  if  (length(aArguments) <> 1)  then
     exit  (nil);
 
   var  lKey: Int32 := Int32(aArguments[0]);
@@ -106,10 +106,10 @@ end;
 // It put value provided to the cache
 class method CachedCalculationsAttribute.AddItemToCache(aArguments: array of Object; aCache: System.Collections.Hashtable; aValue: Object);
 begin
-    if  (not assigned(aArguments))  then 
+    if  (not assigned(aArguments))  then
     exit;
 
-  if  (Length(aArguments) <> 1)  then 
+  if  (length(aArguments) <> 1)  then
     exit;
 
   var  lKey: Int32 := Int32(aArguments[0]);

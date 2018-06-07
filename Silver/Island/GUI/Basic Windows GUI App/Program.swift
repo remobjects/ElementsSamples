@@ -35,7 +35,7 @@ class Program {
         windowClass.hInstance = rtl.GetModuleHandleW(nil)
         windowClass.hIcon = LoadIcon(windowClass.hInstance, IDI_APPLICATION as! LPCWSTR)
         windowClass.hCursor = LoadCursor(nil, IDC_ARROW as! LPCWSTR)
-        windowClass.hbrBackground = (COLOR_WINDOW + 1) as! UnsafePointer<Void>
+        windowClass.hbrBackground = (COLOR_WINDOW + 1) as! HBRUSH
         windowClass.lpszMenuName = nil
         windowClass.lpszClassName = szWindowClass
 

@@ -15,7 +15,7 @@ public __partial class MainWindow: Window {
 		InitializeComponent();
 	}
 
-	public func Exit_Clicked(_ sender: Object!, args: RoutedEventArgs!)
+	public func Exit_Clicked(_ sender: Object!, _ args: RoutedEventArgs!)
 	{
 		Close()
 	}
@@ -34,7 +34,7 @@ public __partial class MainWindow: Window {
 		tbValue.SelectionStart = tbValue.Text.Length
 	}
 
-	public func Text_Clicked(_ sender: Object!, args: RoutedEventArgs!)
+	public func Text_Clicked(_ sender: Object!, _ args: RoutedEventArgs!)
 	{
 		tbValue.Text = tbValue.Text + (sender as! Button).Content.ToString()
 		Refocus()

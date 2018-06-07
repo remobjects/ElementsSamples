@@ -1,15 +1,10 @@
-namespace org.me.deviceinfo;
+﻿namespace org.me.deviceinfo;
 
 //Sample app by Brian Long (http://blong.com)
 
 {
   This example demonstrates querying an Android device for various metrics and data
 }
-
-{$define USING_API_9}
-{$define USING_API_10}
-{$define USING_API_11}
-{$define USING_API_12}
 
 interface
 
@@ -68,7 +63,7 @@ begin
   //Now loop through the string id array, creating a pre-defined 2 item list
   //view item for each one, setting the first item (TextView) to the string
   //and adding the second item (TextView) to the listview
-  for I: Integer := 0 to infoLabels.length - 1 do 
+  for I: Integer := 0 to infoLabels.length - 1 do
   begin
     var listItem := LayoutInflater.inflate(Android.R.layout.simple_list_item_2, nil);
     var infoLabel := TextView(listItem.findViewById(Android.R.id.text1));
@@ -83,7 +78,7 @@ method InfoActivity.onResume;
 begin
   inherited;
   //This is a use of a case expression (as opposed to a case statement)
-  var releaseName := case Build.VERSION.SDK_INT of 
+  var releaseName := case Build.VERSION.SDK_INT of
     Build.VERSION_CODES.BASE: 'Android 1 aka Base, October 2008';
     Build.VERSION_CODES.BASE_1_1: 'Android 1.1 aka Base 1 1, February 2009';
     Build.VERSION_CODES.CUPCAKE: 'Android 1.5 aka Cupcake, May 2009';
@@ -92,21 +87,11 @@ begin
     Build.VERSION_CODES.ECLAIR_0_1: 'Android 2.0.1 aka Eclair 0 1, December 2009';
     Build.VERSION_CODES.ECLAIR_MR1: 'Android 2.1 aka Eclair MR 1, January 2010';
     Build.VERSION_CODES.FROYO: 'Android 2.2 aka FroYo, June 2010';
-  {$ifdef USING_API_9}
     Build.VERSION_CODES.GINGERBREAD: 'Android 2.3 aka GingerBread, November 2010';
-  {$endif}
-  {$ifdef USING_API_10}
     Build.VERSION_CODES.GINGERBREAD_MR1: 'Android 2.3.3 aka GingerBread MR 1, February 2011';
-  {$endif}
-  {$ifdef USING_API_11}
     Build.VERSION_CODES.HONEYCOMB: 'Android 3.0 aka Honeycomb, February 2011';
-  {$endif}
-  {$ifdef USING_API_12}
     Build.VERSION_CODES.HONEYCOMB_MR1: 'Android 3.1 aka Honeycomb MR1, May 2011';
-  {$endif}
-  {$ifdef USING_API_13}
     Build.VERSION_CODES.HONEYCOMB_MR2: 'Android 3.2 aka Honeycomb MR2, June 2011';
-  {$endif}
     Build.VERSION_CODES.CUR_DEVELOPMENT: 'Current development build';
     else 'Unknown version';
   end;
@@ -121,13 +106,11 @@ begin
   infoItems[DEVICE_CPU_ABI].Text :=      WideString.format('%s', Build.CPU_ABI);
   infoItems[DEVICE_BOOTLOADER].Text :=   WideString.format('%s', Build.BOOTLOADER);
   var config := Resources.Configuration;
-  var screenSize := case config.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK of 
+  var screenSize := case config.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK of
     Configuration.SCREENLAYOUT_SIZE_SMALL:  'small';
     Configuration.SCREENLAYOUT_SIZE_NORMAL: 'normal';
     Configuration.SCREENLAYOUT_SIZE_LARGE:  'large';
-  {$ifdef USING_API_9}
     Configuration.SCREENLAYOUT_SIZE_XLARGE: 'extra large';
-  {$endif}
     else 'undefined'
   end + ' screen size';
   var sizeName := '';
@@ -146,13 +129,10 @@ begin
     if (dm.widthPixels = 480) and (dm.heightPixels = 800) then sizeName := 'WVGA800';
     if (dm.widthPixels = 480) and (dm.heightPixels = 854) then sizeName := 'WVGA854'
   end
-  {$ifdef USING_API_9}
   else if dm.densityDpi = DisplayMetrics.DENSITY_XHIGH then begin
     if (dm.widthPixels = 1280) and (dm.heightPixels = 800) then sizeName := 'WXGA';
-  end
-  {$endif}
-  ;
-  var screenOrientation := case config.orientation of 
+  end;
+  var screenOrientation := case config.orientation of
     Configuration.ORIENTATION_LANDSCAPE: 'Landscape';
     Configuration.ORIENTATION_PORTRAIT: 'Portrait';
     Configuration.ORIENTATION_SQUARE: 'Qquare';
@@ -160,16 +140,12 @@ begin
   if sizeName <> '' then  screenSize := sizeName + ' - ' + screenSize;
   infoItems[SCREEN_RESOLUTION].Text := WideString.format('%s%n%s%n%d x %d px%n%.0f x %.0f ppi',
     screenSize, screenOrientation, dm.widthPixels, dm.heightPixels, dm.xdpi, dm.ydpi);
-  var densityStr := case dm.densityDpi of 
+  var densityStr := case dm.densityDpi of
     DisplayMetrics.DENSITY_LOW:    'low density - ldpi';
     DisplayMetrics.DENSITY_MEDIUM: 'medium density - mdpi';
     DisplayMetrics.DENSITY_HIGH:   'high-density - hdpi';
-  {$ifdef USING_API_9}
     DisplayMetrics.DENSITY_XHIGH:  'extra-high-density aka xhdpi';
-  {$endif}
-  {$ifdef USING_API_13}
-    DisplayMetrics.DENSITY_TV:  densityStr := '720p TV';
-  {$endif}
+    DisplayMetrics.DENSITY_TV:     '720p TV';
     else 'unknown density'
   end;
   infoItems[SCREEN_DENSITY].Text := WideString.format(

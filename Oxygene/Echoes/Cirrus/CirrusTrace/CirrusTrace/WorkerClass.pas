@@ -6,7 +6,7 @@ type
   // Aspect declared in CirrusTraceAspectLibrary is applied to this class
   // Build and start the application to see how it will affect the behaviour of
   // Sum and Multiply methods
-  [Aspect:CirrusTraceAspectLibrary.Trace]
+  [CirrusTraceAspectLibrary.Trace]
   WorkerClass = class
   public
     method Sum(aValueA: Int32; aValueB: Int32): Int32; virtual;

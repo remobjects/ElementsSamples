@@ -47,7 +47,7 @@ type
     method mouseDragged(e: MouseEvent);
     method drawWireFrame(g: Graphics);
   end;
-  
+
 implementation
 
 constructor Point3D(xCoord, yCoord, zCoord: Integer);
@@ -197,9 +197,9 @@ begin
   end;
 
   // draw the wireframe
-  g.Color := Color.black;
+  g.Color := Color.BLACK;
   g.fillRect( 0, 0, width, height );
-  g.Color := Color.white;
+  g.Color := Color.WHITE;
   for j: Integer := 0 to edges.length - 1 do
     g.drawLine(
       points[ edges[j].a ].x, points[ edges[j].a ].y,

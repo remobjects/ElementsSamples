@@ -50,9 +50,7 @@
   <ItemGroup>
     <Compile Include="WireFrameViewerApplet.pas" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <ItemGroup>
     <None Include="TestPage.html">
       <SubType>Content</SubType>

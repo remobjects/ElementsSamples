@@ -40,12 +40,7 @@
   <ItemGroup>
     <Reference Include="CoreGraphics" />
     <Reference Include="Foundation" />
-    <Reference Include="libElements.fx">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Reference Libraries\iOS\libElements.fx</HintPath>
-    </Reference>
-    <Reference Include="libxml2">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Toffee\Libraries\libxml2\iOS\libxml2.fx</HintPath>
-    </Reference>
+    <Reference Include="libElements" />
     <Reference Include="UIKit" />
     <Reference Include="rtl" />
     <Reference Include="libToffee" />
