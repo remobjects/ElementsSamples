@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>MetalExample</RootNamespace>
+    <ProjectGuid>{0E72483C-EEBD-4F11-80E5-E5E48B0464AA}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>MetalExample</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyWith>False</AllowLegacyWith>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <AllowUnsafeCode>False</AllowUnsafeCode>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <SDK>macOS</SDK>
+    <MangleTypeNames>True</MangleTypeNames>
+    <CreateAppBundle>True</CreateAppBundle>
+    <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
+    <MacIconFile>.\Resources\App.icns</MacIconFile>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <CodesignCertificateName>Mac Developer: fwestermann@me.com (Z49XRE52ZG)</CodesignCertificateName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <XmlDoc>False</XmlDoc>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cocoa" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
+    <Reference Include="libElements" />
+    <Reference Include="CoreGraphics" />
+    <Reference Include="CoreImage" />
+    <Reference Include="CoreFoundation" />
+    <Reference Include="Metal" />
+    <Reference Include="MetalKit" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.pas" />
+    <Compile Include="MainWindowController.pas" />
+    <None Include="Resources\Entitlements.entitlements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Info.plist" />
+    <Content Include="Resources\App.icns" />
+    <Xib Include="MainWindowController.xib">
+      <DependentUpon>MainWindowController.pas</DependentUpon>
+    </Xib>
+    <Xib Include="Resources\MainMenu.xib" />
+    <AppResource Include="Resources\coral.jpg" />
+    <AppResource Include="Resources\Tex1.JPG" />
+    <Compile Include="MetalRenderer.pas" />
+    <Compile Include="ExampleMetalView.pas" />
+    <Compile Include="MetalExample1.pas" />
+    <AppResource Include="Shader\AAPLShaders1.metal" />
+    <Compile Include="glAssets.pas" />
+    <Compile Include="MetalExample2.pas" />
+    <AppResource Include="Shader\AAPLShaders2.metal" />
+    <AppResource Include="Shader\AAPLShaders3.metal" />
+    <Compile Include="MetalExample3.pas" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+</Project>
