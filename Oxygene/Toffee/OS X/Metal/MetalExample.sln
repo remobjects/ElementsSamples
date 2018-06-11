@@ -1,8 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # RemObjects Fire
-Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "GlHelper", "GlHelper\GlHelper.elements", "{5AAB692A-BFB3-4C71-8BCA-F7249FC3A6CA}"
-EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "MetalExample", "MetalExample\MetalExample.elements", "{0E72483C-EEBD-4F11-80E5-E5E48B0464AA}"
 EndProject
 Global
