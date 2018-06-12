@@ -2,12 +2,8 @@
 
 interface
 uses
-  AppKit,
   Metal,
-  MetalKit,
-  Foundation,
-  RemObjects.Elements.RTL;
-
+  MetalKit;
 
 type
 [IBObject]
@@ -22,7 +18,8 @@ method Metal_View.awakeFromNib;
 begin
   inherited;
   device := MTLCreateSystemDefaultDevice();
-
+  if device = nil then
+  NSLog("Could not create a default MetalDevice!!")
 end;
 
 

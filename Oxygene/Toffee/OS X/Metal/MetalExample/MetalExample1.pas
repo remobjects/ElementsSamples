@@ -5,33 +5,6 @@ uses
   Metal,
   MetalKit;
 
-
-// Buffer index values shared between shader and C code to ensure Metal shader buffer inputs match
-//   Metal API buffer set calls
-type
-
-
-//  This structure defines the layout of each vertex in the array of vertices set as an input to our
-//    Metal vertex shader.  Since this header is shared between our .metal shader and C code,
-//    we can be sure that the layout of the vertex array in our C code matches the layout that
-//    our .metal vertex shader expects
-// At moment we need a dummy record inside because the shader is using vectortypes with a alignment of 16
-
-  AAPLVertex1 =  record
-    // Positions in pixel space
-    // (e.g. a value of 100 indicates 100 pixels from the center)
-    position : vector_float2;
-
-    // Is needed for 16 byte alignement used in Metal
-    dummy : vector_float2;
-
-    // Floating-point RGBA colors
-    color : Color;//vector_float4;
-  end;
-
-
-
-
 type
   MetalExample1 = class(MetalBaseDelegate)
   private
@@ -136,7 +109,8 @@ begin
   createVerticies;
 
   // Try to Compile the Shader
-  var  defaultLibrary  : MTLLibrary := _device.newLibraryWithSource(SourceShader) options(new MTLCompileOptions()) error(var lError);
+  var  defaultLibrary  := newShader(SourceShader);
+
 
   // Load all the shader files with a .metal file extension in the project
   // Will not work at moment in element because there is no precompile for the shaders like in xcode
@@ -144,7 +118,6 @@ begin
 
   if defaultLibrary = nil then
   begin
-    NSLog("Failed to compile the Shader, error %@", lError);
     exit nil;
   end
   else
@@ -153,8 +126,12 @@ begin
     var  vertexFunction  :MTLFunction := defaultLibrary.newFunctionWithName("vertexShader");
 
    // Load the fragment function from the library
-    var fragmentFunction : MTLFunction := defaultLibrary.newFunctionWithName("fragmentShader");
-
+    var fragmentFunction : MTLFunction := defaultLibrary.newFunctionWithName("fragmentColorShader");
+    if fragmentFunction = nil then
+    begin
+      NSLog("Failed to get the fragmentFunction , error %@", lError);
+      exit nil;
+    end;
     // Configure a pipeline descriptor that is used to create a pipeline state
     var pipelineStateDescriptor : MTLRenderPipelineDescriptor  := new MTLRenderPipelineDescriptor();
     pipelineStateDescriptor.label := "Simple Pipeline";
@@ -185,32 +162,17 @@ end;
 method MetalExample1.createVerticies;
 begin
 
-    triangleVertices := new AAPLVertex1[3];
+  triangleVertices := new AAPLVertex1[3];
 //Positions
-    triangleVertices[0].position[0]:=250;
-    triangleVertices[0].position[1]:=-250;
-    triangleVertices[1].position[0]:=-250;
-    triangleVertices[1].position[1]:=-250;
-    triangleVertices[2].position[0]:=0;
-    triangleVertices[2].position[1]:=250;
+  triangleVertices[0].position := [ 250, -250];
+  triangleVertices[1].position := [-250, -250];
+  triangleVertices[2].position := [   0,  250];
+
 
   // Colors
-    triangleVertices[0].color.red :=1;
-    triangleVertices[0].color.blue:=0;
-    triangleVertices[0].color.green:=0;
-    triangleVertices[0].color.alpha:=1;
-
-
-    triangleVertices[1].color.red :=0;
-    triangleVertices[1].color.blue:=1;
-    triangleVertices[1].color.green:=0;
-    triangleVertices[1].color.alpha:=1;
-
-
-    triangleVertices[2].color.red :=0;
-    triangleVertices[2].color.blue:=0;
-    triangleVertices[2].color.green:=1;
-    triangleVertices[2].color.alpha:=1;
+  triangleVertices[0].color :=  Color.createRed();
+  triangleVertices[1].color :=  Color.createGreen();
+  triangleVertices[1].color :=  Color.createBlue();
 
 end;
 

@@ -77,6 +77,11 @@
     <AppResource Include="Shader\AAPLShaders2.metal" />
     <AppResource Include="Shader\AAPLShaders3.metal" />
     <Compile Include="MetalExample3.pas" />
+    <Compile Include="MetalExample4.pas" />
+    <AppResource Include="Shader\AAPLShaders4.metal" />
+    <Compile Include="MetalVertexBuffer.pas" />
+    <Compile Include="MainWindowController.Metal.pas" />
+    <Compile Include="MetalExampleTypes.pas" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
 </Project>

@@ -5,36 +5,14 @@ uses
   Metal,
   MetalKit;
 
-
-// Buffer index values shared between shader and C code to ensure Metal shader buffer inputs match
-//   Metal API buffer set calls
-type
-
-
-//  This structure defines the layout of each vertex in the array of vertices set as an input to our
-//    Metal vertex shader.  Since this header is shared between our .metal shader and C code,
-//    we can be sure that the layout of the vertex array in our C code matches the layout that
-//    our .metal vertex shader expects
-// At moment we need a dummy record inside because the shader is using vectortypes with a alignment of 16
-
-  AAPLVertex2 =  record
-    // Positions in pixel space
-    // (e.g. a value of 100 indicates 100 pixels from the center)
-    position : vector_float2;
-    // Is needed for 16 byte alignement used in Metal
-    dummy : vector_float2;
-    // Floating-point RGBA colors
-    color : Color;//vector_float4;
-  end;
-
-
-
 type
   MetalExample2 = class(MetalBaseDelegate)
   private
+    const QUAD_SIZE = 20;
+   var
     _pipelineState :MTLRenderPipelineState ;
     _viewportSize : array [0..1] of UInt32;//Integer;
-    _vertexBuffer : MTLBuffer;
+    _vertexBuffer : VertexBuffer;//s<AAPLVertex3>;
     _numVertices : NSUInteger ;
    // Interface
     method drawInMTKView(view: not nullable MTKView); override;
@@ -76,22 +54,23 @@ begin
     renderEncoder.setRenderPipelineState(_pipelineState);
 
 
-    // We call -[MTLRenderCommandEncoder setVertexBytes:length:atIndex:] to send data from our
-        //   Application ObjC code here to our Metal 'vertexShader' function
+    // We call -[MTLRenderCommandEncoder setVertexBuffer:offset:atIndex:] to send data in our
+        //   preloaded MTLBuffer from our ObjC code here to our Metal 'vertexShader' function
         // This call has 3 arguments
-        //   1) A pointer to the memory we want to pass to our shader
-        //   2) The memory size of the data we want passed down
-        //   3) An integer index which corresponds to the index of the buffer attribute qualifier
-        //      of the argument in our 'vertexShader' function
+        //   1) buffer - The buffer object containing the data we want passed down
+        //   2) offset - They byte offset from the beginning of the buffer which indicates what
+        //      'vertexPointer' point to.  In this case we pass 0 so data at the very beginning is
+        //      passed down.
+        //      We'll learn about potential uses of the offset in future samples
+        //   3) index - An integer index which corresponds to the index of the buffer attribute
+        //      qualifier of the argument in our 'vertexShader' function.  Note, this parameter is
+        //      the same as the 'index' parameter in
+        //    -[MTLRenderCommandEncoder setVertexBytes:length:atIndex:]
 
-        // You send a pointer to the `triangleVertices` array also and indicate its size
-        // The `AAPLVertexInputIndexVertices` enum value corresponds to the `vertexArray`
-        // argument in the `vertexShader` function because its buffer attribute also uses
-        // the `AAPLVertexInputIndexVertices` enum value for its index
 
 
 
-    renderEncoder.setVertexBuffer(_vertexBuffer ) offset(0) atIndex(AAPLVertexInputIndexVertices);
+    renderEncoder.setVertexBuffer(_vertexBuffer.verticies ) offset(0) atIndex(AAPLVertexInputIndexVertices);
 
 
 
@@ -171,17 +150,12 @@ begin
       NSLog("Failed to created pipeline state, error %@", lError);
       exit nil;
     end;
-    var Buffer := generateVertexData;
+    var Buffer  := generateVertexData;
     var Bufflen : Integer := Buffer.length*sizeOf(AAPLVertex2);
     //NSLog("Bufflen %d", Bufflen);
      // Create a vertex buffer by allocating storage that can be read by the GPU
-    _vertexBuffer := _device.newBufferWithLength(Bufflen)  options(MTLResourceOptions.MTLResourceStorageModeShared);
-
-
-    // Copy the vertex data into the vertex buffer by accessing a pointer via
-    // the buffer's `contents` property
-    memcpy(_vertexBuffer.contents, Buffer, Bufflen);
-
+  //  _vertexBuffer := VertexBuffer.newBuffer(  _device,  Buffer, Bufflen);
+    _vertexBuffer := VertexBuffer.newBuffer(  _device) SourceData(Buffer) withLength(Bufflen);
     //  number of vertices
     _numVertices := Buffer.length;
 
@@ -196,56 +170,22 @@ begin
   result := new AAPLVertex2[6];
 
 //Positions
-  result[0].position[0]:=-20;
-  result[0].position[1]:=20;
-  result[1].position[0]:=20;
-  result[1].position[1]:=20;
-  result[2].position[0]:=-20;
-  result[2].position[1]:=-20;
+  result[0].position := [-QUAD_SIZE,  QUAD_SIZE];
+  result[1].position := [ QUAD_SIZE,  QUAD_SIZE];
+  result[2].position := [-QUAD_SIZE, -QUAD_SIZE];
 
-  result[3].position[0]:=20;
-  result[3].position[1]:=-20;
-  result[4].position[0]:=-20;
-  result[4].position[1]:=-20;
-  result[5].position[0]:=20;
-  result[5].position[1]:=20;
-
+  result[3].position := [ QUAD_SIZE, -QUAD_SIZE];
+  result[4].position := [-QUAD_SIZE, -QUAD_SIZE];
+  result[5].position := [ QUAD_SIZE,  QUAD_SIZE];
 
   // Colors
-  result[0].color.red :=1;
-  result[0].color.blue:=0;
-  result[0].color.green:=0;
-  result[0].color.alpha:=1;
-
-
-  result[1].color.red :=0;
-  result[1].color.blue:=0;
-  result[1].color.green:=1;
-  result[1].color.alpha:=1;
-
-
-  result[2].color.red :=0;
-  result[2].color.blue:=1;
-  result[2].color.green:=0;
-  result[2].color.alpha:=1;
-
-  result[3].color.red :=1;
-  result[3].color.blue:=0;
-  result[3].color.green:=0;
-  result[3].color.alpha:=1;
-
-
-  result[4].color.red :=0;
-  result[4].color.blue:=1;
-  result[4].color.green:=0;
-  result[4].color.alpha:=1;
-
-
-  result[5].color.red :=0;
-  result[5].color.blue:=0;
-  result[5].color.green:=1;
-  result[5].color.alpha:=1;
-
+  //result[0].color := Color.createRed();
+  result[0].color := Color.create(1,1,0,1);
+  result[1].color := Color.createGreen();
+  result[2].color := Color.createBlue();
+  result[3].color := Color.createRed();
+  result[4].color := Color.createBlue();
+  result[5].color := Color.createGreen();
 
 end;
 
@@ -253,7 +193,7 @@ method MetalExample2.generateVertexData: array of AAPLVertex2;
 begin
   const  NUM_COLUMNS = 25;
   const  NUM_ROWS = 15;
-  const  QUAD_SPACING = 50.0;
+  const  QUAD_SPACING =   QUAD_SIZE *2 + 10.0;
 
   var quadVertices := createVerticies;
   var  NUM_VERTICES_PER_QUAD := quadVertices.length;
@@ -275,8 +215,8 @@ begin
         temp.position[0]  := temp.position[0] + upperLeftPosition[0];
         temp.position[1]  := temp.position[1] + upperLeftPosition[1];
         var &index : Integer := (row * NUM_COLUMNS * NUM_VERTICES_PER_QUAD) // Row
-                              + (column * NUM_VERTICES_PER_QUAD) // Column
-                              + j; // vertex
+        + (column * NUM_VERTICES_PER_QUAD) // Column
+        + j; // vertex
        // NSLog("row: %d column: %d  Vertex: %d index: %d", row, column, j, &index);
         result[&index] := temp;
       end;

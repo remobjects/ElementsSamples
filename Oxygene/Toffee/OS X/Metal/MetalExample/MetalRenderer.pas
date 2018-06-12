@@ -5,18 +5,6 @@ uses
 
 interface
 
-const AAPLVertexInputIndexVertices     = 0;
-const AAPLVertexInputIndexViewportSize = 1;
-
-
-type
-  vector_float2 = Array[0..1] of Single;
-  vector_float4 = Array[0..3] of Single;
-
-type Color = record
-  red, green, blue, alpha : Single;
-end;
-
 type
   MetalBaseDelegate = class(MTKViewDelegate)
   protected //MTKViewDelegate
@@ -30,19 +18,22 @@ type
     const DynamicColorRate: Single = 0.015;
   protected
     method makeFancyColor : Color;
+
+    method newShader(const shader : String) : MTLLibrary;
+
+
     method drawInMTKView(view: not nullable MTKView); virtual; empty;
     method mtkView(view: not nullable MTKView) drawableSizeWillChange(size: CGSize); virtual; empty;
   public
+
     constructor initWithMetalKitView(const mtkView : not nullable MTKView);// : MTKViewDelegate;
   end;
 
-
+// Only BAckground color
   MetalRenderer = class(MetalBaseDelegate)
   protected
-
       // Interface
     method drawInMTKView(view: not nullable MTKView); override;
-
 
   public
 
@@ -98,5 +89,18 @@ begin
   end;
   commandBuffer.commit();
 end;
+
+method MetalBaseDelegate.newShader(const shader: String): MTLLibrary;
+begin
+  var Lerror : Error;
+  result := _device.newLibraryWithSource(shader) options(new MTLCompileOptions()) error(var Lerror);
+  if result = nil then
+  begin
+    NSLog("Failed to compile the Shader, error %@", Lerror);
+  end;
+
+end;
+
+
 
 end.

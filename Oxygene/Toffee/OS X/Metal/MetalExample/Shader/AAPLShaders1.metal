@@ -6,19 +6,14 @@ Metal shaders used for this sample
 */
 
 #include <metal_stdlib>
-//#include <simd/simd.h>
-
 using namespace metal;
 
-// Include header shared between this Metal shader code and C code executing Metal API commands
-//#import "AAPLShaderTypes.h"
 
-//#include <simd/simd.h>
 
 // Buffer index values shared between shader and C code to ensure Metal shader buffer inputs match
 //   Metal API buffer set calls
 typedef enum AAPLVertexInputIndex
-{
+    {
     AAPLVertexInputIndexVertices     = 0,
     AAPLVertexInputIndexViewportSize = 1,
     } AAPLVertexInputIndex;
@@ -31,10 +26,10 @@ typedef enum AAPLVertexInputIndex
     {
         // Positions in pixel space
         // (e.g. a value of 100 indicates 100 pixels from the center)
-        vector_float2 position;
+        float2 position;
         
         // Floating-point RGBA colors
-        vector_float4 color;
+        float4 color;
     } AAPLVertex;
 
 
@@ -90,7 +85,7 @@ vertexShader(uint vertexID [[vertex_id]],
 }
 
 // Fragment function
-fragment float4 fragmentShader(RasterizerData in [[stage_in]])
+fragment float4 fragmentColorShader(RasterizerData in [[stage_in]])
 {
     // We return the color we just set which will be written to our color attachment.
     return in.color;

@@ -6,9 +6,8 @@ uses
   MetalKit;
 
 
-
 type
-  MetalExample3 = class(MetalBaseDelegate)
+  MetalExample4 = class(MetalBaseDelegate)
 
   private
 
@@ -30,12 +29,12 @@ type
   end;
 implementation
 
-constructor MetalExample3 initWithMetalKitView(const mtkView: not nullable MTKView);
+constructor MetalExample4 initWithMetalKitView(const mtkView: not nullable MTKView);
 begin
   inherited;
   var lError : Error;
   // First we try to load the Shadersource
-  var SourceShader := Asset.loadFile('AAPLShaders3.metal');
+  var SourceShader := Asset.loadFile('AAPLShaders4.metal');
 
   // If we dont have a Source we go out
   if SourceShader = nil then
@@ -59,7 +58,7 @@ begin
     var  vertexFunction  :MTLFunction := defaultLibrary.newFunctionWithName("vertexShader");
 
    // Load the fragment function from the library
-    var fragmentFunction : MTLFunction := defaultLibrary.newFunctionWithName("samplingShader"); //samplingShader
+    var fragmentFunction : MTLFunction := defaultLibrary.newFunctionWithName("samplingShader2"); //samplingShader
 
     if fragmentFunction = nil then
     begin
@@ -73,7 +72,23 @@ begin
     pipelineStateDescriptor.label := "Simple Pipeline";
     pipelineStateDescriptor.vertexFunction := vertexFunction;
     pipelineStateDescriptor.fragmentFunction := fragmentFunction;
-    pipelineStateDescriptor.colorAttachments[0].pixelFormat := mtkView.colorPixelFormat;
+
+
+    var renderbufferAttachment := pipelineStateDescriptor.colorAttachments[0];
+    renderbufferAttachment.pixelFormat := mtkView.colorPixelFormat;
+    const blending = true;
+    if blending then
+    begin
+      renderbufferAttachment.blendingEnabled := true;
+      renderbufferAttachment.rgbBlendOperation :=  MTLBlendOperation.MTLBlendOperationAdd;
+      renderbufferAttachment.alphaBlendOperation := MTLBlendOperation.MTLBlendOperationAdd;
+
+      renderbufferAttachment.sourceRGBBlendFactor :=  MTLBlendFactor.MTLBlendFactorSourceAlpha;
+      renderbufferAttachment.sourceAlphaBlendFactor := MTLBlendFactor.MTLBlendFactorSourceAlpha;
+
+      renderbufferAttachment.destinationRGBBlendFactor := MTLBlendFactor.MTLBlendFactorOneMinusSourceAlpha;
+      renderbufferAttachment.destinationAlphaBlendFactor := MTLBlendFactor.MTLBlendFactorOneMinusSourceAlpha;
+    end;
 
     _pipelineState := _device.newRenderPipelineStateWithDescriptor(pipelineStateDescriptor) error(var lError);
 
@@ -93,13 +108,13 @@ end;
 
 
 
-method MetalExample3.mtkView(view: not nullable MTKView) drawableSizeWillChange(size: CGSize);
+method MetalExample4.mtkView(view: not nullable MTKView) drawableSizeWillChange(size: CGSize);
 begin
   _viewportSize[0] := Convert.ToInt32(size.width);
   _viewportSize[1] := Convert.ToInt32(size.height);
 end;
 
-method MetalExample3.loadTextureWithLoader;
+method MetalExample4.loadTextureWithLoader;
 begin
   var Loader : MTKTextureLoader := new MTKTextureLoader withDevice(_device);
   var Lerror : Error;
@@ -109,12 +124,12 @@ begin
 
   var lDict := NSDictionary<MTKTextureLoaderOption, NSNumber>.dictionaryWithObjects(
   [
-   NSNumber.numberWithBool(false)
-   ]
-   )
+  NSNumber.numberWithBool(false)
+  ]
+  )
     forKeys(
     [
-     MTKTextureLoaderOptionSRGB
+    MTKTextureLoaderOptionSRGB
     ]
     ) ;
 
@@ -141,7 +156,7 @@ begin
 
 end;
 
-method MetalExample3.fillVertexes  : array of AAPLVertex3;
+method MetalExample4.fillVertexes  : array of AAPLVertex3;
 begin
   result := new AAPLVertex3[6];
   const hsize = 600.0;
@@ -168,7 +183,7 @@ end;
 
 
 
-method MetalExample3.drawInMTKView(view: not nullable MTKView);
+method MetalExample4.drawInMTKView(view: not nullable MTKView);
 begin
 
   var commandBuffer :=  _commandQueue.commandBuffer();
@@ -205,12 +220,17 @@ begin
         //  for its index
     renderEncoder.setVertexBytes(@_viewportSize[0]) length(sizeOf(Int32)*2) atIndex(AAPLVertexInputIndexViewportSize );
 
-    renderEncoder.setFragmentTexture(_texture[akttex])  atIndex(0);
+    renderEncoder.setFragmentTexture(_texture[0])  atIndex(0);
 
 
    // Draw the 3 vertices of our triangle
     renderEncoder.drawPrimitives(MTLPrimitiveType.MTLPrimitiveTypeTriangle) vertexStart(0) vertexCount(6);
 
+    renderEncoder.setFragmentTexture(_texture[1])  atIndex(0);
+
+
+       // Draw the 3 vertices of our triangle
+    renderEncoder.drawPrimitives(MTLPrimitiveType.MTLPrimitiveTypeTriangle) vertexStart(0) vertexCount(6);
 
 
     renderEncoder.endEncoding();
