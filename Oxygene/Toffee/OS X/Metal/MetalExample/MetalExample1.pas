@@ -6,10 +6,17 @@ uses
   MetalKit;
 
 type
+ // "Hello Triangle"
   MetalExample1 = class(MetalBaseDelegate)
   private
-    _pipelineState :MTLRenderPipelineState ;
-    _viewportSize : array [0..1] of UInt32;//Integer;
+    const
+      cShaderName = 'AAPLShaders1.metallib';
+      cVertexFuncName = 'vertexShader';
+      cFragmentFuncName = 'fragmentColorShader';
+    var
+      _pipelineState :MTLRenderPipelineState ;
+      _viewportSize : array [0..1] of UInt32;//Integer;
+
 
    // Interface
     method drawInMTKView(view: not nullable MTKView); override;
@@ -66,7 +73,7 @@ begin
         // the `AAPLVertexInputIndexVertices` enum value for its index
 
     var sizeTriangle := triangleVertices.length * sizeOf(AAPLVertex1);
-   // var sizeTriangle := sizeOf(triangleVertices);//.length * sizeOf(AAPLVertex);
+
     renderEncoder.setVertexBytes(@triangleVertices[0] ) length(sizeTriangle) atIndex(AAPLVertexInputIndexVertices);
 
 
@@ -96,47 +103,18 @@ end;
 constructor MetalExample1 initWithMetalKitView(const mtkView: not nullable MTKView);
 begin
   inherited;
-  var lError : Error;
-  // First we try to load the Shadersource
-  var SourceShader := Asset.loadFile('AAPLShaders1.metal');
+  var ShaderLoader := new shaderLoader(_device) Shadername(cShaderName) Vertexname(cVertexFuncName) Fragmentname(cFragmentFuncName);
+  if ShaderLoader = nil then exit nil
 
-  // If we dont have a Source we go out
-  if SourceShader = nil then
-  begin
-    NSLog("Failed to load  the Shadersouce");
-    exit nil;
-  end;
-  createVerticies;
-
-  // Try to Compile the Shader
-  var  defaultLibrary  := newShader(SourceShader);
-
-
-  // Load all the shader files with a .metal file extension in the project
-  // Will not work at moment in element because there is no precompile for the shaders like in xcode
- // var  defaultLibrary  : MTLLibrary := _device.newDefaultLibrary;
-
-  if defaultLibrary = nil then
-  begin
-    exit nil;
-  end
   else
   begin
-   // Load the vertex function from the library
-    var  vertexFunction  :MTLFunction := defaultLibrary.newFunctionWithName("vertexShader");
+    var lError : Error;
 
-   // Load the fragment function from the library
-    var fragmentFunction : MTLFunction := defaultLibrary.newFunctionWithName("fragmentColorShader");
-    if fragmentFunction = nil then
-    begin
-      NSLog("Failed to get the fragmentFunction , error %@", lError);
-      exit nil;
-    end;
     // Configure a pipeline descriptor that is used to create a pipeline state
     var pipelineStateDescriptor : MTLRenderPipelineDescriptor  := new MTLRenderPipelineDescriptor();
     pipelineStateDescriptor.label := "Simple Pipeline";
-    pipelineStateDescriptor.vertexFunction := vertexFunction;
-    pipelineStateDescriptor.fragmentFunction := fragmentFunction;
+    pipelineStateDescriptor.vertexFunction := ShaderLoader.VertexFunc;
+    pipelineStateDescriptor.fragmentFunction := ShaderLoader.FragmentFunc;
     pipelineStateDescriptor.colorAttachments[0].pixelFormat := mtkView.colorPixelFormat;
 
     _pipelineState := _device.newRenderPipelineStateWithDescriptor(pipelineStateDescriptor) error(var lError);
@@ -150,6 +128,8 @@ begin
       NSLog("Failed to created pipeline state, error %@", lError);
       exit nil;
     end;
+    // Finally setup ther vericies for rendering
+    createVerticies;
   end;
 end;
 

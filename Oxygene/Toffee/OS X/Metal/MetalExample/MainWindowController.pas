@@ -6,7 +6,9 @@ uses
   AppKit,
   MetalKit,
   Foundation;
-
+// The MainWindowController is a partial class
+// because i want to test it :-)
+// and to split the OS (Xcode) part away from the Metal part
 type
   [IBObject]
   MainWindowController = public partial class(NSWindowController)

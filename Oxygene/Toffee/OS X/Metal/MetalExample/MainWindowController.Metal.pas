@@ -6,7 +6,7 @@ uses
 type
   MainWindowController = public partial class(NSWindowController)
   private
-    const BaseExample = 'Only Background Example running';
+    const BaseExample = 'Devices and Commands';
     var renderer : MTKViewDelegate;
 
     method switchApp(const AppId : Integer);
@@ -17,22 +17,22 @@ type
 
         0 : begin
           App := new MetalExample1 InitWithMetalKitView(ViewGL);
-          TimeLabel.label := 'Example Triangle running';
+          TimeLabel.label := '"Hello Triangle" running';
         end;
 
         1 : begin
           App := new MetalExample2 InitWithMetalKitView(ViewGL);
-          TimeLabel.label := 'Example Buffers running';
+          TimeLabel.label := '"Basic Buffers" running';
         end;
 
         2 : begin
           App := new MetalExample3 InitWithMetalKitView(ViewGL);
-          TimeLabel.label := 'Example Texture running';
+          TimeLabel.label := '"Basic Texturing" running';
         end;
 
         3 : begin
           App := new MetalExample4 InitWithMetalKitView(ViewGL);
-          TimeLabel.label := 'Example Texture Blend running';
+          TimeLabel.label := '"Basic Texturing" with Blend running';
         end
         else
           begin
@@ -40,7 +40,13 @@ type
             TimeLabel.label := BaseExample;
           end;
       end;
-
+      // Fallback in case of error
+      if App = nil then
+      begin
+        NSLog("Fallback to default");
+        App  := new MetalRenderer InitWithMetalKitView(ViewGL);
+        TimeLabel.label := BaseExample;
+      end;
 // Set the new delegate in the view
       renderer := App;
       renderer.mtkView(ViewGL) drawableSizeWillChange(ViewGL.drawableSize);

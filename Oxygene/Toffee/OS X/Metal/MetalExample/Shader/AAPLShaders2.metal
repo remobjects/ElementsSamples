@@ -11,30 +11,8 @@ Metal shaders used for this sample
 using namespace metal;
 
 // Include header shared between this Metal shader code and C code executing Metal API commands
-//#import "AAPLShaderTypes.h"
-// Fritz
+#import "AAPLShaderTypes.h"
 
-// Buffer index values shared between shader and C code to ensure Metal shader buffer inputs match
-//   Metal API buffer set calls
-typedef enum AAPLVertexInputIndex
-{
-    AAPLVertexInputIndexVertices     = 0,
-    AAPLVertexInputIndexViewportSize = 1,
-    } AAPLVertexInputIndex;
-    
-    //  This structure defines the layout of each vertex in the array of vertices set as an input to our
-    //    Metal vertex shader.  Since this header is shared between our .metal shader and C code,
-    //    we can be sure that the layout of the vertex array in the code matches the layout that
-    //    our vertex shader expects
-    typedef struct
-    {
-        // Positions in pixel space (i.e. a value of 100 indicates 100 pixels from the origin/center)
-        vector_float2 position;
-        
-        // Floating point RGBA colors
-        vector_float4 color;
-    } AAPLVertex;
-// Fritz
     
 // Vertex shader outputs and fragment shader inputs
 typedef struct
@@ -52,7 +30,7 @@ typedef struct
 
 // Vertex function
 vertex RasterizerData
-vertexShader(uint vertexID [[ vertex_id ]],
+vertexShader2(uint vertexID [[ vertex_id ]],
              device AAPLVertex *vertices [[ buffer(AAPLVertexInputIndexVertices) ]],
              constant vector_uint2 *viewportSizePointer  [[ buffer(AAPLVertexInputIndexViewportSize) ]])
 {
@@ -88,7 +66,7 @@ vertexShader(uint vertexID [[ vertex_id ]],
 }
 
 // Fragment function
-fragment float4 fragmentShader(RasterizerData in [[stage_in]])
+fragment float4 fragmentColorShader2(RasterizerData in [[stage_in]])
 {
     // We return the color we just set which will be written to our color attachment.
     return in.color;

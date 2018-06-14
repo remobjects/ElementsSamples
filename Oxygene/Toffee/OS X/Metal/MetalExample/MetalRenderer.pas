@@ -5,6 +5,8 @@ uses
 
 interface
 
+// Base class for the examples MTKViewDelegates
+
 type
   MetalBaseDelegate = class(MTKViewDelegate)
   protected //MTKViewDelegate
@@ -19,9 +21,6 @@ type
   protected
     method makeFancyColor : Color;
 
-    method newShader(const shader : String) : MTLLibrary;
-
-
     method drawInMTKView(view: not nullable MTKView); virtual; empty;
     method mtkView(view: not nullable MTKView) drawableSizeWillChange(size: CGSize); virtual; empty;
   public
@@ -29,15 +28,15 @@ type
     constructor initWithMetalKitView(const mtkView : not nullable MTKView);// : MTKViewDelegate;
   end;
 
-// Only BAckground color
+// 'Devices and Commands';
+// Only Background color
   MetalRenderer = class(MetalBaseDelegate)
   protected
       // Interface
     method drawInMTKView(view: not nullable MTKView); override;
 
-  public
-
   end;
+
 implementation
 
 method MetalBaseDelegate.makeFancyColor: Color;
@@ -89,18 +88,6 @@ begin
   end;
   commandBuffer.commit();
 end;
-
-method MetalBaseDelegate.newShader(const shader: String): MTLLibrary;
-begin
-  var Lerror : Error;
-  result := _device.newLibraryWithSource(shader) options(new MTLCompileOptions()) error(var Lerror);
-  if result = nil then
-  begin
-    NSLog("Failed to compile the Shader, error %@", Lerror);
-  end;
-
-end;
-
 
 
 end.

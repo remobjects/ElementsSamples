@@ -5,17 +5,16 @@ uses
   Metal,
   MetalKit;
 
- type
-   VertexBuffer = class
-     private
-       _buffer : MTLBuffer;
+type
+  VertexBuffer = class
+  private
+    _buffer : MTLBuffer;
 
-     public
-        //constructor ()
-       class method newBuffer(_device : MTLDevice; const _src : ^Void; const _bufflen : Integer) : VertexBuffer;
-       class method newBuffer(_device : MTLDevice) SourceData(_src :^Void) withLength(_bufflen : Integer) : VertexBuffer;
-       property  verticies : MTLBuffer read _buffer;
-   end;
+  public
+    class method newBuffer(_device : MTLDevice; const _src : ^Void; const _bufflen : Integer) : VertexBuffer;
+    class method newBuffer(_device : MTLDevice) SourceData(_src :^Void) withLength(_bufflen : Integer) : VertexBuffer;
+    property  verticies : MTLBuffer read _buffer;
+  end;
 
 
 
