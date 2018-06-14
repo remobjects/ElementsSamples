@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
+            <connections>
+                <outlet property="TimeLabel" destination="B49-Dp-Jrk" id="SZ8-mA-eU5"/>
+                <outlet property="ViewGL" destination="gMs-7I-f7w" id="01M-aA-bNs"/>
+                <outlet property="window" destination="5" id="GLb-s9-i5g"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Metal Examples" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="674" height="420"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="674" height="420"/>
+            <view key="contentView" canDrawConcurrently="YES" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="674" height="420"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMs-7I-f7w" customClass="Metal_View">
+                        <rect key="frame" x="0.0" y="0.0" width="674" height="420"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </customView>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="AD6C7AC8-D32D-4E24-9953-AC27A87A26FD" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="6jq-KR-eyd">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="Sfq-mB-xsp"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="yhH-uP-yLC"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="POZ-5S-dfz"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Waw-Sb-u7Z"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="oW0-8F-L0i"/>
+                    <toolbarItem implicitItemIdentifier="E97B3FE2-BA23-48C6-94F1-C1F38A3D9C92" label="Triangle" paletteLabel="Triangle" toolTip="Shows a Color Triangle" image="NSApplicationIcon" id="gIW-Az-UWp">
+                        <connections>
+                            <action selector="pressAppButton:" target="-2" id="que-tj-DWG"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="E1376B8C-C6EE-41ED-99ED-C50846C540A0" label="Buffers" paletteLabel="Buffers" tag="1" image="NSApplicationIcon" id="cLD-md-mIt">
+                        <connections>
+                            <action selector="pressAppButton:" target="-2" id="Ive-zU-Pkc"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="57588774-2ECD-4F51-8CAE-4B204E1F2D11" label="Texture" paletteLabel="Texture" tag="2" image="NSApplicationIcon" id="sFH-as-3pN">
+                        <connections>
+                            <action selector="pressAppButton:" target="-2" id="NLU-T3-iNZ"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C72D4495-EAF1-433B-BB8D-951BE62DA337" label="TextureBlend" paletteLabel="TextureBlend" tag="3" image="NSApplicationIcon" id="WrR-0X-Xiq">
+                        <connections>
+                            <action selector="pressAppButton:" target="-2" id="UNC-kq-ucm"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="B20549DE-71B5-4871-934F-DBF173AA0D84" label="Timelabel" paletteLabel="Timelabel" tag="-1" image="NSComputer" id="B49-Dp-Jrk">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="38" height="17"/>
+                        <size key="maxSize" width="400" height="17"/>
+                        <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="-1" id="BOJ-Ez-qdK">
+                            <rect key="frame" x="10" y="14" width="38" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="wpF-HT-xJx">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="gIW-Az-UWp"/>
+                    <toolbarItem reference="cLD-md-mIt"/>
+                    <toolbarItem reference="sFH-as-3pN"/>
+                    <toolbarItem reference="WrR-0X-Xiq"/>
+                    <toolbarItem reference="oW0-8F-L0i"/>
+                    <toolbarItem reference="B49-Dp-Jrk"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <point key="canvasLocation" x="135" y="93.5"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="xBt-do-dpi"/>
+    </objects>
+    <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="NSComputer" width="32" height="32"/>
+    </resources>
+</document>
