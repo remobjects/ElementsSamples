@@ -18,7 +18,6 @@
     <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
     <MacIconFile>.\Resources\App.icns</MacIconFile>
     <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
-    <CodesignCertificateName>Mac Developer: fwestermann@me.com (Z49XRE52ZG)</CodesignCertificateName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
