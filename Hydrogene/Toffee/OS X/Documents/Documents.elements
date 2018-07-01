@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>Documents</RootNamespace>
+    <ProjectGuid>{FCAD5189-FD87-42F7-B1F0-FDFDB3B358D2}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>Documents</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyWith>False</AllowLegacyWith>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <AllowUnsafeCode>False</AllowUnsafeCode>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <SDK>macOS</SDK>
+    <MangleTypeNames>True</MangleTypeNames>
+    <CreateAppBundle>True</CreateAppBundle>
+    <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
+    <MacIconFile>.\Resources\App.icns</MacIconFile>
+    <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <DeploymentTargetVersion>10.13</DeploymentTargetVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cocoa" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
+    <Reference Include="libElements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="FooDocumentWindowController.cs" />
+    <None Include="Resources\Entitlements.entitlements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Info.plist" />
+    <Content Include="Resources\App.icns" />
+    <Xib Include="FooDocumentWindow.xib">
+      <DependentUpon>MainWindowController.java</DependentUpon>
+    </Xib>
+    <Xib Include="Resources\MainMenu.xib" />
+    <Compile Include="FooDocument.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+</Project>
