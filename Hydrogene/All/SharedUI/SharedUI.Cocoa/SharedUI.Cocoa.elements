@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>SharedUI.Cocoa</RootNamespace>
+    <ProjectGuid>{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SharedUI.Cocoa</AssemblyName>
+    <AllowGlobals>False</AllowGlobals>
+    <AllowLegacyWith>False</AllowLegacyWith>
+    <AllowLegacyOutParams>False</AllowLegacyOutParams>
+    <AllowLegacyCreate>False</AllowLegacyCreate>
+    <AllowUnsafeCode>False</AllowUnsafeCode>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <SDK>macOS</SDK>
+    <MangleTypeNames>True</MangleTypeNames>
+    <CreateAppBundle>True</CreateAppBundle>
+    <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
+    <MacIconFile>.\Resources\App.icns</MacIconFile>
+    <DefaultUses>AppKit;Foundation;RemObjects.Elements.RTL</DefaultUses>
+    <BundleIdentifier>com.remobjects.sharedui.cocoa</BundleIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release</OutputPath>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+    <EnableAsserts>False</EnableAsserts>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <CaptureConsoleOutput>False</CaptureConsoleOutput>
+    <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cocoa" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
+    <Reference Include="libElements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Resources\Entitlements.entitlements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Info.plist" />
+    <Content Include="Resources\App.icns" />
+    <Xib Include="Resources\MainMenu.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+  <Import Project="..\SharedUI.Shared\SharedUI.Shared.projitems" Label="Shared" />
+</Project>

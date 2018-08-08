@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{B79CB5B4-3E99-4FBD-A1D3-D79E15EA35D2}</SharedGUID>
+    <ProjectGuid>{02B209BB-A793-4D5D-839A-66B5B751CBA6}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.cs" />
+    <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
+    <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aliases.cs" />
+  </ItemGroup>
+</Project>
