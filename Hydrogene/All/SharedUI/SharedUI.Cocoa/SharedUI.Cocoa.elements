@@ -4,7 +4,7 @@
     <RootNamespace>SharedUI.Cocoa</RootNamespace>
     <ProjectGuid>{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}</ProjectGuid>
     <OutputType>Executable</OutputType>
-    <AssemblyName>SharedUI.Cocoa</AssemblyName>
+    <AssemblyName>Shared.UICocoa</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>
@@ -46,7 +46,6 @@
     <Reference Include="libElements" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDelegate.cs" />
     <None Include="Resources\Entitlements.entitlements" />
   </ItemGroup>
   <ItemGroup>

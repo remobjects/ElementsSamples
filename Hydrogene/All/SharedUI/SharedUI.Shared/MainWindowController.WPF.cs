@@ -22,6 +22,10 @@
 		{
 			window.Show();
 		}
+
+		//
+		// Add WPF-specific code here
+		//
 	}
 	#endif
 }

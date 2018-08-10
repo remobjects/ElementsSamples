@@ -17,5 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Aliases.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.cs" />
   </ItemGroup>
 </Project>

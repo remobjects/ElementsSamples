@@ -5,12 +5,12 @@ namespace SharedUI.WPF
 {
 	public partial class App : Application
 	{
-		public MainWindowController mainWindowController { get; set; }
+		private AppDelegate appDelegate;
 
 		protected override void OnStartup(StartupEventArgs e)
 		{
-			mainWindowController = new MainWindowController();
-			mainWindowController.showWindow(null);
+			appDelegate = new AppDelegate();
+			appDelegate.start();
 		}
 
 	}

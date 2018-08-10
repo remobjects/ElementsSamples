@@ -8,5 +8,9 @@
 			// Do any shared initilaization, here
 			//
 		}
+
+		//
+		// Add Shared code here
+		//
 	}
 }

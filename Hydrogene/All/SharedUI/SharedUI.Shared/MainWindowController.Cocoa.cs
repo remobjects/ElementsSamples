@@ -19,6 +19,9 @@
 			// window has been loaded from its nib file.
 		}
 
+		//
+		// Add Cocoa-specific code here
+		//
 	}
 	#endif
 }
