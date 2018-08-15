@@ -27,14 +27,14 @@
 			else
 			{
 				var a = Convert.TryToDoubleInvariant(valueA);
-				var b = Convert.TryToDoubleInvariant(valueA);
+				var b = Convert.TryToDoubleInvariant(valueB);
 				if (a != null && b != null)
 				{
 					result = Convert.ToString(a+b);
 				}
 				else
 				{
-					result = valueA+" "+valueB;
+					result = valueA+valueB;
 				}
 			}
 		}
