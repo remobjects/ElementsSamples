@@ -10,15 +10,15 @@
     <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.java" />
     <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
     <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.java" />
     <Compile Include="$(MSBuildThisFileDirectory)Aliases.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.java" />
   </ItemGroup>
 </Project>

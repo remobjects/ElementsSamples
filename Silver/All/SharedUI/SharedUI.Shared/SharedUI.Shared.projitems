@@ -10,15 +10,15 @@
     <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.swift" />
     <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
     <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Aliases.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.swift" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.swift" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.swift" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aliases.swift" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.swift" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.swift" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.swift" />
   </ItemGroup>
 </Project>

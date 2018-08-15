@@ -1,5 +1,5 @@
-﻿namespace SharedUI.Shared
-{
+﻿package SharedUI.Shared;
+
 	public class BusinessLogic
 	{
 		//
