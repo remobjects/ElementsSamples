@@ -6,5 +6,6 @@
 
 	#if ECHOES
 	public using id = object;
+	public class IBAction : Attribute {}
 	#endif
 }

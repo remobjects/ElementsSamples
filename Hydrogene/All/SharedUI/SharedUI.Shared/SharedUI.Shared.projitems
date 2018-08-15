@@ -20,5 +20,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLogic.cs" />
   </ItemGroup>
 </Project>
