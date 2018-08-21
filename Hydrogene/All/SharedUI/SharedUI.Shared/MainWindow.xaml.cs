@@ -13,6 +13,15 @@
 		}
 
 		private MainWindowController controller { get { return DataContext as MainWindowController; } }
+
+		//
+		// Forward actions to the controller
+		//
+
+		private void CalculateResult_Click(object sender, RoutedEventArgs e)
+		{
+			controller.calculateResult(sender);
+		}
 	}
 	#endif
 }

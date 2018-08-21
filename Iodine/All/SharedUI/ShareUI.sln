@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Cocoa", "SharedUI.Cocoa\SharedUI.Cocoa.elements", "{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Shared", "SharedUI.Shared\SharedUI.Shared.elements", "{B79CB5B4-3E99-4FBD-A1D3-D79E15EA35D2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.WPF", "SharedUI.WPF\SharedUI.WPF.elements", "{89CE228B-0335-430C-B1E9-D5F84696ED9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
