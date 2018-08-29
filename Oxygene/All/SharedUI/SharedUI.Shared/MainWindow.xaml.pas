@@ -16,7 +16,7 @@ type
     end;
 
   private
-    property controller: MainWindowController;
+    property controller: MainWindowController read DataContext as MainWindowController;
 
     //
     // Forward actions to the controller

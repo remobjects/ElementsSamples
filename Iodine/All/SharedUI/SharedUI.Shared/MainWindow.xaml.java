@@ -7,7 +7,8 @@ import System.Windows.Controls.*;
 
 public __partial class MainWindow extends Window
 {
-	private MainWindowController controller { __get; __set; }
+	private MainWindowController controller { __get { return (MainWindowController)DataContext; } }
+} }
 
 	public MainWindow(MainWindowController controller)
 	{

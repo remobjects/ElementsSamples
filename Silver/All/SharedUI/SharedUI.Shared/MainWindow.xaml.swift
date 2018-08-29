@@ -5,7 +5,9 @@ import System.Windows.Controls;
 
 __partial class MainWindow : Window {
 
-	private var controller: MainWindowController!
+	private var controller: MainWindowController {
+		return DataContext as! MainWindowController
+	}
 
 	public init(controller: MainWindowController!) {
 		DataContext = controller
