@@ -1,4 +1,5 @@
 ﻿using RemObjects.Elements.RTL.Delphi;
+using RemObjects.Elements.RTL.Delphi.VCL;
 
 namespace BasicWebAssemblyGUIControlsApp
 {
@@ -14,6 +15,10 @@ namespace BasicWebAssemblyGUIControlsApp
 
 		public void CreateComponents()
 		{
+			Application = new TApplication(null);
+			Application.Initialize();
+			Application.Run();
+
 			var el = WebAssembly.GetElementById("helloWorld");
 			var lForm = new TForm(null);
 			lForm.Width = 800;
