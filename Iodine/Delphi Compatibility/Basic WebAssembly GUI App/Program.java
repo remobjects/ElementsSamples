@@ -1,12 +1,17 @@
 ﻿package BasicWebAssemblyGUIApp;
 
 import RemObjects.Elements.RTL.Delphi.*;
+import RemObjects.Elements.RTL.Delphi.VCL.*;
 
 @Export
 public class Program
 {
 	public void HelloWorld()
 	{
+		Application = new TApplication(null);
+		Application.Initialize();
+		Application.Run();
+
 		// Create form
 		var lForm = new TForm(null);
 		lForm.Width = 800;

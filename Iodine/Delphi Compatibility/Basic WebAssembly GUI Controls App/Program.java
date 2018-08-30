@@ -1,6 +1,7 @@
 ﻿package BasicWebAssemblyGUIControlsApp;
 
 import RemObjects.Elements.RTL.Delphi.*;
+import RemObjects.Elements.RTL.Delphi.VCL.*;
 
 @Export
 public class Program
@@ -14,6 +15,10 @@ public class Program
 
 	public void CreateComponents()
 	{
+		Application = new TApplication(null);
+		Application.Initialize();
+		Application.Run();
+
 		var el = WebAssembly.GetElementById("helloWorld");
 		var lForm = new TForm(null);
 		lForm.Width = 800;
