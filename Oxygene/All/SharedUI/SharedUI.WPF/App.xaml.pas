@@ -1,7 +1,5 @@
 ﻿namespace SharedUI.WPF;
 
-interface
-
 uses
   System.Windows,
   SharedUI.Shared;
@@ -9,17 +7,15 @@ uses
 type
   App = public partial class(Application)
   private
-	var appDelegate: AppDelegate;
+    var appDelegate: AppDelegate;
   protected
-	method OnStartup(e: StartupEventArgs); override;
+
+    method OnStartup(e: StartupEventArgs); override;
+    begin
+      appDelegate := new AppDelegate();
+      appDelegate.start();
+    end;
+
   end;
-
-implementation
-
-method App.OnStartup(e: StartupEventArgs);
-begin
-  appDelegate := new AppDelegate();
-  appDelegate.start();
-end;
 
 end.

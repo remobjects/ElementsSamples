@@ -1,4 +1,5 @@
 ﻿using RemObjects.Elements.RTL.Delphi;
+using RemObjects.Elements.RTL.Delphi.VCL;
 
 namespace BasicWebAssemblyGUIApp
 {
@@ -7,6 +8,10 @@ namespace BasicWebAssemblyGUIApp
 	{
 		public void HelloWorld()
 		{
+			Application = new TApplication(null);
+			Application.Initialize();
+			Application.Run();
+
 			// Create form
 			var lForm = new TForm(null);
 			lForm.Width = 800;
