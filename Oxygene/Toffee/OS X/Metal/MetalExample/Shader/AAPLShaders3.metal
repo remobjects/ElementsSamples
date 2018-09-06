@@ -1,4 +1,4 @@
-/*
+﻿/*
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
@@ -33,8 +33,8 @@ typedef struct
 // Vertex Function
 vertex RasterizerData
 vertexShaderTex(uint vertexID [[ vertex_id ]],
-             constant AAPLVertexTex *vertexArray [[ buffer(AAPLVertexInputIndexVertices) ]],
-             constant vector_uint2 *viewportSizePointer  [[ buffer(AAPLVertexInputIndexViewportSize) ]])
+	     constant AAPLVertexTex *vertexArray [[ buffer(AAPLVertexInputIndexVertices) ]],
+	     constant vector_uint2 *viewportSizePointer  [[ buffer(AAPLVertexInputIndexViewportSize) ]])
 
 {
 
@@ -69,17 +69,17 @@ vertexShaderTex(uint vertexID [[ vertex_id ]],
     //   interpolated with the other textureCoordinate values in the vertices that make up the
     //   triangle.
     out.textureCoordinate = vertexArray[vertexID].textureCoordinate;
-    
+
     return out;
 }
 
 // Fragment function
 fragment float4
 samplingShader(RasterizerData in [[stage_in]],
-               texture2d<half> colorTexture [[ texture(AAPLTextureIndexBaseColor) ]])
+	       texture2d<half> colorTexture [[ texture(AAPLTextureIndexBaseColor) ]])
 {
     constexpr sampler textureSampler (mag_filter::linear,
-                                      min_filter::linear);
+				      min_filter::linear);
 
     // Sample the texture to obtain a color
     const half4 colorSample = colorTexture.sample(textureSampler, in.textureCoordinate);
@@ -87,4 +87,3 @@ samplingShader(RasterizerData in [[stage_in]],
     // We return the color of the texture
     return float4(colorSample);
 }
-

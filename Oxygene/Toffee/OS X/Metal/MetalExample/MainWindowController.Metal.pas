@@ -12,7 +12,7 @@ type
     method switchApp(const AppId : Integer);
 //method MainWindowController.switchApp(const AppId: Integer);
     begin
-      var App : MTKViewDelegate := nil;
+      var App : MetalBaseDelegate := nil;
       case AppId of
 
         0 : begin
@@ -29,10 +29,14 @@ type
           App := new MetalExample3 InitWithMetalKitView(ViewGL);
           TimeLabel.label := '"Basic Texturing" running';
         end;
-
         3 : begin
           App := new MetalExample4 InitWithMetalKitView(ViewGL);
           TimeLabel.label := '"Basic Texturing" with Blend running';
+        end;
+
+        4 : begin
+          App := new MetalExample5 InitWithMetalKitView(ViewGL);
+          TimeLabel.label := '"Draw a Cube" running';
         end
         else
           begin
@@ -51,7 +55,7 @@ type
       renderer := App;
       renderer.mtkView(ViewGL) drawableSizeWillChange(ViewGL.drawableSize);
       ViewGL.delegate := renderer;
-
+      ViewGL.MouseDelegate := App;
     end;
   end;
 

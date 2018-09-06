@@ -10,14 +10,17 @@
     <AllowLegacyOutParams>False</AllowLegacyOutParams>
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <AllowUnsafeCode>False</AllowUnsafeCode>
+    <UseLegacyPreprocessor>true</UseLegacyPreprocessor>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <SDK>macOS</SDK>
     <MangleTypeNames>True</MangleTypeNames>
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
-    <EntitlementsFile>Resources\Entitlements.entitlements</EntitlementsFile>
     <MacIconFile>.\Resources\App.icns</MacIconFile>
     <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <DefaultLanguage>Oxygene</DefaultLanguage>
+    <CodesignCertificateName>Mac Developer: fwestermann@me.com (Z49XRE52ZG)</CodesignCertificateName>
+    <EntitlementsFile>.\Resources\Entitlements.entitlements</EntitlementsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -29,6 +32,7 @@
     <CaptureConsoleOutput>False</CaptureConsoleOutput>
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
     <XmlDoc>False</XmlDoc>
+    <UseLegacyPreprocessor>true</UseLegacyPreprocessor>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <Optimize>true</Optimize>
@@ -38,6 +42,7 @@
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <CaptureConsoleOutput>False</CaptureConsoleOutput>
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    <UseLegacyPreprocessor>false</UseLegacyPreprocessor>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cocoa" />
@@ -49,6 +54,7 @@
     <Reference Include="CoreFoundation" />
     <Reference Include="Metal" />
     <Reference Include="MetalKit" />
+    <Reference Include="SceneKit" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.pas" />
@@ -57,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources" />
+    <Folder Include="MetalHelper" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Info.plist" />
@@ -78,11 +85,21 @@
     <Compile Include="MetalExample3.pas" />
     <Compile Include="MetalExample4.pas" />
     <MetalShader Include="Shader\AAPLShaders4.metal" />
-    <Compile Include="MetalVertexBuffer.pas" />
     <Compile Include="MainWindowController.Metal.pas" />
     <Compile Include="MetalExampleTypes.pas" />
     <None Include="Shader\AAPLShaderTypes.h" />
     <Compile Include="MetalShaderLoader.pas" />
+    <Compile Include="MetalExample5.pas" />
+    <Compile Include="MetalHelper\MetalGlobals.pas" />
+    <Compile Include="MetalHelper\MetalMatrix3.pas" />
+    <Compile Include="MetalHelper\MetalMatrix4.pas" />
+    <Compile Include="MetalHelper\Metalvec2.pas" />
+    <Compile Include="MetalHelper\MetalVec3.pas" />
+    <Compile Include="MetalHelper\MetalVec4.pas" />
+    <Compile Include="MetalHelper\MetalVertexArrays.pas" />
+    <Compile Include="MetalHelper\MetalVertexBuffer.pas" />
+    <MetalShader Include="Shader\AAPLShaders5.metal" />
+    <Compile Include="ExampleHelpers.pas" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
 </Project>

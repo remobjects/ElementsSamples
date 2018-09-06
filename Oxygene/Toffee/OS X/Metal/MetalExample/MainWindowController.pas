@@ -19,6 +19,7 @@ type
     var ViewGL: Metal_View;
     [IBOutlet]
     var TimeLabel : NSToolbarItem;
+
     [IBAction]
     method pressAppButton(sender: id);
 
@@ -43,6 +44,8 @@ begin
   begin
     switchApp(-1);
     ViewGL.preferredFramesPerSecond := 60;
+    ViewGL.depthStencilPixelFormat := MTLPixelFormat.Depth32Float;
+    //ViewGL.depthStencilTexture
   end;
 end;
 
