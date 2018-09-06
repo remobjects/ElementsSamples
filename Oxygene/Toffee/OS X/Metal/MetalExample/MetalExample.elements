@@ -19,7 +19,6 @@
     <MacIconFile>.\Resources\App.icns</MacIconFile>
     <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
     <DefaultLanguage>Oxygene</DefaultLanguage>
-    <CodesignCertificateName>Mac Developer: fwestermann@me.com (Z49XRE52ZG)</CodesignCertificateName>
     <EntitlementsFile>.\Resources\Entitlements.entitlements</EntitlementsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
