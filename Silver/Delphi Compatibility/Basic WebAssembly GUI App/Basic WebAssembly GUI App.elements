@@ -48,6 +48,7 @@
     <Reference Include="Swift" />
     <Reference Include="Elements" />
     <Reference Include="Delphi" />
+    <Reference Include="DelphiVCL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.swift" />
