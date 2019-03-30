@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
@@ -43,9 +44,10 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Delphi.fx"/>
-    <Reference Include="Elements.fx"/>
-    <Reference Include="Island"/>
+    <Reference Include="Delphi" />
+    <Reference Include="Elements" />
+    <Reference Include="Island" />
+    <Reference Include="DelphiVCL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.pas" />

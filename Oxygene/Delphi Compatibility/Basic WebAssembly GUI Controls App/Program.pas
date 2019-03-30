@@ -1,7 +1,7 @@
 ﻿namespace Basic_WebAssembly_GUI_Controls_App;
 
 uses
-  RemObjects.Elements.RTL.Delphi;
+  RemObjects.Elements.RTL.Delphi, RemObjects.Elements.RTL.Delphi.VCL;
 
 type
   [Export]
@@ -9,10 +9,10 @@ type
   private
     fProgress: TProgressBar;
   public
-  
+
     method HelloWorld;
     begin
-      CreateComponents;      
+      CreateComponents;
     end;
 
     method CreateComponents;
@@ -22,7 +22,7 @@ type
       lForm.Width := 800;
       // el it's a div element in html file, we are using as container for our form
       lForm.Show(el);
-            
+
       var lFontsPanel := new TPanel(lForm);
       lFontsPanel.Height := 150;
       lFontsPanel.Width := 800;
@@ -32,7 +32,7 @@ type
       lFontsCombo.Left := 30;
       lFontsCombo.Top := 50;
       lFontsCombo.Width := 130;
-      // Add combo inside TPanel      
+      // Add combo inside TPanel
       lFontsCombo.Parent := lFontsPanel;
 
       lFontsCombo.Items.Add('Arial');
@@ -44,7 +44,7 @@ type
       lFontSize.Left := 200;
       lFontSize.Top := 50;
       lFontSize.Width := 80;
-      lFontSize.Parent := lFontsPanel;      
+      lFontSize.Parent := lFontsPanel;
       for i: Integer := 8 to 72 step 4 do
         lFontSize.Items.Add(i.ToString());
 
@@ -89,7 +89,7 @@ type
       lIncButton.Caption := 'Increase progress bar value';
       lIncButton.Parent := lSecondPanel;
       lIncButton.OnClick := (a) -> begin fProgress.Position := fProgress.Position + 5; if fProgress.Position >= fProgress.Max then fProgress.Position := 0; end;
-     
+
       fProgress := new TProgressBar(lForm);
       fProgress.Top := 55;
       fProgress.Left := 420;

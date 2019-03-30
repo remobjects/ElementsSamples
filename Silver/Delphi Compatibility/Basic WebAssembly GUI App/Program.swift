@@ -1,4 +1,5 @@
 ﻿import RemObjects.Elements.RTL.Delphi
+import RemObjects.Elements.RTL.Delphi.VCL
 
 @Export
 public class Program {
