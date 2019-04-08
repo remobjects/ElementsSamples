@@ -12,7 +12,7 @@ type
   private
     var edValue: weak NSTextField;
   public
-    method init: instancetype; override;
+    method init: InstanceType; override;
     method windowDidLoad; override;
     [IBAction]
     method pressBackButton(sender: id);

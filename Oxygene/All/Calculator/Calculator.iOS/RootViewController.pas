@@ -12,7 +12,7 @@ type
     [IBOutlet]
     var edValue: weak UITextField;
   public
-    method init: instancetype; override;
+    method init: InstanceType; override;
     method viewDidLoad; override;
     method didReceiveMemoryWarning; override;
     [IBAction]
