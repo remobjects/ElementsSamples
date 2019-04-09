@@ -48,12 +48,9 @@
     <Reference Include="gc" />
     <Reference Include="rtl" />
     <Reference Include="Elements" />
-    <Reference Include="Island">
-      <HintPath>C:\dev\ro\IslandRTL\Source\Bin\Debug\Windows\i386\Island.fx</HintPath>
-    </Reference>
-    <Reference Include="Delphi">
-      <HintPath>..\..\bin\Debug\Windows\i386\Delphi.fx</HintPath>
-    </Reference>
+    <Reference Include="Island"></Reference>
+    <Reference Include="Delphi"></Reference>
+    <Reference Include="DelphiVCL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.pas" />
