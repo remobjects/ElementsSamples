@@ -36,7 +36,7 @@ begin
   mainLayout.LayoutParams := new LinearLayout.LayoutParams(
     ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT);
   //The torch is white
-  mainLayout.BackgroundColor := $FFFFFFFF as Int64;
+  mainLayout.BackgroundColor := $FFFFFFFF as Integer;
   //Hide the regular activity title
   requestWindowFeature(Window.FEATURE_NO_TITLE);
   //Hide the OS status bar
