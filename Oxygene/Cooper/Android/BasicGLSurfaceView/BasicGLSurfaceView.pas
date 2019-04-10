@@ -34,7 +34,7 @@ constructor BasicGLSurfaceView(ctx: Context);
 begin
   inherited;
   EGLContextClientVersion := 2;
-  EGLConfigChooser := false;
+  setEGLConfigChooser(false);
   setEGLConfigChooser(8, 8, 8, 8, 16, 0);
   Renderer := new GLES20TriangleRenderer(ctx);
 end;
