@@ -39,7 +39,7 @@ class RootViewController extends UICollectionViewController
 		// to avoid blocking the main thread and application startup, we do this in a block on a
 		// background thread. Once done, we dispatch mach to the main thread to trigger a reload.
 
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), () => {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), () -> {
 
 			var lArray = new NSMutableArray();
 			for (Int32 i; i <= arc4random_uniform(5)+5; i++)
@@ -58,7 +58,7 @@ class RootViewController extends UICollectionViewController
 			}
 
 			data = lArray;
-			dispatch_async(dispatch_get_main_queue(), () => collectionView.reloadData());
+			dispatch_async(dispatch_get_main_queue(), () -> collectionView.reloadData());
 
 		});
 	}
