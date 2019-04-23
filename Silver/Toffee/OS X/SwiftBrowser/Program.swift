@@ -29,9 +29,9 @@ class ApplicationDelegate: NSObject, INSApplicationDelegate {
 		self._window = window
 	}
 	func applicationDidFinishLaunching(_ notification: NSNotification?) {
-		let webView = WebView(frame: self._window.contentView.frame)
+		let webView = WKWebView(frame: self._window.contentView.frame)
 		self._window.contentView.addSubview(webView)
-		webView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.elementscompiler.com/elements/silver")))
+		webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.elementscompiler.com/elements/silver")))
 	}
 }
 
