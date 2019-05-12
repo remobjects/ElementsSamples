@@ -97,7 +97,7 @@ public class TileView : View {
 		super.onDraw(canvas)
 		for x in 0 ..< XTileCount {
 			for y in 0 ..< YTileCount {
-				if (_tileGrid[x][y] > 0) {
+				if (_tileGrid[x][y] > Star(0)) {
 					canvas.drawBitmap(_tileArray[_tileGrid[x][y]], _XOffset! + x * _tileSize!, _YOffset! + y * _tileSize!, _paint)
 				}
 			}

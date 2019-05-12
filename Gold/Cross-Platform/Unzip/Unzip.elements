@@ -21,15 +21,12 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Target)' == 'Windows' ">
-    <Mode>Island</Mode>
     <SubMode>Windows</SubMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Target)' == 'Linux' ">
-    <Mode>Island</Mode>
     <SubMode>Linux</SubMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Target)' == 'macOS' ">
-    <Mode>Island</Mode>
     <SubMode>Darwin</SubMode>
     <SDK>macOS</SDK>
   </PropertyGroup>

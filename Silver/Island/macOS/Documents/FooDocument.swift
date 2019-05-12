@@ -62,7 +62,7 @@ public class FooDocumentData {
 	}
 
 	init?(from url: URL) {
-		if File.Exists(url.path) {
+		if (url.path as! RemObjects.Elements.RTL.File)?.Exists() {
 			text = File.ReadText(url.path)
 		} else {
 			return nil

@@ -15,7 +15,7 @@
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
     <Name>SqliteApp</Name>
-    <DeploymentTargetVersion>10.2</DeploymentTargetVersion>
+    <DeploymentTargetVersion>10.0</DeploymentTargetVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -52,8 +52,6 @@
     <Compile Include="DetailViewController.cs" />
     <Compile Include="MasterViewController.cs" />
     <Compile Include="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\Info.plist" />
     <AppResource Include="Resources\App Icons\App-29.png" />
     <AppResource Include="Resources\App Icons\App-48.png" />

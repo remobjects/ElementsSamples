@@ -563,7 +563,13 @@ class Coordinate {
 		self.Y = Y;
 	}
 
-	func ==(lhs: Coordinate, rhs: Coordinate) -> Bool{
+	func ==(lhs: Coordinate!, rhs: Coordinate!) -> Bool{
+	  if ((lhs as! Object) == nil) != ((rhs as! Object) == nil) {
+	    return false;
+	  }
+	  if ((lhs as! Object) == nil) {
+	    return true;
+	  } 
 		if (lhs.X == rhs.X) && (lhs.Y == rhs.Y) {
 			return true
 		}

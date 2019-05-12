@@ -45,12 +45,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Elements" />
-    <Reference Include="Island">
-      <HintPath>C:\dev\ro\IslandRTL\Source\Bin\Debug\WebAssembly\wasm32\Island.fx</HintPath>
-    </Reference>
-    <Reference Include="Delphi">
-      <HintPath>..\..\bin\Debug\WebAssembly\wasm32\Delphi.fx</HintPath>
-    </Reference>
+    <Reference Include="Island"></Reference>
+    <Reference Include="Delphi"></Reference>
+    <Reference Include="DelphiVCL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.pas" />
