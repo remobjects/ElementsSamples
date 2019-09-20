@@ -1,0 +1,154 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects EBuild
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "arrays", "arrays\arrays.elements", "{DCDCC772-7795-450C-BD8A-B15D4213FAC7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "atomic-counters", "atomic-counters\atomic-counters.elements", "{58F0E6FF-8694-4B4B-8FB1-AD1C9E369F10}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "base64-encoding", "base64-encoding\base64-encoding.elements", "{0FC5E3E4-BAF3-427E-AD25-4C51805220CE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channel-buffering", "channel-buffering\channel-buffering.elements", "{5AA671FD-B961-47CF-A654-A71B97A56D4F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channel-directions", "channel-directions\channel-directions.elements", "{00551532-60FD-490F-A868-6830B0DC1758}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channels", "channels\channels.elements", "{2D8CBD2E-C160-4FA0-BAE1-B4E5997E53C9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channel-synchronization", "channel-synchronization\channel-synchronization.elements", "{FA435FF6-0F83-4200-813F-47EFE667689E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "closing-channels", "closing-channels\closing-channels.elements", "{863956E8-B007-4369-BF7D-5B17A84569C5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "closures", "closures\closures.elements", "{2E47A6E4-170C-4451-A2E0-2ED3BB91D151}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "collection-functions", "collection-functions\collection-functions.elements", "{4E250058-9DDD-4EF5-AC39-B9AD5E02D06D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "command-line-arguments", "command-line-arguments\command-line-arguments.elements", "{CB2CD145-3EB6-432C-AB64-0A5E62AAD5E0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "command-line-flags", "command-line-flags\command-line-flags.elements", "{FCF5BF35-87AB-4D86-86FB-95390E4C54FA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "command-line-subcommands", "command-line-subcommands\command-line-subcommands.elements", "{7AF69D60-6B28-4AD6-9678-2F9D16C1F737}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "constants", "constants\constants.elements", "{1806526F-C4E9-46B6-957D-D51E8715733E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer", "defer\defer.elements", "{1F4B40A6-16FD-4D88-A156-F9CA06F59E10}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "directories", "directories\directories.elements", "{940DBD85-9D17-444C-A568-7CBCB338993C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "environment-variables", "environment-variables\environment-variables.elements", "{FD45DCF5-CD58-4DF2-B68D-FC11AFAE2DCF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "epoch", "epoch\epoch.elements", "{514B202F-1D31-4C46-B694-D8026BB054F9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "errors", "errors\errors.elements", "{28280128-238F-46D8-8105-6E118D9F3487}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exit", "exit\exit.elements", "{13ED9C7F-CEDF-4527-8A77-7E6C72E3F103}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "file-paths", "file-paths\file-paths.elements", "{B3BDB668-C471-4F26-86F4-87600BD699E1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for", "for\for.elements", "{099BDD84-732A-4843-B685-C310B40DE042}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions", "functions\functions.elements", "{535F85FA-CB81-4D15-A5A7-628AB138198E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "goroutines", "goroutines\goroutines.elements", "{538A0FA8-6E3E-43F2-A772-DDE2E24B0ABC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "hello-world", "hello-world\hello-world.elements", "{B6ABA0AC-A577-4970-B9BA-C8BB233A437F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "http-clients", "http-clients\http-clients.elements", "{B88EAFDA-6E25-489D-B797-14F230B7C4D9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "http-servers", "http-servers\http-servers.elements", "{12D2544D-2620-410E-9CC5-6E9FEF615BD2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-else", "if-else\if-else.elements", "{5C291C0A-5E61-46EB-B37B-4B83A705E4E9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces", "interfaces\interfaces.elements", "{6C811EB9-FC13-4379-97CA-D39EE54E4704}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "json", "json\json.elements", "{4D875BDB-B081-4F94-BFB7-A63AE728B9FB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "line-filters", "line-filters\line-filters.elements", "{8208A7A4-B22C-41D3-BAD4-57141BA953A1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "maps", "maps\maps.elements", "{96E89B49-70ED-481D-A289-C573A9D1E56F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods", "methods\methods.elements", "{3FFAB88D-6A2D-46BD-8C77-23C7DDE16DF6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "multiple-return-values", "multiple-return-values\multiple-return-values.elements", "{55402272-6EE7-4369-B1F5-0EFA529CECF4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutexes", "mutexes\mutexes.elements", "{5815B6E8-80D1-4028-A601-9370E32B4E59}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "non-blocking-channel-operations", "non-blocking-channel-operations\non-blocking-channel-operations.elements", "{46736A4E-19E1-4C9E-898D-DB9AC2319918}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "number-parsing", "number-parsing\number-parsing.elements", "{846694F0-A6B3-48E8-BE5E-E9B8ED099214}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "panic", "panic\panic.elements", "{A9478DEB-56C0-4AEA-9E3B-3BFC8FD0C17F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "pointers", "pointers\pointers.elements", "{DBA1447E-69C3-46DB-9072-0B6583365018}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "random-numbers", "random-numbers\random-numbers.elements", "{4C4A5F8F-AE2E-4505-957D-A53BF828D3C4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range", "range\range.elements", "{83FC54F0-DC76-4219-811D-E9EB64BDA002}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-over-channels", "range-over-channels\range-over-channels.elements", "{3CC15AB9-B371-410D-9D44-2A969035812C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "rate-limiting", "rate-limiting\rate-limiting.elements", "{56288DCC-959A-42EE-987F-FF001C5FF094}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "reading-files", "reading-files\reading-files.elements", "{098261B8-124E-4908-8307-BA974E2E56B7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "recursion", "recursion\recursion.elements", "{87D722E6-921C-4D62-9FAC-C2CF2F37E180}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "regular-expressions", "regular-expressions\regular-expressions.elements", "{3C007B0E-9DBB-47D0-A865-5B780BC76080}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "select", "select\select.elements", "{6910F254-171F-4ACF-A592-E7F3FBCCC599}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sha1-hashes", "sha1-hashes\sha1-hashes.elements", "{25ACA9B5-3190-456C-8F13-8C0040289850}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices", "slices\slices.elements", "{2D863679-FBCD-4E9F-814B-A5E987C17F48}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sorting", "sorting\sorting.elements", "{50616C74-61A6-4ED8-B9D9-5A2999257C4E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sorting-by-functions", "sorting-by-functions\sorting-by-functions.elements", "{243B7F06-1298-4918-8CCA-1C224A7BC792}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "spawning-processes", "spawning-processes\spawning-processes.elements", "{18973B1F-1FAB-452E-B785-314DB4EC8F86}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "stateful-goroutines", "stateful-goroutines\stateful-goroutines.elements", "{6431C427-9887-4D58-AF4A-CF01D9496925}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "string-formatting", "string-formatting\string-formatting.elements", "{216D2C1E-A5A2-4296-8E56-96B500228F81}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "string-functions", "string-functions\string-functions.elements", "{22AF102C-1C0E-4D89-8AA5-0E9D9DCD332C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "structs", "structs\structs.elements", "{DF69981D-8AAE-4F53-ACA7-F97A8D18E1AE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch", "switch\switch.elements", "{BF99CF8A-F1E9-4AD4-9A61-04731E57EADC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "temporary-files-and-directories", "temporary-files-and-directories\temporary-files-and-directories.elements", "{49869E06-D7F5-454B-9950-8E979CBFC026}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "tickers", "tickers\tickers.elements", "{3FA8A752-A1B0-4C60-A243-C8EA8DAC4060}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "time", "time\time.elements", "{22663639-0855-4EA8-B612-E09CBB44A9D0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "time-formatting-parsing", "time-formatting-parsing\time-formatting-parsing.elements", "{CC362068-2F2C-40B8-9C6F-F9897519BC5C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "timeouts", "timeouts\timeouts.elements", "{2AC1A526-CAB8-485A-898D-62A4280DBE10}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "timers", "timers\timers.elements", "{981631AB-5F13-4EEE-9673-D5E4A0B16FA9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "url-parsing", "url-parsing\url-parsing.elements", "{960240F0-3086-468C-AD0E-D942F9946A6E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "values", "values\values.elements", "{2CAB34B9-FFA7-4009-8DBF-09FBEC366380}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables", "variables\variables.elements", "{4ABFFC20-8F6A-498B-8F1B-DBE39D0E652B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variadic-functions", "variadic-functions\variadic-functions.elements", "{FA65FC95-4CFB-418F-B806-D3D440FB4E1C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "waitgroups", "waitgroups\waitgroups.elements", "{B8E8D12E-6F1B-4786-AAAD-1174E3DBAAEF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "worker-pools", "worker-pools\worker-pools.elements", "{FABB3E86-9823-42BA-87B0-0F10D6C8EA40}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "writing-files", "writing-files\writing-files.elements", "{371F8190-7FF7-43A5-B283-E7061360BDE0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "xml", "xml\xml.elements", "{0F7EDA53-AE01-4589-8BF9-72377270E655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

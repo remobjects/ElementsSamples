@@ -8,7 +8,7 @@ uses
 
 type
   TForm2 = public class(TForm)
-  public
+  published
     Button1: TButton;
     Edit1: TEdit;
     Label1: TLabel;

@@ -1,0 +1,190 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "append.Echoes", "append\append.Echoes.elements", "{7A0107EA-4F6C-45FB-B1E1-BF34D56D510C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "array.Echoes", "array\array.Echoes.elements", "{E4B82308-DA7B-44F6-9831-C44AD7A0D2E6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "basic-types.Echoes", "basic-types\basic-types.Echoes.elements", "{21279B3D-5677-4D32-87F2-DD5463E63235}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "buffered-channels.Echoes", "buffered-channels\buffered-channels.Echoes.elements", "{5B5D9714-B2B4-45DD-9C70-077CB38FE3E4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channels.Echoes", "channels\channels.Echoes.elements", "{F6E559D7-198E-407B-A24F-807648E1AC6A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "constants.Echoes", "constants\constants.Echoes.elements", "{49FB48FE-BB5F-4D98-B112-2260E1F088EA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "default-selection.Echoes", "default-selection\default-selection.Echoes.elements", "{9EEDFDD2-724C-4048-893F-C4EF7A733820}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer.Echoes", "defer\defer.Echoes.elements", "{623D2C25-BE25-484B-A23F-56CC04E15478}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer-multi.Echoes", "defer-multi\defer-multi.Echoes.elements", "{FCBC2B12-BD2A-4F1D-A747-F2EDB2034381}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "empty-interface.Echoes", "empty-interface\empty-interface.Echoes.elements", "{97716E55-0709-4338-94F6-5D55A6A09F45}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "errors.Echoes", "errors\errors.Echoes.elements", "{97BDA17C-DBCC-48BF-9BAF-5249FD9CA130}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-equivalent-binary-trees.Echoes", "exercise-equivalent-binary-trees\exercise-equivalent-binary-trees.Echoes.elements", "{28B8BF60-B77F-4A17-A082-F78F30F703CE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-errors.Echoes", "exercise-errors\exercise-errors.Echoes.elements", "{88F3F68E-37FC-438D-AFD1-239B69804A70}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-fibonacci-closure.Echoes", "exercise-fibonacci-closure\exercise-fibonacci-closure.Echoes.elements", "{58623373-FD85-46A1-9529-5C9EE0E7D1AD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-loops-and-functions.Echoes", "exercise-loops-and-functions\exercise-loops-and-functions.Echoes.elements", "{D522C04E-FB66-46D3-82FE-A9EC998E2A52}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-maps.Echoes", "exercise-maps\exercise-maps.Echoes.elements", "{148C30DC-B4F7-4864-9771-C698FD78B9EF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-slices.Echoes", "exercise-slices\exercise-slices.Echoes.elements", "{D8573BFE-B2D3-4F48-96A0-722A2E9EDD70}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-stringer.Echoes", "exercise-stringer\exercise-stringer.Echoes.elements", "{03A046CB-8E32-442C-A4CD-4DFB1896ADF2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-web-crawler.Echoes", "exercise-web-crawler\exercise-web-crawler.Echoes.elements", "{9DE02F89-D1DA-46D2-84E4-C4486F51F0A6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exported-names.Echoes", "exported-names\exported-names.Echoes.elements", "{42050A44-51D5-4B2D-BE8C-C22CEEFCDF44}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for.Echoes", "for\for.Echoes.elements", "{9DD11623-4366-4890-B870-3779E1B513DD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-continued.Echoes", "for-continued\for-continued.Echoes.elements", "{74564C31-D64F-45BB-919B-C4CEAE4FEFE6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "forever.Echoes", "forever\forever.Echoes.elements", "{0F193F94-9778-458E-AD29-15557F88F99D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-is-gos-while.Echoes", "for-is-gos-while\for-is-gos-while.Echoes.elements", "{2A89F996-35B4-44FE-A39A-B7D16C538B1C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-closures.Echoes", "function-closures\function-closures.Echoes.elements", "{2CEFFFA6-3A71-4AF2-BA37-A1FB09BCFE31}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions.Echoes", "functions\functions.Echoes.elements", "{B2E6CF59-D519-43B5-9B93-05D0033AE80C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions-continued.Echoes", "functions-continued\functions-continued.Echoes.elements", "{FBD2FDC4-5679-437D-B805-15698E51C8A4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-values.Echoes", "function-values\function-values.Echoes.elements", "{C93F8D07-1D3D-4A6C-BC67-F5F84F21CA73}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "goroutines.Echoes", "goroutines\goroutines.Echoes.elements", "{DDEEAEC9-F58A-49EA-A1E4-7C63D945BF88}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "hello.Echoes", "hello\hello.Echoes.elements", "{75DC8B23-25B9-40AF-B840-13156B492D9B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if.Echoes", "if\if.Echoes.elements", "{024EA2FB-42F7-46BF-A2D1-A92AF0B3D843}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-and-else.Echoes", "if-and-else\if-and-else.Echoes.elements", "{0462CA60-3517-4E1C-AC00-DADB48BC1ABC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-with-a-short-statement.Echoes", "if-with-a-short-statement\if-with-a-short-statement.Echoes.elements", "{B2A694B3-C479-4446-864C-D134A7E45FCC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "images.Echoes", "images\images.Echoes.elements", "{3FD95CF1-DA05-4012-A21A-74532DAF1651}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "imports.Echoes", "imports\imports.Echoes.elements", "{25203D0A-56F4-4434-89FC-80CDD2E5C494}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection.Echoes", "indirection\indirection.Echoes.elements", "{AD188EF3-4C03-4AD3-ABB9-03982C3108CD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection-values.Echoes", "indirection-values\indirection-values.Echoes.elements", "{45722090-084E-4F6E-95F2-F1A3BAECE55E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces.Echoes", "interfaces\interfaces.Echoes.elements", "{DBB12A11-8EEC-44B7-8363-AA7235DC3884}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces-are-satisfied-implicitly.Echoes", "interfaces-are-satisfied-implicitly\interfaces-are-satisfied-implicitly.Echoes.elements", "{EF2AB591-AB23-48DA-9915-85A2BB08F8A8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values.Echoes", "interface-values\interface-values.Echoes.elements", "{F16B4E67-24FE-4E51-BE07-795022A2B838}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values-with-nil.Echoes", "interface-values-with-nil\interface-values-with-nil.Echoes.elements", "{6CC66966-D377-422A-BE8F-D93B65D59BB5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "making-slices.Echoes", "making-slices\making-slices.Echoes.elements", "{87D6B5E5-A232-4C41-82F1-29F50C5B07A5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals.Echoes", "map-literals\map-literals.Echoes.elements", "{7BA7E6E1-EBC3-4673-840C-1B2F80D26D25}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals-continued.Echoes", "map-literals-continued\map-literals-continued.Echoes.elements", "{33974BD5-CFA6-4DB1-8821-9C2244ED6D9F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "maps.Echoes", "maps\maps.Echoes.elements", "{C712CF44-C061-4F52-BC32-F4945E6A30C0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods.Echoes", "methods\methods.Echoes.elements", "{929FBD15-6E13-4B6D-93D7-15B97D826AD0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-continued.Echoes", "methods-continued\methods-continued.Echoes.elements", "{47927BE3-4B9C-4014-B55C-45E6677D39B4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-funcs.Echoes", "methods-funcs\methods-funcs.Echoes.elements", "{0812B11B-108B-488B-8980-1DB741ECBABA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers.Echoes", "methods-pointers\methods-pointers.Echoes.elements", "{212C0009-7FCD-4C02-B149-95D01615C072}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers-explained.Echoes", "methods-pointers-explained\methods-pointers-explained.Echoes.elements", "{D92E125E-C5D4-477B-A77E-7EF4E78B1C36}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-with-pointer-receivers.Echoes", "methods-with-pointer-receivers\methods-with-pointer-receivers.Echoes.elements", "{6205B4A9-C214-4D30-8386-0FBA5D4F60F6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "multiple-results.Echoes", "multiple-results\multiple-results.Echoes.elements", "{BE22B728-1FDD-47E6-9417-9D5F1836CC3A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutating-maps.Echoes", "mutating-maps\mutating-maps.Echoes.elements", "{9A4EE2D9-0BB1-4E64-8686-658EA175D3E7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutex-counter.Echoes", "mutex-counter\mutex-counter.Echoes.elements", "{FAC10B9A-1124-4486-B893-70637D19F32B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "named-results.Echoes", "named-results\named-results.Echoes.elements", "{CA61D7C3-8E1D-4396-A399-B28023CA8372}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-interface-values.Echoes", "nil-interface-values\nil-interface-values.Echoes.elements", "{B55C1D24-C05A-4971-BDEC-2CD3974CDC28}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-slices.Echoes", "nil-slices\nil-slices.Echoes.elements", "{DAE53570-1A6E-4571-ADFE-099907BDE5C0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "numeric-constants.Echoes", "numeric-constants\numeric-constants.Echoes.elements", "{E5F82A7B-FA8B-4370-B9C9-0FF1F6890424}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "packages.Echoes", "packages\packages.Echoes.elements", "{5858FF86-D63B-40D9-9677-16337035046C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "pointers.Echoes", "pointers\pointers.Echoes.elements", "{A6912784-F1F4-4512-85BF-4B0554304D75}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range.Echoes", "range\range.Echoes.elements", "{694E838A-AABF-4D40-A019-45CF3DDA3CA6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-and-close.Echoes", "range-and-close\range-and-close.Echoes.elements", "{E7DFF20F-039F-468D-BE45-755A42B22099}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-continued.Echoes", "range-continued\range-continued.Echoes.elements", "{9CE5E5C3-EE83-4857-8FF5-8FDA0D4FAD99}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "reader.Echoes", "reader\reader.Echoes.elements", "{4B50A861-7565-4859-9920-47E423B5E0D7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sandbox.Echoes", "sandbox\sandbox.Echoes.elements", "{0F4ACEE7-DA10-404D-80CB-A7927627D031}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "select.Echoes", "select\select.Echoes.elements", "{7D964E6F-CD5F-4929-9A31-4EC42D92F3E5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "short-variable-declarations.Echoes", "short-variable-declarations\short-variable-declarations.Echoes.elements", "{B2CF0D7C-0512-469F-873E-33C6C6CF4BA8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-bounds.Echoes", "slice-bounds\slice-bounds.Echoes.elements", "{833B6F5A-55E2-4141-8E7E-795B56ED12F5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-len-cap.Echoes", "slice-len-cap\slice-len-cap.Echoes.elements", "{36538293-CDB2-41BC-AD37-4ACA29E83EB3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-literals.Echoes", "slice-literals\slice-literals.Echoes.elements", "{0A88DA39-2BA6-4F99-8C90-A0DBC21ACE92}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices.Echoes", "slices\slices.Echoes.elements", "{2F258FA7-7381-45EA-AB05-FFF28603CC2A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-of-slice.Echoes", "slices-of-slice\slices-of-slice.Echoes.elements", "{806B5967-06EC-4DC4-B506-9B0758629CA0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-pointers.Echoes", "slices-pointers\slices-pointers.Echoes.elements", "{090B6C63-B756-40ED-BF8F-0768283CACDE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "stringer.Echoes", "stringer\stringer.Echoes.elements", "{D1FCEDDA-8800-4DDF-9749-11652AA41C3E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-fields.Echoes", "struct-fields\struct-fields.Echoes.elements", "{D9A37143-5957-4312-BC7C-B9DC687D9033}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-literals.Echoes", "struct-literals\struct-literals.Echoes.elements", "{F3E4CDDC-8D1B-4934-AAC5-9A02DE1869DE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-pointers.Echoes", "struct-pointers\struct-pointers.Echoes.elements", "{C1D2084E-1B36-4DAC-BAC3-B350A0417913}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "structs.Echoes", "structs\structs.Echoes.elements", "{28FB669C-0098-4807-B92F-EE2868EA8209}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch.Echoes", "switch\switch.Echoes.elements", "{0006435F-F3F0-470F-94DF-04848FD814C7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-evaluation-order.Echoes", "switch-evaluation-order\switch-evaluation-order.Echoes.elements", "{507A0669-D882-4689-AF2A-364F54695E98}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-with-no-condition.Echoes", "switch-with-no-condition\switch-with-no-condition.Echoes.elements", "{52E71A16-42CF-4C3E-AA62-09E7EF84F442}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Tour.Echoes", "Tour\Tour.Echoes.elements", "{CD7B2CFD-CF0C-468A-8A18-3C6DDFA8F515}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-assertions.Echoes", "type-assertions\type-assertions.Echoes.elements", "{132D4ED6-73C3-4382-AA26-E5BD60C456F6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-conversions.Echoes", "type-conversions\type-conversions.Echoes.elements", "{372B0E65-6E74-4FD1-B2F5-6E9C3064B73B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-inference.Echoes", "type-inference\type-inference.Echoes.elements", "{6BA775ED-8ECF-46E7-9B4B-B59CEF8DC729}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-switches.Echoes", "type-switches\type-switches.Echoes.elements", "{1C4466D3-9233-4AF2-A815-2F88EB2D5525}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables.Echoes", "variables\variables.Echoes.elements", "{44364C2C-1070-4538-B764-3CE94934AEEB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables-with-initializers.Echoes", "variables-with-initializers\variables-with-initializers.Echoes.elements", "{C6D89C9C-96AA-4B97-840A-91F76BBFAF7F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "zero.Echoes", "zero\zero.Echoes.elements", "{3D984BD2-4A5E-4EF6-AF29-D76CF43B2E07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

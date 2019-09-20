@@ -1,0 +1,190 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "append.Island.Linux", "append\append.Island.Linux.elements", "{5DD15FFA-1492-44BB-9BAC-DCA2C4D9CE28}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "array.Island.Linux", "array\array.Island.Linux.elements", "{7BB3D014-FEC3-47D8-903C-84868ED0126E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "basic-types.Island.Linux", "basic-types\basic-types.Island.Linux.elements", "{38246DC4-B727-4DA0-979C-C29105250C01}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "buffered-channels.Island.Linux", "buffered-channels\buffered-channels.Island.Linux.elements", "{30C5C6EC-5F01-4019-8766-FF858072BDF2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channels.Island.Linux", "channels\channels.Island.Linux.elements", "{7655D24C-6330-4E86-A4A9-9EA923C85401}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "constants.Island.Linux", "constants\constants.Island.Linux.elements", "{6ADE4747-F78E-4D37-80C4-D0B1BFD902B5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "default-selection.Island.Linux", "default-selection\default-selection.Island.Linux.elements", "{AE7E37DE-17A9-4DD2-BC31-A0E3A9D3E4BB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer.Island.Linux", "defer\defer.Island.Linux.elements", "{003C476B-9222-4C6F-A2B6-E4B56F64120B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer-multi.Island.Linux", "defer-multi\defer-multi.Island.Linux.elements", "{F0DD778E-53C6-44FE-ACCB-67140D0E6AE9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "empty-interface.Island.Linux", "empty-interface\empty-interface.Island.Linux.elements", "{CC544709-6AFB-466F-A5AD-A3DAA3F1415C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "errors.Island.Linux", "errors\errors.Island.Linux.elements", "{44A9AC99-7614-471F-A66E-511A84163DD9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-equivalent-binary-trees.Island.Linux", "exercise-equivalent-binary-trees\exercise-equivalent-binary-trees.Island.Linux.elements", "{CD6E546C-7B38-4CD8-8E26-850BE80F261F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-errors.Island.Linux", "exercise-errors\exercise-errors.Island.Linux.elements", "{0837AD3D-C56B-49C6-BFEF-A258B0107BC0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-fibonacci-closure.Island.Linux", "exercise-fibonacci-closure\exercise-fibonacci-closure.Island.Linux.elements", "{7779BB6E-8241-4A28-B203-D174C6D69C50}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-loops-and-functions.Island.Linux", "exercise-loops-and-functions\exercise-loops-and-functions.Island.Linux.elements", "{F0A6449B-4964-43AB-ABED-C6C657C21B98}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-maps.Island.Linux", "exercise-maps\exercise-maps.Island.Linux.elements", "{D5D86286-2C89-4CDD-94E7-398D8B654FFC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-slices.Island.Linux", "exercise-slices\exercise-slices.Island.Linux.elements", "{92F45A73-401A-41EC-BF24-7D39763D77DA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-stringer.Island.Linux", "exercise-stringer\exercise-stringer.Island.Linux.elements", "{761E1D81-7B19-48E2-9A8D-CF116E4A6E90}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-web-crawler.Island.Linux", "exercise-web-crawler\exercise-web-crawler.Island.Linux.elements", "{C575A73E-1760-44EF-8EDD-58402D59A31C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exported-names.Island.Linux", "exported-names\exported-names.Island.Linux.elements", "{09B0A204-45D7-4F89-8590-A6D3D6BE655E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for.Island.Linux", "for\for.Island.Linux.elements", "{5329CEC2-6B14-49B6-9AF2-722C44F9E9D4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-continued.Island.Linux", "for-continued\for-continued.Island.Linux.elements", "{61A678C9-D5D3-4616-8C0E-CC47784428C0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "forever.Island.Linux", "forever\forever.Island.Linux.elements", "{B3D33C8C-FCEF-485A-A781-61FA0C847290}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-is-gos-while.Island.Linux", "for-is-gos-while\for-is-gos-while.Island.Linux.elements", "{91FAE99F-6E67-4402-90CC-5BC2E72D8BAB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-closures.Island.Linux", "function-closures\function-closures.Island.Linux.elements", "{8D935462-2473-42B5-895E-C49E72DF2E51}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions.Island.Linux", "functions\functions.Island.Linux.elements", "{DB5F5798-D7A5-4854-B3FA-440562F448C9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions-continued.Island.Linux", "functions-continued\functions-continued.Island.Linux.elements", "{190909F7-5A6E-48D2-B276-E3C98302EDD8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-values.Island.Linux", "function-values\function-values.Island.Linux.elements", "{0C586E42-41E2-483F-BB82-BE8B1815E3DB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "goroutines.Island.Linux", "goroutines\goroutines.Island.Linux.elements", "{E742B9F0-1830-49AF-B3B3-CD5E862800F2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "hello.Island.Linux", "hello\hello.Island.Linux.elements", "{B7CCDB1B-1E4B-4DC7-8AD3-8DABD48BF766}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if.Island.Linux", "if\if.Island.Linux.elements", "{1C721358-7892-486C-AC98-E9D5DCBCE865}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-and-else.Island.Linux", "if-and-else\if-and-else.Island.Linux.elements", "{0DFF7E87-8F16-491B-9FF7-5D890595F5EC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-with-a-short-statement.Island.Linux", "if-with-a-short-statement\if-with-a-short-statement.Island.Linux.elements", "{17080CE3-56CA-433B-B1A6-2A715E6BE4AA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "images.Island.Linux", "images\images.Island.Linux.elements", "{C0872E46-4A20-4816-9587-5AC9B940A8A7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "imports.Island.Linux", "imports\imports.Island.Linux.elements", "{8A0E0F7E-50F4-4687-B651-7D199587F481}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection.Island.Linux", "indirection\indirection.Island.Linux.elements", "{34BC3455-7E63-4905-BCF9-7B67AB8475D4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection-values.Island.Linux", "indirection-values\indirection-values.Island.Linux.elements", "{9EAA91D6-39F3-4ED6-B0E8-F933453D3B56}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces.Island.Linux", "interfaces\interfaces.Island.Linux.elements", "{9357E159-2F96-4D2F-91D9-24A6EAEEBE5D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces-are-satisfied-implicitly.Island.Linux", "interfaces-are-satisfied-implicitly\interfaces-are-satisfied-implicitly.Island.Linux.elements", "{C212F793-6472-423A-BB0B-3B69096541F6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values.Island.Linux", "interface-values\interface-values.Island.Linux.elements", "{BBD9742D-552D-4084-98C9-E076C2E865F7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values-with-nil.Island.Linux", "interface-values-with-nil\interface-values-with-nil.Island.Linux.elements", "{EA400D89-3E9D-4BD7-AFE1-6CECB93BD673}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "making-slices.Island.Linux", "making-slices\making-slices.Island.Linux.elements", "{E0AA098C-6F55-4FD8-9B77-093E409A132F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals.Island.Linux", "map-literals\map-literals.Island.Linux.elements", "{4C246E18-751D-4369-A4BF-46A120F44C28}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals-continued.Island.Linux", "map-literals-continued\map-literals-continued.Island.Linux.elements", "{D6895431-F8A7-48EC-9704-C4E5C039EAF4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "maps.Island.Linux", "maps\maps.Island.Linux.elements", "{E89E137C-D2BF-4707-9E85-92087A71F2F4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods.Island.Linux", "methods\methods.Island.Linux.elements", "{FD6F1496-FC04-4095-96FD-4944A1638626}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-continued.Island.Linux", "methods-continued\methods-continued.Island.Linux.elements", "{9B23DEE9-8F8B-44CB-A9BD-CBB2EA7AE44F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-funcs.Island.Linux", "methods-funcs\methods-funcs.Island.Linux.elements", "{6985EC81-9BDC-4AFE-BB3C-974A97EAB1C5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers.Island.Linux", "methods-pointers\methods-pointers.Island.Linux.elements", "{47D4A82D-8487-4570-B574-F1DF6EABB80D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers-explained.Island.Linux", "methods-pointers-explained\methods-pointers-explained.Island.Linux.elements", "{61A8F7EE-3483-49D8-BDFC-47DDFD8FD725}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-with-pointer-receivers.Island.Linux", "methods-with-pointer-receivers\methods-with-pointer-receivers.Island.Linux.elements", "{DA4F24DE-B428-4FF4-8663-B08A7222869E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "multiple-results.Island.Linux", "multiple-results\multiple-results.Island.Linux.elements", "{581C63CC-7185-4B56-BB9A-F0FCB7614A09}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutating-maps.Island.Linux", "mutating-maps\mutating-maps.Island.Linux.elements", "{313C230D-389C-4ADC-BE91-78B1021FDCDD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutex-counter.Island.Linux", "mutex-counter\mutex-counter.Island.Linux.elements", "{9FAF063D-7E51-48E6-9D1E-29DC684CC34F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "named-results.Island.Linux", "named-results\named-results.Island.Linux.elements", "{0EA21D6B-9E40-4BD0-AB3C-EA779BA548DA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-interface-values.Island.Linux", "nil-interface-values\nil-interface-values.Island.Linux.elements", "{5158ED25-B1F1-440F-877B-6D5E433561BF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-slices.Island.Linux", "nil-slices\nil-slices.Island.Linux.elements", "{64F04941-A308-4067-9884-0C571BA487E9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "numeric-constants.Island.Linux", "numeric-constants\numeric-constants.Island.Linux.elements", "{AAB6AFB8-A03F-4A4E-B425-761C7B4D9D99}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "packages.Island.Linux", "packages\packages.Island.Linux.elements", "{5D212200-355A-4732-B28A-F19004EAE84A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "pointers.Island.Linux", "pointers\pointers.Island.Linux.elements", "{AFC44971-8DAA-4FF3-B5BC-8EAAA76D42D8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range.Island.Linux", "range\range.Island.Linux.elements", "{AD22A85E-B12F-41AD-803A-BAD5B225219F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-and-close.Island.Linux", "range-and-close\range-and-close.Island.Linux.elements", "{E11AD784-3AFB-4EDA-B706-87CD3D3041A2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-continued.Island.Linux", "range-continued\range-continued.Island.Linux.elements", "{B94C9E6F-AE04-4723-9A8C-AAC7696AD3EC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "reader.Island.Linux", "reader\reader.Island.Linux.elements", "{BDEFCBCC-ACD3-41DA-B479-7F2CCF24973D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sandbox.Island.Linux", "sandbox\sandbox.Island.Linux.elements", "{86D71F4A-63DD-4556-A84B-79A5128B4F35}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "select.Island.Linux", "select\select.Island.Linux.elements", "{DEDB0CB8-8F06-4946-9BE1-34639BE81DD6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "short-variable-declarations.Island.Linux", "short-variable-declarations\short-variable-declarations.Island.Linux.elements", "{28337D14-4060-4A26-A298-4A68523B9ABB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-bounds.Island.Linux", "slice-bounds\slice-bounds.Island.Linux.elements", "{33276812-2DF3-4660-B78D-C6A7580E222A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-len-cap.Island.Linux", "slice-len-cap\slice-len-cap.Island.Linux.elements", "{E249E738-B11C-4E59-BC01-7D10CAFF9E58}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-literals.Island.Linux", "slice-literals\slice-literals.Island.Linux.elements", "{AA49A2D5-B90B-4167-8523-D5B5CC26C653}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices.Island.Linux", "slices\slices.Island.Linux.elements", "{53C445E3-9C7E-4FC3-AA36-7C5FA223E473}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-of-slice.Island.Linux", "slices-of-slice\slices-of-slice.Island.Linux.elements", "{8BA33AE7-BD54-4262-AAED-9AFFF90F816E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-pointers.Island.Linux", "slices-pointers\slices-pointers.Island.Linux.elements", "{1042A7D8-FD8E-417E-85F5-B9EBEE41602E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "stringer.Island.Linux", "stringer\stringer.Island.Linux.elements", "{4AE75D8F-797D-474D-85ED-0937DE3546F4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-fields.Island.Linux", "struct-fields\struct-fields.Island.Linux.elements", "{5B6F8D48-9F14-4524-90E8-C8A5E8EC8FD7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-literals.Island.Linux", "struct-literals\struct-literals.Island.Linux.elements", "{910018A7-2CA7-4CAE-8A8B-F8A21281C553}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-pointers.Island.Linux", "struct-pointers\struct-pointers.Island.Linux.elements", "{219CFD27-76EF-47AE-8512-4B75A8AAD5DF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "structs.Island.Linux", "structs\structs.Island.Linux.elements", "{09AA6461-A124-44BE-A09D-1511EB678455}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch.Island.Linux", "switch\switch.Island.Linux.elements", "{466A0990-4FE4-4997-AD43-6866CD07A70D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-evaluation-order.Island.Linux", "switch-evaluation-order\switch-evaluation-order.Island.Linux.elements", "{B58E7D05-41D7-45FC-A280-21960BD3B9B1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-with-no-condition.Island.Linux", "switch-with-no-condition\switch-with-no-condition.Island.Linux.elements", "{5B53FA39-2603-456C-BFF5-444A483C15F5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Tour.Island", "Tour\Tour.Island.elements", "{E6BE7AC6-3131-4D5D-BE53-1B1569FEB56E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-assertions.Island.Linux", "type-assertions\type-assertions.Island.Linux.elements", "{56BDB283-61EB-4751-A7FE-7FE98AAC44C6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-conversions.Island.Linux", "type-conversions\type-conversions.Island.Linux.elements", "{BBD133FA-473B-4193-B8F8-AFAD5A1A5E2E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-inference.Island.Linux", "type-inference\type-inference.Island.Linux.elements", "{CBEF544E-3D35-4129-AA35-9809B767B4D1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-switches.Island.Linux", "type-switches\type-switches.Island.Linux.elements", "{214B9EDB-A8F9-480D-B067-1A501E12D7C8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables.Island.Linux", "variables\variables.Island.Linux.elements", "{A223739E-8DBB-4F48-A616-F878C4EBF9E3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables-with-initializers.Island.Linux", "variables-with-initializers\variables-with-initializers.Island.Linux.elements", "{AD8E5F33-1842-4661-A4E1-F1C498A260C5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "zero.Island.Linux", "zero\zero.Island.Linux.elements", "{D79BD59C-F924-47FC-A5BC-FDEF744D6C2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

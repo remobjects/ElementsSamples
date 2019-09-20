@@ -17,6 +17,10 @@ type
 
     method CreateComponents;
     begin
+      Application := new TApplication(nil);
+      Application.Initialize;
+      Application.Run;
+
       var el := WebAssembly.GetElementById('helloWorld');
       var lForm := new TForm(nil);
       lForm.Width := 800;

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{40F07CEF-C0EF-4D2A-BE3C-70F805BBA71B}</ProjectGuid>
+    <BinaryName>exercise-reader</BinaryName>
+    <Mode>Echoes</Mode>
+    <OutputType>Executable</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="exercise-reader.go" /> 
+    <ProjectReference Include="Tour.Echoes">
+      <HintPath>..\Tour\Bin\Debug\Tour.dll</HintPath>
+      <Project>{CD7B2CFD-CF0C-468A-8A18-3C6DDFA8F515}</Project>
+      <ProjectFile>..\Tour\Tour.Echoes.elements</ProjectFile>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>

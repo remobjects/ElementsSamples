@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{552151D9-9EEF-463A-AA04-740A8892ADCC}</ProjectGuid>
+    <BinaryName>exercise-images</BinaryName>
+    <Mode>Island</Mode>
+    <SubMode>Darwin</SubMode>
+    <SDK>macOS</SDK>
+    <OutputType>Executable</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="exercise-images.go" />
+    <ProjectReference Include="Tour.Island">
+      <HintPath />
+      <Project>{765C19AB-1997-4EAB-9EA9-3C155546FC6C}</Project>
+      <ProjectFile>..\Tour\Tour.Island.elements</ProjectFile>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>
