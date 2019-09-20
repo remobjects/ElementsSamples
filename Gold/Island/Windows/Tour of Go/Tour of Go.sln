@@ -1,0 +1,190 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "append.Island.Windows", "append\append.Island.Windows.elements", "{CBE968A1-7715-406F-824A-5974E1F4D7E3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "array.Island.Windows", "array\array.Island.Windows.elements", "{73FDE697-9F7C-4869-B2A1-619CCC76620F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "basic-types.Island.Windows", "basic-types\basic-types.Island.Windows.elements", "{3141336A-95F8-4465-BCD6-6356A0EE382C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "buffered-channels.Island.Windows", "buffered-channels\buffered-channels.Island.Windows.elements", "{393BA80D-023E-4468-B4C3-3467CB042515}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channels.Island.Windows", "channels\channels.Island.Windows.elements", "{624BB988-FEB8-46DC-B3FD-AC06B4C20D89}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "constants.Island.Windows", "constants\constants.Island.Windows.elements", "{CB643288-20FA-4D9A-B2F7-6C9DCF3014B9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "default-selection.Island.Windows", "default-selection\default-selection.Island.Windows.elements", "{4EE1349A-62F5-40F8-8C98-4973DBD295EA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer.Island.Windows", "defer\defer.Island.Windows.elements", "{202D4924-DD9A-4101-8ACF-54167BAC2165}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer-multi.Island.Windows", "defer-multi\defer-multi.Island.Windows.elements", "{0BABD750-3E57-41A5-964B-DCDC2311F18C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "empty-interface.Island.Windows", "empty-interface\empty-interface.Island.Windows.elements", "{AAB075BE-519B-4DDC-BB14-5D985870D481}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "errors.Island.Windows", "errors\errors.Island.Windows.elements", "{0B209330-7AF4-43D1-873F-1B1C90BF18A6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-equivalent-binary-trees.Island.Windows", "exercise-equivalent-binary-trees\exercise-equivalent-binary-trees.Island.Windows.elements", "{64CC053D-F343-4577-A1F4-722D256357CE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-errors.Island.Windows", "exercise-errors\exercise-errors.Island.Windows.elements", "{C82100FB-832F-4388-8873-8B517F34AEF6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-fibonacci-closure.Island.Windows", "exercise-fibonacci-closure\exercise-fibonacci-closure.Island.Windows.elements", "{7CC635DC-2311-473C-B4CB-7CC6B32D18A8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-loops-and-functions.Island.Windows", "exercise-loops-and-functions\exercise-loops-and-functions.Island.Windows.elements", "{8AEA226D-795C-47AE-A817-BCCA855A6B43}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-maps.Island.Windows", "exercise-maps\exercise-maps.Island.Windows.elements", "{04AFE539-04F8-471A-A769-0FCDFA98F2E2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-slices.Island.Windows", "exercise-slices\exercise-slices.Island.Windows.elements", "{E431C82D-32DB-456F-BEC2-076337C528BD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-stringer.Island.Windows", "exercise-stringer\exercise-stringer.Island.Windows.elements", "{D37AA71D-059F-404F-96AC-D2DAAB95706A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-web-crawler.Island.Windows", "exercise-web-crawler\exercise-web-crawler.Island.Windows.elements", "{72B4481B-3F6C-43E5-B630-3CD407FEFFD3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exported-names.Island.Windows", "exported-names\exported-names.Island.Windows.elements", "{7E181EEE-A4F7-4AEC-870F-D2F54CB07852}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for.Island.Windows", "for\for.Island.Windows.elements", "{727127BC-3150-40BF-8A8E-AA1B386A774C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-continued.Island.Windows", "for-continued\for-continued.Island.Windows.elements", "{6E4AB0BF-7C75-4752-97EE-0BBEA03CFCE2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "forever.Island.Windows", "forever\forever.Island.Windows.elements", "{353A9751-229A-40F4-8DBF-21134A7101BF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-is-gos-while.Island.Windows", "for-is-gos-while\for-is-gos-while.Island.Windows.elements", "{EF722345-A7FC-4241-9356-4B8F6A61078A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-closures.Island.Windows", "function-closures\function-closures.Island.Windows.elements", "{AD79A9E6-B739-42B2-83CA-F29DE64B2834}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions.Island.Windows", "functions\functions.Island.Windows.elements", "{487B6741-789E-4754-A15F-1A5E43C1BA78}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions-continued.Island.Windows", "functions-continued\functions-continued.Island.Windows.elements", "{CF19BF9A-D52C-4442-8908-791E24A71A3C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-values.Island.Windows", "function-values\function-values.Island.Windows.elements", "{4C0EDBEA-33E7-4B0D-97D4-81D871A934DD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "goroutines.Island.Windows", "goroutines\goroutines.Island.Windows.elements", "{90ADC93C-5F4C-4E65-BAE3-284DBB2B1C86}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "hello.Island.Windows", "hello\hello.Island.Windows.elements", "{D6371799-E3C3-4E0D-8E6E-197FBB53B0CE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if.Island.Windows", "if\if.Island.Windows.elements", "{6DDBA5B3-4130-47C4-958F-F31BFD30C27A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-and-else.Island.Windows", "if-and-else\if-and-else.Island.Windows.elements", "{B04E11CD-303B-4835-9C22-879CB36F9D75}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-with-a-short-statement.Island.Windows", "if-with-a-short-statement\if-with-a-short-statement.Island.Windows.elements", "{002F55D8-0F6E-47B7-9B0C-C2D01C197588}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "images.Island.Windows", "images\images.Island.Windows.elements", "{A660230E-DE0A-4E7B-B677-CC73249241CA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "imports.Island.Windows", "imports\imports.Island.Windows.elements", "{8577DE36-FA31-4EAD-988D-241DD4FC5BFE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection.Island.Windows", "indirection\indirection.Island.Windows.elements", "{A4A1AE21-F373-4F8A-A138-0995793C9184}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection-values.Island.Windows", "indirection-values\indirection-values.Island.Windows.elements", "{287063EC-8218-4278-B461-3C8A36D6FA86}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces.Island.Windows", "interfaces\interfaces.Island.Windows.elements", "{608A3751-0B74-48FF-AD28-5AD8269CFB70}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces-are-satisfied-implicitly.Island.Windows", "interfaces-are-satisfied-implicitly\interfaces-are-satisfied-implicitly.Island.Windows.elements", "{1068DAC3-CFE3-4598-9950-2286D1ECCD33}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values.Island.Windows", "interface-values\interface-values.Island.Windows.elements", "{A9BC421E-BB36-4318-928E-BE0D7B25C3F3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values-with-nil.Island.Windows", "interface-values-with-nil\interface-values-with-nil.Island.Windows.elements", "{16E95308-BE30-4769-8A1F-22F3F487F4C0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "making-slices.Island.Windows", "making-slices\making-slices.Island.Windows.elements", "{331D66E9-12DB-44FD-B5F4-EB21578FA872}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals.Island.Windows", "map-literals\map-literals.Island.Windows.elements", "{CCEF305C-5F4E-4B0F-9DCD-C7E8F00BE9E6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals-continued.Island.Windows", "map-literals-continued\map-literals-continued.Island.Windows.elements", "{F816B506-A0E1-4491-ADEC-FBBCB27E9C80}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "maps.Island.Windows", "maps\maps.Island.Windows.elements", "{658C828F-9A1F-4565-9647-70DE9EF146A2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods.Island.Windows", "methods\methods.Island.Windows.elements", "{DC4717E2-28A6-4194-93E8-A2833C9074CC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-continued.Island.Windows", "methods-continued\methods-continued.Island.Windows.elements", "{7FE57575-D853-48E3-8110-32A3E16EBA1C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-funcs.Island.Windows", "methods-funcs\methods-funcs.Island.Windows.elements", "{46B7E904-1219-4B94-93AB-C6537B189B89}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers.Island.Windows", "methods-pointers\methods-pointers.Island.Windows.elements", "{692F838C-09CC-4C67-A074-E324E67039FF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers-explained.Island.Windows", "methods-pointers-explained\methods-pointers-explained.Island.Windows.elements", "{B78CEE97-AE45-4157-93CB-E429845F8ED0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-with-pointer-receivers.Island.Windows", "methods-with-pointer-receivers\methods-with-pointer-receivers.Island.Windows.elements", "{334D306F-E9FA-4B60-B477-86A6E486EB26}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "multiple-results.Island.Windows", "multiple-results\multiple-results.Island.Windows.elements", "{A83F1214-54A6-48FC-9B2B-05F79CBE7D09}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutating-maps.Island.Windows", "mutating-maps\mutating-maps.Island.Windows.elements", "{8B998C8F-EBC3-41AC-94B1-0E12E219E5B6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutex-counter.Island.Windows", "mutex-counter\mutex-counter.Island.Windows.elements", "{CBECE86C-76B1-48FC-95D9-40B8ACFA83C4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "named-results.Island.Windows", "named-results\named-results.Island.Windows.elements", "{E69234DD-CAF7-4546-8E3E-97EAE940B9FB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-interface-values.Island.Windows", "nil-interface-values\nil-interface-values.Island.Windows.elements", "{75DE99FB-9EE7-4A60-9A66-89B4967E680E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-slices.Island.Windows", "nil-slices\nil-slices.Island.Windows.elements", "{CF2AAC4F-CE07-48CC-A042-3D25983C6113}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "numeric-constants.Island.Windows", "numeric-constants\numeric-constants.Island.Windows.elements", "{6CD54E33-8D28-41CC-9905-413CC0564103}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "packages.Island.Windows", "packages\packages.Island.Windows.elements", "{46D9F016-FC05-4633-B85E-1CBE14AE35D8}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "pointers.Island.Windows", "pointers\pointers.Island.Windows.elements", "{DE5B19D1-D8E4-4E67-999F-0A52780CB555}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range.Island.Windows", "range\range.Island.Windows.elements", "{9756165A-5073-4449-B666-8DD74C6D4835}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-and-close.Island.Windows", "range-and-close\range-and-close.Island.Windows.elements", "{3E1BD1E9-8016-479C-A895-6381D86DA1C5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-continued.Island.Windows", "range-continued\range-continued.Island.Windows.elements", "{BD5DE511-FAC6-4FAE-B978-DCCF076A0F9D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "reader.Island.Windows", "reader\reader.Island.Windows.elements", "{C3BEDABE-AE77-43AE-9A5E-1EBA67A76EAE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sandbox.Island.Windows", "sandbox\sandbox.Island.Windows.elements", "{12EB2D11-AA31-4502-B900-EB2F493C2558}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "select.Island.Windows", "select\select.Island.Windows.elements", "{B36594D3-79A5-44E6-827B-5903C3C6FB88}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "short-variable-declarations.Island.Windows", "short-variable-declarations\short-variable-declarations.Island.Windows.elements", "{449EFC62-7972-4CA5-A2AD-857156EBD68D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-bounds.Island.Windows", "slice-bounds\slice-bounds.Island.Windows.elements", "{E04419AF-40F3-41EB-8326-B0C94C41151D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-len-cap.Island.Windows", "slice-len-cap\slice-len-cap.Island.Windows.elements", "{713B9A51-65B3-41BD-94A3-F7885C9654F9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-literals.Island.Windows", "slice-literals\slice-literals.Island.Windows.elements", "{540C802E-8F59-4FBA-AC76-642200200392}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices.Island.Windows", "slices\slices.Island.Windows.elements", "{C41DB439-0F7C-4B82-A804-DB20321651F1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-of-slice.Island.Windows", "slices-of-slice\slices-of-slice.Island.Windows.elements", "{045A5F1D-0BB0-4874-8F8F-4151562EE373}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-pointers.Island.Windows", "slices-pointers\slices-pointers.Island.Windows.elements", "{41AC2487-2B9F-4935-BC8B-F01DF7D676D4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "stringer.Island.Windows", "stringer\stringer.Island.Windows.elements", "{9992455A-1DE1-4A96-B14A-E11197FAD460}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-fields.Island.Windows", "struct-fields\struct-fields.Island.Windows.elements", "{2FEA3D4E-9FF7-40C4-B1C6-D1A693C13C58}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-literals.Island.Windows", "struct-literals\struct-literals.Island.Windows.elements", "{6AE7D24A-164B-4230-B10B-AA18548E4F63}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-pointers.Island.Windows", "struct-pointers\struct-pointers.Island.Windows.elements", "{13D9D9E6-D56B-4C94-89BD-C3E89E77425C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "structs.Island.Windows", "structs\structs.Island.Windows.elements", "{4DEA381B-3831-422F-833B-ABA2E5D1085E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch.Island.Windows", "switch\switch.Island.Windows.elements", "{E3364A96-B6C7-4F70-B612-FA33E5A3FD35}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-evaluation-order.Island.Windows", "switch-evaluation-order\switch-evaluation-order.Island.Windows.elements", "{3D966434-0F1C-4A5D-A8BF-D8DCA17FD2FE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-with-no-condition.Island.Windows", "switch-with-no-condition\switch-with-no-condition.Island.Windows.elements", "{271EF487-04F6-4190-8CAE-2DF6E0F29161}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Tour.Island", "Tour\Tour.Island.elements", "{3612C583-C42B-4CED-886C-13B57BD66D4E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-assertions.Island.Windows", "type-assertions\type-assertions.Island.Windows.elements", "{FA679393-5B63-4303-A05E-AE71436A4B60}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-conversions.Island.Windows", "type-conversions\type-conversions.Island.Windows.elements", "{189F0AAB-C1F6-40C9-A328-4C8F35A96C87}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-inference.Island.Windows", "type-inference\type-inference.Island.Windows.elements", "{2574CBB7-DC6B-4D1E-ABFF-8C22B3E9962F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-switches.Island.Windows", "type-switches\type-switches.Island.Windows.elements", "{F5283CB6-EB89-46AE-8484-6229BE542BA7}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables.Island.Windows", "variables\variables.Island.Windows.elements", "{5CE59DE1-99CD-4E0E-83B9-45742B81AEEF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables-with-initializers.Island.Windows", "variables-with-initializers\variables-with-initializers.Island.Windows.elements", "{B8C55356-2359-4ED8-8F6C-208A745AA7D4}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "zero.Island.Windows", "zero\zero.Island.Windows.elements", "{2AFC5848-B43E-4499-B2F0-5E363D7C7CC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

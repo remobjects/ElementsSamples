@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{46D9F016-FC05-4633-B85E-1CBE14AE35D8}</ProjectGuid>
+    <BinaryName>packages</BinaryName>
+    <Mode>Island</Mode>
+    <SubMode>Windows</SubMode>
+    <OutputType>Executable</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="packages.go" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>

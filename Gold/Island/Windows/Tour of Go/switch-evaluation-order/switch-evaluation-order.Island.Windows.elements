@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{3D966434-0F1C-4A5D-A8BF-D8DCA17FD2FE}</ProjectGuid>
+    <BinaryName>switch-evaluation-order</BinaryName>
+    <Mode>Island</Mode>
+    <SubMode>Windows</SubMode>
+    <OutputType>Executable</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="switch-evaluation-order.go" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>

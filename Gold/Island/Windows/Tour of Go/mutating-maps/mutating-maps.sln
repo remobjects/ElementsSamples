@@ -1,0 +1,14 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects EBuild
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutating-maps.Island.Windows", "mutating-maps.Island.Windows.elements", "{8B998C8F-EBC3-41AC-94B1-0E12E219E5B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects EBuild
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions.Island.Darwin.macOS", "functions.Island.Darwin.macOS.elements", "{729463D3-3AF0-4303-8ADA-C8520E875D77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

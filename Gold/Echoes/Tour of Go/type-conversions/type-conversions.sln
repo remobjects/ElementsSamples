@@ -1,0 +1,14 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects EBuild
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-conversions.Echoes", "type-conversions.Echoes.elements", "{372B0E65-6E74-4FD1-B2F5-6E9C3064B73B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

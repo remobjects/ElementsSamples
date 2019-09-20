@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{CD7B2CFD-CF0C-468A-8A18-3C6DDFA8F515}</ProjectGuid>
+    <RootNamespace>golang.org.x.tour</RootNamespace>
+    <BinaryName>Tour</BinaryName>
+    <Mode>Echoes</Mode>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="pic\pic.go" />
+    <Compile Include="reader\validate.go" />
+    <Compile Include="tree\tree.go" />
+    <Compile Include="wc\wc.go" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>

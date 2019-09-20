@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{04AFE539-04F8-471A-A769-0FCDFA98F2E2}</ProjectGuid>
+    <BinaryName>exercise-maps</BinaryName>
+    <Mode>Island</Mode>
+    <SubMode>Windows</SubMode>
+    <OutputType>Executable</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="exercise-maps.go" /> 
+    <ProjectReference Include="Tour.Island">
+      <HintPath />
+      <Project>{3612C583-C42B-4CED-886C-13B57BD66D4E}</Project>
+      <ProjectFile>..\Tour\Tour.Island.elements</ProjectFile>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>

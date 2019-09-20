@@ -1,0 +1,190 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "append.Island.Darwin.macOS", "append\append.Island.Darwin.macOS.elements", "{F2B56079-826C-4347-A1F7-CA240E72EF88}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "array.Island.Darwin.macOS", "array\array.Island.Darwin.macOS.elements", "{C47CCEE0-8696-41F7-9513-22D2EFF953B5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "basic-types.Island.Darwin.macOS", "basic-types\basic-types.Island.Darwin.macOS.elements", "{ACD290C8-998C-4961-9985-6D25B43DF7F6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "buffered-channels.Island.Darwin.macOS", "buffered-channels\buffered-channels.Island.Darwin.macOS.elements", "{12AF3ABD-4CC2-4B79-8A41-FDBF23D918FE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "channels.Island.Darwin.macOS", "channels\channels.Island.Darwin.macOS.elements", "{34E0FCD7-B6F8-4B64-B590-A5001B3BF3D0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "constants.Island.Darwin.macOS", "constants\constants.Island.Darwin.macOS.elements", "{DF6B4A45-A7C0-4A7D-BC92-7FB447CA1EE3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "default-selection.Island.Darwin.macOS", "default-selection\default-selection.Island.Darwin.macOS.elements", "{5BF7E56F-3A4D-480D-BB7A-CFB35C1682B0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer.Island.Darwin.macOS", "defer\defer.Island.Darwin.macOS.elements", "{5830914C-E91E-462A-BB85-6E98E7893BA2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "defer-multi.Island.Darwin.macOS", "defer-multi\defer-multi.Island.Darwin.macOS.elements", "{585E5087-FAED-4CA7-890C-A4447F24147B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "empty-interface.Island.Darwin.macOS", "empty-interface\empty-interface.Island.Darwin.macOS.elements", "{D7373BC2-93EA-4870-A1C7-F1EC82FBB204}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "errors.Island.Darwin.macOS", "errors\errors.Island.Darwin.macOS.elements", "{0D0479A5-3FEF-4269-BDB0-ED5B8876F924}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-equivalent-binary-trees.Island.Darwin.macOS", "exercise-equivalent-binary-trees\exercise-equivalent-binary-trees.Island.Darwin.macOS.elements", "{7D68B252-7438-4826-A266-891805AB4AB5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-errors.Island.Darwin.macOS", "exercise-errors\exercise-errors.Island.Darwin.macOS.elements", "{10212FD5-FD2A-49E5-80BB-158E5BE9A01B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-fibonacci-closure.Island.Darwin.macOS", "exercise-fibonacci-closure\exercise-fibonacci-closure.Island.Darwin.macOS.elements", "{5E0105C2-2ECB-4EB8-9B94-6E2E30B40717}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-loops-and-functions.Island.Darwin.macOS", "exercise-loops-and-functions\exercise-loops-and-functions.Island.Darwin.macOS.elements", "{D4040A06-7CCF-4F19-9460-9E898A6FA015}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-maps.Island.Darwin.macOS", "exercise-maps\exercise-maps.Island.Darwin.macOS.elements", "{2B1914BF-69A9-49B0-A6E6-3F86204BAC97}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-slices.Island.Darwin.macOS", "exercise-slices\exercise-slices.Island.Darwin.macOS.elements", "{112C4B1B-6A69-4FFA-BB9F-C348F0F8E2BD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-stringer.Island.Darwin.macOS", "exercise-stringer\exercise-stringer.Island.Darwin.macOS.elements", "{74141400-449F-4C60-8223-158633A07800}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exercise-web-crawler.Island.Darwin.macOS", "exercise-web-crawler\exercise-web-crawler.Island.Darwin.macOS.elements", "{969F636C-6BB4-40CB-93B7-1499DF644BE0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "exported-names.Island.Darwin.macOS", "exported-names\exported-names.Island.Darwin.macOS.elements", "{3C450FF2-056E-4A2A-BDCC-8D6FC969142A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for.Island.Darwin.macOS", "for\for.Island.Darwin.macOS.elements", "{4132BC8E-C8DA-4717-82D5-0AFC5903E9CB}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-continued.Island.Darwin.macOS", "for-continued\for-continued.Island.Darwin.macOS.elements", "{816997E6-74B1-48C5-8A65-2476AD7AB10F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "forever.Island.Darwin.macOS", "forever\forever.Island.Darwin.macOS.elements", "{80AB1DEA-49CF-4AC4-BCCA-2063B0381ECA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "for-is-gos-while.Island.Darwin.macOS", "for-is-gos-while\for-is-gos-while.Island.Darwin.macOS.elements", "{CC3B74A4-DCD4-4CEF-9D31-1C8AEF21BF77}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-closures.Island.Darwin.macOS", "function-closures\function-closures.Island.Darwin.macOS.elements", "{5D431FB0-95F1-4DD5-ACF3-142DE07505A1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions.Island.Darwin.macOS", "functions\functions.Island.Darwin.macOS.elements", "{729463D3-3AF0-4303-8ADA-C8520E875D77}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "functions-continued.Island.Darwin.macOS", "functions-continued\functions-continued.Island.Darwin.macOS.elements", "{4FAD4931-7DB6-49F3-8D54-76494C279CE0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "function-values.Island.Darwin.macOS", "function-values\function-values.Island.Darwin.macOS.elements", "{BAC4FC20-B4D3-45A2-9BB5-D972BB41AC2E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "goroutines.Island.Darwin.macOS", "goroutines\goroutines.Island.Darwin.macOS.elements", "{951403A9-3EF2-4458-B9CF-8BCEE72323E9}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "hello.Island.Darwin.macOS", "hello\hello.Island.Darwin.macOS.elements", "{6502A53E-2FB3-42DD-AF29-ED313C4478D2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if.Island.Darwin.macOS", "if\if.Island.Darwin.macOS.elements", "{099A6B5A-ED32-43D4-89FD-6436F608AE8F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-and-else.Island.Darwin.macOS", "if-and-else\if-and-else.Island.Darwin.macOS.elements", "{C1AC259E-104B-4F1D-8AD2-6B6C11D66DF1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "if-with-a-short-statement.Island.Darwin.macOS", "if-with-a-short-statement\if-with-a-short-statement.Island.Darwin.macOS.elements", "{8CE8AE09-85AA-4777-A547-79BA505EB59B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "images.Island.Darwin.macOS", "images\images.Island.Darwin.macOS.elements", "{ED7B2140-E42E-4833-A369-8C3B1C81DA3F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "imports.Island.Darwin.macOS", "imports\imports.Island.Darwin.macOS.elements", "{F58DA4E3-23B9-45A8-8266-7A1E65DCC689}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection.Island.Darwin.macOS", "indirection\indirection.Island.Darwin.macOS.elements", "{4B5EF979-71F7-4C24-805F-3D831E205848}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "indirection-values.Island.Darwin.macOS", "indirection-values\indirection-values.Island.Darwin.macOS.elements", "{A12C06A1-9A62-41BC-92EB-D67842ADEAFA}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces.Island.Darwin.macOS", "interfaces\interfaces.Island.Darwin.macOS.elements", "{30C10190-4DD6-4FFF-BBF7-3BBF26771DF3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interfaces-are-satisfied-implicitly.Island.Darwin.macOS", "interfaces-are-satisfied-implicitly\interfaces-are-satisfied-implicitly.Island.Darwin.macOS.elements", "{052DC45A-81A2-44B1-B1E5-24899D092EFC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values.Island.Darwin.macOS", "interface-values\interface-values.Island.Darwin.macOS.elements", "{F68C9301-646E-4324-87EB-1909F426D292}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "interface-values-with-nil.Island.Darwin.macOS", "interface-values-with-nil\interface-values-with-nil.Island.Darwin.macOS.elements", "{D8145587-3335-4A84-9446-0F2C21EBEE0D}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "making-slices.Island.Darwin.macOS", "making-slices\making-slices.Island.Darwin.macOS.elements", "{0E9624B0-47AE-422F-B693-49D264F7A4BC}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals.Island.Darwin.macOS", "map-literals\map-literals.Island.Darwin.macOS.elements", "{2FBDF952-E5F9-42B0-B652-FA5D9017F245}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "map-literals-continued.Island.Darwin.macOS", "map-literals-continued\map-literals-continued.Island.Darwin.macOS.elements", "{89FA4764-18FA-436A-B6DD-8477DF056B49}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "maps.Island.Darwin.macOS", "maps\maps.Island.Darwin.macOS.elements", "{E2EF6651-FFEB-4F35-8651-908C10D9EFE6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods.Island.Darwin.macOS", "methods\methods.Island.Darwin.macOS.elements", "{BFC73781-FF84-423A-82CF-B851EE8EB713}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-continued.Island.Darwin.macOS", "methods-continued\methods-continued.Island.Darwin.macOS.elements", "{C0C5784D-3E7F-442A-A993-AE028DB31874}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-funcs.Island.Darwin.macOS", "methods-funcs\methods-funcs.Island.Darwin.macOS.elements", "{A316DE78-4871-4443-A9F7-B5E4A905EF54}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers.Island.Darwin.macOS", "methods-pointers\methods-pointers.Island.Darwin.macOS.elements", "{92E046D1-1771-4B09-BB6F-C467CC891092}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-pointers-explained.Island.Darwin.macOS", "methods-pointers-explained\methods-pointers-explained.Island.Darwin.macOS.elements", "{B4A5D832-5128-42DD-89DE-DC8F9B17985F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "methods-with-pointer-receivers.Island.Darwin.macOS", "methods-with-pointer-receivers\methods-with-pointer-receivers.Island.Darwin.macOS.elements", "{E1CB8809-0A75-42D0-BBE0-CD9BB6040460}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "multiple-results.Island.Darwin.macOS", "multiple-results\multiple-results.Island.Darwin.macOS.elements", "{6B52030B-68B9-485C-BBF1-5ADD3046DBAD}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutating-maps.Island.Darwin.macOS", "mutating-maps\mutating-maps.Island.Darwin.macOS.elements", "{CBD4BABC-BFF6-4939-BCE9-65C7BDFB4DC1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "mutex-counter.Island.Darwin.macOS", "mutex-counter\mutex-counter.Island.Darwin.macOS.elements", "{71B7EA01-A163-41B7-8BB4-F74E2600FF6E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "named-results.Island.Darwin.macOS", "named-results\named-results.Island.Darwin.macOS.elements", "{0703A7A9-C7A0-42B6-9A43-42D9EBF52902}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-interface-values.Island.Darwin.macOS", "nil-interface-values\nil-interface-values.Island.Darwin.macOS.elements", "{E8CBDC3F-490D-437E-95FE-54B7EE6E1208}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "nil-slices.Island.Darwin.macOS", "nil-slices\nil-slices.Island.Darwin.macOS.elements", "{2C9CA0A7-F26F-406F-9C11-98F7D48C366B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "numeric-constants.Island.Darwin.macOS", "numeric-constants\numeric-constants.Island.Darwin.macOS.elements", "{898A2631-41CA-435C-9C53-74FBD70FA7BE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "packages.Island.Darwin.macOS", "packages\packages.Island.Darwin.macOS.elements", "{003CCDD8-63AE-4E40-A988-4F1A74ABEA83}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "pointers.Island.Darwin.macOS", "pointers\pointers.Island.Darwin.macOS.elements", "{59072CD0-ABFF-4354-976D-792F16B0815A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range.Island.Darwin.macOS", "range\range.Island.Darwin.macOS.elements", "{75C1EFBA-C18F-4FDB-9845-6BBADC14B4EE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-and-close.Island.Darwin.macOS", "range-and-close\range-and-close.Island.Darwin.macOS.elements", "{075596E9-1457-41CC-A0E6-D4020A206786}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "range-continued.Island.Darwin.macOS", "range-continued\range-continued.Island.Darwin.macOS.elements", "{A83A5A58-40BD-44E4-8C2D-D6BA53D57A84}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "reader.Island.Darwin.macOS", "reader\reader.Island.Darwin.macOS.elements", "{7EBF677E-2F47-4AA5-BFDA-9C8606BFA386}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "sandbox.Island.Darwin.macOS", "sandbox\sandbox.Island.Darwin.macOS.elements", "{D1A3BB20-2E86-4579-97F0-1CFBEEFDC512}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "select.Island.Darwin.macOS", "select\select.Island.Darwin.macOS.elements", "{EB1FE010-D007-485A-A189-0B91603F0DD1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "short-variable-declarations.Island.Darwin.macOS", "short-variable-declarations\short-variable-declarations.Island.Darwin.macOS.elements", "{7287A1BB-6942-488F-B80B-BCFDCABB4642}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-bounds.Island.Darwin.macOS", "slice-bounds\slice-bounds.Island.Darwin.macOS.elements", "{CFE6B3D7-E763-478C-99EE-A56DA1F064DF}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-len-cap.Island.Darwin.macOS", "slice-len-cap\slice-len-cap.Island.Darwin.macOS.elements", "{67652DF7-F717-4601-9D2B-F19D575E9B6A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slice-literals.Island.Darwin.macOS", "slice-literals\slice-literals.Island.Darwin.macOS.elements", "{E1427E36-07E9-4B38-B350-488FC5D6EDA6}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices.Island.Darwin.macOS", "slices\slices.Island.Darwin.macOS.elements", "{B000D7C2-96F3-402F-8185-30A515ECBD06}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-of-slice.Island.Darwin.macOS", "slices-of-slice\slices-of-slice.Island.Darwin.macOS.elements", "{DA650474-6D6F-465B-9C2B-3EABD4C71213}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "slices-pointers.Island.Darwin.macOS", "slices-pointers\slices-pointers.Island.Darwin.macOS.elements", "{307FB0FC-03E9-4AC4-9064-7A125155711E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "stringer.Island.Darwin.macOS", "stringer\stringer.Island.Darwin.macOS.elements", "{F772A103-8308-4116-8944-4899DD3B84ED}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-fields.Island.Darwin.macOS", "struct-fields\struct-fields.Island.Darwin.macOS.elements", "{890F8294-B427-457D-8AF6-29282A09A530}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-literals.Island.Darwin.macOS", "struct-literals\struct-literals.Island.Darwin.macOS.elements", "{EB55D985-42DA-4B73-B699-7E4D7A8559A3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "struct-pointers.Island.Darwin.macOS", "struct-pointers\struct-pointers.Island.Darwin.macOS.elements", "{3F1FEED2-04C9-46D4-8E62-5AE9DFFCC705}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "structs.Island.Darwin.macOS", "structs\structs.Island.Darwin.macOS.elements", "{A66A902C-167F-44E9-82F5-13DE708B2A19}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch.Island.Darwin.macOS", "switch\switch.Island.Darwin.macOS.elements", "{C12278B7-1863-45AB-B1AC-8587BE34E7C5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-evaluation-order.Island.Darwin.macOS", "switch-evaluation-order\switch-evaluation-order.Island.Darwin.macOS.elements", "{7D7C77F2-38AE-4C84-BDD7-D1DAC5B56601}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "switch-with-no-condition.Island.Darwin.macOS", "switch-with-no-condition\switch-with-no-condition.Island.Darwin.macOS.elements", "{CB06025A-8234-45D9-B295-CE953BF8C253}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "Tour.Island", "Tour\Tour.Island.elements", "{765C19AB-1997-4EAB-9EA9-3C155546FC6C}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-assertions.Island.Darwin.macOS", "type-assertions\type-assertions.Island.Darwin.macOS.elements", "{D73BC51D-BFC0-451E-9DFD-56E12497341B}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-conversions.Island.Darwin.macOS", "type-conversions\type-conversions.Island.Darwin.macOS.elements", "{4BB20F48-1A44-4717-8902-C25C11761DE2}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-inference.Island.Darwin.macOS", "type-inference\type-inference.Island.Darwin.macOS.elements", "{9E3E07A3-63A2-4C85-80FA-78125E3E8B52}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "type-switches.Island.Darwin.macOS", "type-switches\type-switches.Island.Darwin.macOS.elements", "{D97DD043-3E1D-442E-BD81-B4FFC3A00929}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables.Island.Darwin.macOS", "variables\variables.Island.Darwin.macOS.elements", "{9A09D00C-39B1-4DE3-88A1-8F317EFFC1D5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "variables-with-initializers.Island.Darwin.macOS", "variables-with-initializers\variables-with-initializers.Island.Darwin.macOS.elements", "{2A92BA52-C882-47F1-8332-E00DE62CA420}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "zero.Island.Darwin.macOS", "zero\zero.Island.Darwin.macOS.elements", "{6CA21549-BA33-4D96-9097-99FEDD956782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

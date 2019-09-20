@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{112C4B1B-6A69-4FFA-BB9F-C348F0F8E2BD}</ProjectGuid>
+    <BinaryName>exercise-slices</BinaryName>
+    <Mode>Island</Mode>
+    <SubMode>Darwin</SubMode>
+    <SDK>macOS</SDK>
+    <OutputType>Executable</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="#" />
+    <Compile Include="exercise-slices.go" />
+    <ProjectReference Include="Tour.Island">
+      <HintPath />
+      <Project>{765C19AB-1997-4EAB-9EA9-3C155546FC6C}</Project>
+      <ProjectFile>..\Tour\Tour.Island.elements</ProjectFile>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>
