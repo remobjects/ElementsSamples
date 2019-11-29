@@ -19,7 +19,7 @@ namespace BasicWebAssemblyGUIControlsApp
 			Application.Initialize();
 			Application.Run();
 
-			var el = WebAssembly.GetElementById("helloWorld");
+			var el = Browser.GetElementById("helloWorld");
 			var lForm = new TForm(null);
 			lForm.Width = 800;
 			// el it's a div element in html file, we are using as container for our form

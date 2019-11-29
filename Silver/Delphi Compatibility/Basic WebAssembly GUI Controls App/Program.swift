@@ -13,7 +13,7 @@ public class Program {
 
 	public func CreateComponents()
 	{
-		var el = WebAssembly.GetElementById("helloWorld")
+		var el = Browser.GetElementById("helloWorld")
 		var lForm = TForm(nil)
 		lForm.Width = 800
 		// el it's a div element in html file, we are using as container for our form
