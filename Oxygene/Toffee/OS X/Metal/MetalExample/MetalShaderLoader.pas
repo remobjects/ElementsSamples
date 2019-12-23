@@ -33,6 +33,7 @@ begin
  // var  defaultLibrary  : MTLLibrary := _device.newDefaultLibrary;
   if defaultLibrary = nil then
   begin
+    NSLog("Shaderlib, error %@", SourceShader);
     NSLog("Failed to load the Shaderlib, error %@", lError);
     exit nil;
   end

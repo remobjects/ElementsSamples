@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMs-7I-f7w" customClass="Metal_View">
-                        <rect key="frame" x="0.0" y="0.0" width="674" height="420"/>
+                        <rect key="frame" x="10" y="10" width="656" height="404"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </customView>
                 </subviews>
@@ -42,19 +42,24 @@
                             <action selector="pressAppButton:" target="-2" id="que-tj-DWG"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="E1376B8C-C6EE-41ED-99ED-C50846C540A0" label="Buffers" paletteLabel="Buffers" tag="1" image="NSApplicationIcon" id="cLD-md-mIt">
+                    <toolbarItem implicitItemIdentifier="E1376B8C-C6EE-41ED-99ED-C50846C540A0" label="Buffers" paletteLabel="Buffers" toolTip="Show Vertexbuffer" tag="1" image="NSApplicationIcon" id="cLD-md-mIt">
                         <connections>
                             <action selector="pressAppButton:" target="-2" id="Ive-zU-Pkc"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="57588774-2ECD-4F51-8CAE-4B204E1F2D11" label="Texture" paletteLabel="Texture" tag="2" image="NSApplicationIcon" id="sFH-as-3pN">
+                    <toolbarItem implicitItemIdentifier="57588774-2ECD-4F51-8CAE-4B204E1F2D11" label="Texture" paletteLabel="Texture" toolTip="Simple Texture" tag="2" image="NSApplicationIcon" id="sFH-as-3pN">
                         <connections>
                             <action selector="pressAppButton:" target="-2" id="NLU-T3-iNZ"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="C72D4495-EAF1-433B-BB8D-951BE62DA337" label="TextureBlend" paletteLabel="TextureBlend" tag="3" image="NSApplicationIcon" id="WrR-0X-Xiq">
+                    <toolbarItem implicitItemIdentifier="C72D4495-EAF1-433B-BB8D-951BE62DA337" label="TextureBlend" paletteLabel="TextureBlend" toolTip="Blend two Textures" tag="3" image="NSApplicationIcon" id="WrR-0X-Xiq">
                         <connections>
                             <action selector="pressAppButton:" target="-2" id="UNC-kq-ucm"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="1D9689B9-2A9C-47A7-B32A-D1A1355CB712" label="Draw Cube" paletteLabel="Draw Cube" toolTip="Draw a Cube" tag="4" image="NSApplicationIcon" id="L7Q-3V-hz2">
+                        <connections>
+                            <action selector="pressAppButton:" target="-2" id="Ws7-GB-SVo"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="B20549DE-71B5-4871-934F-DBF173AA0D84" label="Timelabel" paletteLabel="Timelabel" tag="-1" image="NSComputer" id="B49-Dp-Jrk">
@@ -77,11 +82,12 @@
                     <toolbarItem reference="cLD-md-mIt"/>
                     <toolbarItem reference="sFH-as-3pN"/>
                     <toolbarItem reference="WrR-0X-Xiq"/>
+                    <toolbarItem reference="L7Q-3V-hz2"/>
                     <toolbarItem reference="oW0-8F-L0i"/>
                     <toolbarItem reference="B49-Dp-Jrk"/>
                 </defaultToolbarItems>
             </toolbar>
-            <point key="canvasLocation" x="135" y="93.5"/>
+            <point key="canvasLocation" x="135" y="93"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="xBt-do-dpi"/>
     </objects>
