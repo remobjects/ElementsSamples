@@ -1,4 +1,4 @@
-/*
+﻿/*
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
@@ -13,7 +13,7 @@ using namespace metal;
 // Include header shared between this Metal shader code and C code executing Metal API commands
 #import "AAPLShaderTypes.h"
 
-    
+
 // Vertex shader outputs and fragment shader inputs
 typedef struct
 {
@@ -31,8 +31,8 @@ typedef struct
 // Vertex function
 vertex RasterizerData
 vertexShader2(uint vertexID [[ vertex_id ]],
-             device AAPLVertex *vertices [[ buffer(AAPLVertexInputIndexVertices) ]],
-             constant vector_uint2 *viewportSizePointer  [[ buffer(AAPLVertexInputIndexViewportSize) ]])
+	     device AAPLVertex *vertices [[ buffer(AAPLVertexInputIndexVertices) ]],
+	     constant vector_uint2 *viewportSizePointer  [[ buffer(AAPLVertexInputIndexViewportSize) ]])
 {
     RasterizerData out;
 
@@ -42,7 +42,7 @@ vertexShader2(uint vertexID [[ vertex_id ]],
     // Index into our array of positions to get the current vertex
     //   Our positions are specified in pixel dimensions (i.e. a value of 100 is 100 pixels from
     //   the origin)
-    float2 pixelSpacePosition = vertices[vertexID].position.xy;
+    float2 pixelSpacePosition = vertices[vertexID].position;//.xy;
 
     // Dereference viewportSizePointer and cast to float so we can do floating-point division
     vector_float2 viewportSize = vector_float2(*viewportSizePointer);
@@ -71,4 +71,3 @@ fragment float4 fragmentColorShader2(RasterizerData in [[stage_in]])
     // We return the color we just set which will be written to our color attachment.
     return in.color;
 }
-
