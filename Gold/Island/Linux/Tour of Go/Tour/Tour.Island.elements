@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{E6BE7AC6-3131-4D5D-BE53-1B1569FEB56E}</ProjectGuid>
@@ -7,6 +7,18 @@
     <Mode>Island</Mode>
     <SubMode>Linux</SubMode>
     <OutputType>StaticLibrary</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <Optimize>False</Optimize>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <OutputPath>.\Bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Island-Linux'">
+    <Mode>Island</Mode>
+    <SubMode>Linux</SubMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="#" />

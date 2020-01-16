@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{765C19AB-1997-4EAB-9EA9-3C155546FC6C}</ProjectGuid>
@@ -8,6 +8,18 @@
     <SubMode>Darwin</SubMode>
     <SDK>macOS</SDK>
     <OutputType>StaticLibrary</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <Optimize>False</Optimize>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <OutputPath>.\Bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Island-Darwin'">
+    <Mode>Island</Mode>
+    <SubMode>Darwin</SubMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="#" />

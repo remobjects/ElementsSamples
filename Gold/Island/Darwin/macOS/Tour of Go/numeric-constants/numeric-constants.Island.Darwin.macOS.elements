@@ -8,6 +8,18 @@
     <SDK>macOS</SDK>
     <OutputType>Executable</OutputType>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <Optimize>False</Optimize>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <OutputPath>.\Bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Island-Darwin'">
+    <Mode>Island</Mode>
+    <SubMode>Darwin</SubMode>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="#" />
     <Compile Include="numeric-constants.go" />
