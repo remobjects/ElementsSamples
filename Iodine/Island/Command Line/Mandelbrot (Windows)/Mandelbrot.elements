@@ -4,7 +4,7 @@
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>MandelbrotWindows</RootNamespace>
     <ProjectGuid>E83AC861-F307-4C1B-BC9F-A5691B258A9F</ProjectGuid>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>MandelbrotWindows</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

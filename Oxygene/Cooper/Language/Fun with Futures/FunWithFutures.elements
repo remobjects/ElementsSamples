@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
     <ProjectGuid>62704506-1400-4705-bb1b-dc5269a24c96</ProjectGuid>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <Name>FunWithFutures</Name>

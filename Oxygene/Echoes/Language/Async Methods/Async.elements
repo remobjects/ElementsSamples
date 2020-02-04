@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{1F544C5F-6354-4C22-8A9C-8AD999671687}</ProjectGuid>
     <RootNamespace>AsyncSample</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>Async</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

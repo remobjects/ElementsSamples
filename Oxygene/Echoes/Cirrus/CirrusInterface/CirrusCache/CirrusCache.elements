@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>CirrusCache</RootNamespace>
-    <OutputType>Exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>CirrusCache</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>

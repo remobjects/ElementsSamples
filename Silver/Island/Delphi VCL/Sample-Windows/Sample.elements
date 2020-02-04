@@ -4,7 +4,7 @@
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>Sample</RootNamespace>
     <ProjectGuid>{7D901073-8CC7-4C82-A9BA-F01505D089DE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>Sample</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>CirrusTrace</RootNamespace>
-    <OutputType>Exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>CirrusTrace</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>

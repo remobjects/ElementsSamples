@@ -4,7 +4,7 @@
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>BasicGtkApp</RootNamespace>
     <ProjectGuid>{c34f7909-bc5d-4c8e-a693-8edba7e7058e}</ProjectGuid>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>BasicGtkApp</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

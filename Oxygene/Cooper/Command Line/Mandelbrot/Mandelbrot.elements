@@ -3,7 +3,7 @@
   <PropertyGroup>
     <RootNamespace>org.me.mandelbrot</RootNamespace>
     <ProjectGuid>{697FFAE7-377D-409C-82A2-09471D28ECC2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>mandelbrot</AssemblyName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <Name>Mandelbrot</Name>

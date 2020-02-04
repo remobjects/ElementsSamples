@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{32F4F0E0-63E8-4824-A7BE-9E59625DB2B6}</ProjectGuid>
     <RootNamespace>UsingGenerics</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>UsingGenerics</AssemblyName>
     <AllowGlobals>True</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

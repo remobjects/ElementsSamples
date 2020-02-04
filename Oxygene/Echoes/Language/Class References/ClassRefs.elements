@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{16108192-B66B-4F0A-B780-6F9116BD125B}</ProjectGuid>
     <RootNamespace>ClassRefs</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>ClassRefs</AssemblyName>
     <AllowGlobals>True</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

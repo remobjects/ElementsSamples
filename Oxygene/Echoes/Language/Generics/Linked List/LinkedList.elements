@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{FD68D6E4-5EA1-4C55-B0A3-421F2A5662E1}</ProjectGuid>
     <RootNamespace>LinkedList</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>LinkedList</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

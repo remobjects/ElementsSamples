@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{E8B7DD53-5665-419E-89A3-FCADA662FDFC}</ProjectGuid>
     <RootNamespace>ComplexNumbers</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>ComplexNumbers</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

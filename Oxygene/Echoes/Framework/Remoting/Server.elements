@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{A7E3EE0C-E300-4D1F-ACAB-3176E7FB2F9A}</ProjectGuid>
     <RootNamespace>Server</RootNamespace>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>Server</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>

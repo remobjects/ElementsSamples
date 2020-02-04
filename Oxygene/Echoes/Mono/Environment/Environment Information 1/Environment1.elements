@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>MonoConsoleApplication1</RootNamespace>
-    <OutputType>Exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>MonoConsoleApplication1</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>

@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectGuid>{7D652A62-E39F-4039-9CA7-9F228F3D39D8}</ProjectGuid>
-    <OutputType>exe</OutputType>
+    <OutputType>Executable</OutputType>
     <AssemblyName>HelloMono</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>
