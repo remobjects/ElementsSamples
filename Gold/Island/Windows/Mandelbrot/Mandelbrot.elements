@@ -5,7 +5,7 @@
     <RootNamespace>Mandelbrot</RootNamespace>
     <ProjectGuid>{E83AC861-F307-4C1B-BC9F-A5691B258A9F}</ProjectGuid>
     <OutputType>Executable</OutputType>
-    <AssemblyName>Mandelbrot</AssemblyName>
+    <BinaryName>Mandelbrot</BinaryName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>

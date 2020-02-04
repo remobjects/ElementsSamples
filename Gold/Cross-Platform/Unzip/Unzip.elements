@@ -5,7 +5,7 @@
     <RootNamespace>Unzip</RootNamespace>
     <ProjectGuid>{89818A71-EE1D-44DA-9533-F29F911B971B}</ProjectGuid>
     <OutputType>Executable</OutputType>
-    <AssemblyName>unzip</AssemblyName>
+    <BinaryName>unzip</BinaryName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <Mode>Island</Mode>
   </PropertyGroup>

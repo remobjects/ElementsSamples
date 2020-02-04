@@ -4,8 +4,8 @@
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>Mandelbrot</RootNamespace>
     <ProjectGuid>{E83AC861-F307-4C1B-BC9F-A5691B258A9F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <AssemblyName>Mandelbrot</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <BinaryName>Mandelbrot</BinaryName>
     <AllowGlobals>False</AllowGlobals>
     <AllowLegacyWith>False</AllowLegacyWith>
     <AllowLegacyOutParams>False</AllowLegacyOutParams>

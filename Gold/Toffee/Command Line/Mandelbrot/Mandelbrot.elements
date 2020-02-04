@@ -4,7 +4,7 @@
     <RootNamespace>Mandelbrot</RootNamespace>
     <ProjectGuid>C3A41F18-1518-46F9-842E-ABF1CFF30301</ProjectGuid>
     <OutputType>executable</OutputType>
-    <AssemblyName>mandelbrot</AssemblyName>
+    <BinaryName>mandelbrot</BinaryName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <Name>Mandelbrot</Name>
     <SDK>OS X</SDK>
