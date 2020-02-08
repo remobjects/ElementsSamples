@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SendSlackMessage", "SendSlackMessage.elements", "{DEDDDB41-FA18-4052-99F1-C2300E4748B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEDDDB41-FA18-4052-99F1-C2300E4748B9}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{DEDDDB41-FA18-4052-99F1-C2300E4748B9}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{DEDDDB41-FA18-4052-99F1-C2300E4748B9}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{DEDDDB41-FA18-4052-99F1-C2300E4748B9}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
