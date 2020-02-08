@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SimpleGoRoutineChannel", "SimpleGoRoutineChannel.elements", "{C54C623D-4CBC-49B0-8224-C18FBB149DE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C54C623D-4CBC-49B0-8224-C18FBB149DE2}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C54C623D-4CBC-49B0-8224-C18FBB149DE2}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{C54C623D-4CBC-49B0-8224-C18FBB149DE2}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{C54C623D-4CBC-49B0-8224-C18FBB149DE2}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
