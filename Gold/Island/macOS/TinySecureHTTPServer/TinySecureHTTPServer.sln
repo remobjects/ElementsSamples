@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "TinySecureHTTPServer", "TinySecureHTTPServer.elements", "{DD74EA0F-62BD-421D-9C0F-6C24F52B2F1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD74EA0F-62BD-421D-9C0F-6C24F52B2F1C}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{DD74EA0F-62BD-421D-9C0F-6C24F52B2F1C}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{DD74EA0F-62BD-421D-9C0F-6C24F52B2F1C}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{DD74EA0F-62BD-421D-9C0F-6C24F52B2F1C}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
