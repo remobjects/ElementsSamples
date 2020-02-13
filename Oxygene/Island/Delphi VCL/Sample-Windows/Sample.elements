@@ -22,7 +22,6 @@
     <GenerateDebugInfo>True</GenerateDebugInfo>
     <CaptureConsoleOutput>False</CaptureConsoleOutput>
     <StartMode>Project</StartMode>
-    <CpuType>x86</CpuType>
     <RuntimeVersion>v25</RuntimeVersion>
     <Architecture>i386</Architecture>
     <XmlDoc>False</XmlDoc>
@@ -38,7 +37,6 @@
     <CaptureConsoleOutput>False</CaptureConsoleOutput>
     <StartMode>Project</StartMode>
     <RegisterForComInterop>False</RegisterForComInterop>
-    <CpuType>x86</CpuType>
     <RuntimeVersion>v25</RuntimeVersion>
     <XmlDoc>False</XmlDoc>
     <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
