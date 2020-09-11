@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "org.me.snake", "org.me.Snake.elements", "{26688190-8C7B-44A1-8751-80208D11ADA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26688190-8C7B-44A1-8751-80208D11ADA3}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{26688190-8C7B-44A1-8751-80208D11ADA3}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{26688190-8C7B-44A1-8751-80208D11ADA3}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{26688190-8C7B-44A1-8751-80208D11ADA3}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

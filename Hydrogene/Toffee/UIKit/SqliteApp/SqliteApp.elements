@@ -2,7 +2,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>SqliteApp</RootNamespace>
-    <ProjectGuid>{50b6ef81-9d66-41eb-92c9-e11958e614a3}</ProjectGuid>
+    <ProjectGuid>{50B6EF81-9D66-41EB-92C9-E11958E614A3}</ProjectGuid>
     <OutputType>executable</OutputType>
     <AssemblyName>SqliteApp</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
@@ -40,9 +40,7 @@
   <ItemGroup>
     <Reference Include="CoreGraphics" />
     <Reference Include="Foundation" />
-    <Reference Include="libsqlite3">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Oxygene\Toffee\Libraries\libsqlite3\iOS\libsqlite3.fx</HintPath>
-    </Reference>
+    <Reference Include="libsqlite3" />
     <Reference Include="UIKit" />
     <Reference Include="rtl" />
     <Reference Include="libToffee" />

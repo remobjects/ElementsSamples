@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
     <RootNamespace>BasicGtkApp</RootNamespace>
-    <ProjectGuid>{c34f7909-bc5d-4c8e-a693-8edba7e7058e}</ProjectGuid>
+    <ProjectGuid>{C34F7909-BC5D-4C8E-A693-8EDBA7E7058E}</ProjectGuid>
     <OutputType>Executable</OutputType>
     <AssemblyName>BasicGtkApp</AssemblyName>
     <AllowGlobals>False</AllowGlobals>
@@ -42,32 +42,19 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="atk">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Island\Reference Libraries\Linux\x86_64\atk.fx</HintPath>
-    </Reference>
-    <Reference Include="cairo">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Island\Reference Libraries\Linux\x86_64\cairo.fx</HintPath>
-    </Reference>
+    <Reference Include="atk" />
+    <Reference Include="cairo" />
     <Reference Include="gc" />
-    <Reference Include="gdk">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Island\Reference Libraries\Linux\x86_64\gdk.fx</HintPath>
-    </Reference>
-    <Reference Include="glib">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Island\Reference Libraries\Linux\x86_64\glib.fx</HintPath>
-    </Reference>
-    <Reference Include="gtk">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Island\Reference Libraries\Linux\x86_64\gtk.fx</HintPath>
-    </Reference>
+    <Reference Include="gdk" />
+    <Reference Include="glib" />
+    <Reference Include="gtk" />
     <Reference Include="Island" />
-    <Reference Include="pango">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Island\Reference Libraries\Linux\x86_64\pango.fx</HintPath>
-    </Reference>
+    <Reference Include="pango" />
     <Reference Include="rtl" />
     <Reference Include="Swift" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.java" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.Linux.targets" />
 </Project>

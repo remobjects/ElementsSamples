@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
-    <ProjectGuid>{06035d4a-745a-45df-88b4-0f5644d6ab87}</ProjectGuid>
+    <ProjectGuid>{06035D4A-745A-45DF-88B4-0F5644D6AB87}</ProjectGuid>
     <RootNamespace>Calculator</RootNamespace>
     <OutputType>winexe</OutputType>
     <AssemblyName>Calculator</AssemblyName>
@@ -51,9 +51,7 @@
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Elements">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Echoes\Reference Assemblies\Elements.dll</HintPath>
-    </Reference>
+    <Reference Include="Elements" />
     <Reference Include="mscorlib" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -106,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Target)' == 'Echoes'">
+    <Reference Include="Echoes" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
   <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared" />

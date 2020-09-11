@@ -2,7 +2,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
-    <ProjectGuid>{64f5087a-8f8e-4048-af33-33fab9a13141}</ProjectGuid>
+    <ProjectGuid>{64F5087A-8F8E-4048-AF33-33FAB9A13141}</ProjectGuid>
     <OutputType>Library</OutputType>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <AllowLegacyCreate>False</AllowLegacyCreate>
@@ -74,9 +74,8 @@
     <None Include="res\drawable-xhdpi\icon.png">
       <SubType>Content</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <Compile Include="MainActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="android">
@@ -86,12 +85,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="elements">
-      <HintPath>C:\Program Files (x86)\RemObjects Software\Elements\Cooper\Reference Archives\elements.jar</HintPath>
       <Private>True</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="MainActivity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets" />
   <Import Project="..\Calculator.Engine\Calculator.Engine.projitems" Label="Shared" />
