@@ -28,7 +28,7 @@ class Program {
 	static func Run() -> Int32 {
 		window = gtk_window_new(GtkWindowType.GTK_WINDOW_TOPLEVEL) as! UnsafePointer<GtkWindow>
 
-		gtk_window_set_title(window, "RemObjects C# - Island GTK Sample")
+		gtk_window_set_title(window, "RemObjects Swift - Island GTK Sample")
 		gtk_window_set_default_size(window, 200, 200)
 
 		var button_box = gtk_hbutton_box_new()

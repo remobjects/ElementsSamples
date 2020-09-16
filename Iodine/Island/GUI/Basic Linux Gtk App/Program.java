@@ -32,7 +32,7 @@ class Program
 	{
 		window = (GtkWindow *)gtk_window_new(GtkWindowType.GTK_WINDOW_TOPLEVEL);
 
-		gtk_window_set_title(window, "RemObjects C# - Island GTK Sample");
+		gtk_window_set_title(window, "RemObjects Iodine - Island GTK Sample");
 		gtk_window_set_default_size(window, 200, 200);
 
 		var button_box = gtk_hbutton_box_new();
