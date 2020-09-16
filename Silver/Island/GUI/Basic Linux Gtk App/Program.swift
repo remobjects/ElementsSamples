@@ -15,7 +15,7 @@ class Program {
 
 	static var window: UnsafePointer<GtkWindow>
 
-	static func clicked(_ app: UnsafePointer<GtkApplication>, _ userdata: UnsafePointer<Void>) {
+	static func clicked(_ app: UnsafePointer<GtkWidget>, _ userdata: UnsafePointer<Void>) {
 		let dialog = (gtk_message_dialog_new(nil,
 											 GtkDialogFlags.GTK_DIALOG_DESTROY_WITH_PARENT,
 											 GtkMessageType.GTK_MESSAGE_INFO,
@@ -25,26 +25,22 @@ class Program {
 		gtk_widget_destroy(dialog)
 	}
 
-	static func activate(_ app: UnsafePointer<GtkApplication>, _ userdata: UnsafePointer<Void>) {
-		window = gtk_application_window_new(app) as! UnsafePointer<GtkWindow>
-		gtk_window_set_title(window, "RemObjects Elements - Island GTK Sample")
+	static func Run() -> Int32 {
+		window = gtk_window_new(GtkWindowType.GTK_WINDOW_TOPLEVEL) as! UnsafePointer<GtkWindow>
+
+		gtk_window_set_title(window, "RemObjects C# - Island GTK Sample")
 		gtk_window_set_default_size(window, 200, 200)
 
-		var button_box = gtk_button_box_new(GtkOrientation.GTK_ORIENTATION_HORIZONTAL)
+		var button_box = gtk_hbutton_box_new()
 		gtk_container_add(window, button_box)
 
 		var button = gtk_button_new_with_label("Hello World")
 		g_signal_connect_data(button as! glib.gpointer, "clicked", (clicked as! UnsafePointer<Void>) as! glib.GVoidFunc, nil, nil, 0 as! GConnectFlags)
 		gtk_container_add(button_box as! UnsafePointer<GtkContainer>, button)
 		gtk_widget_show_all(window)
-	}
 
-	static func Run() -> Int32 {
-		var app = gtk_application_new ("org.gtk.example", gio.GApplicationFlags.G_APPLICATION_FLAGS_NONE)
-		g_signal_connect_data(app as! glib.gpointer, "activate", (activate as! UnsafePointer<Void>) as! glib.GVoidFunc, nil, nil, 0 as! GConnectFlags)
-		var status = g_application_run (app, ExternalCalls.nargs, ExternalCalls.args)
-		g_object_unref(app as! glib.gpointer)
-		return status
+		gtk_main()
+		return 0
 	}
 }
 

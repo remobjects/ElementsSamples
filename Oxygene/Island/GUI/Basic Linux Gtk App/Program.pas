@@ -34,12 +34,12 @@ type
     class method Main(args: array of String): Int32;
     begin
       gtk_init(@ExternalCalls.nargs, @ExternalCalls.args);
-      
+
       window := ^GtkWindow(gtk_window_new(GtkWindowType.GTK_WINDOW_TOPLEVEL));
-      
-      gtk_window_set_title(window, 'RemObjects Elements - Island GTK Sample');
+
+      gtk_window_set_title(window, 'RemObjects Oxygene - Island GTK Sample');
       gtk_window_set_default_size(window, 200, 200);
-      
+
       var button_box := gtk_hbutton_box_new();
       gtk_container_add(window, button_box);
 
@@ -47,7 +47,7 @@ type
       g_signal_connect_data(glib.gpointer(button), 'clicked', glib.GVoidFunc(^Void(@clicked)), nil, nil, GConnectFlags(0));
       gtk_container_add(^GtkContainer(button_box), button);
       gtk_widget_show_all(window);
-      
+
       gtk_main;
     end;
 
