@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "GoCrawler", "GoCrawler.elements", "{A85CDB59-5385-4ED6-B606-1701FE266189}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A85CDB59-5385-4ED6-B606-1701FE266189}.Debug|AnyCPU.ActiveCfg = Debug
+		{A85CDB59-5385-4ED6-B606-1701FE266189}.Debug|AnyCPU.Build.0 = Debug
+		{A85CDB59-5385-4ED6-B606-1701FE266189}.Debug|AnyCPU.Deploy.0 = Debug
+		{A85CDB59-5385-4ED6-B606-1701FE266189}.Release|AnyCPU.ActiveCfg = Release
+		{A85CDB59-5385-4ED6-B606-1701FE266189}.Release|AnyCPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE200B67-9ACC-4C9C-B2E1-D530332969A4}
+	EndGlobalSection
+EndGlobal
