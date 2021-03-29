@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{B79CB5B4-3E99-4FBD-A1D3-D79E15EA35D2}</SharedGUID>
+    <ProjectGuid>{B79CB5B4-3E99-4FBD-A1D3-D79E15EA35D2}</ProjectGuid>
+    <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
+    <RootNamespace>SharedUI.Shared</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.vb" />
+    <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
+    <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aliases.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.vb" />
+  </ItemGroup>
+</Project>
