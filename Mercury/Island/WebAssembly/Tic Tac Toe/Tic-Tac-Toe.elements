@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <RootNamespace>TicTacToe</RootNamespace>
+    <ProjectGuid>{5F08105A-A903-4F8A-8800-29282E3005EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>TicTacToe</AssemblyName>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <DebugIndexHtmlFile>Web\index.html</DebugIndexHtmlFile>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <ConditionalDefines>DEBUG;TRACE;CONFIG=Debug</ConditionalDefines>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <EnableAsserts>True</EnableAsserts>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\Bin\Release</OutputPath>
+    <ConditionalDefines>CONFIG=Release</ConditionalDefines>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Island" />
+    <Reference Include="Mercury" />
+    <Reference Include="Elements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Html Include="Web\index.html" />
+    <None Include="Web\style.css" />
+    <Compile Include="GameState.vb" />
+    <Compile Include="Web\index.html.vb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.WebAssembly.targets" />
+</Project>

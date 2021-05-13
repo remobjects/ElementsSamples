@@ -1,0 +1,32 @@
+﻿<html>
+  <head>
+    <title>TicTacToe Test Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script lang="javascript" src="wasm/RemObjectsElements.js"></script>
+    <script lang="javascript" src="wasm/TicTacToe.js"></script>
+    <script lang="javascript">
+      TicTacToe.instantiate("wasm/TicTacToe.wasm").then(function (module) {
+        console.log("WebAssembly file TicTacToe.wasm has been loaded.");
+        page = module.index();
+      });
+      </script>
+  </head>
+  <body>
+    <section>
+      <h1 class="game--title">Tic Tac Toe</h1>
+      <div class="game--container">
+        <div id="Cell0" data-cell-index="0" class="cell"></div>
+        <div id="Cell1" data-cell-index="1" class="cell"></div>
+        <div id="Cell2" data-cell-index="2" class="cell"></div>
+        <div id="Cell3" data-cell-index="3" class="cell"></div>
+        <div id="Cell4" data-cell-index="4" class="cell"></div>
+        <div id="Cell5" data-cell-index="5" class="cell"></div>
+        <div id="Cell6" data-cell-index="6" class="cell"></div>
+        <div id="Cell7" data-cell-index="7" class="cell"></div>
+        <div id="Cell8" data-cell-index="8" class="cell"></div>
+      </div>
+      <h2 id="StatusDisplay" class="game--status">Loading game</h2>
+      <button id="btnRestart" class="game--status">Restart Game</button>
+    </section>
+  </body>
+</html>

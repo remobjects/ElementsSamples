@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Water
+Project("{00000000-0000-0000-0000-000000000000}") = "Tic-Tac-Toe", "Tic-Tac-Toe.elements", "{5F08105A-A903-4F8A-8800-29282E3005EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F08105A-A903-4F8A-8800-29282E3005EE}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{5F08105A-A903-4F8A-8800-29282E3005EE}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{5F08105A-A903-4F8A-8800-29282E3005EE}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{5F08105A-A903-4F8A-8800-29282E3005EE}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
