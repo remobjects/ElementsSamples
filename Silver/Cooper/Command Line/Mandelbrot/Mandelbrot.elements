@@ -29,7 +29,7 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="rt"/>
-        <Reference Include="swift">
+        <Reference Include="Silver">
             <Private>True</Private>
         </Reference>
         <Reference Include="cooper">

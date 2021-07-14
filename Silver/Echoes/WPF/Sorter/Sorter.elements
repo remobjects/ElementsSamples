@@ -55,7 +55,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ReachFramework" />
-    <Reference Include="Swift">
+    <Reference Include="Silver">
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

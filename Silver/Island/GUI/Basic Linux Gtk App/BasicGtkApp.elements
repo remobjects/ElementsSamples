@@ -51,7 +51,7 @@
     <Reference Include="Island" />
     <Reference Include="pango" />
     <Reference Include="rtl" />
-    <Reference Include="Swift" />
+    <Reference Include="Silver" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.swift" />

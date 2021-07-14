@@ -80,7 +80,7 @@
     <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
-    <Reference Include="swift">
+    <Reference Include="Silver">
       <Private>True</Private>
     </Reference>
   </ItemGroup>

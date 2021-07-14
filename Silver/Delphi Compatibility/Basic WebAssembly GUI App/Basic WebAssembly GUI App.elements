@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Island" />
-    <Reference Include="Swift" />
+    <Reference Include="Silver" />
     <Reference Include="Elements" />
     <Reference Include="Delphi" />
     <Reference Include="DelphiVCL" />

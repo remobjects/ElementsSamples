@@ -44,7 +44,7 @@
     <Reference Include="gc" />
     <Reference Include="Island" />
     <Reference Include="rtl" />
-    <Reference Include="Swift" />
+    <Reference Include="Silver" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.swift" />
