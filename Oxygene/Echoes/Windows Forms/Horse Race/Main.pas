@@ -3,12 +3,12 @@
 interface
 
 uses
-  System.Windows.Forms, 
+  System.Windows.Forms,
   System.Drawing;
 
 type
-  HorseUIUpdateDelegate = delegate(aPictureBox : PictureBox; anIncrement : integer);
-  
+  HorseUIUpdateDelegate = delegate(aPictureBox : PictureBox; anIncrement : Integer);
+
   MainForm = class(System.Windows.Forms.Form)
   {$REGION Windows Form Designer generated fields}
   private
@@ -27,26 +27,26 @@ type
   {$ENDREGION}
   private
     const
-      TotalHorses: integer = 3;
-    
-  protected
-    fFirstHorse: integer;
-    
-    method Dispose(aDisposing: boolean); override;
+      TotalHorses: Integer = 3;
 
-    method DoHorseUIUpdate(aPictureBox : PictureBox; anIncrement : integer); 
-    method SetFirstHorse(Value : integer); locked; // Thread safe
+  protected
+    fFirstHorse: Integer;
+
+    method Dispose(aDisposing: Boolean); override;
+
+    method DoHorseUIUpdate(aPictureBox : PictureBox; anIncrement : Integer);
+    method SetFirstHorse(Value : Integer); locked; // Thread safe
   public
     constructor;
     class method Main;
-    
-    method FindControl(aParent: Control; aName: string): Control;
-    method Race(LaneNumber: integer); async; // Asynchronous method that will execute in its own thread
-    
-    property FirstHorse: integer read fFirstHorse write SetFirstHorse;
+
+    method FindControl(aParent: Control; aName: String): Control;
+    method Race(LaneNumber: Integer); async; // Asynchronous method that will execute in its own thread
+
+    property FirstHorse: Integer read fFirstHorse write SetFirstHorse;
     class RandomGen: Random := new Random();
   end;
-  
+
 implementation
 
 {$REGION Construction and Disposition}
@@ -93,36 +93,36 @@ begin
   (self.Horse3 as System.ComponentModel.ISupportInitialize).BeginInit();
   (self.pictureBox1 as System.ComponentModel.ISupportInitialize).BeginInit();
   self.SuspendLayout();
-  // 
+  //
   // Horse1
-  // 
+  //
   self.Horse1.Image := (resources.GetObject('Horse1.Image') as System.Drawing.Image);
   self.Horse1.Location := new System.Drawing.Point(16, 77);
   self.Horse1.Name := 'Horse1';
   self.Horse1.Size := new System.Drawing.Size(95, 72);
   self.Horse1.TabIndex := 0;
   self.Horse1.TabStop := false;
-  // 
+  //
   // Horse2
-  // 
+  //
   self.Horse2.Image := (resources.GetObject('Horse2.Image') as System.Drawing.Image);
   self.Horse2.Location := new System.Drawing.Point(16, 181);
   self.Horse2.Name := 'Horse2';
   self.Horse2.Size := new System.Drawing.Size(95, 72);
   self.Horse2.TabIndex := 1;
   self.Horse2.TabStop := false;
-  // 
+  //
   // Horse3
-  // 
+  //
   self.Horse3.Image := (resources.GetObject('Horse3.Image') as System.Drawing.Image);
   self.Horse3.Location := new System.Drawing.Point(16, 285);
   self.Horse3.Name := 'Horse3';
   self.Horse3.Size := new System.Drawing.Size(95, 72);
   self.Horse3.TabIndex := 3;
   self.Horse3.TabStop := false;
-  // 
+  //
   // bStartRace
-  // 
+  //
   self.bStartRace.ImageAlign := System.Drawing.ContentAlignment.MiddleRight;
   self.bStartRace.Location := new System.Drawing.Point(16, 12);
   self.bStartRace.Name := 'bStartRace';
@@ -130,10 +130,10 @@ begin
   self.bStartRace.TabIndex := 7;
   self.bStartRace.Text := 'Start Race';
   self.bStartRace.Click += new System.EventHandler(@self.bStartRace_Click);
-  // 
+  //
   // panel1
-  // 
-  self.panel1.Anchor := (((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Left) 
+  //
+  self.panel1.Anchor := (((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Left)
         or System.Windows.Forms.AnchorStyles.Right) as System.Windows.Forms.AnchorStyles);
   self.panel1.BackColor := System.Drawing.Color.FromArgb(((0 as System.Byte) as System.Int32), ((192 as System.Byte) as System.Int32), ((0 as System.Byte) as System.Int32));
   self.panel1.BorderStyle := System.Windows.Forms.BorderStyle.FixedSingle;
@@ -141,10 +141,10 @@ begin
   self.panel1.Name := 'panel1';
   self.panel1.Size := new System.Drawing.Size(488, 16);
   self.panel1.TabIndex := 8;
-  // 
+  //
   // panel2
-  // 
-  self.panel2.Anchor := (((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Left) 
+  //
+  self.panel2.Anchor := (((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Left)
         or System.Windows.Forms.AnchorStyles.Right) as System.Windows.Forms.AnchorStyles);
   self.panel2.BackColor := System.Drawing.Color.FromArgb(((0 as System.Byte) as System.Int32), ((192 as System.Byte) as System.Int32), ((0 as System.Byte) as System.Int32));
   self.panel2.BorderStyle := System.Windows.Forms.BorderStyle.FixedSingle;
@@ -152,10 +152,10 @@ begin
   self.panel2.Name := 'panel2';
   self.panel2.Size := new System.Drawing.Size(488, 16);
   self.panel2.TabIndex := 9;
-  // 
+  //
   // panel3
-  // 
-  self.panel3.Anchor := (((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Left) 
+  //
+  self.panel3.Anchor := (((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Left)
         or System.Windows.Forms.AnchorStyles.Right) as System.Windows.Forms.AnchorStyles);
   self.panel3.BackColor := System.Drawing.Color.FromArgb(((0 as System.Byte) as System.Int32), ((192 as System.Byte) as System.Int32), ((0 as System.Byte) as System.Int32));
   self.panel3.BorderStyle := System.Windows.Forms.BorderStyle.FixedSingle;
@@ -163,9 +163,9 @@ begin
   self.panel3.Name := 'panel3';
   self.panel3.Size := new System.Drawing.Size(488, 16);
   self.panel3.TabIndex := 10;
-  // 
+  //
   // pictureBox1
-  // 
+  //
   self.pictureBox1.Image := (resources.GetObject('pictureBox1.Image') as System.Drawing.Image);
   self.pictureBox1.InitialImage := (resources.GetObject('pictureBox1.InitialImage') as System.Drawing.Image);
   self.pictureBox1.Location := new System.Drawing.Point(446, 12);
@@ -174,9 +174,9 @@ begin
   self.pictureBox1.SizeMode := System.Windows.Forms.PictureBoxSizeMode.StretchImage;
   self.pictureBox1.TabIndex := 11;
   self.pictureBox1.TabStop := false;
-  // 
+  //
   // MainForm
-  // 
+  //
   self.ClientSize := new System.Drawing.Size(520, 406);
   self.Controls.Add(self.pictureBox1);
   self.Controls.Add(self.panel3);
@@ -218,7 +218,7 @@ method MainForm.MainForm_Load(sender: System.Object; e: System.EventArgs);
 begin
   { Notice the use of the "matching" keyword in this for-each block.
     We loop through all the Controls in the form that are of PictureBox type. }
-  for each matching picture: PictureBox in Controls do 
+  for each matching picture: PictureBox in Controls do
     (picture.Image as Bitmap).MakeTransparent(Color.Red);
 end;
 
@@ -226,54 +226,54 @@ method MainForm.bStartRace_Click(sender: System.Object; e: System.EventArgs);
 begin
   fFirstHorse := 0;
   { Since the Race method was marked "async", the following loop will
-    terminate before the horses finish racing }    
-  for i: integer := 1 to TotalHorses do 
+    terminate before the horses finish racing }
+  for i: Integer := 1 to TotalHorses do
     Race(i);
 
   { We need to wait until there's a winner before showing the dialog }
-  while (FirstHorse=0) do 
+  while (FirstHorse=0) do
     Application.DoEvents;
-  
+
   { Displays the winner }
   MessageBox.Show('Horse '+FirstHorse.ToString+' won the race!');
 end;
 
-method MainForm.DoHorseUIUpdate(aPictureBox : PictureBox; anIncrement : integer); 
+method MainForm.DoHorseUIUpdate(aPictureBox : PictureBox; anIncrement : integer);
 begin
-  if (anIncrement<=0) 
+  if (anIncrement<=0)
     then aPictureBox.Left := 8
     else aPictureBox.Left := aPictureBox.Left+anIncrement;
 end;
 
-method MainForm.Race(LaneNumber: integer); 
+method MainForm.Race(LaneNumber: integer);
 var horse: PictureBox;
-    
+
 begin
   { We find the right PictureBox }
   horse := FindControl(Self, 'Horse'+LaneNumber.ToString) as PictureBox;
   if (horse=NIL) then raise new Exception('No such lane!');
-    
+
   { The race code }
   horse.Invoke(new HorseUIUpdateDelegate(@DoHorseUIUpdate), [horse, 0]);
-  
+
   while (horse.Left<horse.Parent.Width-horse.Width-20) do begin
     { Control access needs to be synchronized }
     horse.BeginInvoke(new HorseUIUpdateDelegate(@DoHorseUIUpdate), [horse, 10]);
     System.Threading.Thread.Sleep(RandomGen.Next(10, 300));
   end;
-  
+
   { The following assignment is thread safe, because of the "locked" directive
     used in the declaration of SetFirstHorse above }
-  if (FirstHorse = 0) then 
+  if (FirstHorse = 0) then
     FirstHorse := LaneNumber;
 end;
 
-method MainForm.FindControl(aParent: Control; aName: string): Control; 
+method MainForm.FindControl(aParent: Control; aName: string): Control;
 begin
   for each matching tmpcontrol: Control in aParent.Controls do begin
     if (String.Compare(tmpcontrol.Name, aName, TRUE)=0) then begin
       { Exits returning tmpcontrol as value. This is equivalent to
-          
+
           [..]
           begin
             result := tmpcontrol;
@@ -290,9 +290,9 @@ begin
   end;
 end;
 
-method MainForm.SetFirstHorse(Value: integer); 
+method MainForm.SetFirstHorse(Value: integer);
 { Safety checks to ensure this method is always called with a proper value. }
-{ Note how we make use of the new "between" operator to compare both upper 
+{ Note how we make use of the new "between" operator to compare both upper
   and lower bounds at the same time. }
 require
   0 < Value <= TotalHorses;
