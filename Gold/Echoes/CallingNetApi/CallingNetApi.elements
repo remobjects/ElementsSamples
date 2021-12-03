@@ -6,9 +6,8 @@
     <ProjectGuid>{56DAA298-274A-4FF7-8432-50C3FC79D2B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>CallingNetApi</AssemblyName>
-    <ApplicationIcon>Properties\App.ico</ApplicationIcon>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFramework>.NETFramework4.5</TargetFramework>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
     <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

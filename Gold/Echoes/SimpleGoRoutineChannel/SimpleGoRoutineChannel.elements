@@ -6,9 +6,8 @@
     <ProjectGuid>{737AD191-4184-4C4D-8362-3861796B7B0C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>SimpleGoRoutineChannel</AssemblyName>
-    <ApplicationIcon>Properties\App.ico</ApplicationIcon>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFramework>.NETFramework4.5</TargetFramework>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
     <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

@@ -6,9 +6,8 @@
     <ProjectGuid>{7D5894FF-9FDD-42B7-94F2-BA1A195C4069}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>SendSlackMessage</AssemblyName>
-    <ApplicationIcon>Properties\App.ico</ApplicationIcon>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFramework>.NETFramework4.5</TargetFramework>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
     <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
