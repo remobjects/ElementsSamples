@@ -51,12 +51,12 @@
     <Folder Include="res\layout\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
+    <AndroidResource Include="res\values\strings.xml">
       <SubType>Content</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidManifest Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="android" />
@@ -78,7 +78,7 @@
     <Content Include="res\drawable\star_logo.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\drawable\widget_bg.android-xml">
+    <Content Include="res\drawable\widget_bg.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="res\drawable\widget_bg_normal.9.png">
@@ -90,16 +90,16 @@
     <Content Include="res\drawable\widget_bg_selected.9.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\layout\widget_message.layout-xml">
+    <Content Include="res\layout\widget_message.xml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\layout\widget_word.layout-xml">
+    <Content Include="res\layout\widget_word.xml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\values\styles.android-xml">
+    <Content Include="res\values\styles.xml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\xml\widget_word.android-xml">
+    <Content Include="res\xml\widget_word.xml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

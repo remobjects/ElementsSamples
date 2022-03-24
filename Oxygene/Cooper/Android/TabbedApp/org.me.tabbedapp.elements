@@ -54,15 +54,15 @@
     <Folder Include="res\layout\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\values\strings.android-xml">
+    <None Include="res\values\strings.xml">
       <SubType>Content</SubType>
     </None>
-    <None Include="res\layout\main.layout-xml">
+    <None Include="res\layout\main.xml">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidManifest Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="res\drawable-hdpi\icon.png" />
     <AndroidResource Include="res\drawable-mdpi\icon.png" />
     <AndroidResource Include="res\drawable-ldpi\icon.png" />
@@ -83,10 +83,10 @@
     <Content Include="res\drawable\ic_tab_one_white.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\drawable\ic_tab_one.android-xml">
+    <Content Include="res\drawable\ic_tab_one.xml">
       <SubType>Form</SubType>
     </Content>
-    <Content Include="res\drawable\ic_tab_three.android-xml">
+    <Content Include="res\drawable\ic_tab_three.xml">
       <SubType>Form</SubType>
     </Content>
     <Content Include="res\drawable\ic_tab_three_grey.png">
@@ -95,7 +95,7 @@
     <Content Include="res\drawable\ic_tab_three_white.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\drawable\ic_tab_two.android-xml">
+    <Content Include="res\drawable\ic_tab_two.xml">
       <SubType>Form</SubType>
     </Content>
     <Content Include="res\drawable\ic_tab_two_grey.png">

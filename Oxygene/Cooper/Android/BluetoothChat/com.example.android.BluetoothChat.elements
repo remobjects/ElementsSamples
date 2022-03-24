@@ -52,12 +52,12 @@
         <Folder Include="res\layout\"/>
     </ItemGroup>
     <ItemGroup>
-        <AndroidResource Include="res\values\strings.android-xml">
+        <AndroidResource Include="res\values\strings.xml">
             <SubType>Content</SubType>
         </AndroidResource>
     </ItemGroup>
     <ItemGroup>
-        <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
+        <AndroidManifest Include="Properties\AndroidManifest.xml"/>
     </ItemGroup>
     <ItemGroup>
         <Reference Include="android"/>
@@ -68,20 +68,20 @@
         <Compile Include="DeviceListActivity.pas"/>
     </ItemGroup>
     <ItemGroup>
-        <Content Include="res\menu-v10\option_menu.android-xml">
+        <Content Include="res\menu-v10\option_menu.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\values-v11\styles.android-xml">
+        <Content Include="res\values-v11\styles.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\values\styles.android-xml">
+        <Content Include="res\values\styles.xml">
             <SubType>Content</SubType>
         </Content>
         <None Include="NOTICE">
             <SubType>Content</SubType>
             <ExcludeFromBuild>True</ExcludeFromBuild>
         </None>
-        <Content Include="res\menu\option_menu.android-xml">
+        <Content Include="res\menu\option_menu.xml">
             <SubType>Content</SubType>
         </Content>
         <None Include="Readme.txt">
@@ -94,19 +94,19 @@
         <Content Include="res\drawable\app_icon.png">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\custom_title.layout-xml">
+        <Content Include="res\layout\custom_title.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\device_list.layout-xml">
+        <Content Include="res\layout\device_list.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\device_name.layout-xml">
+        <Content Include="res\layout\device_name.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\main.layout-xml">
+        <Content Include="res\layout\main.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\message.layout-xml">
+        <Content Include="res\layout\message.xml">
             <SubType>Content</SubType>
         </Content>
     </ItemGroup>

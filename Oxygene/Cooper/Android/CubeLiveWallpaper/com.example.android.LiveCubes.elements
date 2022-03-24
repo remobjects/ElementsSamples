@@ -52,12 +52,12 @@
         <Folder Include="res\xml"/>
     </ItemGroup>
     <ItemGroup>
-        <AndroidResource Include="res\values\strings.android-xml">
+        <AndroidResource Include="res\values\strings.xml">
             <SubType>Content</SubType>
         </AndroidResource>
     </ItemGroup>
     <ItemGroup>
-        <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
+        <AndroidManifest Include="Properties\AndroidManifest.xml"/>
     </ItemGroup>
     <ItemGroup>
         <Reference Include="android"/>
@@ -74,16 +74,16 @@
         <Content Include="res\drawable\ic_launcher_wallpaper.png">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\values\shapes.android-xml">
+        <Content Include="res\values\shapes.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\xml\cube1.android-xml">
+        <Content Include="res\xml\cube1.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\xml\cube2.android-xml">
+        <Content Include="res\xml\cube2.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\xml\cube2_settings.android-xml">
+        <Content Include="res\xml\cube2_settings.xml">
             <SubType>Content</SubType>
         </Content>
     </ItemGroup>

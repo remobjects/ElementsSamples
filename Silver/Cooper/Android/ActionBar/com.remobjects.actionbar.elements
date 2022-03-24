@@ -54,10 +54,10 @@
     <Folder Include="res\layout\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
+    <AndroidResource Include="res\values\strings.xml">
       <SubType>Content</SubType>
     </AndroidResource>
-    <AndroidResource Include="res\layout\main.layout-xml">
+    <AndroidResource Include="res\layout\main.xml">
       <SubType>Content</SubType>
     </AndroidResource>
     <None Include="res\drawable-hdpi\icon.png">
@@ -72,7 +72,7 @@
     <None Include="res\drawable-xhdpi\icon.png">
       <SubType>Content</SubType>
     </None>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidManifest Include="Properties\AndroidManifest.xml" />
     <Compile Include="MainActivity.swift" />
     <Compile Include="SearchActivity.swift" />
     <Compile Include="SettingsActivity.swift" />

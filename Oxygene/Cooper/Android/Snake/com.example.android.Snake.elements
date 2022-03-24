@@ -50,12 +50,12 @@
     <Folder Include="res\layout\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
+    <AndroidResource Include="res\values\strings.xml">
       <SubType>Content</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidManifest Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="android" />
@@ -84,10 +84,10 @@
     <Content Include="res\drawable\yellowstar.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\layout\snake_layout.android-xml">
+    <Content Include="res\layout\snake_layout.xml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="res\values\attrs.android-xml">
+    <Content Include="res\values\attrs.xml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

@@ -31,7 +31,7 @@ JetBoyView.JetBoyThread.doDrawPlay.
 
 3) On larger displays the help text did not fit in the TextView thanks to the 
 pixel size being fixed, but the font size being scaled. To fix this the 
-TextView in main.layout-xml has had its layout_width and layout_height
+TextView in main.xml has had its layout_width and layout_height
 attributes adjusted from 300px to 300dp.
 
 4) The protection beam was not stretched across the whole height of larger

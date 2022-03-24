@@ -57,15 +57,15 @@
     <Folder Include="res\layout\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
+    <AndroidResource Include="res\values\strings.xml">
       <SubType>Content</SubType>
     </AndroidResource>
-    <AndroidResource Include="res\layout\info.layout-xml">
+    <AndroidResource Include="res\layout\info.xml">
       <SubType>Content</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidManifest Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="res\drawable-hdpi\icon.png" />
     <AndroidResource Include="res\drawable-mdpi\icon.png" />
     <AndroidResource Include="res\drawable-ldpi\icon.png" />

@@ -47,12 +47,12 @@
     <Folder Include="res\values\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="res\values\strings.android-xml">
+    <AndroidResource Include="res\values\strings.xml">
       <SubType>Content</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidManifest Include="Properties\AndroidManifest.android-xml" />
+    <AndroidManifest Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="res\drawable-hdpi\icon.png" />
     <AndroidResource Include="res\drawable-mdpi\icon.png" />
     <AndroidResource Include="res\drawable-ldpi\icon.png" />
@@ -64,7 +64,7 @@
     <Compile Include="MainActivity.pas" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\layout\main.layout-xml">
+    <Content Include="res\layout\main.xml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

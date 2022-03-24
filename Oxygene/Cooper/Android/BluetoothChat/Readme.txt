@@ -16,7 +16,7 @@ Holo theme and so gets an ActionBar. Code in the app checks the running API leve
 and uses the ActionBar when appropriate.
 
 Custom themes AppTheme and DialogTheme are defined differently based on the running platform
-in values\styles.android-xml and values-v11\styles.android-xml to pull in the Holo
+in values\styles.xml and values-v11\styles.xml to pull in the Holo
 theme where available and a suitable theme where not.
 
 The original demo had a bug whereby closing the app terminated but then recreated

@@ -54,15 +54,15 @@
         <Folder Include="res\xml\"/>
     </ItemGroup>
     <ItemGroup>
-        <None Include="res\values\strings.android-xml">
+        <None Include="res\values\strings.xml">
             <SubType>Content</SubType>
         </None>
-        <None Include="res\layout\main.layout-xml">
+        <None Include="res\layout\main.xml">
             <SubType>Content</SubType>
         </None>
     </ItemGroup>
     <ItemGroup>
-        <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
+        <AndroidManifest Include="Properties\AndroidManifest.xml"/>
         <AndroidResource Include="res\drawable-hdpi\icon.png"/>
         <AndroidResource Include="res\drawable-mdpi\icon.png"/>
         <AndroidResource Include="res\drawable-ldpi\icon.png"/>
@@ -79,19 +79,19 @@
         <Compile Include="MainActivity.pas"/>
     </ItemGroup>
     <ItemGroup>
-        <Content Include="res\layout\about.layout-xml">
+        <Content Include="res\layout\about.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\listitem_twolines.layout-xml">
+        <Content Include="res\layout\listitem_twolines.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\layout\listview_header.layout-xml">
+        <Content Include="res\layout\listview_header.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\values\arrays.android-xml">
+        <Content Include="res\values\arrays.xml">
             <SubType>Content</SubType>
         </Content>
-        <Content Include="res\xml\listviewactivitypreferences.android-xml">
+        <Content Include="res\xml\listviewactivitypreferences.xml">
             <SubType>Content</SubType>
         </Content>
     </ItemGroup>
