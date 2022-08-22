@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
-    <ProjectGuid>{c98ffdb7-8c2c-45ca-95d0-624050e9497e}</ProjectGuid>
+    <ProjectGuid>{C98FFDB7-8C2C-45CA-95D0-624050E9497E}</ProjectGuid>
     <RootNamespace>Calculator.WPF</RootNamespace>
     <OutputType>winexe</OutputType>
     <AssemblyName>Calculator.WPF</AssemblyName>
@@ -51,7 +51,7 @@
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Elements"></Reference>
+    <Reference Include="Elements" />
     <Reference Include="mscorlib" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -96,15 +96,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.swift">
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
     </None>
-    <Compile Include="Properties\Settings.Designer.swift">
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
