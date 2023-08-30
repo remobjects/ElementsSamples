@@ -29,13 +29,13 @@ namespace RegExpression
                 ShowMessage("Text DOES NOT match the regular expression");
         }
 
-        __published void lbRegExpClick(TObject Sender)
+        __published void FormCreate(TObject Sender)
         {
             lbRegExp.ItemIndex = 0;
             lbRegExpClick(lbRegExp);
         }
 
-        __published void FormCreate(TObject Sender)
+        __published void lbRegExpClick(TObject Sender)
         {
             switch (lbRegExp.ItemIndex)
             {
