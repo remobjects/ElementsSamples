@@ -41,8 +41,6 @@ var
 
 implementation
 
-{$R *.fmx}
-
 procedure TForm1.EditTextChangeTracking(Sender: TObject);
 begin
 	if (TRegEx.IsMatch(EditText.Text, MemoRegEx.Text)) then
