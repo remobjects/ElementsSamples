@@ -24,9 +24,9 @@ type
     Label1: TLabel;
     lbRegExp: TListBox;
     MemoRegEx: TMemo;
-    procedure Button1Click(Sender: TObject);
-    procedure lbRegExpClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    method Button1Click(Sender: TObject);
+    method lbRegExpClick(Sender: TObject);
+    method FormCreate(Sender: TObject);
   end;
 
 var
@@ -34,7 +34,7 @@ var
 
 implementation
 
-procedure TForm1.Button1Click(Sender: TObject);
+method TForm1.Button1Click(Sender: TObject);
 begin
   if TRegEx.IsMatch(EditText.Text, MemoRegEx.Lines.Text) then
     ShowMessage('Text DOES match the regular expression')
@@ -42,13 +42,13 @@ begin
     ShowMessage('Text DOES NOT match the regular expression');
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+method TForm1.FormCreate(Sender: TObject);
 begin
   lbRegExp.ItemIndex := 0;
   lbRegExpClick(lbRegExp);
 end;
 
-procedure TForm1.lbRegExpClick(Sender: TObject);
+method TForm1.lbRegExpClick(Sender: TObject);
 begin
   case lbRegExp.ItemIndex of
     0: begin
