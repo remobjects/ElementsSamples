@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346d9-4656-40da-a068-22d5425d4639}") = "RegExpression (FireMonkey)", "RegExpression (FireMonkey).elements", "{0643c382-f02f-464f-8198-92a1f76a1097}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0643c382-f02f-464f-8198-92a1f76a1097}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{0643c382-f02f-464f-8198-92a1f76a1097}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{0643c382-f02f-464f-8198-92a1f76a1097}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0643c382-f02f-464f-8198-92a1f76a1097}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
