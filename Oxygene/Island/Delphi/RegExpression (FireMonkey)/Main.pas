@@ -31,9 +31,9 @@ type
 		EditText: TEdit;
 		lbType: TLabel;
 		SEResult: TShadowEffect;
-		procedure FormCreate(Sender: TObject);
-		procedure lbRegExpChange(Sender: TObject);
-		procedure EditTextChangeTracking(Sender: TObject);
+		method FormCreate(Sender: TObject);
+		method lbRegExpChange(Sender: TObject);
+		method EditTextChangeTracking(Sender: TObject);
 	end;
 
 var
@@ -41,7 +41,7 @@ var
 
 implementation
 
-procedure TForm1.EditTextChangeTracking(Sender: TObject);
+method TForm1.EditTextChangeTracking(Sender: TObject);
 begin
 	if (TRegEx.IsMatch(EditText.Text, MemoRegEx.Text)) then
 		SEResult.ShadowColor := TAlphaColors.Green
@@ -52,12 +52,12 @@ begin
 
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+method TForm1.FormCreate(Sender: TObject);
 begin
 	lbRegExpChange(lbRegExp);
 end;
 
-procedure TForm1.lbRegExpChange(Sender: TObject);
+method TForm1.lbRegExpChange(Sender: TObject);
 begin
 	if lbType = nil then
 		exit;
