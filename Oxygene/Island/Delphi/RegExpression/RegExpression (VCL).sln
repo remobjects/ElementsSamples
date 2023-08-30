@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346d9-4656-40da-a068-22d5425d4639}") = "RegExpression (VCL)", "RegExpression (VCL).elements", "{860799d3-16cf-4ccf-9d10-60bde475dc1c}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{860799d3-16cf-4ccf-9d10-60bde475dc1c}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{860799d3-16cf-4ccf-9d10-60bde475dc1c}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{860799d3-16cf-4ccf-9d10-60bde475dc1c}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{860799d3-16cf-4ccf-9d10-60bde475dc1c}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
