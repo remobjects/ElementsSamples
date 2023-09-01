@@ -59,6 +59,7 @@ namespace RegExpression
 										   "(25[0-5]|2[0-4]\\d|[01]?\\d?\\d)){4}|[a-zA-Z\\" +
 										   "d\\-]*[a-zA-Z\\d]:((?=[\\x01-\\x7f])[^\\\\\\[\\]]|" +
 										   "\\\\[\\x01-\\x7f])+)\\])(?(angle)>)$";
+					break;
 				}
 				case 1:
 				{
@@ -68,6 +69,7 @@ namespace RegExpression
 										   ".(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\." +
 										   "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\." +
 										   "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b";
+					break;
 				}
 				case 2:
 				{
@@ -75,6 +77,7 @@ namespace RegExpression
 					lbType.Text = "Date in mm-dd-yyyy format from between 01-01-1900 and 12-31-2099";
 					MemoRegEx.Lines.Text = "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[" +
 										   "01])[- /.](19|20)\\d\\d$";
+					break;
 				}
 				case 3:
 				{
@@ -82,6 +85,7 @@ namespace RegExpression
 					lbType.Text = "Date in dd-mm-yyyy format from between 01-01-1900 and 31-12-2099";
 					MemoRegEx.Lines.Text = "^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[01" +
 										   "2])[- /.](19|20)\\d\\d$";
+					break;
 				}
 			}
 			EditTextChangeTracking(EditText);
