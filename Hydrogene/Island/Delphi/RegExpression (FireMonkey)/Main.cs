@@ -30,10 +30,10 @@ namespace RegExpression
 
 		__published void EditTextChangeTracking(TObject Sender)
 		{
-			if (TRegEx.IsMatch(EditText.Text, MemoRegEx.Lines.Text))
-				ShowMessage("Text DOES match the regular expression");
+			if (TRegEx.IsMatch(EditText.Text, MemoRegEx.Text))
+				SEResult.ShadowColor = TAlphaColors.Green;
 			else
-				ShowMessage("Text DOES NOT match the regular expression");
+				SEResult.ShadowColor = TAlphaColors.Palevioletred;
 		}
 
 		__published void FormCreate(TObject Sender)
@@ -43,6 +43,8 @@ namespace RegExpression
 
 		__published void lbRegExpChange(TObject Sender)
 		{
+			if (lbType == null)
+				return;
 			switch (lbRegExp.ItemIndex)
 			{
 				case 0:
@@ -82,6 +84,7 @@ namespace RegExpression
 										   "2])[- /.](19|20)\\d\\d$";
 				}
 			}
+			EditTextChangeTracking(EditText);
 		}
 	}
 

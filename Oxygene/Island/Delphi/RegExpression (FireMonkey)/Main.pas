@@ -43,13 +43,10 @@ implementation
 
 method TForm1.EditTextChangeTracking(Sender: TObject);
 begin
-	if (TRegEx.IsMatch(EditText.Text, MemoRegEx.Text)) then
+	if TRegEx.IsMatch(EditText.Text, MemoRegEx.Text) then
 		SEResult.ShadowColor := TAlphaColors.Green
 	else
-		// by some reasons, original TAlphaColors.Red doesn't work as expected
-		// so we will use TAlphaColors.Palevioletred
 		SEResult.ShadowColor := TAlphaColors.Palevioletred;
-
 end;
 
 method TForm1.FormCreate(Sender: TObject);
@@ -59,7 +56,7 @@ end;
 
 method TForm1.lbRegExpChange(Sender: TObject);
 begin
-	if lbType = nil then
+	if not assigned(lbType) then
 		exit;
 	case lbRegExp.ItemIndex of
 		0:

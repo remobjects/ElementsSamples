@@ -11,7 +11,6 @@ namespace RegExpression
             Application.Initialize();
             Application.CreateForm(TForm1, ref Form1);
             Application.Run();
-
         }
     }
 }
