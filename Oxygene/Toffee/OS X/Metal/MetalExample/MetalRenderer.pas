@@ -8,7 +8,13 @@ interface
 // Base class for the examples MTKViewDelegates
 
 type
-  MetalBaseDelegate = class(MTKViewDelegate)
+  MetalMouseDelegate = public interface
+   method MouseMove(const mx, my : Single);
+   method DontShowCursor : Boolean;
+   property showCrosshair : Boolean;
+  end;
+
+  MetalBaseDelegate = class(MTKViewDelegate, MetalMouseDelegate)
   protected //MTKViewDelegate
     _device : MTLDevice;//  id<MTLDevice>;
     _commandQueue :  MTLCommandQueue; // id<MTLCommandQueue>;
@@ -23,6 +29,12 @@ type
 
     method drawInMTKView(view: not nullable MTKView); virtual; empty;
     method mtkView(view: not nullable MTKView) drawableSizeWillChange(size: CGSize); virtual; empty;
+    method MouseMove(const mx, my : Single); virtual; empty;
+    method DontShowCursor : Boolean; virtual;
+    begin
+      exit false;
+    end;
+    property showCrosshair : Boolean;
   public
 
     constructor initWithMetalKitView(const mtkView : not nullable MTKView);// : MTKViewDelegate;

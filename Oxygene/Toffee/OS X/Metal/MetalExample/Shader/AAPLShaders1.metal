@@ -1,4 +1,4 @@
-/*
+﻿/*
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
@@ -27,18 +27,18 @@ typedef struct
 // Vertex function
 vertex RasterizerData
 vertexShader(uint vertexID [[vertex_id]],
-             constant AAPLVertex *vertices [[buffer(AAPLVertexInputIndexVertices)]],
-             constant vector_uint2 *viewportSizePointer [[buffer(AAPLVertexInputIndexViewportSize)]])
+	     constant AAPLVertex *vertices [[buffer(AAPLVertexInputIndexVertices)]],
+	     constant vector_uint2 *viewportSizePointer [[buffer(AAPLVertexInputIndexViewportSize)]])
 {
     RasterizerData out;
-     
+
     // Initialize our output clip space position
     out.clipSpacePosition = vector_float4(0.0, 0.0, 0.0, 1.0);
 
     // Index into our array of positions to get the current vertex
     //   Our positions are specified in pixel dimensions (i.e. a value of 100 is 100 pixels from
     //   the origin)
-    float2 pixelSpacePosition = vertices[vertexID].position.xy;
+    float2 pixelSpacePosition = vertices[vertexID].position; //.xy;
 
     // Dereference viewportSizePointer and cast to float so we can do floating-point division
     vector_float2 viewportSize = vector_float2(*viewportSizePointer);
@@ -51,7 +51,7 @@ vertexShader(uint vertexID [[vertex_id]],
     // Calculate and write x and y values to our clip-space position.  In order to convert from
     //   positions in pixel space to positions in clip-space, we divide the pixel coordinates by
     //   half the size of the viewport.
-    out.clipSpacePosition.xy = pixelSpacePosition / (viewportSize / 2.0);
+    out.clipSpacePosition.xy = pixelSpacePosition  / (viewportSize / 2.0);
 
     // Pass our input color straight to our output color.  This value will be interpolated
     //   with the other color values of the vertices that make up the triangle to produce
@@ -67,4 +67,3 @@ fragment float4 fragmentColorShader(RasterizerData in [[stage_in]])
     // We return the color we just set which will be written to our color attachment.
     return in.color;
 }
-

@@ -12,13 +12,16 @@ type
   vector_float2 = Array[0..1] of Single;
   vector_float4 = Array[0..3] of Single;
 
+  //vector_float2 = TVector2;
+  //vector_float4 = TVector4;
+
 type
 
 //  This structure defines the layout of each vertex in the array of vertices set as an input to our
 //    Metal vertex shader.  Since this header is shared between our .metal shader and C code,
 //    we can be sure that the layout of the vertex array in our C code matches the layout that
 //    our .metal vertex shader expects
-// At moment we need a dummy record inside because the shader is using vectortypes with a alignment of 16
+
 // Used in Example1
   AAPLVertex1 =  record
     // Positions in pixel space
@@ -26,8 +29,6 @@ type
     {$HIDE H7}
     position : vector_float2;
 
-    // Is needed for 16 byte alignement used in Metal
-    dummy : vector_float2;
 
     // Floating-point RGBA colors
     color : Color;//vector_float4;
@@ -52,6 +53,17 @@ type Color = record
   class method createBlue() : Color;
 
 end;
+
+Vertex3d = record
+ position : array[0..2] of Single;
+ normal : array[0..2] of Single;
+ color : Color;
+ tex : array[0..1] of Single;
+ method toBuffer : array of Single;
+ class method fromBuffer(const buffer : Array of Single) : Vertex3d;
+end;
+
+
 
 implementation
 class method Color.create(const r: single; const g: single; const b: single; const a: single): Color;
@@ -84,6 +96,23 @@ begin
   result.green := 0;
   result.blue := 1;
   result.alpha := 1;
+end;
+
+method Vertex3d.toBuffer: array of Single;
+begin
+  result := [position[0], position[1], position[2], normal[0], normal[1], normal[2], tex[0], tex[1]];
+end;
+
+class method Vertex3d.fromBuffer(const buffer: array of Single) : Vertex3d;
+begin
+  result := new Vertex3d();
+  result.position[0] := buffer[0];
+  result.position[1] := buffer[1];
+  result.position[2] := buffer[2];
+  result.normal[0] := buffer[3];
+  result.normal[1] := buffer[4];
+  result.normal[2] := buffer[5];
+  result.color := Color.create(1,0,0,1);
 end;
 
 end.

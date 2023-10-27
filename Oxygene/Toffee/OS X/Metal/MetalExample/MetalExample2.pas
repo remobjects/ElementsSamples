@@ -58,7 +58,8 @@ begin
 
 
     renderEncoder.setRenderPipelineState(_pipelineState);
-
+    renderEncoder.setTriangleFillMode(MTLTriangleFillMode.Fill);
+    renderEncoder.setCullMode(MTLCullMode.None);
 
     // We call -[MTLRenderCommandEncoder setVertexBuffer:offset:atIndex:] to send data in our
         //   preloaded MTLBuffer from our ObjC code here to our Metal 'vertexShader' function
