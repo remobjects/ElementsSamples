@@ -3,6 +3,7 @@ using System.Types;
 using System.UITypes;
 using System.Classes;
 using System.Variants;
+using System.RegularExpressions;
 using FMX.Types;
 using FMX.Controls;
 using FMX.Forms;
@@ -12,7 +13,6 @@ using FMX.Edit;
 using FMX.Memo;
 using FMX.ListBox;
 using FMX.Layouts;
-using System.RegularExpressions;
 using FMX.StdCtrls;
 using FMX.Controls.Presentation;
 using FMX.ScrollBox;
@@ -30,10 +30,7 @@ namespace RegExpression
 
 		__published void EditTextChangeTracking(TObject Sender)
 		{
-			if (TRegEx.IsMatch(EditText.Text, MemoRegEx.Text))
-				SEResult.ShadowColor = TAlphaColors.Green;
-			else
-				SEResult.ShadowColor = TAlphaColors.Palevioletred;
+			SEResult.ShadowColor = TRegEx.IsMatch(EditText.Text, MemoRegEx.Text) ? TAlphaColors.Green : TAlphaColors.Palevioletred;
 		}
 
 		__published void FormCreate(TObject Sender)
