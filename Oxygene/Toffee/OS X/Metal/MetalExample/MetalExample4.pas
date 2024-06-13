@@ -18,8 +18,11 @@ type
       _viewportSize : array [0..1] of UInt32;//Integer;
       _texture : array of MTLTexture;
       _Vertextes : array of AAPLVertex3;
-      akttex : Integer := 0;
-      aktloop : Integer;
+      _BlendFac : Single := 0.0;
+      _BlendStep : Single := 0.0095;
+
+    method switchBlend();
+
     method mtkView(view: not nullable MTKView) drawableSizeWillChange(size: CGSize); override;
     method drawInMTKView(view: not nullable MTKView); override;
 
@@ -91,8 +94,8 @@ method MetalExample4.loadTextureWithLoader;
 begin
   var Loader : MTKTextureLoader := new MTKTextureLoader withDevice(_device);
   var Lerror : Error;
-  var texturl0 :=  Asset.getUrlfor("Tex1.JPG");
-  var texturl1 :=  Asset.getUrlfor("coral.JPG");
+  var texturl1 :=  Asset.getUrlfor("Tex1.JPG");
+  var texturl0 :=  Asset.getUrlfor("coral.JPG");
 
 
   var lDict := NSDictionary<MTKTextureLoaderOption, NSNumber>.dictionaryWithObjects(
@@ -134,13 +137,15 @@ begin
   result := new AAPLVertex3[6];
   const hsize = 600.0;
   const vsize = 400.0;
+  const dsize = 0.0;
 
 //Positions
   result[0].position := [hsize, -vsize];
-  result[1].position := [-hsize, -vsize];
-  result[2].position := [-hsize, vsize];
+  result[1].position := [-hsize, -vsize+dsize];
+  result[2].position := [-hsize, vsize-dsize];
+
   result[3].position := [hsize, -vsize];
-  result[4].position := [-hsize, vsize];
+  result[4].position := [-hsize, vsize-dsize];
   result[5].position := [hsize, vsize];
 
   // Texture
@@ -193,16 +198,11 @@ begin
         //  for its index
     renderEncoder.setVertexBytes(@_viewportSize[0]) length(sizeOf(Int32)*2) atIndex(AAPLVertexInputIndexViewportSize );
 
-    renderEncoder.setFragmentTexture(_texture[0])  atIndex(0);
-
+    renderEncoder.setFragmentTexture(_texture[1])  atIndex(0);
+    renderEncoder.setFragmentTexture(_texture[0])  atIndex(1);
+    renderEncoder.setFragmentBytes(@_BlendFac) length(sizeOf(Single)) atIndex(0 );
 
    // Draw the 3 vertices of our triangle
-    renderEncoder.drawPrimitives(MTLPrimitiveType.MTLPrimitiveTypeTriangle) vertexStart(0) vertexCount(6);
-
-    renderEncoder.setFragmentTexture(_texture[1])  atIndex(0);
-
-
-       // Draw the 3 vertices of our triangle
     renderEncoder.drawPrimitives(MTLPrimitiveType.MTLPrimitiveTypeTriangle) vertexStart(0) vertexCount(6);
 
 
@@ -211,12 +211,15 @@ begin
   end;
   commandBuffer.commit();
 
-  inc(aktloop);
-  if aktloop > 100 then
-  begin
-    akttex := if akttex = 0 then 1 else 0;
-    aktloop := 0;
-  end;
+  switchBlend();
+
+end;
+
+method MetalExample4.switchBlend;
+begin
+  _BlendFac := _BlendFac+ _BlendStep;;
+  if (_BlendFac > 1.0) or (_BlendFac < 0) then
+    _BlendStep := -_BlendStep;
 end;
 
 end.

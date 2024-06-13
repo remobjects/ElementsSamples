@@ -27,7 +27,13 @@ end;
 
 class method Asset.loadFile(const aFilename: String): String;
 begin
-  var  lname :=  getFullname(aFilename);
+  {$IF TEST}
+    var lname : string = "";
+   {$ELSE}
+   var
+      lname :=  getFullname(aFilename);
+  {$ENDIF}
+
    if lname.FileExists then
     exit File.ReadText(lname) else exit nil;
 end;
