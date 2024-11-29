@@ -26,14 +26,14 @@ uses
 type
 	TForm1 = class(TForm)
 	published
-		lbRegExp: TListBox;
-		MemoRegEx: TMemo;
 		EditText: TEdit;
 		lbType: TLabel;
+		lbRegExp: TListBox;
 		SEResult: TShadowEffect;
+		MemoRegEx: TMemo;
+		method EditTextChangeTracking(Sender: TObject);
 		method FormCreate(Sender: TObject);
 		method lbRegExpChange(Sender: TObject);
-		method EditTextChangeTracking(Sender: TObject);
 	end;
 
 var
@@ -43,6 +43,7 @@ implementation
 
 method TForm1.EditTextChangeTracking(Sender: TObject);
 begin
+	nil := EditText.Text;
 	if TRegEx.IsMatch(EditText.Text, MemoRegEx.Text) then
 		SEResult.ShadowColor := TAlphaColors.Green
 	else
@@ -59,8 +60,7 @@ begin
 	if not assigned(lbType) then
 		exit;
 	case lbRegExp.ItemIndex of
-		0:
-			begin
+		0: begin
 				lbType.Text := 'E-mail for validation';
 				MemoRegEx.Text := '^((?>[a-zA-Z\d!#$%&''*+\-/=?^_`{|}~]+\x20*' +
 					'|"((?=[\x01-\x7f])[^"\\]|\\[\x01-\x7f])*"\' +
@@ -72,27 +72,22 @@ begin
 					'd\-]*[a-zA-Z\d]:((?=[\x01-\x7f])[^\\\[\]]|' +
 					'\\[\x01-\x7f])+)\])(?(angle)>)$';
 			end;
-		1:
-			begin
+		1: begin
 				// Accept IP address between 0..255
 				lbType.Text := 'IP address for validation (0..255)';
 				MemoRegEx.Text := '\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\' +
 					'.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.' +
 					'(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.' +
 					'(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b';
-
 			end;
-		2:
-			begin
+		2: begin
 				// Data interval format mm-dd-yyyy
 				lbType.Text :=
 					'Date in mm-dd-yyyy format from between 01-01-1900 and 12-31-2099';
 				MemoRegEx.Text := '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[' +
 					'01])[- /.](19|20)\d\d$';
-
 			end;
-		3:
-			begin
+		3: begin
 				// Data interval format mm-dd-yyyy
 				lbType.Text :=
 					'Date in dd-mm-yyyy format from between 01-01-1900 and 31-12-2099';
