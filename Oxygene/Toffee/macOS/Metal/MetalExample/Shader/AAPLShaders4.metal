@@ -1,4 +1,4 @@
-/*
+﻿/*
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
@@ -68,7 +68,7 @@ vertexShaderTex2(uint vertexID [[ vertex_id ]],
     //   interpolated with the other textureCoordinate values in the vertices that make up the
     //   triangle.
     out.textureCoordinate = vertexArray[vertexID].textureCoordinate;
-    
+
     return out;
 }
 
@@ -81,9 +81,9 @@ samplingShader2(RasterizerData in [[stage_in]],
                                       min_filter::linear);
 
     // Sample the texture to obtain a color
-    const half4 colorSample = colorTexture.sample(textureSampler, in.textureCoordinate);
-   colorSample.a = 0.7;
-    // We return the color of the texture
+    half4 colorSample = colorTexture.sample(textureSampler, in.textureCoordinate);
+    colorSample.a = 0.7;
+
+    // We return the color of the texture, converting to float4
     return float4(colorSample);
 }
-

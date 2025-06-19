@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346d9-4656-40da-a068-22d5425d4639}") = "MetalExample", "MetalExample.elements", "{0e72483c-eebd-4f11-80e5-e5e48b0464aa}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0e72483c-eebd-4f11-80e5-e5e48b0464aa}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{0e72483c-eebd-4f11-80e5-e5e48b0464aa}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{0e72483c-eebd-4f11-80e5-e5e48b0464aa}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0e72483c-eebd-4f11-80e5-e5e48b0464aa}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
