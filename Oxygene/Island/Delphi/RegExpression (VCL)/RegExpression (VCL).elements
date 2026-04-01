@@ -8,7 +8,7 @@
     <AssemblyName>RegExpression</AssemblyName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
-    <DelphiSDK>Delphi 11</DelphiSDK>
+    <DelphiSDK>Delphi</DelphiSDK>
     <ApplicationIcon>.\App.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

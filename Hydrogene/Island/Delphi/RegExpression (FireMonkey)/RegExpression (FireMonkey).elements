@@ -7,7 +7,7 @@
     <OutputType>Executable</OutputType>
     <AssemblyName>RegExpression_fmx</AssemblyName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <DelphiSDK>Delphi 11</DelphiSDK>
+    <DelphiSDK>Delphi</DelphiSDK>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>False</Optimize>
