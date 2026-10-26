@@ -1,4 +1,5 @@
-﻿namespace com.example.android.basicglsurfaceview;
+﻿// Positive sample guard: install the OpenGL renderer through the setter, avoiding the nested Renderer type.
+namespace com.example.android.basicglsurfaceview;
 
 {*
  * Copyright (C) 2007 The Android Open Source Project
@@ -36,7 +37,7 @@ begin
   EGLContextClientVersion := 2;
   setEGLConfigChooser(false);
   setEGLConfigChooser(8, 8, 8, 8, 16, 0);
-  Renderer := new GLES20TriangleRenderer(ctx);
+  setRenderer(new GLES20TriangleRenderer(ctx));
 end;
 
 end.

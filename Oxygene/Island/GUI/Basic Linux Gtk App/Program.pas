@@ -1,4 +1,5 @@
-﻿// based on https://developer.gnome.org/gtk-tutorial/stable/c489.html
+﻿// Positive sample guard: create a horizontal GTK button box with the supported orientation API.
+// based on https://developer.gnome.org/gtk-tutorial/stable/c489.html
 
 namespace BasicGtkApp;
 
@@ -40,7 +41,7 @@ type
       gtk_window_set_title(window, 'RemObjects Oxygene - Island GTK Sample');
       gtk_window_set_default_size(window, 200, 200);
 
-      var button_box := gtk_hbutton_box_new();
+      var button_box := gtk_button_box_new(GtkOrientation.GTK_ORIENTATION_HORIZONTAL);
       gtk_container_add(window, button_box);
 
       var button := gtk_button_new_with_label('Hello World');

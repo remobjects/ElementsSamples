@@ -1,4 +1,5 @@
-﻿namespace clockapplet;
+﻿// Positive sample guard: preserve the drawing and input behavior in a standalone desktop window on modular JDKs.
+namespace clockapplet;
 
 // Sample applet project by Brian Long (http://blong.com)
 // Translated from Michael McGuffin's Clock1 applet
@@ -8,12 +9,12 @@ interface
 
 uses
   java.util.*,
-  java.applet.*,
+  drawingsamples,
   java.awt.*,
   java.text.*;
 
 type
-  ClockApplet = public class(Applet, Runnable)
+  ClockApplet = public class(DesktopSample, Runnable)
   private
     var width, height: Integer;
     var t: Thread := nil;
@@ -25,6 +26,7 @@ type
     method drawHand(angle: Double; radius: Integer; g: Graphics);
     method drawWedge(angle: Double; radius: Integer; g: Graphics);
   public
+    class method Main(args: array of String);
     method init(); override;
     method paint(g: Graphics); override;
     method start; override;
@@ -33,6 +35,11 @@ type
   end;
 
 implementation
+
+class method ClockApplet.Main(args: array of String);
+begin
+  DesktopSample.Show(new ClockApplet, 'Clock');
+end;
 
 method ClockApplet.init();
 begin

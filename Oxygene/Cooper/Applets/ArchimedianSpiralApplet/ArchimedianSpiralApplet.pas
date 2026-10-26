@@ -1,4 +1,5 @@
-﻿namespace archimedianspiralapplet;
+﻿// Positive sample guard: preserve the drawing and input behavior in a standalone desktop window on modular JDKs.
+namespace archimedianspiralapplet;
 
 // Sample applet project by Brian Long (http://blong.com)
 // Translated from Michael McGuffin's ArchimedianSpiral applet
@@ -8,21 +9,27 @@ interface
 
 uses
   java.util,
-  java.applet.*,
+  drawingsamples,
   java.awt;
 
 type
-  ArchimedianSpiralApplet = public class(Applet)
+  ArchimedianSpiralApplet = public class(DesktopSample)
   private
     var width, height: Integer;
     const N = 30; // number of points per full rotation
     const W = 5;  // winding number, or number of full rotations
   public
+    class method Main(args: array of String);
     method init(); override;
     method paint(g: Graphics); override;
   end;
 
 implementation
+
+class method ArchimedianSpiralApplet.Main(args: array of String);
+begin
+  DesktopSample.Show(new ArchimedianSpiralApplet, 'ArchimedianSpiral');
+end;
 
 method ArchimedianSpiralApplet.init();
 begin

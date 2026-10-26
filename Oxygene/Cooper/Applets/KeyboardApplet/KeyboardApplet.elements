@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProductVersion>3.5</ProductVersion>
-    <OutputType>Library</OutputType>
+    <OutputType>Executable</OutputType>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <Name>KeyboardApplet</Name>
     <RootNamespace>keyboardapplet</RootNamespace>
@@ -45,10 +45,12 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt" />
+    <Reference Include="java.base" />
+    <Reference Include="java.desktop" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KeyboardApplet.pas" />
+    <Compile Include="..\..\Desktop\Drawing Samples\DesktopSample.pas" />
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <ItemGroup>

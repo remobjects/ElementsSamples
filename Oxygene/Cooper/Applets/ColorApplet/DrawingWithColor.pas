@@ -1,4 +1,5 @@
-﻿namespace colorapplet;
+﻿// Positive sample guard: preserve the drawing and input behavior in a standalone desktop window on modular JDKs.
+namespace colorapplet;
 
 // Sample applet project by Brian Long (http://blong.com)
 // Translated from Michael McGuffin's DrawingWithColor2 applet
@@ -8,21 +9,27 @@ interface
 
 uses
   java.util,
-  java.applet.*,
+  drawingsamples,
   java.awt;
 
 type
-  ColorApplet = public class(Applet)
+  ColorApplet = public class(DesktopSample)
   private
     var width, height: Integer;
     const N = 25; // the number of colors created
     var spectrum: array of Color; // arrays of elements, each of type Color
   public
+    class method Main(args: array of String);
     method init(); override;
     method paint(g: Graphics); override;
   end;
 
 implementation
+
+class method ColorApplet.Main(args: array of String);
+begin
+  DesktopSample.Show(new ColorApplet, 'Color');
+end;
 
 method ColorApplet.init();
 begin

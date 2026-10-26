@@ -27,6 +27,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Go" />
+    <Reference Include="Elements" />
     <Reference Include="Foundation" />
     <Reference Include="gc" />
     <Reference Include="Island" />

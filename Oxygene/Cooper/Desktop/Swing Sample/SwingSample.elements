@@ -46,7 +46,8 @@
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt" />
+    <Reference Include="java.base" />
+    <Reference Include="java.desktop" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SwingSample.pas" />

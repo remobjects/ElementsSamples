@@ -1,4 +1,5 @@
-﻿namespace Maps;
+﻿// Positive sample guard: configure the application delegate on the segue destination class, not another framework delegate.
+namespace Maps;
 
 interface
 
@@ -92,7 +93,7 @@ method MainViewController.prepareForSegue(aSegue: not nullable UIStoryboardSegue
 begin
   if aSegue.identifier.isEqualToString('showAlternate') then begin
 
-    aSegue.destinationViewController.delegate := self;
+    (aSegue.destinationViewController as FlipsideViewController).delegate := self;
     if UIDevice.currentDevice.userInterfaceIdiom = UIUserInterfaceIdiom.UIUserInterfaceIdiomPad then begin
       var lPopoverController := (aSegue as UIStoryboardPopoverSegue).popoverController;
       flipsidePopoverController := lPopoverController;

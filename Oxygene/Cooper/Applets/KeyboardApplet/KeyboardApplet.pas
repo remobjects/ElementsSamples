@@ -1,4 +1,5 @@
-﻿namespace keyboardapplet;
+﻿// Positive sample guard: preserve the drawing and input behavior in a standalone desktop window on modular JDKs.
+namespace keyboardapplet;
 
 interface
 
@@ -7,13 +8,13 @@ interface
 // from http://profs.etsmtl.ca/mmcguffin/learn/java/05-keyboardInput
 
 uses
-  java.applet,
+  drawingsamples,
   java.awt,
   java.awt.event,
   java.util;
 
 type
-  KeyboardApplet = public class(Applet, KeyListener, MouseListener, MouseMotionListener)
+  KeyboardApplet = public class(DesktopSample, KeyListener, MouseListener, MouseMotionListener)
   private
     const N = 25; // the number of colors created
     var spectrum: array of Color; // arrays of elements, each of type Color
@@ -21,6 +22,7 @@ type
     var s: String := '';
     var skip: Integer := 0;
   public
+    class method Main(args: array of String);
     method init(); override;
     method paint(g: Graphics); override;
     method keyPressed(e: KeyEvent);
@@ -36,6 +38,11 @@ type
   end;
 
 implementation
+
+class method KeyboardApplet.Main(args: array of String);
+begin
+  DesktopSample.Show(new KeyboardApplet, 'Keyboard');
+end;
 
 method KeyboardApplet.init();
 begin

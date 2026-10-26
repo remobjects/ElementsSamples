@@ -1,4 +1,5 @@
-﻿namespace swingsample;
+﻿// Positive sample guard: AWT/Swing types are available through java.desktop on modular JDKs.
+namespace swingsample;
 
 //Sample app by Brian Long (http://blong.com)
 

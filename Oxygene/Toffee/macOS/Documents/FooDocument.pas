@@ -1,4 +1,5 @@
-﻿namespace Documents;
+﻿// Positive sample guard: the document constructor matches the imported NSDocument NSError reference signature.
+namespace Documents;
 
 interface
 
@@ -14,7 +15,7 @@ type
 	property data: FooDocumentData read  private write ;
 
 	// NSDocument implementation
-	constructor withType(&type: NSString) error(error: ^NSError); override;  // workaround for invalid NSError pointer being passed in, sometimes
+	constructor withType(&type: NSString) error(var error: NSError); override;  // workaround for invalid NSError pointer being passed in, sometimes
 	method readFromURL(url: not nullable NSURL) ofType(typeName: not nullable NSString) error(var error: NSError): Boolean; override;
 	method writeToURL(url: not nullable NSURL) ofType(typeName: not nullable NSString) forSaveOperation(aveOperation: NSSaveOperationType) originalContentsURL(absoluteOriginalContentsURL: nullable NSURL) error(var error: NSError): Boolean; override;
 	method makeWindowControllers; override;
@@ -31,7 +32,7 @@ type
 
 implementation
 
-constructor FooDocument withType(&type: NSString) error(error: ^NSError);
+constructor FooDocument withType(&type: NSString) error(var error: NSError);
 begin
   data := new FooDocumentData();
 end;

@@ -1,4 +1,5 @@
-﻿namespace Indigo;
+﻿// Positive sample guard: decimal division preserves fractional calculator results.
+namespace Indigo;
 
 interface
 
@@ -84,7 +85,7 @@ begin
         end;
         '/':
         begin
-            response.Res := request.Numbers.operand1 div request.Numbers.operand2;
+            response.Res := request.Numbers.operand1 / request.Numbers.operand2;
             result := response;
             exit
         end;

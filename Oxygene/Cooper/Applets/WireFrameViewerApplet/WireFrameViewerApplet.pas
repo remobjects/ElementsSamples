@@ -1,4 +1,5 @@
-﻿namespace wireframeviewerapplet;
+﻿// Positive sample guard: preserve the drawing and input behavior in a standalone desktop window on modular JDKs.
+namespace wireframeviewerapplet;
 
 // Sample applet project by Brian Long (http://blong.com)
 // Translated from Michael McGuffin's WireframeViewer applet
@@ -7,7 +8,7 @@
 interface
 
 uses
-  java.applet.*,
+  drawingsamples,
   java.awt.*,
   java.awt.event.*;
 
@@ -24,7 +25,7 @@ type
     constructor(vertexA, vertexB: Integer);
   end;
 
-  WireFrameViewerApplet = public class(Applet, MouseListener, MouseMotionListener)
+  WireFrameViewerApplet = public class(DesktopSample, MouseListener, MouseMotionListener)
   private
     var width, height: Integer;
     var mx, my: Integer; // the most recently recorded mouse coordinates
@@ -35,6 +36,7 @@ type
     var vertices: array of Point3D;
     var edges: array of Edge;
   public
+    class method Main(args: array of String);
     method init(); override;
     method paint(g: Graphics); override;
     method update(g: Graphics); override;
@@ -49,6 +51,11 @@ type
   end;
 
 implementation
+
+class method WireFrameViewerApplet.Main(args: array of String);
+begin
+  DesktopSample.Show(new WireFrameViewerApplet, 'WireFrameViewer');
+end;
 
 constructor Point3D(xCoord, yCoord, zCoord: Integer);
 begin

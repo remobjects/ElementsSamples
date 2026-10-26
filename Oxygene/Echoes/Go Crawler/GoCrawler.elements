@@ -8,7 +8,7 @@
     <AssemblyName>GoCrawler</AssemblyName>
     <ApplicationIcon>Properties\App.ico</ApplicationIcon>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFramework>.NETFramework4.0</TargetFramework>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
     <Name>GoCrawler</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -30,6 +30,7 @@
     <Reference Include="Go">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Echoes" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
