@@ -24,7 +24,7 @@ Class Program
 	window = TryCast(gtk_window_new(GtkWindowType.GTK_WINDOW_TOPLEVEL), Ptr(Of GtkWindow))
 	gtk_window_set_title(window, "RemObjects Mercury - Island GTK Sample")
 	gtk_window_set_default_size(window, 200, 200)
-	Dim button_box = gtk_hbutton_box_new()
+	Dim button_box = gtk_button_box_new(GtkOrientation.GTK_ORIENTATION_HORIZONTAL)
 	gtk_container_add(window, button_box)
 	Dim button = gtk_button_new_with_label("Hello World")
 	g_signal_connect_data(TryCast(button, glib.gpointer), "clicked", TryCast(TryCast(AddressOf clicked, Ptr(Of Void)), glib.GVoidFunc), Null, Null, TryCast(0, GConnectFlags))

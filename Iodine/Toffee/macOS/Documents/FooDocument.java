@@ -8,7 +8,7 @@ import AppKit.*;
 	// NSDocument implementation
 	//
 
-	@Override this withType(NSString type) error(NSError *error) { // workaround for invalid NSError pointer being passed in, sometimes
+	@Override public this withType(NSString type) error(__ref NSError error) {
 		data = new FooDocumentData();
 	}
 

@@ -1,8 +1,8 @@
 ﻿namespace Sample;
 
 uses
-  RemObjects.Elements.RTL.Delphi, 
-  RemObjects.Elements.RTL.Delphi.VCL;
+  Vcl.Forms,
+  System.Classes;
 
 type
   {$IF WEBASSEMBLY}[Export]{$ENDIF}
@@ -11,9 +11,9 @@ type
 
     method Main; static;
     begin
-      Application := new TApplication(nil);
       Application.Initialize;
-      Application.CreateForm(typeOf(TForm2), var Form2);
+      Application.MainFormOnTaskBar := true;
+      Application.CreateForm(TForm2, var Form2);
       Application.Run;
     end;
 

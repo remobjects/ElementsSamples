@@ -28,7 +28,7 @@
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="rt" />
+    <Reference Include="java.base" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

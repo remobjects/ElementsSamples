@@ -6,7 +6,7 @@
 	// NSDocument implementation
 	//
 
-	override init(type: String?, error: UnsafePointer<NSError>) { // workaround for invalid NSError pointer being passed in, sometimes
+	override init(type: String?, error: inout NSError?) {
 		data = FooDocumentData()
 	}
 

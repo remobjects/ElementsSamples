@@ -1,7 +1,7 @@
-﻿import RemObjects.Elements.RTL.Delphi
-import RemObjects.Elements.RTL.Delphi.VCL
+﻿import System.Classes
+import Vcl.Forms
 
-Application = TApplication(nil)
 Application.Initialize()
-Application.CreateForm(dynamicType(TForm2), &Form2)
+Application.MainFormOnTaskBar = true
+Application.CreateForm(TForm2, &Form2)
 Application.Run()

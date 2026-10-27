@@ -3,8 +3,11 @@
 interface
 
 uses
-  RemObjects.Elements.RTL.Delphi,
-  RemObjects.Elements.RTL.Delphi.VCL;
+  System.Classes,
+  Vcl.Forms,
+  Vcl.Controls,
+  Vcl.StdCtrls,
+  Vcl.Dialogs;
 
 type
   TForm2 = public class(TForm)

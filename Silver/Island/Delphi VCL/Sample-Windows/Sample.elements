@@ -12,7 +12,8 @@
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <AllowUnsafeCode>False</AllowUnsafeCode>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DelphiSDK>Delphi</DelphiSDK>
+    <Architecture>x86_64</Architecture>
     <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -23,7 +24,6 @@
     <CaptureConsoleOutput>False</CaptureConsoleOutput>
     <StartMode>Project</StartMode>
     <RuntimeVersion>v25</RuntimeVersion>
-    <Architecture>i386</Architecture>
     <XmlDoc>False</XmlDoc>
     <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
@@ -47,14 +47,14 @@
     <Reference Include="rtl" />
     <Reference Include="Elements" />
     <Reference Include="Island" />
-    <Reference Include="Delphi" />
-    <Reference Include="DelphiVCL" />
+    <Reference Include="Delphi.rtl" />
+    <Reference Include="Delphi.vcl" />
+    <Reference Include="Island.DelphiSupport" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.swift" />
-    <Resource Include="Unit2.dfm" />
+    <EmbeddedResource Include="Unit2.dfm" />
     <Compile Include="Unit2.swift" />
-    <Resource Include="manifest.res" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.Windows.targets" />
 </Project>

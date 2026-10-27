@@ -46,7 +46,7 @@
     <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
-    <Reference Include="rt" />
+    <Reference Include="java.base" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.pas" />

@@ -9,7 +9,7 @@ namespace Documents
 		// NSDocument implementation
 		//
 
-		public override this withType(NSString type) error(NSError *error) // workaround for invalid NSError pointer being passed in, sometimes
+		public override this withType(NSString type) error(ref NSError error)
 		{
 			data = new FooDocumentData();
 		}

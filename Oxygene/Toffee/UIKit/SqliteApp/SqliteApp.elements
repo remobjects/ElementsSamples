@@ -12,6 +12,7 @@
         <AllowUnsafeCode>False</AllowUnsafeCode>
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
         <SDK>iOS</SDK>
+        <DeploymentTargetVersion>10.0</DeploymentTargetVersion>
         <CreateAppBundle>True</CreateAppBundle>
         <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
         <Name>SqliteApp</Name>
@@ -40,6 +41,7 @@
     <ItemGroup>
         <Reference Include="CoreGraphics"/>
         <Reference Include="Foundation"/>
+        <Reference Include="libToffee"/>
         <Reference Include="libsqlite3">
             <HintPath>..\..\git\oxygene\Frameworks\libsqlite3\iOS\libsqlite3.fx</HintPath>
         </Reference>

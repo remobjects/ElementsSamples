@@ -48,7 +48,6 @@
     <Reference Include="CoreGraphics" />
     <Reference Include="CoreImage" />
     <Reference Include="CoreFoundation" />
-    <Reference Include="libDelphi" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.pas" />
