@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <RootNamespace>ContextManager</RootNamespace>
+    <ProjectGuid>{7CE16B2E-0B06-4F1F-945E-3F4753FAC13F}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>ContextManager</AssemblyName>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Mode>Island</Mode>
+    <SubMode>Darwin</SubMode>
+    <DefaultUses>Promethium</DefaultUses>
+    <BinaryName>ContextManager</BinaryName>
+    <SDK>macOS</SDK>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <ConditionalDefines>DEBUG;TRACE;</ConditionalDefines>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <EnableAsserts>True</EnableAsserts>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\Bin\Release</OutputPath>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <Optimize>True</Optimize>
+    <EnableAsserts>False</EnableAsserts>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gc" />
+    <Reference Include="Island" />
+    <Reference Include="rtl" />
+  </ItemGroup>
+  <ItemGroup>
+    </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+  <ItemGroup>
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Promethium">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../../../Echoes/Command Line/Context Manager/Program.py">
+      <Link>Program.py</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

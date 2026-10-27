@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "CsvReport", "CsvReport.elements", "{03F917D5-EC1D-4A3A-BA00-C823660A44AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03F917D5-EC1D-4A3A-BA00-C823660A44AD}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{03F917D5-EC1D-4A3A-BA00-C823660A44AD}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{03F917D5-EC1D-4A3A-BA00-C823660A44AD}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{03F917D5-EC1D-4A3A-BA00-C823660A44AD}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

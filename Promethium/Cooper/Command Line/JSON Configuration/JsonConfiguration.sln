@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "JsonConfiguration", "JsonConfiguration.elements", "{F7C0C1A2-3711-46C0-B711-FE2B7BDF9CE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7C0C1A2-3711-46C0-B711-FE2B7BDF9CE3}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{F7C0C1A2-3711-46C0-B711-FE2B7BDF9CE3}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{F7C0C1A2-3711-46C0-B711-FE2B7BDF9CE3}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{F7C0C1A2-3711-46C0-B711-FE2B7BDF9CE3}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+download
+unpack
+compile
+package

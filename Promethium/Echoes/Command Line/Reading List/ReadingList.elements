@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
   <PropertyGroup>
     <RootNamespace>ReadingList</RootNamespace>
     <ProjectGuid>{AAB28681-1A7F-4E77-8868-743EA6CF35EA}</ProjectGuid>
@@ -7,7 +7,7 @@
     <BinaryName>ReadingList</BinaryName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <TargetFramework>.NETFramework4.8</TargetFramework>
-    <OutputPath>.\bin\Release</OutputPath>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
     <DefaultUses>Promethium</DefaultUses>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
@@ -25,4 +25,14 @@
     </Reference>
     <Compile Include="Program.py" />
   </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>False</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
 </Project>

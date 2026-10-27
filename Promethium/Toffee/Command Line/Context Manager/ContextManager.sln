@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "ContextManager", "ContextManager.elements", "{1696246F-4918-4695-8F47-573649BFF4DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1696246F-4918-4695-8F47-573649BFF4DB}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{1696246F-4918-4695-8F47-573649BFF4DB}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{1696246F-4918-4695-8F47-573649BFF4DB}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{1696246F-4918-4695-8F47-573649BFF4DB}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

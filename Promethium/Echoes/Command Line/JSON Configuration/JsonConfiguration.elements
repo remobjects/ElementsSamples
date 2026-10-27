@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>JsonConfiguration</RootNamespace>
+    <ProjectGuid>{8A9075A6-824B-417A-A989-CD2D54D9EA1A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <BinaryName>JsonConfiguration</BinaryName>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <DefaultUses>Promethium</DefaultUses>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="Echoes">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Promethium">
+      <Private>True</Private>
+    </Reference>
+    <Compile Include="Program.py" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>False</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+</Project>

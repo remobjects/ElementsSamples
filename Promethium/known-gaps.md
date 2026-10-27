@@ -1,10 +1,17 @@
-# Compatibility gaps observed while preparing the samples
+# Compatibility boundaries
 
-These are short probes of ordinary Python syntax. The five checked-in projects use patterns that compile and run. The cases below did not compile with the `develop-promethium` compiler tested on 27 October 2026; they are potential ship-readiness work, not claims about other targets.
+The sample runner reports every target failure and returns a nonzero exit code; it does not filter unsupported targets or treat successful compilation as runtime proof.
 
-1. **Empty dictionary with a typed annotation.** `counts: dict[str, int] = {}` reports a conversion from `Promethium.Dictionary[Object,Object]` to `Promethium.Dictionary[String,Int32]`. An empty literal has no entries from which to infer key and value types, but the annotation supplies both.
-2. **Dictionary indexing.** With `counts: dict[str, int]`, `counts[word] = counts.get(word, 0) + 1` reports that `Promethium.Dictionary[String,Int32]` has no default property. The sample uses `collections.Counter` to avoid this gap.
-3. **Filtered list comprehension.** `[book for book in books if book.finished]` reports `No member 'Where' on type 'Promethium.List[Book]'`. The sample uses a normal loop.
-4. **Ordinary project module imports.** With `budget.py` and `Program.py` in one `.elements` project, `from budget import total` reports an unknown namespace `budget`. The sample uses a shared `@namespace("trip_budget")` directive and directly references `total`.
+- Project filenames do not automatically define Python module namespaces. Trip Budget demonstrates Elements' explicit `@namespace` contract.
+- libPromethium JSON, CSV, graph, and binary APIs have typed or explicit helper surfaces. The separate CPython reference scripts validate equivalent results, not API identity.
+- Context-manager exception information follows the target's exception model. Native traceback objects are not CPython traceback objects; Island exceptions and arbitrary Cocoa thrown objects have no common traceback API, so their third `__exit__` argument is `None`.
+- Native sample projects currently exercise macOS only. Other operating systems and mobile targets need separate execution coverage.
 
-These probes should become focused compiler regressions when addressed. The executable samples intentionally stay green so the suite can serve as a release gate.
+The original empty typed dictionary, dictionary indexing metadata, and filtered-comprehension build failures have regression coverage in the compiler collection tests. Target-specific runtime failures remain release blockers until the complete matrix passes. Do not work around a failing language pattern in a sample merely to make the matrix green.
+
+## Cases that must stay visible in the gate
+
+- JSON Configuration formats a boolean using `"Alerts: {0}".format(...)`. The expected Python spelling is `True`; native formatting currently produces `true` on Cooper and `1` on Toffee. Do not change the expected output to accept these differences.
+- Generator Pipeline uses an unannotated generator parameter. Toffee currently rejects the yielded value's `%` operation as `id mod Int32`. Keep the shared source unchanged so this remains a compatibility check.
+
+The full libPromethium test suite is a separate gate. Passing these ten examples does not establish that all library modules or unsupported Python constructs work.

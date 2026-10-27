@@ -1,0 +1,2 @@
+"North, Bay",open
+West,open

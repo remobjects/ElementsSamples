@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "GeneratorPipeline", "GeneratorPipeline.elements", "{68A10C41-B507-4106-B122-93E7CBB13338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68A10C41-B507-4106-B122-93E7CBB13338}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{68A10C41-B507-4106-B122-93E7CBB13338}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{68A10C41-B507-4106-B122-93E7CBB13338}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{68A10C41-B507-4106-B122-93E7CBB13338}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

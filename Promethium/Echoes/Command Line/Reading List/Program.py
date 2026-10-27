@@ -1,4 +1,4 @@
-# Sample: use classes, a property, defaults, lists, loops, and totals.
+# Sample: use classes, a property, defaults, filtered comprehensions, and totals.
 class Book:
     title: str
     pages: int
@@ -19,10 +19,12 @@ books = [
     Book("Tide Pools", 180),
     Book("Night Sky", 310),
 ]
+unfinished = [book for book in books if not book.finished]
+for book in unfinished:
+    print(book.label)
+
 finished_pages: int = 0
 for book in books:
     if book.finished:
         finished_pages += book.pages
-    else:
-        print(book.label)
 print("Finished pages: {0}".format(finished_pages))

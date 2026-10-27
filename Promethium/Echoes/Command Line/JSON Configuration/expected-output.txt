@@ -1,0 +1,3 @@
+Coast Watch
+Retries: 3
+Alerts: True

@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "DependencyPlan", "DependencyPlan.elements", "{30F1AFE6-CDB8-4AB2-B1A9-CA558788866C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30F1AFE6-CDB8-4AB2-B1A9-CA558788866C}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{30F1AFE6-CDB8-4AB2-B1A9-CA558788866C}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{30F1AFE6-CDB8-4AB2-B1A9-CA558788866C}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{30F1AFE6-CDB8-4AB2-B1A9-CA558788866C}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

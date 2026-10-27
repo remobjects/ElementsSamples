@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "SensorSummary", "SensorSummary.elements", "{C976B45B-6114-460C-B8A3-2A853C29BD11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C976B45B-6114-460C-B8A3-2A853C29BD11}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C976B45B-6114-460C-B8A3-2A853C29BD11}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{C976B45B-6114-460C-B8A3-2A853C29BD11}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{C976B45B-6114-460C-B8A3-2A853C29BD11}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

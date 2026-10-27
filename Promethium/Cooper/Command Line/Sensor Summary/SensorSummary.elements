@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>3.5</ProductVersion>
+    <ProjectGuid>{622A727B-8F55-42EA-81ED-1FD45088D043}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <RootNamespace>SensorSummary</RootNamespace>
+    <DefaultUses>Promethium</DefaultUses>
+    <BinaryName>SensorSummary</BinaryName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <ConditionalDefines>DEBUG;TRACE;</ConditionalDefines>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+    <CpuType>anycpu</CpuType>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\Bin\Release</OutputPath>
+    <CpuType>anycpu</CpuType>
+    <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+    <Optimize>True</Optimize>
+    <EnableAsserts>False</EnableAsserts>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rt" />
+    <Reference Include="cooper">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.targets" />
+  <ItemGroup>
+    <Reference Include="elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="promethium">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../../../Echoes/Command Line/Sensor Summary/Program.py">
+      <Link>Program.py</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

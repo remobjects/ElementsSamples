@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "BinaryRecord", "BinaryRecord.elements", "{7BFDC952-17D0-4438-83C7-96F61A6A427D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BFDC952-17D0-4438-83C7-96F61A6A427D}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{7BFDC952-17D0-4438-83C7-96F61A6A427D}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{7BFDC952-17D0-4438-83C7-96F61A6A427D}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{7BFDC952-17D0-4438-83C7-96F61A6A427D}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

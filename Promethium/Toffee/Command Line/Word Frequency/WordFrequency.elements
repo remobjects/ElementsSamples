@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <RootNamespace>WordFrequency</RootNamespace>
+    <ProjectGuid>{22940E5B-DF01-4342-9A3F-A062834DF533}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>WordFrequency</AssemblyName>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <SDK>macOS</SDK>
+    <MangleTypeNames>True</MangleTypeNames>
+    <DefaultUses>Promethium</DefaultUses>
+    <BinaryName>WordFrequency</BinaryName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <OutputPath>.\Bin\Debug</OutputPath>
+    <ConditionalDefines>DEBUG;TRACE;</ConditionalDefines>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+    <EnableAsserts>True</EnableAsserts>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\Bin\Release</OutputPath>
+    <Optimize>True</Optimize>
+    <EnableAsserts>False</EnableAsserts>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Foundation" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
+  </ItemGroup>
+  <ItemGroup>
+    </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+  <ItemGroup>
+    <Reference Include="libElements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="libPromethium">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../../../Echoes/Command Line/Word Frequency/Program.py">
+      <Link>Program.py</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

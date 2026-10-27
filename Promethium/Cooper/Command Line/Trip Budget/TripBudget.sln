@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "TripBudget", "TripBudget.elements", "{B30F62B0-C2F0-45F0-8D0B-DBAF6DFBD113}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B30F62B0-C2F0-45F0-8D0B-DBAF6DFBD113}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{B30F62B0-C2F0-45F0-8D0B-DBAF6DFBD113}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{B30F62B0-C2F0-45F0-8D0B-DBAF6DFBD113}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{B30F62B0-C2F0-45F0-8D0B-DBAF6DFBD113}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,12 +1,14 @@
-# Sample: count words with Python modules, a function, and iteration over results.
-from collections import Counter
+# Sample: count words using a typed dictionary, indexing, and libPromethium regex.
 import re
 
 
-def count_words(text: str) -> Counter[str]:
-    return Counter[str](re.split(" ", text))
+def count_words(text: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for word in re.split(" ", text):
+        counts[word] = counts.get(word, 0) + 1
+    return counts
 
 
-counts: Counter[str] = count_words("sun sand sea sun sea sun")
-for entry in counts.most_common():
-    print("{0}: {1}".format(entry[0], entry[1]))
+counts = count_words("sun sand sea sun sea sun")
+for word in ["sun", "sea", "sand"]:
+    print("{0}: {1}".format(word, counts[word]))
