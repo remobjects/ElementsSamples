@@ -1,8 +1,8 @@
 ﻿package SharedUI.Shared;
 
-#ifdef TOFFEE
+#if TOFFEE
 
-@NSApplicationMain, @IBObject
+@NSApplicationMain @IBObject
 public __partial class AppDelegate extends INSApplicationDelegate
 {
 	public void applicationDidFinishLaunching(NSNotification notification)

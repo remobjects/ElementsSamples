@@ -1,6 +1,6 @@
 <Application x:Class="AvalonApplication4.MyApp"
-    xmlns="http://schemas.microsoft.com/winfx/avalon/2005"
-    xmlns:x="http://schemas.microsoft.com/winfx/xaml/2005"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     StartupUri="OxygeneWindow.xaml"
     >
     <Application.Resources>

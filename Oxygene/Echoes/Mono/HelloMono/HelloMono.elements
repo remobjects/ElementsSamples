@@ -8,7 +8,7 @@
     <AllowLegacyOutParams>False</AllowLegacyOutParams>
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
@@ -24,21 +24,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Security">
-      <HintPath>$(Framework)\2.0\Mono.Security.dll</HintPath>
       <Name>Mono.Security.dll</Name>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>$(Framework)\2.0\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>$(Framework)\2.0\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Data">
-      <HintPath>$(Framework)\2.0\System.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>$(Framework)\2.0\System.Xml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

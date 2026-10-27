@@ -1,6 +1,6 @@
 ﻿package SharedUI.Shared;
 
-#ifdef ECHOES
+#if ECHOES
 
 public __partial class AppDelegate
 {

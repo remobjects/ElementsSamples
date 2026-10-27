@@ -1,13 +1,13 @@
 ﻿<Window x:Class="AvalonApplication4.OxygeneWindow"
-    xmlns="http://schemas.microsoft.com/winfx/avalon/2005"
-    xmlns:x="http://schemas.microsoft.com/winfx/xaml/2005"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="World Clock"
     >
 
 <!-- The graphic used in this example has been made by Weyert de Boer of TeamRO
 		 The graphic is based on World Clock dashboard widget of Apple MacOSX Tiger -->
 <Grid>
-		<Viewbox xmlns="http://schemas.microsoft.com/winfx/avalon/2005" xmlns:x="http://schemas.microsoft.com/winfx/xaml/2005" Margin="2">
+		<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Margin="2">
 			
 			<!-- This will add a border, this was used for debugging purpose, it's now just made transparent
 					 for example make a gradient in by: VerticalGradient Blue Yellow (our debug "border") -->
@@ -20,17 +20,17 @@
 
         	<!-- The main canvas of the clock, the width/height are magic numbers found by hand. -->
         	<Canvas Height="146" Width="145"  Name="backgroundWidget"
-            				xmlns="http://schemas.microsoft.com/winfx/avalon/2005"
-            				xmlns:x="http://schemas.microsoft.com/winfx/xaml/2005"
+            				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             				>
           	<Canvas.RenderTransform>
           			<!-- RenderTransform command to reset the scale and center position of the "parent" canvas area -->
-            		<ScaleTransform Center="0,0" ScaleX="1" ScaleY="1" />
+            		<ScaleTransform CenterX="0" CenterY="0" ScaleX="1" ScaleY="1" />
           	</Canvas.RenderTransform>
         
         		<!-- The widget background imagery, includes everything but the pointers and numbers -->
         		<Canvas Name="widgetBackground">
-        			  <Path Fill="#ff020202" FillRule="NonZero" Data="
+        			  <Path Fill="#ff020202" Data="F1
                       M 145.334473,139.247070
                       C 145.334473,143.160156 142.139160,146.333984 138.197754,146.333984
                       L 7.135742,146.333984
@@ -42,7 +42,7 @@
                       L 145.334473,139.247070
                       Z"/>
         
-        			<Path FillRule="NonZero" Data="
+        			<Path Data="F1
                       M 143.349121,9.380371
                       C 143.349121,5.672852 140.256348,2.666992 136.440918,2.666992
                       L 9.574219,2.666992
@@ -63,7 +63,7 @@
         		</Canvas>
         
         		<Canvas Name="clockBackground">
-                  <Path Fill="#ffc8c8c8" FillRule="NonZero" Data="
+                  <Path Fill="#ffc8c8c8" Data="F1
                     M 129.332520,72.666992
                     C 129.332520,103.594727 104.483887,128.666016 73.831543,128.666016
                     C 43.179199,128.666016 18.332520,103.594727 18.332520,72.666992
@@ -72,7 +72,7 @@
                     Z"/>
                 
                   <!-- Clock/Hour clock/<Path> -->
-                  <Path FillRule="NonZero" Data="
+                  <Path Data="F1
                     M 127.999512,71.666992
                     C 127.999512,102.042969 103.374512,126.666016 72.998535,126.666016
                     C 42.623047,126.666016 17.999512,102.042969 17.999512,71.666992
@@ -90,7 +90,7 @@
                   </Path>
                 
                   <!-- Clock/Hour clock/<Path> -->
-                  <Path Fill="#ffe6e6e6" FillRule="NonZero" Data="
+                  <Path Fill="#ffe6e6e6" Data="F1
                     M 126.333496,61.667480
                     C 126.605957,61.763184 126.859863,61.863281 127.128418,61.959961
                     C 122.541504,36.216797 100.061035,16.667480 72.998535,16.667480
@@ -99,13 +99,13 @@
                     Z"/>
                 
                   <!-- Clock/Hour clock/<Path> -->
-                  <Path Fill="#ffe3e3e3" FillRule="NonZero" Data="
+                  <Path Fill="#ffe3e3e3" Data="F1
                     M 112.332520,110.666992"/>
         		</Canvas>	
 
                						<Canvas Name="Hours">
                <Canvas RenderTransform="translate -36 -33">
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 93.150391,135.759766
                    L 93.150391,136.628906
                    L 88.908203,145.500977
@@ -117,7 +117,7 @@
                    L 93.150391,135.759766
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 104.881836,63.288086
                    L 104.854492,63.288086
                    L 103.314453,64.119141
@@ -129,7 +129,7 @@
                    L 104.881836,63.288086
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 109.269531,71.026855
                    L 109.269531,70.291016
                    L 110.208984,69.378418
@@ -147,7 +147,7 @@
                    L 109.269531,71.026855
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 85.548828,68.622070
                    L 85.521484,68.622070
                    L 83.981445,69.453125
@@ -159,7 +159,7 @@
                    L 85.548828,68.622070
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 92.537109,68.622070
                    L 92.509766,68.622070
                    L 90.970703,69.453125
@@ -171,7 +171,7 @@
                    L 92.537109,68.622070
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 71.548340,82.622070
                    L 71.520996,82.622070
                    L 69.981445,83.453125
@@ -183,7 +183,7 @@
                    L 71.548340,82.622070
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 78.810059,89.584473
                    C 80.022461,89.584473 80.608398,88.153809 80.608398,85.892090
                    C 80.608398,83.711914 80.063477,82.281738 78.810059,82.281738
@@ -199,7 +199,7 @@
                    L 78.755371,90.510742
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 69.140625,101.601074
                    C 68.132324,101.601074 67.410645,102.500000 67.410645,103.753418
                    C 67.410645,104.856934 68.078125,105.633789 69.113281,105.633789
@@ -223,7 +223,7 @@
                    L 66.974609,108.862793
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 74.380859,121.539063
                    C 73.287109,121.539063 72.687500,122.258301 72.687500,123.097656
                    C 72.672363,124.071777 73.421875,124.596191 74.545898,124.895996
@@ -252,7 +252,7 @@
                    L 74.425781,120.594727
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 129.548828,68.955078
                    L 129.521484,68.955078
                    L 127.982422,69.786133
@@ -264,7 +264,7 @@
                    L 129.548828,68.955078
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 150.116211,108.901855
                    C 150.488281,109.124512 151.333984,109.495605 152.254883,109.495605
                    C 153.917969,109.495605 154.453125,108.441406 154.437500,107.624512
@@ -286,7 +286,7 @@
                    L 150.116211,108.901855
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 142.017578,90.580078
                    L 142.017578,89.819824
                    L 142.988281,88.876465
@@ -304,7 +304,7 @@
                    L 142.017578,90.580078
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 145.708984,128.905273
                    L 145.708984,125.736816
                    C 145.708984,125.242676 145.722656,124.748535 145.751953,124.254883
@@ -328,7 +328,7 @@
                    L 145.708984,132.465820
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 132.392578,138.083496
                    L 128.788086,138.083496
                    L 128.424805,140.481445
@@ -347,7 +347,7 @@
                    L 132.392578,138.083496
                    Z"/>
                
-                 <Path Fill="#ff595959" FillRule="NonZero" Data="
+                 <Path Fill="#ff595959" Data="F1
                    M 110.280273,151.634766
                    C 111.371094,151.634766 112.113281,150.718750 112.113281,149.365723
                    C 112.113281,148.013184 111.341797,147.198730 110.164063,147.198730
@@ -374,14 +374,14 @@
 
         
           	<Canvas Name="HoursPointer">
-                  <Path Fill="#ff000000" FillRule="NonZero" Data="
+                  <Path Fill="#ff000000" Data="F1
                     M 72.456543,100.135742
                     L 76.956543,70.092773
                     L 68.081543,70.193359
                     L 72.456543,100.135742
                     Z"/>
                 
-                  <Path Fill="#ff383838" FillRule="NonZero" Data="
+                  <Path Fill="#ff383838" Data="F1
                     M 77.044434,67.138672
                     C 75.889160,66.009766 74.312988,65.312500 72.569824,65.312500
                     C 71.008301,65.312500 69.578613,65.873047 68.466309,66.800781
@@ -391,7 +391,7 @@
                     C 78.976074,69.922852 78.234863,68.300781 77.044434,67.138672
                     Z"/>
                 
-                  <Path Fill="#ffffffff" FillRule="NonZero" Data="
+                  <Path Fill="#ffffffff" Data="F1
                     M 77.556152,71.903320
                     C 77.556152,74.647461 75.331543,76.872070 72.587402,76.872070
                     C 69.844238,76.872070 67.618652,74.647461 67.618652,71.903320
@@ -400,19 +400,19 @@
                     Z"/>
                     
         				<Canvas.RenderTransform>
-        					<RotateTransform Angle="160" Center="0,0" />
+        					<RotateTransform Angle="160" CenterX="0" CenterY="0" />
         				</Canvas.RenderTransform>
           	</Canvas>
         
         		<Canvas Name="MinutesPointer">
-                  <Path Fill="#ff000000" FillRule="NonZero" Data="
+                  <Path Fill="#ff000000" Data="F1
                     M 72.775879,30.843750
                     L 68.275879,68.093750
                     L 77.150879,67.968750
                     L 72.775879,30.843750
                     Z"/>
                 
-                  <Path Fill="#ff383838" FillRule="NonZero" Data="
+                  <Path Fill="#ff383838" Data="F1
                     M 78.963379,71.539063
                     C 78.963379,75.078125 76.096191,77.945313 72.557129,77.945313
                     C 69.019043,77.945313 66.150879,75.078125 66.150879,71.539063
@@ -420,7 +420,7 @@
                     C 76.096191,65.132813 78.963379,68.000000 78.963379,71.539063
                     Z"/>
                 
-                  <Path Fill="#ffffffff" FillRule="NonZero" Data="
+                  <Path Fill="#ffffffff" Data="F1
                     M 69.246582,75.458008
                     C 67.306152,73.517578 67.306152,70.371582 69.246582,68.431641
                     C 71.187012,66.491699 74.333496,66.491211 76.273926,68.431641
@@ -429,12 +429,12 @@
                     Z"/>
         
         				<Canvas.RenderTransform>
-        					<RotateTransform Angle="160" Center="0,0" />
+        					<RotateTransform Angle="160" CenterX="0" CenterY="0" />
         				</Canvas.RenderTransform>
         		</Canvas>
         
         		<Canvas Name="SecondsPointer">
-                  <Path Fill="#fffa0e0b" FillRule="NonZero" Data="
+                  <Path Fill="#fffa0e0b" Data="F1
                     M 74.676270,71.650391
                     C 74.676270,72.726563 73.804199,73.598633 72.729004,73.598633
                     C 71.652832,73.598633 70.780762,72.726563 70.780762,71.650391
@@ -442,7 +442,7 @@
                     C 73.804199,69.703125 74.676270,70.575195 74.676270,71.650391
                     Z"/>
                 
-                  <Path Fill="#fffa0e0b" FillRule="NonZero" Data="
+                  <Path Fill="#fffa0e0b" Data="F1
                     M 122.572754,72.166992
                     L 72.601074,72.166992
                     L 72.601074,71.134766
@@ -452,7 +452,7 @@
         
         				<Canvas.RenderTransform>
         						<!-- -->
-        						<RotateTransform Angle="0" Center="0,0" />
+        						<RotateTransform Angle="0" CenterX="0" CenterY="0" />
         				</Canvas.RenderTransform>
 
 

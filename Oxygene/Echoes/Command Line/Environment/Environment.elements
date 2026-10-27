@@ -9,7 +9,7 @@
     <AllowLegacyCreate>False</AllowLegacyCreate>
     <ApplicationIcon>Properties\App.ico</ApplicationIcon>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFramework>.NETFramework4.8</TargetFramework>
     <ProjectGuid>{F4269134-C46D-42E7-87D2-5A28DCC34F26}</ProjectGuid>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <Name>Environment</Name>

@@ -11,13 +11,13 @@ uses
 type
   MyApp = public partial class(Application)
   private
-    method AppStartingUp(sender: Object; e: StartingUpCancelEventArgs);
+    method AppStartingUp(sender: Object; e: StartupEventArgs);
 
   end;
   
 implementation
 
-method MyApp.AppStartingUp(sender: Object; e: StartingUpCancelEventArgs);
+method MyApp.AppStartingUp(sender: Object; e: StartupEventArgs);
 begin
   var lMainWindow := new OxygeneWindow();
   

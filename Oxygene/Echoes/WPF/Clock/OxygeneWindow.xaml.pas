@@ -12,8 +12,7 @@ uses
   System.Windows.Documents,
   System.Windows.Media,
   System.Windows.Navigation,
-  System.Windows.Shapes,
-  System.Windows.Forms;
+  System.Windows.Shapes;
   
 type
   OxygeneWindow = public partial class(Window)
@@ -32,16 +31,19 @@ constructor OxygeneWindow;
 begin
   InitializeComponent();
 
-  ( SecondsPointer.RenderTransform as RotateTransform ).Center := new Point( 72, 71 );
-  ( MinutesPointer.RenderTransform as RotateTransform ).Center := new Point( 72, 72 );
-  ( HoursPointer.RenderTransform as RotateTransform ).Center := new Point( 72, 72 );
+  ( SecondsPointer.RenderTransform as RotateTransform ).CenterX := 72;
+  ( SecondsPointer.RenderTransform as RotateTransform ).CenterY := 71;
+  ( MinutesPointer.RenderTransform as RotateTransform ).CenterX := 72;
+  ( MinutesPointer.RenderTransform as RotateTransform ).CenterY := 72;
+  ( HoursPointer.RenderTransform as RotateTransform ).CenterX := 72;
+  ( HoursPointer.RenderTransform as RotateTransform ).CenterY := 72;
 
 	// The updateClock() method will update the pointers to the apporiate time,
 	// we trigger the method at creation to let it be update accordinly at run time.
   updateClock();
   
   fTimer := new System.Windows.Threading.DispatcherTimer();
-  //fTimer.Interval := 2000;
+  fTimer.Interval := TimeSpan.FromSeconds(1);
   fTimer.Tick += ElapsedEventHandler;
   fTimer.Start();
 end;
@@ -55,7 +57,7 @@ begin
   ( SecondsPointer.RenderTransform as RotateTransform ).Angle := lTime.Second * 6 - 90;
   ( MinutesPointer.RenderTransform as RotateTransform ).Angle := lTime.Minute * 6;
   ( HoursPointer.RenderTransform as RotateTransform ).Angle 	:= iif( lHour < 12, lHour, lHour - 12 ) * 30 - 180;
-  Text := 'World Clock (' + DateTime.Now.ToString() + ')';
+  Title := 'World Clock (' + DateTime.Now.ToString() + ')';
 end;
 
 method OxygeneWindow.ElapsedEventHandler(sender: Object; e: EventArgs); 
