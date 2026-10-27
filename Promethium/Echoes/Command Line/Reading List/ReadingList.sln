@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "ReadingList", "ReadingList.elements", "{AAB28681-1A7F-4E77-8868-743EA6CF35EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAB28681-1A7F-4E77-8868-743EA6CF35EA}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{AAB28681-1A7F-4E77-8868-743EA6CF35EA}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{AAB28681-1A7F-4E77-8868-743EA6CF35EA}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{AAB28681-1A7F-4E77-8868-743EA6CF35EA}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

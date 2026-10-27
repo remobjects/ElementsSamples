@@ -1,6 +1,6 @@
 # Elements Samples
 
-This git repository contains the official sample suite for the [RemObjects Elements](http://www.elementscompiler.com) compiler and tool chain, including all three languages (Oxygene, C# and Swift) and all three currently supported platforms (.NET, Cocoa and Java/Android).
+This git repository contains the official sample suite for the [RemObjects Elements](http://www.elementscompiler.com) compiler and tool chain, including examples for its languages and target platforms.
 
 Most of these samples ship with and are installed by the Elements installer for Windows; this repository represents a complete super-set of those samples, and might contain newer versions. Fire 8.4 and later provides the option to install these samples directly from the git repository.
 
@@ -20,6 +20,7 @@ Languages:
 * **Hydrogene** &ndash; RemObjects C#
 * **Silver** &ndash; RemObjects Swift
 * **Iodine** &ndash; RemObjects Java
+* **Promethium** &ndash; RemObjects Python
 
 Platforms:
 

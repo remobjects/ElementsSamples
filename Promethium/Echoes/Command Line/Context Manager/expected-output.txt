@@ -1,0 +1,11 @@
+start
+enter outer
+enter inner
+work
+exit inner clean
+exit outer clean
+enter failed
+exit failed error
+caught
+enter handled
+exit handled error
