@@ -1,0 +1,24 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{49D80970-0838-4FBA-A0E3-08B7A85410A9}</ProjectGuid>
+    <OutputType>Executable</OutputType>
+    <BinaryName>TeeChart</BinaryName>
+    <RootNamespace>TeeChartSample</RootNamespace>
+    <DelphiSDK>Delphi</DelphiSDK>
+    <Architecture>x86_64</Architecture>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rtl" />
+    <Reference Include="gc" />
+    <Reference Include="Island" />
+    <Reference Include="Island.DelphiSupport" />
+    <Reference Include="Delphi.rtl" />
+    <Reference Include="Delphi.fmx" />
+    <Reference Include="Delphi.FmxTee" />
+    <Reference Include="Delphi.FmxTeeUI" />
+    <Compile Include="Main.pas" />
+    <EmbeddedResource Include="Main.fmx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Elements/RemObjects.Elements.Island.Windows.targets" />
+</Project>

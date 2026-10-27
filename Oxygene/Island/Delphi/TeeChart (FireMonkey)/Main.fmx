@@ -1,0 +1,12 @@
+object ChartForm: TChartForm
+  Caption = 'Delphi TeeChart - Elements Oxygene'
+  ClientHeight = 300
+  ClientWidth = 500
+  OnCreate = FormCreate
+  object Chart1: TChart
+    Align = Client
+    object BarSeries1: TBarSeries
+      ColorEachPoint = True
+    end
+  end
+end
