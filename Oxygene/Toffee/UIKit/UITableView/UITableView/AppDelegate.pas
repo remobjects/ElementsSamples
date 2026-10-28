@@ -1,28 +1,17 @@
 ﻿namespace OxygeneiOSUITableViewDemo;
 
-interface
-
-uses
-  UIKit;
+uses UIKit;
 
 type
   [IBObject]
-  AppDelegate = class(IUIApplicationDelegate)
-  private
+  AppDelegate = public class(IUIApplicationDelegate)
   public
-    property window: UIWindow;
-    method application(application: UIApplication) didFinishLaunchingWithOptions(launchOptions: NSDictionary): Boolean;
+    method application(aApplication: UIApplication) didFinishLaunchingWithOptions(aOptions: NSDictionary): Boolean;
+    begin
+      // Process initialization belongs here; each SceneDelegate owns its window.
+      result := true;
+    end;
+
   end;
-
-implementation
-
-method AppDelegate.application(application: UIApplication) didFinishLaunchingWithOptions(launchOptions: NSDictionary): Boolean;
-begin
-  window := new UIWindow withFrame(UIScreen.mainScreen.bounds);
-  window.rootViewController := new UINavigationController withRootViewController(new RootViewController);
-  window.makeKeyAndVisible;
-  result := true;
-end;
-
 
 end.

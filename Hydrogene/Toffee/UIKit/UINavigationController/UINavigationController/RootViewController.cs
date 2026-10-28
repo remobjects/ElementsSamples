@@ -5,21 +5,17 @@
 	[IBObject]
 	class RootViewController : UIViewController
 	{
-		public override id init()
+		public this() : base withNibName("RootViewController") bundle(null)
 		{
-			this = base.initWithNibName("RootViewController") bundle(null);
-			if (this != null)
-			{
-				title = "UINavigationController";
-			}
-			return this;
+		  title = "UINavigationController";
+
 		}
 
 		[IBAction]
     public void buttonPressed(id sender)
     {
         SecondViewController secondViewController = new SecondViewController();
-        this.navigationController.pushViewController(secondViewController) animated(true); 
+        this.navigationController.pushViewController(secondViewController) animated(true);
 	  }
   }
 }

@@ -12,6 +12,7 @@
         <AllowUnsafeCode>False</AllowUnsafeCode>
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
         <SDK>iOS</SDK>
+    <DeploymentTargetVersion>13.0</DeploymentTargetVersion>
         <CreateAppBundle>True</CreateAppBundle>
         <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
         <Name>TicTacToe</Name>
@@ -38,7 +39,6 @@
         <CaptureConsoleOutput>False</CaptureConsoleOutput>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <CreateIPA>True</CreateIPA>
-        <Architecture>armv7;armv7s</Architecture>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="CoreGraphics"/>
@@ -50,6 +50,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppDelegate.pas"/>
+    <Compile Include="SceneDelegate.pas" />
         <Compile Include="Board.pas"/>
         <Compile Include="ComputerPlayer.pas"/>
         <Compile Include="Program.pas"/>
@@ -153,4 +154,7 @@
     <PropertyGroup>
         <PreBuildEvent/>
     </PropertyGroup>
+  <ItemGroup>
+    <Storyboard Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

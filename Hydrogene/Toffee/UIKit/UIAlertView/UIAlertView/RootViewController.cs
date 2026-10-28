@@ -1,50 +1,24 @@
 ﻿namespace CSharpiOSUIAlertViewDemo
 {
-	using UIKit;
+  using UIKit;
 
-	[IBObject]
-	class RootViewController : UIViewController
-	{
+  [IBObject]
+  class RootViewController : UIViewController
+  {
+    [IBOutlet] public UITextField messageField;
 
-    [IBOutlet]
-    public UITextField messageField;
-
-		public override id init()
-		{
-			this = base.initWithNibName("RootViewController") bundle(null);
-			if (this != null)
-			{
-				title = "CSharp UIAlertView Demo";
-			}
-			return this;
-		}
-
-
-    [IBAction]
-		public  void sendMessage(id sender)
-		{
-			UIAlertView message = new UIAlertView withTitle("Message") message(this.messageField.text) @delegate(this) cancelButtonTitle("OK") otherButtonTitles("More Info", "Even More Info", null);
-		  message.show();
-		}
-
-    
-	  public void alertView(UIAlertView alertView) clickedButtonAtIndex(NSInteger buttonIndex)
+    public this() : base withNibName("RootViewController") bundle(null)
     {
-        string buttonText = alertView.buttonTitleAtIndex(buttonIndex);
-        NSLog("Button Text:%@",buttonText );
-        if (buttonText == "OK")
-          NSLog("OK");
-       
-        switch (buttonText)
-        {
-           case "OK": 
-			     {
-					   NSLog("OK was selected.");
-             break;
-           }
-        }
+      title = "Alerts";
     }
 
-
-	}
+    [IBAction]
+    public void sendMessage(id sender)
+    {
+      var alert = UIAlertController.alertControllerWithTitle("Message") message(messageField.text) preferredStyle(UIAlertControllerStyle.Alert);
+      foreach (var title in new string[] { "OK", "More Info", "Even More Info" })
+        alert.addAction(UIAlertAction.actionWithTitle(title) style(UIAlertActionStyle.Default) handler(action => NSLog("%@ was selected.", action.title)));
+      presentViewController(alert) animated(true) completion(null);
+    }
+  }
 }

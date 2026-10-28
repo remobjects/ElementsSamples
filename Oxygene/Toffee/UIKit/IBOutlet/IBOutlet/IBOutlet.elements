@@ -12,6 +12,7 @@
     <AllowUnsafeCode>False</AllowUnsafeCode>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <SDK>iOS</SDK>
+    <DeploymentTargetVersion>13.0</DeploymentTargetVersion>
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
     <Name>IBOutlet</Name>
@@ -45,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.pas" />
+    <Compile Include="SceneDelegate.pas" />
     <Compile Include="Program.pas" />
     <Compile Include="RootViewController.pas" />
   </ItemGroup>
@@ -75,4 +77,7 @@
   <PropertyGroup>
     <PreBuildEvent />
   </PropertyGroup>
+  <ItemGroup>
+    <Storyboard Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

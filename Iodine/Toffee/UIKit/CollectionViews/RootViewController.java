@@ -14,19 +14,15 @@ class RootViewController extends UICollectionViewController
 		return (UICollectionViewFlowLayout)collectionView.collectionViewLayout;
 	}
 
-	@Override
-	public id init()
+	public this()
 	{
-		this = super.initWithCollectionViewLayout(new UICollectionViewFlowLayout());
-		if (this != null)
-		{
-			title = "Collection View Sample";
-			collectionView.registerClass(UICollectionViewCell.class) forCellWithReuseIdentifier(CELL_IDENTIFIER);
-			collectionView.registerClass(UICollectionReusableView.class) forSupplementaryViewOfKind(UICollectionElementKindSectionHeader) withReuseIdentifier(HEADER_IDENTIFIER);
-			collectionViewFlowLayout().sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-			collectionViewFlowLayout().headerReferenceSize = CGSizeMake(40, 40); // only one dimension is used at a time
-		}
-		return this;
+	  super withCollectionViewLayout(new UICollectionViewFlowLayout());
+	  title = "Collection View Sample";
+	  collectionView.registerClass(UICollectionViewCell.class) forCellWithReuseIdentifier(CELL_IDENTIFIER);
+	  collectionView.registerClass(UICollectionReusableView.class) forSupplementaryViewOfKind(UICollectionElementKindSectionHeader) withReuseIdentifier(HEADER_IDENTIFIER);
+	  collectionViewFlowLayout().sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+	  collectionViewFlowLayout().headerReferenceSize = CGSizeMake(40, 40); // only one dimension is used at a time
+
 	}
 
 	@Override
@@ -37,16 +33,16 @@ class RootViewController extends UICollectionViewController
 		// set up the (random) data to display in the collection view.
 
 		// to avoid blocking the main thread and application startup, we do this in a block on a
-		// background thread. Once done, we dispatch mach to the main thread to trigger a reload.
+		// background thread. Once done, we dispatch back to the main thread to trigger a reload.
 
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), () -> {
 
 			var lArray = new NSMutableArray();
-			for (Int32 i; i <= arc4random_uniform(5)+5; i++)
+			for (Int32 i = 0; i <= arc4random_uniform(5)+5; i++)
 			{
 
 				var lSection = new NSMutableArray();
-				for (Int32 j; j <= arc4random_uniform(50)+5; j++)
+				for (Int32 j = 0; j <= arc4random_uniform(50)+5; j++)
 				{
 
 				  var lSize = arc4random_uniform(100) + 100;
@@ -56,9 +52,10 @@ class RootViewController extends UICollectionViewController
 				lArray.addObject(lSection);
 
 			}
-
-			data = lArray;
-			dispatch_async(dispatch_get_main_queue(), () -> collectionView.reloadData());
+			dispatch_async(dispatch_get_main_queue(), () -> {
+				data = lArray;
+				collectionView.reloadData();
+			});
 
 		});
 	}
@@ -88,17 +85,17 @@ class RootViewController extends UICollectionViewController
 		var result = collectionView.dequeueReusableCellWithReuseIdentifier(CELL_IDENTIFIER) forIndexPath(indexPath);
 
 		// remove any existing sub-views, in case we are reusing an existing cell
-		result.subviews.makeObjectsPerformSelector(NSSelectorFromString("removeFromSuperview"));
+		result.contentView.subviews.makeObjectsPerformSelector(NSSelectorFromString("removeFromSuperview"));
 
 		// and then add a label to the cell showing the current item number.
 		var lLabel = new UILabel();
 		lLabel.text = NSNumber.numberWithInt(indexPath.row).stringValue;
-		lLabel.frame = result.bounds;
+		lLabel.frame = result.contentView.bounds;
 		lLabel.textColor = UIColor.whiteColor;
 		lLabel.backgroundColor = UIColor.darkGrayColor;
 		lLabel.font = UIFont.systemFontOfSize(30);
-		lLabel.textAlignment = NSTextAlignment.NSTextAlignmentCenter;
-		result.addSubview(lLabel);
+		lLabel.textAlignment = NSTextAlignment.Center;
+		result.contentView.addSubview(lLabel);
 
 		return result;
 	}
@@ -125,7 +122,7 @@ class RootViewController extends UICollectionViewController
 		lLabel.textColor = UIColor.blackColor;
 		lLabel.backgroundColor = UIColor.lightGrayColor;
 		lLabel.font = UIFont.boldSystemFontOfSize(20);
-		lLabel.textAlignment = NSTextAlignment.NSTextAlignmentCenter;
+		lLabel.textAlignment = NSTextAlignment.Center;
 		lLabel.contentMode = UIViewContentMode.UIViewContentModeRedraw;
 		result.addSubview(lLabel);
 

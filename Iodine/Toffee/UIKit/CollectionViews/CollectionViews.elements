@@ -12,6 +12,7 @@
     <AllowUnsafeCode>False</AllowUnsafeCode>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <SDK>iOS</SDK>
+    <DeploymentTargetVersion>13.0</DeploymentTargetVersion>
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
     <Name>CollectionViews</Name>
@@ -45,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.java" />
+    <Compile Include="SceneDelegate.java" />
     <Compile Include="RootViewController.java" />
   </ItemGroup>
   <ItemGroup>
@@ -76,4 +78,7 @@
   <PropertyGroup>
     <PreBuildEvent />
   </PropertyGroup>
+  <ItemGroup>
+    <Storyboard Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
     <Name>SqliteApp</Name>
-    <DeploymentTargetVersion>10.0</DeploymentTargetVersion>
+    <DeploymentTargetVersion>13.0</DeploymentTargetVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="SceneDelegate.cs" />
     <Compile Include="DetailViewController.cs" />
     <Compile Include="MasterViewController.cs" />
     <Compile Include="Program.cs" />
@@ -83,4 +84,7 @@
   <PropertyGroup>
     <PreBuildEvent />
   </PropertyGroup>
+  <ItemGroup>
+    <Storyboard Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

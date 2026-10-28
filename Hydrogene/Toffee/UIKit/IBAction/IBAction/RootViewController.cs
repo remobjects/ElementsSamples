@@ -5,14 +5,14 @@
 	[IBObject]
   public class RootViewController : UIViewController
 	{
-	
-	
+
+
 	  private UILabel fLabel;
 
     [IBOutlet]
     public UILabel label
     {
-        get { 
+        get {
            return fLabel;
         }
 
@@ -21,14 +21,10 @@
         }
 		}
 
-		public override id init()
+		public this() : base withNibName("RootViewController") bundle(null)
 		{
-			this = base.initWithNibName("RootViewController") bundle(null);
-			if (this != null)
-			{
-				title = "iOS IBAction Demo";
-			}
-			return this;
+		  title = "iOS IBAction Demo";
+
 		}
 
     [IBAction]
@@ -36,6 +32,6 @@
     {
        label.text = "Button Was Tapped";
     }
-	
+
 	}
 }

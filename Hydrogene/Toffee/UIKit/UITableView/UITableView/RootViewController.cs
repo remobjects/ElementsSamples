@@ -9,18 +9,14 @@
 
 		private string[] dataArray;
 
-		public override id init()
+		public this() : base withNibName("RootViewController") bundle(null)
 		{
-			this = base.initWithNibName("RootViewController") bundle(null);
-			if (this != null)
-			{
-				title = "TableView Demo";
-				this.dataArray =  new string[] {"Athens" , "Paris",	 "St. Louis" , "Athens", "London", "Stockholm", "Berlin",  "Antwerp", "Chamonix",	"St. Moritz",	"Amsterdam"	, "Los Angeles", "Lake Placid",
-				"Garmisch-Partenkirchen", "Tokyo", "Sapporo", "Cortina d'Ampezzo", "Oslo", "Helsinki",	"Melbourne", "Stockholm", "Squaw Valley", "Rome",
-				"Innsbruck"	, "Mexico City", "Grenoble"	,"Sapporo" ,"Munich", "Montreal", "Moscow", "Lake Placid", "Sarajevo", "Seoul", "Calgary", "Barcelona", "Albertville",
-				"Lillehammer", "Atlanta", "Nagano", "Sydney", "Salt Lake City", "Turin", "Beijing", "Vancouver", "Sochi","Rio de Janero", "Pyeongchang"};
-			}
-			return this;
+		  title = "TableView Demo";
+		  this.dataArray =  new string[] {"Athens" , "Paris",	 "St. Louis" , "Athens", "London", "Stockholm", "Berlin",  "Antwerp", "Chamonix",	"St. Moritz",	"Amsterdam"	, "Los Angeles", "Lake Placid",
+		  "Garmisch-Partenkirchen", "Tokyo", "Sapporo", "Cortina d'Ampezzo", "Oslo", "Helsinki",	"Melbourne", "Stockholm", "Squaw Valley", "Rome",
+		  "Innsbruck"	, "Mexico City", "Grenoble"	,"Sapporo" ,"Munich", "Montreal", "Moscow", "Lake Placid", "Sarajevo", "Seoul", "Calgary", "Barcelona", "Albertville",
+		  "Lillehammer", "Atlanta", "Nagano", "Sydney", "Salt Lake City", "Turin", "Beijing", "Vancouver", "Sochi","Rio de Janero", "Pyeongchang"};
+
 		}
 
 		public override void viewDidLoad()
@@ -39,7 +35,7 @@
 
 			cell.textLabel.text = this.dataArray[indexPath.row];
 
-			return cell!;   
+			return cell!;
 		}
 
 		private NSInteger tableView(UITableView! tableView) numberOfRowsInSection(NSInteger section)
@@ -56,8 +52,9 @@
 		private void tableView(UITableView tableView) didSelectRowAtIndexPath(NSIndexPath indexPath)
 		{
 			string text = tableView.cellForRowAtIndexPath(indexPath).textLabel.text;
-			UIAlertView message = new UIAlertView withTitle("City Selected") message(text) @delegate(null) cancelButtonTitle("OK") otherButtonTitles(null);
-			message.show();
+			var message = UIAlertController.alertControllerWithTitle("City Selected") message(text) preferredStyle(UIAlertControllerStyle.Alert);
+			message.addAction(UIAlertAction.actionWithTitle("OK") style(UIAlertActionStyle.Default) handler(null));
+			presentViewController(message) animated(true) completion(null);
 		}
 	}
 }

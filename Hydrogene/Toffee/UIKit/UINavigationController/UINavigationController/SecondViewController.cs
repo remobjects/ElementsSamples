@@ -5,13 +5,10 @@ namespace UINavigationController
 	[IBObject]
 	public class SecondViewController: UIViewController
 	{
-		public override id init()
+		public this() : base withNibName("SecondViewController") bundle(null)
 		{
-			this = base.initWithNibName("SecondViewController") bundle(null);
-      if (this != null) {
-        this.title = "Second View Controller";
-	    }
-			return this;
+		  this.title = "Second View Controller";
+
 		}
 
     public override void viewDidLoad()
@@ -31,8 +28,9 @@ namespace UINavigationController
 
     public void otherButtonPressed()
     {
-         UIAlertView message = new UIAlertView withTitle("Search Selected") message("If this were a real application you would now go into the DO STUFF mode") @delegate(null) cancelButtonTitle("OK") otherButtonTitles(null);
-         message.show();
+         var message = UIAlertController.alertControllerWithTitle("Search Selected") message("If this were a real application you would now go into the DO STUFF mode") preferredStyle(UIAlertControllerStyle.Alert);
+         message.addAction(UIAlertAction.actionWithTitle("OK") style(UIAlertActionStyle.Default) handler(null));
+         presentViewController(message) animated(true) completion(null);
     }
 	}
 }

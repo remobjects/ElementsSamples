@@ -5,14 +5,10 @@
 	[IBObject]
 	class RootViewController : UIViewController
 	{
-		public override id init()
+		public this() : base withNibName("RootViewController") bundle(null)
 		{
-			this = base.initWithNibName("RootViewController") bundle(null);
-			if (this != null)
-			{
-				title = "CSharpiOSTableViewCellDemo";
-			}
-			return this;
+		  title = "CSharpiOSTableViewCellDemo";
+
 		}
 
 		public override void viewDidLoad()

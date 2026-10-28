@@ -7,6 +7,7 @@
     <AssemblyName>MultipleViews</AssemblyName>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <SDK>iOS</SDK>
+    <DeploymentTargetVersion>13.0</DeploymentTargetVersion>
     <MangleTypeNames>True</MangleTypeNames>
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
@@ -34,12 +35,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="SceneDelegate.cs" />
     <Compile Include="RootViewController.cs" />
     <Content Include="Resources\Info.plist" />
     <AssetCatalog Include="Resources\Images.xcassets">
       <AppIcon>AppIcon</AppIcon>
     </AssetCatalog>
-    <Xib Include="Resources\LaunchScreen.xib" />
     <Compile Include="DetailViewController.cs" />
     <Xib Include="DetailView.xib" />
     <AppResource Include="Resources\Gold.png" />
@@ -51,4 +52,7 @@
     <Compile Include="Data.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+  <ItemGroup>
+    <Storyboard Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

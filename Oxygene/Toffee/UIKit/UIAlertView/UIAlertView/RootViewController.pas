@@ -1,47 +1,29 @@
 ﻿namespace OxygeneiOSUIAlertViewDemo;
 
-interface
-
-uses
-  UIKit;
-  
+uses UIKit;
 
 type
   [IBObject]
-  RootViewController = public class(UIViewController, IUIAlertViewDelegate)
-  private
-    method alertView(alertView : UIAlertView) clickedButtonAtIndex(buttonIndex: NSInteger);
+  RootViewController = public class(UIViewController)
   public
-    method init: id; override;
 
-    [IBOutlet] messageField : UITextField;
-    [IBAction] method sendMessage(sender: id);
+    [IBOutlet] property messageField: UITextField;
+
+    constructor;
+    begin
+      inherited constructor withNibName("RootViewController") bundle(nil);
+      title := "Alerts";
+    end;
+
+    [IBAction]
+    method sendMessage(aSender: id);
+    begin
+      var lAlert := UIAlertController.alertControllerWithTitle("Message") message(messageField.text) preferredStyle(UIAlertControllerStyle.Alert);
+      for each lTitle in ["OK", "More Info", "Even More Info"] do
+        lAlert.addAction(UIAlertAction.actionWithTitle(lTitle) style(UIAlertActionStyle.Default) handler(aAction -> NSLog("%@ was selected.", aAction.title)));
+      presentViewController(lAlert) animated(true) completion(nil);
+    end;
+
   end;
-
-implementation
-
-method RootViewController.init: id;
-begin
-  self := inherited initWithNibName('RootViewController') bundle(nil);
-  if assigned(self) then begin
-    title := 'Oxygene UIAlertView Demo';
-  end;
-  result := self;
-end;
-
-method  RootViewController.sendMessage(sender: id);
-begin
-  var message := new UIAlertView withTitle("Message") message(messageField.text) &delegate(self) cancelButtonTitle("OK") otherButtonTitles("More Info", "Even More Info", nil);
-  message.show();
-end;
-
-method RootViewController.alertView(alertView : UIAlertView) clickedButtonAtIndex(buttonIndex: NSInteger);
-begin
-   case alertView.buttonTitleAtIndex(buttonIndex) of 
-    "OK": NSLog("OK was selected.");
-    "More Info": NSLog("More Info was selected.");
-    "Even More Info": NSLog("Even More Info was selected.");
-   end;
-end;
 
 end.

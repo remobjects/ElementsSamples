@@ -1,50 +1,41 @@
 ﻿namespace FirstOxygeneiOSApp;
 
-interface
-
 uses
   UIKit;
 
 type
   [IBObject]
   RootViewController = public class(UIViewController)
-  private
   public
-    method init: id; override;
+
+    constructor;
+    begin
+      inherited constructor withNibName('RootViewController') bundle(nil);
+      title := 'My First App';
+    end;
+
     method viewDidLoad; override;
+    begin
+      inherited viewDidLoad;
+
+      view.backgroundColor := UIColor.systemBackgroundColor;
+      var lLabel := new UILabel;
+      lLabel.translatesAutoresizingMaskIntoConstraints := false;
+      lLabel.text := "My First iOS App.";
+      lLabel.textColor := UIColor.labelColor;
+      lLabel.font := UIFont.preferredFontForTextStyle(UIFontTextStyleTitle1);
+      lLabel.adjustsFontForContentSizeCategory := true;
+      lLabel.numberOfLines := 0;
+      lLabel.textAlignment := NSTextAlignment.Center;
+      view.addSubview(lLabel);
+
+      // Safe-area constraints adapt to rotation, resizing and larger text.
+      var lGuide := view.safeAreaLayoutGuide;
+      lLabel.leadingAnchor.constraintEqualToAnchor(lGuide.leadingAnchor) constant(20).active := true;
+      lLabel.trailingAnchor.constraintEqualToAnchor(lGuide.trailingAnchor) constant(-20).active := true;
+      lLabel.centerYAnchor.constraintEqualToAnchor(lGuide.centerYAnchor).active := true;
+    end;
+
   end;
-
-implementation
-
-method RootViewController.init: id;
-begin
-  self := inherited initWithNibName('RootViewController') bundle(nil);
-  if assigned(self) then begin
-    title := 'My First App';
-  end;
-  result := self;
-end;
-
-method RootViewController.viewDidLoad;
-begin
-  inherited viewDidLoad;
-
-  //Create a Frame To Work With
-  var frame := CGRectMake(0, 0, 320, 200);
-
-  //Create a new label based on the frame.
-  var label := new UILabel withFrame(frame);
-
-  //Set some properties of the label
-  label.textColor := UIColor.redColor;
-  label.font :=  UIFont.fontWithName("American Typewriter") size(30);
-  label.textAlignment := NSTextAlignment.NSTextAlignmentCenter;
-  label.text  := "My First iOS App.";
-
-  //Add the label to the view
-  self.view.addSubview(label);
-  
-end;
-
 
 end.

@@ -1,7 +1,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>CFBundleIcons</key>
+        <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+      <key>UIApplicationSupportsMultipleScenes</key>
+      <false/>
+      <key>UISceneConfigurations</key>
+      <dict>
+        <key>UIWindowSceneSessionRoleApplication</key>
+        <array>
+          <dict>
+            <key>UISceneConfigurationName</key>
+            <string>Default Configuration</string>
+            <key>UISceneDelegateClassName</key>
+            <string>SceneDelegate</string>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+<key>CFBundleIcons</key>
     <dict>
       <key>CFBundlePrimaryIcon</key>
       <dict>
@@ -23,13 +42,8 @@
       <integer>1</integer>
       <integer>2</integer>
     </array>
-    <key>UIMainStoryboardFile</key>
-    <string>MainStoryboard~iPhone</string>
-    <key>UIMainStoryboardFile~ipad</key>
-    <string>MainStoryboard~iPad</string>
     <key>UIRequiredDeviceCapabilities</key>
     <array>
-      <string>armv7</string>
     </array>
     <key>UISupportedInterfaceOrientations</key>
     <array>

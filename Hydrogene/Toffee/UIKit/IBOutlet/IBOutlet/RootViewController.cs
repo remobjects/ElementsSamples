@@ -9,14 +9,10 @@
 		[IBOutlet]
 		public UILabel label;
 
-		public override id init()
+		public this() : base withNibName("RootViewController") bundle(null)
 		{
-			this = base.initWithNibName("RootViewController") bundle(null);
-			if (this != null)
-			{
-				title = "CSharp iOS IBOutlet Demo";
-			}
-			return this;
+		  title = "CSharp iOS IBOutlet Demo";
+
 		}
 
 		public override void viewDidLoad()

@@ -1,26 +1,17 @@
 ﻿namespace Maps;
 
-interface
-
-uses
-  UIKit;
+uses UIKit;
 
 type
-  AppDelegate = class(IUIApplicationDelegate)
-  private
+  [IBObject]
+  AppDelegate = public class(IUIApplicationDelegate)
   public
-    property window: UIWindow;
-
-    method application(application: UIApplication) didFinishLaunchingWithOptions(launchOptions: NSDictionary): Boolean;
+    method application(aApplication: UIApplication) didFinishLaunchingWithOptions(aOptions: NSDictionary): Boolean;
+    begin
+      // Process initialization belongs here; each SceneDelegate owns its window.
+      result := true;
+    end;
 
   end;
-
-implementation
-
-method AppDelegate.application(application: UIApplication) didFinishLaunchingWithOptions(launchOptions: NSDictionary): Boolean;
-begin
-  result := true;
-end;
-
 
 end.

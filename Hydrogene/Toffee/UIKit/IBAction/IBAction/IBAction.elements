@@ -12,6 +12,7 @@
     <AllowUnsafeCode>False</AllowUnsafeCode>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <SDK>iOS</SDK>
+    <DeploymentTargetVersion>13.0</DeploymentTargetVersion>
     <CreateAppBundle>True</CreateAppBundle>
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
     <Name>IBAction</Name>
@@ -45,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="SceneDelegate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="RootViewController.cs" />
   </ItemGroup>
@@ -75,4 +77,7 @@
   <PropertyGroup>
     <PreBuildEvent />
   </PropertyGroup>
+  <ItemGroup>
+    <Storyboard Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>
