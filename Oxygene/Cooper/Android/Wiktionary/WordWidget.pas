@@ -16,115 +16,115 @@
  * limitations under the License.
  *}
 
-interface
-
 uses
-  android.app,
-  android.appwidget,
-  android.content,
-  android.content.res,
-  android.net,
-  android.os,
-  android.text.format,
-  android.util,
-  android.widget,
-  java.util.regex;
+  android.app, android.app.job, android.appwidget, android.content,
+  android.content.res, android.net, android.os, android.util, android.widget,
+  java.util.concurrent, java.util.regex;
 
 type
-  /// <summary>
-  /// Define a simple widget that shows the Wiktionary "Word of the day." To build
-  /// an update we spawn a background Service to perform the API queries.
-  /// </summary>
   WordWidget = public class(AppWidgetProvider)
   public
-    method onUpdate(aContext: Context; appWidgetManager: AppWidgetManager; appWidgetIds: array of Integer); override;
+
+    method onUpdate(aContext: Context; aManager: AppWidgetManager; aIds: array of Integer); override;
+    begin
+      // JobScheduler permits network work after this broadcast receiver returns.
+      var lJob := new JobInfo.Builder(1, new ComponentName(aContext, typeOf(UpdateService)));
+      lJob.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
+      JobScheduler(aContext.getSystemService(Context.JOB_SCHEDULER_SERVICE)).schedule(lJob.build);
+    end;
+
   end;
 
-  UpdateService nested in WordWidget = public class(Service)
+  UpdateService nested in WordWidget = public class(JobService)
   private
-    //Regular expression that splits "Word of the day" entry into word
-    //name, word type, and the first description bullet point.
+
     const WOTD_PATTERN = '(?s)\{\{wotd\|(.+?)\|(.+?)\|([^#\|]+).*?\}\}';
+    field fExecutor: ExecutorService := Executors.newSingleThreadExecutor;
+    field fWork: java.util.concurrent.&Future<Object>;
+    field fHandler: Handler := new Handler(Looper.MainLooper);
+    field fGeneration: Integer;
+
   public
-    method onStart(aIntent: Intent; startId: Integer); override;
+
+    method onStartJob(aParameters: JobParameters): Boolean; override;
+    begin
+      inc(fGeneration);
+      var lGeneration := fGeneration;
+      fWork := fExecutor.submit(Runnable(method begin
+        var lViews := buildUpdate(self);
+        fHandler.post(method begin
+          if lGeneration ≠ fGeneration then
+            exit;
+          AppWidgetManager.getInstance(self).updateAppWidget(new ComponentName(self, typeOf(WordWidget)), lViews);
+          jobFinished(aParameters, false);
+        end);
+      end));
+      result := true;
+    end;
+
+    method onStopJob(aParameters: JobParameters): Boolean; override;
+    begin
+      inc(fGeneration);
+      if assigned(fWork) then
+        fWork.cancel(true);
+      fHandler.removeCallbacksAndMessages(nil);
+      result := true;
+    end;
+
+    method onDestroy; override;
+    begin
+      inc(fGeneration);
+      fExecutor.shutdownNow;
+      fHandler.removeCallbacksAndMessages(nil);
+      inherited;
+    end;
+
     method buildUpdate(aContext: Context): RemoteViews;
-    method onBind(aIntent: Intent): IBinder; override;
+    begin
+      //  Pick out month names from resources
+      var res: Resources := aContext.Resources;
+      var monthNames: array of String := res.StringArray[R.&array.month_names];
+      //  Find current month and day
+      var today := java.util.Calendar.getInstance;
+      //  Build the page title for today, such as "March 21"
+      var pageName: String := res.getString(R.string.template_wotd_title, monthNames[today.get(java.util.Calendar.MONTH)], today.get(java.util.Calendar.DAY_OF_MONTH));
+      var pageContent: String := nil;
+      try
+        //  Try querying the Wiktionary API for today's word
+        pageContent := SimpleWikiHelper.getPageContent(pageName, false);
+      except
+        on e: SimpleWikiHelper.ApiException do
+          Log.e('WordWidget', 'Couldn''t contact API', e);
+        on e: SimpleWikiHelper.ParseException do
+          Log.e('WordWidget', 'Couldn''t parse API response', e)
+      end;
+      var views: RemoteViews := nil;
+      //  Use a regular expression to parse out the word and its definition
+      var matcher: Matcher := Pattern.compile(WOTD_PATTERN).matcher(if assigned(pageContent) then pageContent else "");
+      if matcher.find then
+      begin
+        //  Build an update that holds the updated widget contents
+        views := new RemoteViews(aContext.PackageName, R.layout.widget_word);
+        var wordTitle: String := matcher.&group(1);
+        views.setTextViewText(R.id.word_title, wordTitle);
+        views.setTextViewText(R.id.word_type, matcher.&group(2));
+        views.setTextViewText(R.id.definition, matcher.&group(3).trim);
+        //  When user clicks on widget, launch to Wiktionary definition page
+        var definePage: String := WideString.format('%s://%s/%s', ExtendedWikiHelper.WIKI_AUTHORITY, ExtendedWikiHelper.WIKI_LOOKUP_HOST, wordTitle);
+        var defineIntent: Intent := new Intent(Intent.ACTION_VIEW, Uri.parse(definePage));
+        defineIntent.setClass(aContext, typeOf(LookupActivity));
+        var lPendingIntent: PendingIntent := PendingIntent.getActivity(aContext, 0, defineIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE);
+        views.setOnClickPendingIntent(R.id.widget, lPendingIntent)
+      end
+      else
+      begin
+        //  Didn't find word of day, so show error message
+        views := new RemoteViews(aContext.PackageName, R.layout.widget_message);
+        views.setTextViewText(R.id.message, aContext.String[R.string.widget_error])
+      end;
+      exit views
+    end;
+
   end;
-
-implementation
-
-method WordWidget.onUpdate(aContext: Context; appWidgetManager: AppWidgetManager; appWidgetIds: array of Integer);
-begin
-  //  To prevent any ANR timeouts, we perform the update in a service
-  aContext.startService(new Intent(aContext, typeOf(UpdateService)))
-end;
-
-method WordWidget.UpdateService.onStart(aIntent: Intent; startId: Integer);
-begin
-  //  Build the widget update for today
-  var updateViews: RemoteViews := buildUpdate(self);
-  //  Push update for this widget to the home screen
-  var thisWidget: ComponentName := new ComponentName(self, typeOf(WordWidget));
-  var manager: AppWidgetManager := AppWidgetManager.getInstance(self);
-  manager.updateAppWidget(thisWidget, updateViews)
-end;
-
-/// <summary>
-/// Build a widget update to show the current Wiktionary
-/// "Word of the day." Will block until the online API returns.
-/// </summary>
-/// <param name="context"></param>
-/// <returns></returns>
-method WordWidget.UpdateService.buildUpdate(aContext: Context): RemoteViews;
-begin
-  //  Pick out month names from resources
-  var res: Resources := aContext.Resources;
-  var monthNames: array of String := res.StringArray[R.&array.month_names];
-  //  Find current month and day
-  var today: Time := new Time();
-  today.setToNow;
-  //  Build the page title for today, such as "March 21"
-  var pageName: String := res.getString(R.string.template_wotd_title, monthNames[today.month], today.monthDay);
-  var pageContent: String := nil;
-  try
-    //  Try querying the Wiktionary API for today's word
-    pageContent := SimpleWikiHelper.getPageContent(pageName, false);
-  except
-    on e: SimpleWikiHelper.ApiException do 
-      Log.e('WordWidget', 'Couldn''t contact API', e);
-    on e: ParseException do 
-      Log.e('WordWidget', 'Couldn''t parse API response', e)
-  end;
-  var views: RemoteViews := nil;
-  //  Use a regular expression to parse out the word and its definition
-  var matcher: Matcher := Pattern.compile(WOTD_PATTERN).matcher(pageContent);
-  if matcher.find then 
-  begin
-    //  Build an update that holds the updated widget contents
-    views := new RemoteViews(aContext.PackageName, R.layout.widget_word);
-    var wordTitle: String := matcher.&group(1);
-    views.setTextViewText(R.id.word_title, wordTitle);
-    views.setTextViewText(R.id.word_type, matcher.&group(2));
-    views.setTextViewText(R.id.definition, matcher.&group(3).trim);
-    //  When user clicks on widget, launch to Wiktionary definition page
-    var definePage: String := WideString.format('%s://%s/%s', ExtendedWikiHelper.WIKI_AUTHORITY, ExtendedWikiHelper.WIKI_LOOKUP_HOST, wordTitle);
-    var defineIntent: Intent := new Intent(Intent.ACTION_VIEW, Uri.parse(definePage));
-    var lPendingIntent: PendingIntent := PendingIntent.getActivity(aContext, 0, defineIntent, 0);
-    views.setOnClickPendingIntent(R.id.widget, lPendingIntent)
-  end
-  else
-  begin
-    //  Didn't find word of day, so show error message
-    views := new RemoteViews(aContext.PackageName, R.layout.widget_message);
-    views.setTextViewText(R.id.message, aContext.String[R.string.widget_error])
-  end;
-  exit views
-end;
-
-method WordWidget.UpdateService.onBind(aIntent: Intent): IBinder;
-begin
-  //  We don't need to bind to this service
-  exit nil
-end;
 
 end.

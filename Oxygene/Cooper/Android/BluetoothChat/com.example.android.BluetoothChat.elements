@@ -41,6 +41,7 @@
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
     </PropertyGroup>
     <ItemGroup>
+    <Compile Include="WindowInsetsSupport.pas" />
         <Folder Include="Properties\"/>
         <Folder Include="res\"/>
         <Folder Include="res\drawable-hdpi\"/>
@@ -64,6 +65,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="BlueToothChat.pas"/>
+        <Compile Include="BluetoothPermissions.pas"/>
         <Compile Include="BluetoothChatService.pas"/>
         <Compile Include="DeviceListActivity.pas"/>
     </ItemGroup>

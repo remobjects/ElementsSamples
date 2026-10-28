@@ -44,6 +44,7 @@
         <AndroidSign>False</AndroidSign>
     </PropertyGroup>
     <ItemGroup>
+    <Compile Include="WindowInsetsSupport.pas" />
         <Folder Include="Properties\"/>
         <Folder Include="res\"/>
         <Folder Include="res\drawable-hdpi\"/>

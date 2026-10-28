@@ -43,6 +43,7 @@
     <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="WindowInsetsSupport.pas" />
     <Folder Include="Properties\" />
     <Folder Include="res\" />
     <Folder Include="res\anim\" />

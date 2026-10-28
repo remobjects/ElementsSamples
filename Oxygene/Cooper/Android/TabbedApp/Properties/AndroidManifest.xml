@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		package="org.me.tabbedapp">
+		android:versionCode="1" android:versionName="1.0" package="org.me.tabbedapp">
   <application 
         android:label="@string/app_name"
         android:icon="@drawable/icon">
-    <activity android:label="@string/app_name" android:name="org.me.tabbedapp.MainActivity"
+    <activity android:label="@string/app_name" android:name="org.me.tabbedapp.MainActivity" android:exported="true"
               android:theme="@android:style/Theme.NoTitleBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="@string/tab_one_label" android:name="org.me.tabbedapp.TabOneActivity" />
-    <activity android:label="@string/tab_two_label" android:name="org.me.tabbedapp.TabTwoActivity" />
-    <activity android:label="@string/tab_three_label" android:name="org.me.tabbedapp.TabThreeActivity" />
   </application>
-  <uses-sdk android:minSdkVersion="4" />
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
 </manifest>

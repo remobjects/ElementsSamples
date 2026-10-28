@@ -44,6 +44,7 @@
     <AndroidSign>False</AndroidSign>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="WindowInsetsSupport.pas" />
     <Folder Include="Properties\" />
     <Folder Include="res\" />
     <Folder Include="res\drawable-hdpi\" />
@@ -72,9 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.pas" />
-    <Compile Include="TabOneActivity.pas" />
-    <Compile Include="TabThreeActivity.pas" />
-    <Compile Include="TabTwoActivity.pas" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="res\drawable\ic_tab_one_grey.png">

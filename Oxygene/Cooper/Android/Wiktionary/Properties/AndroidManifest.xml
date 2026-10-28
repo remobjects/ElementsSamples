@@ -6,7 +6,7 @@
     android:versionName="1.0">
 
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="4" />
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
 
   <meta-data android:name="android.app.default_searchable" android:value=".LookupActivity" />
 
@@ -17,7 +17,7 @@
 
     <!-- Browser-like Activity to navigate dictionary definitions  -->
     <activity
-        android:name=".LookupActivity"
+        android:name=".LookupActivity" android:exported="true"
         android:theme="@style/LookupTheme"
         android:launchMode="singleTop"
         android:configChanges="orientation|keyboardHidden">
@@ -43,7 +43,7 @@
     </activity>
 
     <!-- Broadcast Receiver that will process AppWidget updates -->
-    <receiver android:name=".WordWidget"
+    <receiver android:name=".WordWidget" android:exported="false"
               android:label="@string/widget_name"
               android:icon="@drawable/app_icon"
               >
@@ -55,7 +55,7 @@
     </receiver>
 
     <!-- Service to perform web API queries -->
-    <service android:name=".WordWidget$UpdateService" />
+    <service android:name=".WordWidget$UpdateService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true" />
 
   </application>
 
