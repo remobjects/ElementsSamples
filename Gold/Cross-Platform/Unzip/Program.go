@@ -4,41 +4,38 @@ import (
 "archive/zip"
 "fmt"
 "io"
-"log"
 "os"
 "path/filepath"
 "strings"
 )
 
-//func main() int { // E102 Invalid signature for "main" method. It must either have no parameters, or one parameter declared as String or array of String. It must have either no result value, or an Int32 as result.
-//func main(args string[]) int {
 func main() {
 	writeLn("RemObjects Gold: Unzip Sample.")
 
 	args := os.Args[1:]
 	if args.Length != 2 {
 		writeLn("Syntax: unzip <zip file> <target folder>")
-		return //1
+		os.Exit(1)
+		return
 	}
 
 	if !Exists(args[0]) {
 		writeLn("File "+args[0]+" does not exist.")
-		return //1
+		os.Exit(1)
+		return
 	}
-
-	//if files, error := Unzip(args[0], args[1]) { // E17 Expression expected
 
 	files, error := Unzip(args[0], args[1])
 	if error != nil {
-		writeLn(error)
-		return //1
+		writeLn(error.Error())
+		os.Exit(1)
+		return
 	}
 
 	for _, file := range files {
 		writeLn(file)
 	}
 
-	return //0
 }
 
 func Exists(name string) bool {
@@ -53,6 +50,10 @@ func Exists(name string) bool {
 func Unzip(src string, dest string) ([]string, error) {
 
 	var filenames []string
+	dest, err := filepath.Abs(dest)
+	if err != nil {
+		return filenames, err
+	}
 
 	r, err := zip.OpenReader(src)
 	if err != nil {
@@ -61,9 +62,23 @@ func Unzip(src string, dest string) ([]string, error) {
 	defer r.Close()
 
 	for _, f := range r.File {
+        // Reject traversal before joining: do not depend on a backend normalizing Join.
+        entryName := strings.Replace(f.Name, "\\", "/", -1)
+        if strings.HasPrefix(entryName, "/") || strings.Contains(entryName, ":") {
+            return filenames, fmt.Errorf("%s: illegal file path", f.Name)
+        }
+        for _, part := range strings.Split(entryName, "/") {
+            if part == ".." {
+                return filenames, fmt.Errorf("%s: illegal file path", f.Name)
+            }
+        }
+        if f.Mode() & os.ModeSymlink != 0 {
+            return filenames, fmt.Errorf("%s: symbolic links are not extracted", f.Name)
+        }
+
 
 		// Store filename/path for returning and using later on
-		fpath := filepath.Join(dest, f.Name)
+		fpath := filepath.Join(dest, entryName)
 
 		// Check for ZipSlip. More Info: http://bit.ly/2MsjAWE
 		if !strings.HasPrefix(fpath, filepath.Clean(dest)+string(os.PathSeparator)) {
@@ -74,7 +89,9 @@ func Unzip(src string, dest string) ([]string, error) {
 
 		if f.FileInfo().IsDir() {
 			// Make Folder
-			os.MkdirAll(fpath, os.ModePerm)
+			if err := os.MkdirAll(fpath, os.ModePerm); err != nil {
+				return filenames, err
+			}
 			continue
 		}
 
@@ -90,17 +107,24 @@ func Unzip(src string, dest string) ([]string, error) {
 
 		rc, err := f.Open()
 		if err != nil {
+			outFile.Close()
 			return filenames, err
 		}
 
 		_, err = io.Copy(outFile, rc)
 
 		// Close the file without defer to close before next iteration of loop
-		outFile.Close()
-		rc.Close()
+		outputCloseError := outFile.Close()
+		inputCloseError := rc.Close()
 
 		if err != nil {
 			return filenames, err
+		}
+		if outputCloseError != nil {
+			return filenames, outputCloseError
+		}
+		if inputCloseError != nil {
+			return filenames, inputCloseError
 		}
 	}
 	return filenames, nil

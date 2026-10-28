@@ -1,11 +1,10 @@
 ﻿package TinySecureHTTPServer
 
 // https server, with a handler for '/hello' path.
-// to test, browse to https://127.0.0.1/hello
-// to generate server.crt and server.key (self signed certificate, need to accept browser warning about it), use a linux machine:
-// openssl genrsa -out https-server.key 2048
-// openssl ecparam -genkey -name secp384r1 -out https-server.key
-// openssl req -new -x509 -sha256 -key https-server.key -out https-server.crt -days 3650
+// to test, browse to https://127.0.0.1:8443/hello
+// to generate server.crt and server.key (self signed certificate, need to accept browser warning about it), run OpenSSL in this directory:
+// openssl ecparam -genkey -name secp384r1 -out server.key
+// openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
 
 import (
 	"net/http"
@@ -19,7 +18,7 @@ func HelloServer(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/hello", HelloServer)
-	err := http.ListenAndServeTLS(":443", "server.crt", "server.key", nil)
+	err := http.ListenAndServeTLS("127.0.0.1:8443", "server.crt", "server.key", nil)
 
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)

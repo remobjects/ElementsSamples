@@ -6,7 +6,6 @@
     <ProjectGuid>{F5D59671-B8E1-4154-A8D9-5D353A32D952}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>TinySecureHTTPServer</AssemblyName>
-    <ApplicationIcon>Properties\App.ico</ApplicationIcon>
     <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
     <TargetFramework>.NETFramework4.5</TargetFramework>
     <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>

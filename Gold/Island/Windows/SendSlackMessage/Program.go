@@ -1,52 +1,70 @@
 ﻿package SendSlackMessage
 
-// code from https://golangcode.com/send-slack-messages-without-a-library/
-
 import (
-	"bytes"
-	"encoding/json"
-	"errors"
-	"log"
-	"net/http"
-	"time"
+    "bytes"
+    "encoding/json"
+    "errors"
+    "log"
+    "net/http"
+    "io/ioutil"
+    "os"
+    "time"
 )
 
 type SlackRequestBody struct {
-	Text string `json:"text"`
+    Text string `json:"text"`
+}
+
+// localFixture is an in-memory HTTP transport: the default run sends no network traffic.
+// The real client uses its normal transport when SLACK_WEBHOOK_URL is configured.
+type localFixture struct {}
+
+func (fixture localFixture) RoundTrip(req *http.Request) (*http.Response, error) {
+    defer req.Body.Close()
+    if req.Method != http.MethodPost || req.Header.Get("Content-Type") != "application/json" {
+        return nil, errors.New("Expected a JSON POST")
+    }
+    body, err := ioutil.ReadAll(req.Body)
+    if err != nil || string(body) != `{"text":"Test Message"}` {
+        return nil, errors.New("Unexpected fixture message")
+    }
+    return &http.Response{StatusCode: http.StatusOK, Body: ioutil.NopCloser(bytes.NewBufferString("ok")), Header: make(http.Header)}, nil
 }
 
 func main() {
-	// need to set up a new application in slack (https://api.slack.com/apps) and then get a
-	// webhook, just paste below and that is!
-	webhookUrl := "https://hooks.slack.com/services/?????????????"
-	err := SendSlackNotification(webhookUrl, "Test Message")
-	if err != nil {
-		log.Fatal(err)
-	}
+    webhookURL := os.Getenv("SLACK_WEBHOOK_URL")
+    client := &http.Client{Timeout: 10 * time.Second}
+    if webhookURL == "" {
+        webhookURL = "http://fixture.local/slack"
+        client.Transport = localFixture{}
+    }
+    if err := SendSlackNotification(client, webhookURL, "Test Message"); err != nil {
+        log.Fatal(err)
+    }
+    log.Print("Webhook accepted the message.")
 }
 
-// SendSlackNotification will post to an 'Incoming Webook' url setup in Slack Apps. It accepts
-// some text and the slack channel is saved within Slack.
-func SendSlackNotification(webhookUrl string, msg string) error {
-
-	slackBody, _ := json.Marshal(SlackRequestBody{Text: msg})
-	req, err := http.NewRequest(http.MethodPost, webhookUrl, bytes.NewBuffer(slackBody))
-	if err != nil {
-		return err
-	}
-
-	req.Header.Add("Content-Type", "application/json")
-
-	client := &http.Client{Timeout: 10 * time.Second}
-	resp, err := client.Do(req)
-	if err != nil {
-		return err
-	}
-
-	buf := new(bytes.Buffer)
-	buf.ReadFrom(resp.Body)
-	if buf.String() != "ok" {
-		return errors.New("Non-ok response returned from Slack")
-	}
-	return nil
+func SendSlackNotification(client *http.Client, webhookURL string, msg string) error {
+    slackBody, err := json.Marshal(SlackRequestBody{Text: msg})
+    if err != nil {
+        return err
+    }
+    req, err := http.NewRequest(http.MethodPost, webhookURL, bytes.NewBuffer(slackBody))
+    if err != nil {
+        return err
+    }
+    req.Header.Set("Content-Type", "application/json")
+    resp, err := client.Do(req)
+    if err != nil {
+        return err
+    }
+    defer resp.Body.Close()
+    buf := new(bytes.Buffer)
+    if _, err := buf.ReadFrom(resp.Body); err != nil {
+        return err
+    }
+    if resp.StatusCode != http.StatusOK || buf.String() != "ok" {
+        return errors.New("Webhook did not accept the message")
+    }
+    return nil
 }
