@@ -9,10 +9,11 @@ namespace Calculator.iOS
 		[IBOutlet]
 		__weak UITextField edValue;
 
-		public override instancetype init()
+		public this() : base withNibName("RootViewController") bundle(null)
 		{
-			base.initWithNibName("RootViewController") bundle(null);
-			title = "Calculator.iOS";
+
+		  title = "Calculator.iOS";
+
 		}
 
 		public override void viewDidLoad()
