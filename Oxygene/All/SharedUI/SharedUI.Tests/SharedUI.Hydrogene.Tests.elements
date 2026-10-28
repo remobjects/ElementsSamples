@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{B24000BE-483B-4A93-AA4E-F5B8234337CC}</ProjectGuid>
+    <RootNamespace>SharedUI.Shared</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SharedUI.Tests</AssemblyName>
+    <TargetFramework>.NETCore10.0</TargetFramework>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><Optimize>False</Optimize></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' "><Optimize>True</Optimize></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elements"><Private>True</Private></Reference>
+    <Reference Include="Echoes"><Private>True</Private></Reference>
+    <Compile Include="Program.pas" />
+    <Compile Include="..\..\..\..\Hydrogene\All\SharedUI\SharedUI.Shared\MainWindowController.cs" />
+    <Compile Include="..\..\..\..\Hydrogene\All\SharedUI\SharedUI.Shared\Aliases.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+</Project>

@@ -1,4 +1,4 @@
-﻿#if ECHOES
+﻿#if WPF
 
 import System.Windows;
 import System.Windows.Controls;

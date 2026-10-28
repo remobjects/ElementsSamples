@@ -10,9 +10,14 @@
     <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Condition="$(ConditionalDefines.Contains('GTK'))" Include="$(MSBuildThisFileDirectory)MainWindow.ui">
+      <LogicalName>MainWindow.ui</LogicalName>
+    </EmbeddedResource>
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.pas" />
-    <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
-    <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.GTK.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.VCL.pas" />
+    <Xib Condition="$(Mode) == 'Toffee'" Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
+    <Page Condition="$(ConditionalDefines.Contains('WPF'))" Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.pas" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.pas" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.pas" />
@@ -20,5 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.pas" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.pas" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.pas" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.dfm.pas" />
+    <EmbeddedResource Condition="$(ConditionalDefines.Contains('VCL'))" Include="$(MSBuildThisFileDirectory)MainWindow.dfm" />
   </ItemGroup>
 </Project>

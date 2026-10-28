@@ -1,14 +1,8 @@
 ﻿open __partial class MainWindowController {
 
 	private func setup() {
-		//
-		//  Do any shared initilaization, here
-		//
+		result = "N/A"
 	}
-
-	//
-	// Add Shared code here
-	//
 
 	@Notify public var valueA: String!
 	@Notify public var valueB: String!

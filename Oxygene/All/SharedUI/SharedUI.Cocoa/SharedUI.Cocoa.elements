@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
+    <SharedUIPlatform>Cocoa</SharedUIPlatform>
     <RootNamespace>SharedUI.Cocoa</RootNamespace>
     <ProjectGuid>{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}</ProjectGuid>
     <OutputType>Executable</OutputType>

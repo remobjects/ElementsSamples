@@ -4,14 +4,8 @@
 	{
 		private void setup()
 		{
-			//
-			// Do any shared initilaization, here
-			//
+			result = "N/A";
 		}
-
-		//
-		// Add Shared code here
-		//
 
 		[Notify] public string valueA { get; set; }
 		[Notify] public string valueB { get; set; }

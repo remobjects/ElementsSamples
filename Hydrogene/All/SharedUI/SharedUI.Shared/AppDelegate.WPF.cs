@@ -1,6 +1,6 @@
 ﻿namespace SharedUI.Shared
 {
-	#if ECHOES
+	#if WPF
 	public partial class AppDelegate
 	{
 		//

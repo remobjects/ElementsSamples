@@ -10,9 +10,12 @@
     <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Condition="$(ConditionalDefines.Contains('GTK'))" Include="$(MSBuildThisFileDirectory)MainWindow.ui">
+      <LogicalName>MainWindow.ui</LogicalName>
+    </EmbeddedResource>
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.cs" />
     <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
-    <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
+    <Page Condition="$(ConditionalDefines.Contains('WPF'))" Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.cs" />
@@ -20,5 +23,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.GTK.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.VCL.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.dfm.cs" />
+    <EmbeddedResource Condition="$(ConditionalDefines.Contains('VCL'))" Include="$(MSBuildThisFileDirectory)MainWindow.dfm" />
   </ItemGroup>
 </Project>

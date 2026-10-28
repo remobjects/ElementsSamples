@@ -1,6 +1,6 @@
 ﻿Public Imports id = Object
 
-#If ECHOES Then
+#If ECHOES Or ISLAND Then
 Public Class IBAction
   Inherits Attribute
 End Class

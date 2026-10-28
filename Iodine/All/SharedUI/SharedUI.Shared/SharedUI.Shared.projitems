@@ -10,15 +10,22 @@
     <Import_RootNamespace>SharedUI.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Condition="$(ConditionalDefines.Contains('GTK'))" Include="$(MSBuildThisFileDirectory)MainWindow.ui">
+      <LogicalName>MainWindow.ui</LogicalName>
+    </EmbeddedResource>
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.java" />
     <Xib Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
-    <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
+    <Page Condition="$(ConditionalDefines.Contains('WPF'))" Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindow.xaml.java" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.java" />
     <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.java" />
-    <Compile Include="$(MSBuildThisFileDirectory)Aliases.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aliases.java" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.java" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.java" />
     <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.WPF.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.GTK.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.VCL.java" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindow.dfm.java" />
+    <EmbeddedResource Condition="$(ConditionalDefines.Contains('VCL'))" Include="$(MSBuildThisFileDirectory)MainWindow.dfm" />
   </ItemGroup>
 </Project>

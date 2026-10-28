@@ -7,7 +7,7 @@ public __partial class MainWindowController extends NSWindowController
 {
 	public MainWindowController()
 	{
-		super("MainWindow");
+		super windowNibName("MainWindow");
 		setup();
 	}
 

@@ -9,9 +9,7 @@
   Public Property result As String = "N/A"
 
   Private Sub setup()
-	'
-	'  Do any shared initilaization, here
-	'
+    result = "N/A"
   End Sub
 
   <IBAction>

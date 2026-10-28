@@ -1,6 +1,6 @@
 ﻿package SharedUI.Shared;
 
-#if ECHOES
+#if WPF
 
 import System.Windows.*;
 import System.Windows.Controls.*;
@@ -19,7 +19,7 @@ public __partial class MainWindowController
 	// Compatibility Helpers. These could/should be in a shared base class, in a real app with many window/views
 	//
 
-	public void showWindow(id sender)
+	public void showWindow(Object sender)
 	{
 		window.Show();
 	}

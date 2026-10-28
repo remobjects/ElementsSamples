@@ -1,4 +1,4 @@
-﻿#if ECHOES
+﻿#if WPF
 
 extension AppDelegate {
 	//

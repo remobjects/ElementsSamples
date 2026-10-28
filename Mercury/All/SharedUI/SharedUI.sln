@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Cocoa", "SharedUI.Cocoa\SharedUI.Cocoa.elements", "{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.WPF", "SharedUI.WPF\SharedUI.WPF.elements", "{89CE228B-0335-430C-B1E9-D5F84696ED9F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.GTK", "SharedUI.GTK\SharedUI.GTK.elements", "{DC6D1B1D-EA37-4FB6-AD20-A90BE3DC9F7A}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.VCL", "SharedUI.VCL\SharedUI.VCL.elements", "{E8ECBF06-9106-44DE-90A3-530A06409B32}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Shared", "SharedUI.Shared\SharedUI.Shared.elements", "{B79CB5B4-3E99-4FBD-A1D3-D79E15EA35D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{E8890539-F6B2-4AFA-9D21-AEC2935AE18E}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{89CE228B-0335-430C-B1E9-D5F84696ED9F}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{DC6D1B1D-EA37-4FB6-AD20-A90BE3DC9F7A}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{DC6D1B1D-EA37-4FB6-AD20-A90BE3DC9F7A}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{DC6D1B1D-EA37-4FB6-AD20-A90BE3DC9F7A}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{DC6D1B1D-EA37-4FB6-AD20-A90BE3DC9F7A}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{E8ECBF06-9106-44DE-90A3-530A06409B32}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{E8ECBF06-9106-44DE-90A3-530A06409B32}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{E8ECBF06-9106-44DE-90A3-530A06409B32}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{E8ECBF06-9106-44DE-90A3-530A06409B32}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+EndGlobal

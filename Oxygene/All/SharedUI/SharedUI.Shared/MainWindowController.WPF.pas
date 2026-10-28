@@ -1,5 +1,5 @@
 ﻿namespace SharedUI.Shared;
-{$IF ECHOES}
+{$IF WPF}
 
 uses
   System.Windows,

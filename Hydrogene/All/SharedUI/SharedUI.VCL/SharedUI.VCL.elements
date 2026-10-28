@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3D4BE800-5562-4120-915C-41250771EEF7}</ProjectGuid>
+    <RootNamespace>SharedUI.Shared</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SharedUI.VCL</AssemblyName>
+    <StartupObject>SharedUI.Shared.Program</StartupObject>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <DelphiSDK>Delphi 13</DelphiSDK>
+    <Architecture>x86_64</Architecture>
+    <ConditionalDefines>VCL</ConditionalDefines>
+    <SharedUIPlatform>VCL</SharedUIPlatform>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ConditionalDefines>DEBUG;VCL</ConditionalDefines>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ConditionalDefines>VCL</ConditionalDefines>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Island" />
+    <Reference Include="gc" />
+    <Reference Include="rtl" />
+    <Reference Include="Elements" />
+    <Reference Include="Delphi.rtl" />
+    <Reference Include="Delphi.vcl" />
+    <Reference Include="Island.DelphiSupport" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.Windows.targets" />
+  <Import Project="..\SharedUI.Shared\SharedUI.Shared.projitems" Label="Shared" />
+</Project>

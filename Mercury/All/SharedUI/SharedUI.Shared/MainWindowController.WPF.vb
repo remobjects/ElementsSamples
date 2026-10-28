@@ -1,4 +1,4 @@
-﻿#If ECHOES Then
+﻿#If WPF Then
 Imports System.Windows
 
 Public Partial Class MainWindowController

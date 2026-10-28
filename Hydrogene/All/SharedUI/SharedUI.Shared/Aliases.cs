@@ -4,7 +4,7 @@
 	// Aliases and mapped types to make type names more similar between Cocoa and WPF
 	//
 
-	#if ECHOES
+	#if ECHOES || ISLAND
 	public using id = object;
 	public class IBAction : Attribute {}
 	#endif

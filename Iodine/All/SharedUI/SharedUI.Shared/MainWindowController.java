@@ -4,21 +4,15 @@ public __partial class MainWindowController
 {
 	private void setup()
 	{
-		//
-		//  Do any shared initilaization, here
-		//
+		result = "N/A";
 	}
-
-	//
-	// Add Shared code here
-	//
 
 	@Notify public String valueA { __get; __set; }
 	@Notify public String valueB { __get; __set; }
 	@Notify public String result { __get; private __set; }
 
 	@IBAction
-	public void calculateResult(id sender)
+	public void calculateResult(Object sender)
 	{
 		if ((length(valueA) == 0) | (length(valueB) == 0))
 		{

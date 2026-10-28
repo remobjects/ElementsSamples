@@ -1,36 +1,43 @@
 # Elements Samples
 
-This git repository contains the official sample suite for the [RemObjects Elements](http://www.elementscompiler.com) compiler and tool chain, including examples for its languages and target platforms.
+Official samples for the [RemObjects Elements](https://www.elementscompiler.com) languages and platforms. Open a sample's `.sln` in Fire, Water, Earth or Visual Studio where supported, or build its `.elements` project with EBuild. Use a current Elements release and the SDKs required by the selected target. Samples on the current branch may need newer features than older installed releases; release tags retain historical versions.
 
-Most of these samples ship with and are installed by the Elements installer for Windows; this repository represents a complete super-set of those samples, and might contain newer versions. Fire 8.4 and later provides the option to install these samples directly from the git repository.
+## Where to start
 
-Please refer to branch and tag names to know which version of the compiler samples are targeted at; the base level of samples works with Elements 8.3 and later. The state of samples shipped with each release of Elements will me marked with a tag named `release-` plus the release month (e.g. `release-mar16` for the Elements 8.3 release shipped in March 2016).
+- [Shared UI](Oxygene/All/SharedUI/README.md): shared controller behavior with native Cocoa, WPF, GTK and Delphi VCL views. Full implementations in Oxygene, Hydrogene, Iodine, Silver and Mercury.
+- [Calculator](Oxygene/All/Calculator): a shared evaluator with separate native application hosts.
+- [UIKit](Oxygene/Toffee/UIKit): scene lifecycle, navigation, collections, native controls and custom drawing. Modernized applications require iOS 13 or later.
+- [Android](Oxygene/Cooper/Android): native activities, Bluetooth, lifecycle-owned work and widgets. Check each manifest and project for SDK requirements.
+- [Python](Promethium/README.md): practical language/library examples, expected output and target verification commands.
+- [Legacy](Legacy/README.md): deprecated examples retained at their original relative language/platform paths for historical and compatibility use.
 
-The official repository URL is [github.com/remobjects/ElementsSamples](https://github.com/remobjects/ElementsSamples); the latest versions of samples can always be found there, and pull requests and contributions are welcome!
+Go By Example and Tour of Go remain Go-specific tutorials. Their target variants are retained for a separate testing pass; they are not the cross-language translation backlog.
 
-## Structure
+## Organization
 
-Samples are grouped by language first, then by platform. Underneath each language/platform combo, samples may or may not be grouped by logical categories, depending own the scope and amount of samples in the section.
+Paths start with a language, then a platform and optional topic. Language folders use the compiler code names:
 
-The folder names use the language and platform code names:
+| Folder | Language |
+| --- | --- |
+| Oxygene | Object Pascal |
+| Hydrogene | C# |
+| Silver | Swift |
+| Iodine | Java |
+| Gold | Go |
+| Mercury | Visual Basic |
+| Promethium | Python, preview |
 
-Languages:
+Myth sample coverage will be added as the required language features become available; its absence is not a claim that every compiler target is unsupported.
 
-* **Oxygene** &ndash; the Oxygene (Object Pascal) Language
-* **Hydrogene** &ndash; RemObjects C#
-* **Silver** &ndash; RemObjects Swift
-* **Iodine** &ndash; RemObjects Java
-* **Promethium** &ndash; RemObjects Python
+| Folder | Platform |
+| --- | --- |
+| All / Cross-Platform | Multiple targets or shared source |
+| Echoes | .NET |
+| Cooper | JVM and Android |
+| Toffee | Native Apple platforms |
+| Island | Native targets, including Windows, Linux, Darwin and WebAssembly where demonstrated |
+| Gotham | Shared cross-platform libraries |
 
-Platforms:
+Availability of a language or target does not imply that every family has a matching sample. Native UI samples require the platform toolkit; third-party integration samples also require their documented libraries. Successful cross-compilation alone does not validate a device or UI runtime.
 
-* **All** &ndash; cross-platform samples, spanning two or more platforms
-* **Echoes** &ndash; .NET, including Mono, WinRT, Windows Phone, Silverlight, Universal apps, and Xamarin
-* **Cooper** &ndash; Java and Android
-* **Toffee** &ndash; Cocoa, including macOS, iOS, tvOS and watchOS
-* **Gotham** &ndash; Elements’ “Meta” platform for cross-platform libraries
-* **Island** &ndash; Elements’ “Native” platform for Windows, Linux and Darwin
-
-Each sample ships with a .SLN file that can be opened in both Fire, Water and Visual Studio (where applicable), and also built from the command line using EBuild or MSBuild/xbuild.
-
-Enjoy!
+The authoritative repository is [remobjects/ElementsSamples](https://github.com/remobjects/ElementsSamples). Contributions should include required resources, clear prerequisites and a way to verify the demonstrated behavior. Use Elements projects for sample tests.

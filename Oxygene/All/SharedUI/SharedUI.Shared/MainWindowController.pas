@@ -4,10 +4,6 @@ type
   MainWindowController = public partial class
   public
 
-    //
-    // Add Shared code here
-    //
-
     [Notify] property valueA: String;
     [Notify] property valueB: String;
     [Notify] property &result: String read private write;
@@ -34,10 +30,7 @@ type
 
     method setup;
     begin
-      //
-      //  Do any shared initilaization, here
-      //
-      //
+      &result := "N/A";
     end;
 
   end;

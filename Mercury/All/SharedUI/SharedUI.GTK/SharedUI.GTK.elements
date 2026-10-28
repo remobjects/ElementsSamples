@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{DC6D1B1D-EA37-4FB6-AD20-A90BE3DC9F7A}</ProjectGuid>
+    <RootNamespace>SharedUI.Shared</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SharedUI.GTK</AssemblyName>
+    <TargetFramework>.NETCore10.0</TargetFramework>
+    <StartupObject>SharedUI.Shared.Program</StartupObject>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <ConditionalDefines>GTK</ConditionalDefines>
+    <SharedUIPlatform>GTK</SharedUIPlatform>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ConditionalDefines>DEBUG;GTK</ConditionalDefines>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ConditionalDefines>GTK</ConditionalDefines>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elements"><Private>True</Private></Reference>
+    <Reference Include="Echoes"><Private>True</Private></Reference>
+    <NuGetReference Include="GirCore.Gtk-4.0:[0.8.1]"><Private>True</Private></NuGetReference>
+    <Compile Include="Program.vb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+  <Import Project="..\SharedUI.Shared\SharedUI.Shared.projitems" Label="Shared" />
+</Project>

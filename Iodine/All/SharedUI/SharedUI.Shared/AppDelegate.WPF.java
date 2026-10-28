@@ -1,6 +1,6 @@
 ﻿package SharedUI.Shared;
 
-#if ECHOES
+#if WPF
 
 public __partial class AppDelegate
 {

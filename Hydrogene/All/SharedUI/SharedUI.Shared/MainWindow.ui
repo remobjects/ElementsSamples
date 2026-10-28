@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <object class="GtkApplicationWindow" id="MainWindow">
+    <property name="title">Shared UI</property>
+    <property name="default-width">420</property>
+    <property name="default-height">260</property>
+    <property name="child">
+      <object class="GtkBox" id="Content">
+        <property name="orientation">vertical</property>
+        <property name="spacing">8</property>
+        <property name="margin-top">20</property>
+        <property name="margin-bottom">20</property>
+        <property name="margin-start">20</property>
+        <property name="margin-end">20</property>
+        <child>
+          <object class="GtkLabel" id="ExplanationLabel">
+            <property name="label">Add two numbers, or join two pieces of text.</property>
+            <property name="wrap">true</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="ValueALabel">
+            <property name="label">Value A</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ValueAEntry" />
+        </child>
+        <child>
+          <object class="GtkLabel" id="ValueBLabel">
+            <property name="label">Value B</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ValueBEntry" />
+        </child>
+        <child>
+          <object class="GtkButton" id="CalculateButton">
+            <property name="label">Calculate</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="ResultLabel">
+            <property name="label">N/A</property>
+            <property name="selectable">true</property>
+          </object>
+        </child>
+      </object>
+    </property>
+  </object>
+</interface>

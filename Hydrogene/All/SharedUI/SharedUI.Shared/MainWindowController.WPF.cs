@@ -1,6 +1,6 @@
 ﻿namespace SharedUI.Shared
 {
-	#if ECHOES
+	#if WPF
 	using System.Windows;
 	using System.Windows.Controls;
 
