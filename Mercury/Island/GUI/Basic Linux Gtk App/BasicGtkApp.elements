@@ -51,7 +51,6 @@
     <Reference Include="Island" />
     <Reference Include="pango" />
     <Reference Include="rtl" />
-    <Reference Include="Silver" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.vb" />

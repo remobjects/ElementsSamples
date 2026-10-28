@@ -6,7 +6,7 @@ Public Module Program
 	Const szWindowClass As LPCWSTR = "IslandWindowsSample"
 
 	<CallingConvention(CallingConvention.Stdcall)> _
-	Function WndProc(hWnd As HWND, message As UINT, wParam As WPARAM, lParam As LPARAM) As Integer
+	Function WndProc(hWnd As HWND, message As UINT, wParam As WPARAM, lParam As LPARAM) As LRESULT
 
 		Select Case message
 			Case WM_COMMAND:

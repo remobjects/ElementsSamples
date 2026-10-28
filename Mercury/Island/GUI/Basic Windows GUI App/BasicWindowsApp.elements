@@ -45,7 +45,6 @@
     <Reference Include="gc" />
     <Reference Include="Island" />
     <Reference Include="rtl" />
-    <Reference Include="Silver" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.vb" />
