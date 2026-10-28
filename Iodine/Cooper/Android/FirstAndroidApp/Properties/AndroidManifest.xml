@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.me.firstandroidapp" android:versionCode="1" android:versionName="1.0">
   <application android:label="@string/app_name" android:icon="@drawable/icon">
     
-    <activity android:label="@string/app_name" android:name="org.me.firstandroidapp.MainActivity">
+    <activity android:label="@string/app_name" android:name="org.me.firstandroidapp.MainActivity" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

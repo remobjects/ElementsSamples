@@ -70,7 +70,9 @@
       <Subtype>Form</Subtype>
       <DesignableClassName>CallingWin32DLL.MainForm</DesignableClassName>
     </Compile>
-    <EmbeddResource Include="Main.resx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.pas</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Program.pas" />
     <Content Include="Properties\App.ico" />
     <Compile Include="Properties\AssemblyInfo.pas" />

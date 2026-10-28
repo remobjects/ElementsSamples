@@ -81,7 +81,9 @@
       <SubType>Form</SubType>
       <DesignableClassName>AwaitSample.MainForm</DesignableClassName>
     </Compile>
-    <EmbeddedResource Include="Main.resx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.pas</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Program.pas" />
     <Compile Include="Properties\AssemblyInfo.pas" />
     <Content Include="Properties\App.ico" />

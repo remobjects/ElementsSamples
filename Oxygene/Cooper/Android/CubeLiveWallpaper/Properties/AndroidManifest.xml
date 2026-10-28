@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.android.livecubes"
           android:versionCode="1"
-          android:versionName="1.0.0" android:versionCode="1" android:versionName="1.0">
+          android:versionName="1.0.0">
   <application 
         android:label="@string/wallpapers"
         android:icon="@drawable/ic_launcher_wallpaper">
@@ -10,7 +10,7 @@
     <service
         android:label="@string/wallpaper_cube1"
         android:name=".cube1.CubeWallpaper1"
-        android:permission="android.permission.BIND_WALLPAPER">
+        android:permission="android.permission.BIND_WALLPAPER" android:exported="true">
       <intent-filter>
         <action android:name="android.service.wallpaper.WallpaperService" />
       </intent-filter>
@@ -20,7 +20,7 @@
     <service
         android:label="@string/wallpaper_cube2"
         android:name=".cube2.CubeWallpaper2"
-        android:permission="android.permission.BIND_WALLPAPER">
+        android:permission="android.permission.BIND_WALLPAPER" android:exported="true">
       <intent-filter>
         <action android:name="android.service.wallpaper.WallpaperService" />
       </intent-filter>

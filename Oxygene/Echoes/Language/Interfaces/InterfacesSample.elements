@@ -65,7 +65,9 @@
       <Subtype>Form</Subtype>
       <DesignableClassName>InterfacesSample.MainForm</DesignableClassName>
     </Compile>
-    <EmbeddResource Include="Main.resx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.pas</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="SampleClasses.pas" />
   </ItemGroup>
   <ItemGroup>

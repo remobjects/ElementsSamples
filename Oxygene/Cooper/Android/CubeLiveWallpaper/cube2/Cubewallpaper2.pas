@@ -39,7 +39,7 @@ type
   CubeEngine nested in CubeWallpaper2 = public class(WallpaperService.Engine,
     SharedPreferences.OnSharedPreferenceChangeListener)      
   private
-    var mHandler: Handler := new Handler;
+    var mHandler: Handler := new Handler(Looper.MainLooper);
     var mWallpaperService: CubeWallpaper2;
     var mOriginalPoints: array of ThreeDPoint;
     var mRotatedPoints: array of ThreeDPoint;
@@ -96,7 +96,7 @@ begin
   mDrawCube := new interface Runnable(run := method begin drawFrame end);
   //  Create a Paint to draw the lines for our cube
   mPaint := new Paint;
-  mPaint.Color := $ffffffff as Int64;
+  mPaint.Color := Color.WHITE;
   mPaint.AntiAlias := true;
   mPaint.StrokeWidth := 2;
   mPaint.StrokeCap := Paint.Cap.ROUND;
@@ -216,7 +216,7 @@ method CubeWallpaper2.CubeEngine.drawCube(c: Canvas);
 begin
   c.save;
   c.translate(mCenterX, mCenterY);
-  c.drawColor($ff000000 as Int64);
+  c.drawColor(Color.BLACK);
   var now: Int64 := SystemClock.elapsedRealtime;
   var xrot: Single := Single(now - mStartTime) div 1000;
   var yrot: Single := (0.5 - mOffset) * 2.0;
@@ -249,7 +249,7 @@ end;
 
 method CubeWallpaper2.CubeEngine.onSharedPreferenceChanged(prefs: SharedPreferences; key: String);
 begin
-  var shape: String := prefs.String['cube2_shape', 'cube'];
+  var shape: String := prefs.getString('cube2_shape', 'cube');
   //  read the 3D model from the resource
   readModel(shape);
 end;

@@ -61,7 +61,7 @@ begin
   self.button1.Size := new System.Drawing.Size(150, 23);
   self.button1.TabIndex := 0;
   self.button1.Text := 'Test Events';
-  self.button1.Click += new System.EventHandler(@self.button1_Click);
+  self.button1.Click += new System.EventHandler(self.button1_Click);
   //
   // MainForm
   //

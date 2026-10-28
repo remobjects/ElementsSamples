@@ -65,7 +65,9 @@
       <Subtype>Form</Subtype>
       <DesignableClassName>ObjectPascal.MainForm</DesignableClassName>
     </Compile>
-    <EmbeddResource Include="Main.resx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.pas</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="SampleClasses.pas" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />

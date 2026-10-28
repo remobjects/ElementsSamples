@@ -44,7 +44,9 @@
       <Subtype>Form</Subtype>
       <DesignableClassName>Anonymous_Methods.MainForm</DesignableClassName>
     </Compile>
-    <EmbeddResource Include="Main.resx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.pas</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Program.pas" />
     <Content Include="Properties\App.ico" />
     <Compile Include="Properties\AssemblyInfo.pas" />

@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 		      package="com.example.android.snake"
           android:versionCode="1"
-          android:versionName="1.0.0" android:versionCode="1" android:versionName="1.0">
+          android:versionName="1.0.0">
   <application 
         android:label="Snake on a Phone">
     <activity android:name=".Snake"
               android:theme="@android:style/Theme.NoTitleBar"
               android:screenOrientation="portrait"
-              android:configChanges="keyboardHidden|orientation">
+              android:configChanges="keyboardHidden|orientation" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

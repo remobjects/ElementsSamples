@@ -66,6 +66,8 @@
       <Subtype>Form</Subtype>
       <DesignableClassName>BasicWindowsApp.MainForm</DesignableClassName>
     </Compile>
-    <EmbeddResource Include="Main.resx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.pas</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

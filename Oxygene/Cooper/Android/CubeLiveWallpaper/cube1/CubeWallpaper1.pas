@@ -35,7 +35,7 @@ type
 
   CubeEngine nested in CubeWallpaper1 = public class(WallpaperService.Engine)
   private
-    var mHandler: Handler := new Handler;
+    var mHandler: Handler := new Handler(Looper.MainLooper);
     var mOffset: Single;
     var mPaint: Paint;
     var mTouchX: Single := -1;
@@ -69,7 +69,7 @@ begin
   mDrawCube := new interface Runnable(run := method begin drawFrame end);
   //  Create a Paint to draw the lines for our cube
   mPaint := new Paint;
-  mPaint.Color := $ffffffff as Int64;
+  mPaint.Color := Color.WHITE;
   mPaint.AntiAlias := true;
   mPaint.StrokeWidth := 2;
   mPaint.StrokeCap := Paint.Cap.ROUND;
@@ -186,7 +186,7 @@ method CubeWallpaper1.CubeEngine.drawCube(c: Canvas);
 begin
   c.save;
   c.translate(mCenterX, mCenterY);
-  c.drawColor($ff000000 as Int64);
+  c.drawColor(Color.BLACK);
   drawLine(c, -400, -400, -400,  400, -400, -400);
   drawLine(c,  400, -400, -400,  400,  400, -400);
   drawLine(c,  400,  400, -400, -400,  400, -400);

@@ -40,7 +40,7 @@ begin
        cls := aClassToUse.New('A String', 123, <etc>); }
   instance := aClassToUse.New;
 
-  Console.WriteLine('Created instance of type: '+instance.ActualType.Name);
+  Console.WriteLine('Created instance of type: '+instance.GetType.Name);
 end;
 
 { The "Main" global method is the application entry point. 
