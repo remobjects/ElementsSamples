@@ -222,7 +222,7 @@ type
               var lLastMatchID := NSUserDefaults.standardUserDefaults.objectForKey(KEY_CURRENT_MATCH_ID);
               if assigned(lLastMatchID) and not assigned(fCurrentMatch) then begin
 
-                for each m in aMatches do begin
+                for each m: GKTurnBasedMatch in aMatches do begin
                   if m.matchID = lLastMatchID then begin
 
                     fCurrentMatch := m;
