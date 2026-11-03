@@ -12,7 +12,6 @@
     <OutputPath>.\Bin\Debug</OutputPath>
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
     <GenerateDebugInfo>True</GenerateDebugInfo>
-    <Architecture>x86_64</Architecture>
     <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
     <EnableAsserts>True</EnableAsserts>
   </PropertyGroup>

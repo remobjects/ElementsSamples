@@ -9,7 +9,7 @@ class Program {
 	static HWND button = null;
 
 	@CallingConvention(CallingConvention.Stdcall)
-	static int WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+	static LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	{
 		switch (message)
 		{
