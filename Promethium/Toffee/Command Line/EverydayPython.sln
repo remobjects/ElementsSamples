@@ -20,12 +20,24 @@ Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "SensorSummary", "Sensor Sum
 EndProject
 Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "BinaryRecord", "Binary Record/BinaryRecord.elements", "{E7E8054D-0344-4045-932B-DA808F776231}"
 EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "Mandelbrot", "Mandelbrot/Mandelbrot.elements", "{DF01064A-8BC1-4A34-89E1-19AFC4EEAC5B}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "QueueAndStack", "Queue and Stack/QueueAndStack.elements", "{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AnyCPU = Debug|AnyCPU
 		Release|AnyCPU = Release|AnyCPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF01064A-8BC1-4A34-89E1-19AFC4EEAC5B}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{DF01064A-8BC1-4A34-89E1-19AFC4EEAC5B}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{DF01064A-8BC1-4A34-89E1-19AFC4EEAC5B}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{DF01064A-8BC1-4A34-89E1-19AFC4EEAC5B}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Release|AnyCPU.Build.0 = Release|AnyCPU
 		{22940E5B-DF01-4342-9A3F-A062834DF533}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
 		{22940E5B-DF01-4342-9A3F-A062834DF533}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{22940E5B-DF01-4342-9A3F-A062834DF533}.Release|AnyCPU.ActiveCfg = Release|AnyCPU

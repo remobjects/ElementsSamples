@@ -13,6 +13,8 @@ import sys
 ROOT = Path(__file__).resolve().parent
 SAMPLES = (
     ("Word Frequency", "WordFrequency", "Program.py"),
+    ("Mandelbrot", "Mandelbrot", "Program.py"),
+    ("Queue and Stack", "QueueAndStack", "Program.py"),
     ("Reading List", "ReadingList", "Program.py"),
     ("Context Manager", "ContextManager", "Program.py"),
     ("Generator Pipeline", "GeneratorPipeline", "Program.py"),

@@ -1,0 +1,11 @@
+Stack (last in, first out):
+third
+second
+first
+Queue (first in, first out):
+10
+20
+30
+Reused stack: new item
+Reused queue: 40
+Remaining items: 0

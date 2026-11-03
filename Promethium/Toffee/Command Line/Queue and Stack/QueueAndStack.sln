@@ -1,0 +1,16 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "QueueAndStack", "QueueAndStack.elements", "{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{AD991F2D-E2C5-4F92-BA46-E8E43BDDE38F}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+EndGlobal

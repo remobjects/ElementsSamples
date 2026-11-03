@@ -1,10 +1,12 @@
 # Promethium samples
 
-Ten original examples demonstrate everyday Python patterns and libPromethium APIs. Each has Echoes (.NET Framework 4.8), Cooper (Java), Island (macOS), and Toffee (macOS) projects with Debug and Release configurations. The non-Echoes projects link the same source files, so target differences remain visible.
+Twelve command-line examples demonstrate everyday Python patterns and libPromethium APIs. Each has Echoes (.NET Framework 4.8), Cooper (Java), Island (macOS), and Toffee (macOS) projects with Debug and Release configurations. The non-Echoes projects link the same source files, so target differences remain visible.
 
 | Sample | Patterns and library APIs | CPython reference |
 | --- | --- | --- |
 | [Word Frequency](Echoes/Command%20Line/Word%20Frequency/) | typed dictionaries, indexing, `re.split`, iteration | Same source |
+| [Mandelbrot](Echoes/Command%20Line/Mandelbrot/) | typed floating-point functions, nested loops, ASCII rendering | Same source |
+| [Queue and Stack](Echoes/Command%20Line/Queue%20and%20Stack/) | typed lists, FIFO/LIFO removal, reuse after draining | Same source |
 | [Reading List](Echoes/Command%20Line/Reading%20List/) | classes, default arguments, properties, filtered comprehensions | Same source |
 | [Context Manager](Echoes/Command%20Line/Context%20Manager/) | nested `with`, exception propagation and suppression | Same source |
 | [Generator Pipeline](Echoes/Command%20Line/Generator%20Pipeline/) | `yield`, `range`, lazy iteration | Same source |
@@ -16,6 +18,16 @@ Ten original examples demonstrate everyday Python patterns and libPromethium API
 | [Binary Record](Echoes/Command%20Line/Binary%20Record/) | `struct` network-order helpers, `binascii.hexlify`, `len(bytes)` | Separate script |
 
 Open `EverydayPython.sln` in the desired target's `Command Line` directory, or an individual sample solution. Samples require the corresponding Elements SDK and libPromethium; no external services or package installs are needed.
+
+## GUI samples
+
+| Sample | Platform | Native UI |
+| --- | --- | --- |
+| [First App](Cooper/Android/FirstApp/FirstApp.sln) | Android | XML layouts, two activities and an Intent carrying a message |
+| [Basic Windows App](Echoes/Windows%20Forms/Basic%20Windows%20App/BasicWindowsApp.sln) | Windows / .NET Framework 4.8 | Windows Forms controls and a button event handler |
+| [Basic Application](Toffee/macOS/BasicApplication/BasicApplication.sln) | macOS / Cocoa | XIB window and menu, application delegate and button action |
+
+Open the sample solution in Fire or Water. Run Android on an emulator or device, Windows Forms on Windows, and the Cocoa app on macOS. Each sample has Debug and Release configurations and uses the corresponding native platform SDK.
 
 ## Verification
 

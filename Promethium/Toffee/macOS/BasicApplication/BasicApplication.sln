@@ -1,0 +1,16 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Elements
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "BasicApplication", "BasicApplication.elements", "{A0DE6F58-87EE-481A-BB5F-1E400D780883}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0DE6F58-87EE-481A-BB5F-1E400D780883}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{A0DE6F58-87EE-481A-BB5F-1E400D780883}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{A0DE6F58-87EE-481A-BB5F-1E400D780883}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{A0DE6F58-87EE-481A-BB5F-1E400D780883}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+EndGlobal
