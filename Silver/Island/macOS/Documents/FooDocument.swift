@@ -55,7 +55,7 @@ import AppKit
 
 public class FooDocumentData {
 
-	var text: String;
+	var text: String = "New Foo!";
 
 	init() {
 		text = "New Foo!"

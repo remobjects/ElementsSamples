@@ -7,7 +7,7 @@ class Program {
     static var button: HWND = nil
 
     @CallingConvention(CallingConvention.Stdcall)
-    static func WndProc(_ hWnd: HWND, _ message: UINT, _ wParam: WPARAM, _ lParam: LPARAM) -> Integer {
+    static func WndProc(_ hWnd: HWND, _ message: UINT, _ wParam: WPARAM, _ lParam: LPARAM) -> LRESULT {
         switch message {
             case WM_COMMAND:
                 if wParam == BN_CLICKED && lParam == button as! rtl.LPARAM {
@@ -26,8 +26,8 @@ class Program {
         // Set up and Register the Windows Class
         //
 
-        var windowClass: WNDCLASSEX
-        windowClass.cbSize = sizeOf(WNDCLASSEX)
+        var windowClass = `default`(rtl.WNDCLASSEX)
+        windowClass.cbSize = sizeOf(rtl.WNDCLASSEX)
         windowClass.style = CS_HREDRAW | CS_VREDRAW
         windowClass.lpfnWndProc = WndProc
         windowClass.cbClsExtra = 0
