@@ -1,0 +1,24 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346d9-4656-40da-a068-22d5425d4639}") = "PyConsoleApplication", "..\..\..\..\..\..\..\Test Projects\PyConsoleApplication\PyConsoleApplication.elements", "{88725366-7b0e-4e5f-9ef1-a550354637c6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88725366-7b0e-4e5f-9ef1-a550354637c6}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{88725366-7b0e-4e5f-9ef1-a550354637c6}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{88725366-7b0e-4e5f-9ef1-a550354637c6}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{88725366-7b0e-4e5f-9ef1-a550354637c6}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(RemObjectsSolutionTree) = preSolution
+		ProjectOrder = 88725366-7b0e-4e5f-9ef1-a550354637c6
+		RootOrder = 88725366-7b0e-4e5f-9ef1-a550354637c6
+	EndGlobalSection
+EndGlobal

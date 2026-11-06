@@ -19,6 +19,17 @@ Twelve command-line examples demonstrate everyday Python patterns and libPrometh
 
 Open `EverydayPython.sln` in the desired target's `Command Line` directory, or an individual sample solution. Samples require the corresponding Elements SDK and libPromethium; no external services or package installs are needed.
 
+## Interactive console samples
+
+| Sample | Platform | Features |
+| --- | --- | --- |
+| [Falling Bricks](Toffee/Command%20Line/FallingBricks/FallingBricks.sln) | macOS / Cocoa | ANSI colors, live keyboard input, landing preview, scoring and levels |
+
+Falling Bricks runs in an interactive terminal rather than the IDE output pane.
+See its [README](Toffee/Command%20Line/FallingBricks/README.md) for controls,
+build instructions and native API requirements. It is separate from the
+noninteractive Everyday Python verification matrix.
+
 ## GUI samples
 
 | Sample | Platform | Native UI |
