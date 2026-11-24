@@ -1,0 +1,24 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346d9-4656-40da-a068-22d5425d4639}") = "NewtonObservatory", "NewtonObservatory.elements", "{F900F4FA-2842-51E5-9459-CD3B715368A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F900F4FA-2842-51E5-9459-CD3B715368A1}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{F900F4FA-2842-51E5-9459-CD3B715368A1}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{F900F4FA-2842-51E5-9459-CD3B715368A1}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{F900F4FA-2842-51E5-9459-CD3B715368A1}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(RemObjectsSolutionTree) = preSolution
+		ProjectOrder = 625b6252-5128-4e8a-9098-c2a4a5087720
+		RootOrder = 625b6252-5128-4e8a-9098-c2a4a5087720
+	EndGlobalSection
+EndGlobal

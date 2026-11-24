@@ -1,0 +1,122 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{F900F4FA-2842-51E5-9459-CD3B715368A1}</ProjectGuid>
+    <RootNamespace>NewtonObservatory</RootNamespace>
+    <AssemblyName>NewtonObservatory</AssemblyName>
+    <OutputType>Executable</OutputType>
+    <StartupClass>NewtonObservatory.Program</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL;RemObjects.Elements.RTL.Units</DefaultUses>
+    <OutputPath>Bin\$(Configuration)</OutputPath>
+    <DefaultLanguage>Oxygene</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>False</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Echoes'">
+    <OutputPath>Bin/$(Configuration)/Echoes</OutputPath>
+    <Mode>Echoes</Mode>
+    <TargetFramework>.NETCore10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Target)' == 'Echoes'">
+    <Reference Include="System.Console" />
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Echoes">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Cooper'">
+    <OutputPath>Bin/$(Configuration)/Cooper</OutputPath>
+    <Mode>Cooper</Mode>
+    <SubMode>Java</SubMode>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Target)' == 'Cooper'">
+    <Reference Include="rt" />
+    <Reference Include="elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="cooper">
+      <Private>True</Private>
+    </Reference>
+    <GradleReference Include="org.jline:jline-terminal:4.7.0">
+      <Private>True</Private>
+    </GradleReference>
+    <GradleReference Include="org.jline:jline-native:4.7.0">
+      <Private>True</Private>
+    </GradleReference>
+    <GradleReference Include="org.jline:jline-terminal-jni:4.7.0">
+      <Private>True</Private>
+    </GradleReference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Toffee'">
+    <OutputPath>Bin/$(Configuration)/Toffee</OutputPath>
+    <Mode>Toffee</Mode>
+    <SubMode>macOS</SubMode>
+    <SDK>macOS</SDK>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Target)' == 'Toffee'">
+    <Reference Include="Foundation" />
+    <Reference Include="rtl" />
+    <Reference Include="libToffee" />
+    <Reference Include="libElements" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Island.macOS'">
+    <OutputPath>Bin/$(Configuration)/Island.macOS</OutputPath>
+    <Mode>Island</Mode>
+    <SubMode>Darwin</SubMode>
+    <SDK>macOS</SDK>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Target)' == 'Island.macOS'">
+    <Reference Include="Island" />
+    <Reference Include="gc" />
+    <Reference Include="rtl" />
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Island.Linux'">
+    <OutputPath>Bin/$(Configuration)/Island.Linux</OutputPath>
+    <Mode>Island</Mode>
+    <SubMode>Linux</SubMode>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Target)' == 'Island.Linux'">
+    <Reference Include="Island" />
+    <Reference Include="gc" />
+    <Reference Include="rtl" />
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Target)' == 'Island.Windows'">
+    <OutputPath>Bin/$(Configuration)/Island.Windows</OutputPath>
+    <Mode>Island</Mode>
+    <SubMode>Windows</SubMode>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Target)' == 'Island.Windows'">
+    <Reference Include="Island" />
+    <Reference Include="gc" />
+    <Reference Include="rtl" />
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Explorer.pas" />
+    <Compile Include="NewtonSolver.pas" />
+    <Compile Include="Observatory.pas" />
+    <Compile Include="Program.pas" />
+    <Compile Include="RootPalette.pas" />
+    <Compile Include="Terminal.pas" />
+    <Compile Include="TerminalExplorer.pas" />
+    <None Include="readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
+</Project>

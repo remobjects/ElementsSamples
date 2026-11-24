@@ -4,6 +4,7 @@ Official samples for the [RemObjects Elements](https://www.elementscompiler.com)
 
 ## Where to start
 
+- [Newton Observatory](Oxygene/All/NewtonObservatory/readme.md) draws a Newton fractal in the terminal. Explore it with the arrow keys and zoom controls in any of the eight languages.
 - [Shared UI](Oxygene/All/SharedUI/README.md): shared controller behavior with native Cocoa, WPF, GTK and Delphi VCL views.
 - [Calculator](Oxygene/All/Calculator): a shared evaluator with separate native application hosts.
 - [UIKit](Oxygene/Toffee/UIKit): scene lifecycle, navigation, collections, native controls and custom drawing. Modernized applications require iOS 13 or later.
