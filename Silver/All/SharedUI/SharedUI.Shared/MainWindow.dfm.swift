@@ -5,13 +5,13 @@ import Vcl.Controls
 import Vcl.StdCtrls
 
 public class MainWindow: TForm {
-  __published var ValueAEdit: TEdit!
-  __published var ValueBEdit: TEdit!
-  __published var ResultLabel: TLabel!
-  __published var CalculateButton: TButton!
-  __published var ValueALabel: TLabel!
-  __published var ValueBLabel: TLabel!
-  __published var ExplanationLabel: TLabel!
+  __published __field ValueAEdit: TEdit!
+  __published __field ValueBEdit: TEdit!
+  __published __field ResultLabel: TLabel!
+  __published __field CalculateButton: TButton!
+  __published __field ValueALabel: TLabel!
+  __published __field ValueBLabel: TLabel!
+  __published __field ExplanationLabel: TLabel!
 
   __published func ValueAChanged(_ sender: TObject!) { controller?.valueA = ValueAEdit.Text }
   __published func ValueBChanged(_ sender: TObject!) { controller?.valueB = ValueBEdit.Text }
