@@ -1,0 +1,103 @@
+version 1;
+namespace NewtonObservatory;
+use RemObjects.Elements.RTL;
+
+type Observatory: class {
+  private static method NearRoot(_x: Double!, _y: Double!, _rootX: Double!, _rootY: Double!): Boolean! {
+    readonly var _dx = _x - _rootX;
+    readonly var _dy = _y - _rootY;
+    return _dx * _dx + _dy * _dy ≤ 1e-12;
+  }
+
+  private static method Sample(borrowed _plate: Exposure!, _real: Double!, _imaginary: Double!): Char! {
+    var _x = _real;
+    var _y = _imaginary;
+    var _step = 0;
+    while _step ≤ 36 {
+      var _root = -1;
+      var _ramp: String! = "";
+      if Observatory.NearRoot(_x, _y, 1.0, 0.0) {
+        _root = 0;
+        _ramp = "@#%*+=:.";
+      } else if Observatory.NearRoot(_x, _y, -0.5, 0.8660254037844386) {
+        _root = 1;
+        _ramp = "OXxo/;:, ";
+      } else if Observatory.NearRoot(_x, _y, -0.5, -0.8660254037844386) {
+        _root = 2;
+        _ramp = "WMmvn~-.";
+      }
+      if _root ≥ 0 {
+        _plate.Mark(_root);
+        var _shade = _step / 2;
+        if _shade ≥ _ramp.Length { _shade = _ramp.Length - 1; }
+        return _ramp[_shade];
+      }
+      readonly var _squareX = _x * _x - _y * _y;
+      readonly var _squareY = 2.0 * _x * _y;
+      readonly var _norm = _squareX * _squareX + _squareY * _squareY;
+      if _step == 36 or _norm ≤ 1e-24 { break; }
+      _x = (2.0 * _x + _squareX / _norm) / 3.0;
+      _y = (2.0 * _y - _squareY / _norm) / 3.0;
+      _step = _step + 1;
+    }
+    _plate.Mark(-1);
+    return "?"[0];
+  }
+
+  static method RenderRegion(_width: Int32!, _height: Int32!, _left: Int32!, _top: Int32!, _centerX: Double!, _centerY: Double!, _zoom: Double!): retained Exposure! {
+    readonly var _plate = new Exposure(_height);
+    var _row = 0;
+    while _row < _height {
+      readonly var _line = new global.RemObjects.Elements.RTL.StringBuilder();
+      readonly var _y = _centerY - ((_row + _top) as Double!) * 0.105 / _zoom;
+      var _col = 0;
+      while _col < _width {
+        readonly var _x = _centerX + ((_col + _left) as Double!) * 0.045 / _zoom;
+        _line.Append(Observatory.Sample(borrowed _plate, _x, _y));
+        _col = _col + 1;
+      }
+      _plate.Rows[_row] = _line.ToString();
+      _row = _row + 1;
+    }
+    return _plate;
+  }
+
+  static method RenderViewport(_width: Int32!, _height: Int32!, _real: Double!, _imaginary: Double!, _zoom: Double!): retained Exposure! {
+    return Observatory.RenderRegion(_width, _height, -(_width / 2), -(_height / 2), _real, _imaginary, _zoom);
+  }
+
+  static method Run() {
+    readonly var _plate = Observatory.RenderViewport(77, 25, 0.0, 0.0, 1.0);
+    readonly var _rule: String! = "+-----------------------------------------------------------------------------+";
+    ~writeLn(_rule);
+    ~writeLn("|  N E W T O N   O B S E R V A T O R Y                                        |");
+    ~writeLn("|  PLATE 01  /  BASINS OF z^3 - 1  /  77 x 25 SAMPLES                         |");
+    ~writeLn(_rule);
+    var _row = 0;
+    while _row < 25 {
+      readonly var _text: String! = _plate.Rows[_row] ?? "";
+      ~writeLn((#"|{_text}|") ?? "");
+      _row = _row + 1;
+    }
+    ~writeLn(_rule);
+    readonly var _east = _plate.RootCounts[0];
+    readonly var _north = _plate.RootCounts[1];
+    readonly var _south = _plate.RootCounts[2];
+    readonly var _missing = _plate.UnresolvedCount;
+    ~writeLn((#"  @ EAST   {_east}   O NORTH  {_north}   W SOUTH  {_south}   ? UNRESOLVED  {_missing}") ?? "");
+    ~writeLn("  Each ramp runs fast -> slow convergence (limit: 36 steps).");
+    ~writeLn("");
+    ~writeLn("  [02 / CALIBRATION] Developing SOUTH-03 with calibration/3-ramp...");
+    Observatory.RenderRegion(9, 4, -14, 8, 0.0, 0.0, 1.0);
+  }
+}
+
+type Program: class {
+  static method Main(borrowed _args: String![]!): Int32! {
+    for _arg in _args {
+      if _arg == "--explore" { return TerminalExplorer.Run(); }
+    }
+    Observatory.Run();
+    return 0;
+  }
+}
