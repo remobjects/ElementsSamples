@@ -1,0 +1,50 @@
+// Classes, constructor overloads, a computed property and filtered iteration over books.
+version 1;
+namespace Samples.ReadingList;
+use RemObjects.Elements.RTL;
+
+type Book: class {
+  readonly property Title: String!;
+  readonly property Pages: Int32!;
+  readonly property Finished: Boolean! = false;
+
+  constructor(_title: String!, _pages: Int32!, _finished: Boolean!) {
+    self.Title = _title;
+    self.Pages = _pages;
+    self.Finished = _finished;
+  }
+
+  constructor(_title: String!, _pages: Int32!) {
+    self.Title = _title;
+    self.Pages = _pages;
+  }
+
+  readonly property Label: String! {
+    read mutates never; {
+      var _title = check not null(self.Title);
+      var _prefix = check not null(_title + " (");
+      var _pages = check not null(global.RemObjects.Elements.RTL.Convert.ToString(self.Pages));
+      var _label = check not null(_prefix + _pages);
+      return check not null(_label + " pages)");
+    }
+  }
+}
+
+type ReadingListProgram: class {
+  private constructor() {}
+
+  static method Main(): Int32! {
+    var _books: Book![]! = [new Book("Coastal Maps", 220, true),
+      new Book("Tide Pools", 180), new Book("Night Sky", 310)];
+    for _book in _books {
+      if not _book.Finished { global.Samples.Console.WriteLine(_book.Label); }
+    }
+    var _finishedPages: Int32! = 0;
+    for _book in _books {
+      if _book.Finished { _finishedPages = _finishedPages + _book.Pages; }
+    }
+    global.Samples.Console.WriteLine(
+      check not null("Finished pages: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(_finishedPages))));
+    return 0;
+  }
+}

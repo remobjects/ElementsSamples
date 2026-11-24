@@ -1,0 +1,56 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Cocoa", "SharedUI.Cocoa\SharedUI.Cocoa.elements", "{0BA2AA10-E4CE-4743-8A56-421085A5BDE0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Shared", "SharedUI.Shared\SharedUI.Shared.elements", "{70939089-BA54-4952-8115-FB953ACAA3F0}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.WPF", "SharedUI.WPF\SharedUI.WPF.elements", "{E39D4278-D6D5-457B-B0BA-B07EE6594A14}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.GTK", "SharedUI.GTK\SharedUI.GTK.elements", "{20A3E58F-2D18-4958-8BBA-39D449B0C521}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.VCL", "SharedUI.VCL\SharedUI.VCL.elements", "{9A56A94F-1387-49B7-A0E5-B6A36858716F}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Myth.Tests", "SharedUI.Tests\SharedUI.Myth.Tests.elements", "{6F40CFFF-6CE6-43B5-A6C2-7168D3F74338}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Myth.WPF.UI.Tests", "SharedUI.Tests\SharedUI.Myth.WPF.UI.Tests.elements", "{011CFFEF-8B18-41E3-BE01-C9D449A00BED}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Myth.GTK.UI.Tests", "SharedUI.Tests\SharedUI.Myth.GTK.UI.Tests.elements", "{9C84DB68-9503-409E-887F-2100F6ADA2CE}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedUI.Myth.VCL.UI.Tests", "SharedUI.Tests\SharedUI.Myth.VCL.UI.Tests.elements", "{6E39879D-52B3-4761-A85E-1F9EB7288BD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F40CFFF-6CE6-43B5-A6C2-7168D3F74338}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{6F40CFFF-6CE6-43B5-A6C2-7168D3F74338}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{011CFFEF-8B18-41E3-BE01-C9D449A00BED}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{011CFFEF-8B18-41E3-BE01-C9D449A00BED}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{9C84DB68-9503-409E-887F-2100F6ADA2CE}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{9C84DB68-9503-409E-887F-2100F6ADA2CE}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{6E39879D-52B3-4761-A85E-1F9EB7288BD2}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{6E39879D-52B3-4761-A85E-1F9EB7288BD2}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{9A56A94F-1387-49B7-A0E5-B6A36858716F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{9A56A94F-1387-49B7-A0E5-B6A36858716F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{9A56A94F-1387-49B7-A0E5-B6A36858716F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{9A56A94F-1387-49B7-A0E5-B6A36858716F}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{20A3E58F-2D18-4958-8BBA-39D449B0C521}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{20A3E58F-2D18-4958-8BBA-39D449B0C521}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{20A3E58F-2D18-4958-8BBA-39D449B0C521}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{20A3E58F-2D18-4958-8BBA-39D449B0C521}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{0BA2AA10-E4CE-4743-8A56-421085A5BDE0}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{0BA2AA10-E4CE-4743-8A56-421085A5BDE0}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{0BA2AA10-E4CE-4743-8A56-421085A5BDE0}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0BA2AA10-E4CE-4743-8A56-421085A5BDE0}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{E39D4278-D6D5-457B-B0BA-B07EE6594A14}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{E39D4278-D6D5-457B-B0BA-B07EE6594A14}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{E39D4278-D6D5-457B-B0BA-B07EE6594A14}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{E39D4278-D6D5-457B-B0BA-B07EE6594A14}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

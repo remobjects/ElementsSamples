@@ -1,0 +1,36 @@
+version 1;
+namespace SharedUI.Shared;
+use System.Classes;
+use Vcl.Forms;
+use Vcl.StdCtrls;
+
+type MainWindow: class extends TForm {
+  // DFM streaming fills these nullable published fields after form construction.
+  published field _valueAEdit: TEdit?;
+  published field _valueBEdit: TEdit?;
+  published field _resultLabel: TLabel?;
+  published field _calculateButton: TButton?;
+  published field _valueALabel: TLabel?;
+  published field _valueBLabel: TLabel?;
+  published field _explanationLabel: TLabel?;
+
+  property Controller: MainWindowController?;
+
+  published method ValueAChanged(_sender: TObject?) mutates sometimes; {
+    readonly var _controller = self.Controller;
+    if _controller != null {
+      _controller.ValueA = check not null(self._valueAEdit).Text;
+    }
+  }
+
+  published method ValueBChanged(_sender: TObject?) mutates sometimes; {
+    readonly var _controller = self.Controller;
+    if _controller != null {
+      _controller.ValueB = check not null(self._valueBEdit).Text;
+    }
+  }
+
+  published method CalculateClick(_sender: TObject?) mutates sometimes; {
+    check not null(self.Controller).CalculateResult(borrowed null);
+  }
+}

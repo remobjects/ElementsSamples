@@ -1,0 +1,15 @@
+version 1;
+namespace SharedUI.WPF;
+use System.Windows;
+use SharedUI.Shared;
+
+type App: partial class extends Application {
+  private field _appDelegate: AppDelegate?;
+
+  override method OnStartup(borrowed _event: StartupEventArgs!) mutates sometimes; {
+    inherited.OnStartup(borrowed _event);
+    readonly var _delegate = new AppDelegate();
+    self._appDelegate = _delegate;
+    _delegate.Start();
+  }
+}

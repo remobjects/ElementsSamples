@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="SharedUI.Shared.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shared UI" Width="460" Height="300" MinWidth="360" MinHeight="280">
+  <StackPanel Margin="20">
+    <TextBlock Text="Add two numbers, or join two pieces of text." TextWrapping="Wrap" Margin="0,0,0,12" />
+    <Label Content="Value _A" Target="{Binding ElementName=ValueAInput}" />
+    <TextBox x:Name="ValueAInput" Text="{Binding ValueA, UpdateSourceTrigger=PropertyChanged}" />
+    <Label Content="Value _B" Target="{Binding ElementName=ValueBInput}" />
+    <TextBox x:Name="ValueBInput" Text="{Binding ValueB, UpdateSourceTrigger=PropertyChanged}" />
+    <Button x:Name="CalculateButton" Click="CalculateResultClick" IsDefault="True" Content="_Calculate" Margin="0,12,0,12" />
+    <TextBlock x:Name="ResultOutput" Text="{Binding Result}" FontWeight="Bold" TextWrapping="Wrap" AutomationProperties.Name="Result" />
+  </StackPanel>
+</Window>

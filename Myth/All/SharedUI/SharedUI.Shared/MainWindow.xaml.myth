@@ -1,0 +1,16 @@
+version 1;
+namespace SharedUI.Shared;
+use System.Windows;
+
+type MainWindow: partial class extends Window {
+  constructor WithController(retained _controller: MainWindowController!) {
+    inherited.constructor();
+    self.DataContext = _controller;
+    self.InitializeComponent();
+  }
+
+  private method CalculateResultClick(borrowed _sender: Object?, borrowed _event: RoutedEventArgs!) mutates sometimes; {
+    readonly var _controller = check not null(self.DataContext as MainWindowController?);
+    _controller.CalculateResult(borrowed _sender);
+  }
+}

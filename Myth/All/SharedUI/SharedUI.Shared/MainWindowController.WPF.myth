@@ -1,0 +1,16 @@
+version 1;
+namespace SharedUI.Shared;
+use System.Windows;
+
+type MainWindowController: partial class {
+  readonly property Window: Window!;
+
+  constructor() {
+    self.Window = new MainWindow.WithController(retained self);
+    self.Setup();
+  }
+
+  method Show(borrowed _sender: Object?) mutates sometimes; {
+    self.Window.Show();
+  }
+}

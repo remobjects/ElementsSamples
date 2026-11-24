@@ -1,0 +1,26 @@
+version 1;
+namespace SharedUI.Shared;
+
+type Program: class {
+  private constructor() {}
+  private static field _delegate: AppDelegate?;
+  static property Application: global.Gtk.Application? { read; private write; }
+
+  static method Main(): Int32! {
+    global.Gtk.Module.Initialize();
+    readonly var _application = check not null(global.Gtk.Application.New("com.remobjects.samples.sharedui", global.Gio.ApplicationFlags.FlagsNone));
+    Program.Application = _application;
+    _application.add_OnActivate(retained new block(_sender: global.Gio.Application?, _event: global.System.EventArgs?) {
+      readonly var _delegate = Program._delegate;
+      if _delegate == null {
+        readonly var _newDelegate = new AppDelegate();
+        Program._delegate = _newDelegate;
+        _newDelegate.Start();
+      } else {
+        readonly var _controller = check not null(_delegate.MainWindowController);
+        _controller.Show(borrowed null);
+      }
+    });
+    return _application.RunWithSynchronizationContext(borrowed []);
+  }
+}

@@ -1,0 +1,15 @@
+version 1;
+namespace SharedUI.Shared;
+use AppKit;
+use Foundation;
+
+[IBObject]
+type MainWindowController: partial class extends NSWindowController {
+  constructor() {
+    inherited.constructor.withWindowNibName("MainWindow");
+    self.Setup();
+  }
+  method Show(borrowed _sender: Object?) mutates sometimes; {
+    self.showWindow(borrowed _sender);
+  }
+}

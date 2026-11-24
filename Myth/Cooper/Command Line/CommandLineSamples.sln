@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "BinaryRecord", "Binary Record\BinaryRecord.elements", "{DC8166F6-3D01-4CF7-B38A-2566142888D7}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "DependencyPlan", "Dependency Plan\DependencyPlan.elements", "{3E961454-4CA6-485A-AB7B-55A46ADF74EA}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "ReadingList", "Reading List\ReadingList.elements", "{C8AC0133-D088-4180-9C23-A1B054FF85F6}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "SensorSummary", "Sensor Summary\SensorSummary.elements", "{D108C533-14E4-41D2-8FB3-3B24F2CF97AF}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "TripBudget", "Trip Budget\TripBudget.elements", "{72115A1C-1502-48C2-BF78-2AE453864E60}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "WordFrequency", "Word Frequency\WordFrequency.elements", "{F261083F-D2DC-4FCA-A78E-090326B0333D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC8166F6-3D01-4CF7-B38A-2566142888D7}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{DC8166F6-3D01-4CF7-B38A-2566142888D7}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{DC8166F6-3D01-4CF7-B38A-2566142888D7}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{DC8166F6-3D01-4CF7-B38A-2566142888D7}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{3E961454-4CA6-485A-AB7B-55A46ADF74EA}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{3E961454-4CA6-485A-AB7B-55A46ADF74EA}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{3E961454-4CA6-485A-AB7B-55A46ADF74EA}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{3E961454-4CA6-485A-AB7B-55A46ADF74EA}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{C8AC0133-D088-4180-9C23-A1B054FF85F6}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C8AC0133-D088-4180-9C23-A1B054FF85F6}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{C8AC0133-D088-4180-9C23-A1B054FF85F6}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{C8AC0133-D088-4180-9C23-A1B054FF85F6}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{D108C533-14E4-41D2-8FB3-3B24F2CF97AF}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{D108C533-14E4-41D2-8FB3-3B24F2CF97AF}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{D108C533-14E4-41D2-8FB3-3B24F2CF97AF}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{D108C533-14E4-41D2-8FB3-3B24F2CF97AF}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{72115A1C-1502-48C2-BF78-2AE453864E60}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{72115A1C-1502-48C2-BF78-2AE453864E60}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{72115A1C-1502-48C2-BF78-2AE453864E60}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{72115A1C-1502-48C2-BF78-2AE453864E60}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{F261083F-D2DC-4FCA-A78E-090326B0333D}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{F261083F-D2DC-4FCA-A78E-090326B0333D}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{F261083F-D2DC-4FCA-A78E-090326B0333D}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{F261083F-D2DC-4FCA-A78E-090326B0333D}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+// Console output adapter; the sample algorithms are shared unchanged across targets.
+version 1;
+namespace Samples;
+
+type Console: class {
+  private constructor() {}
+
+  static method WriteLine(_text: String!) { global.RemObjects.Elements.RTL.writeLn(_text); }
+}

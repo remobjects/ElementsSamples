@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{7FFD3E61-4C20-4786-81F7-874844566749}</ProjectGuid>
+    <RootNamespace>Samples.SensorSummary</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SensorSummary</AssemblyName>
+    <StartupClass>Samples.SensorSummary.SensorSummaryProgram</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <Architecture>arm64</Architecture>
+    <SDK>macOS</SDK>
+    <CodeSign>False</CodeSign>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rtl">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="gc">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Island">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\All\Command Line\Sensor Summary\Program.myth" />
+    <None Include="..\..\..\All\Command Line\Sensor Summary\expected-output.txt" />
+    <Compile Include="..\..\..\All\Console.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.Darwin.targets" />
+</Project>

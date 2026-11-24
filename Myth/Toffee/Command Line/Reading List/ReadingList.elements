@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{0D5A571B-1662-4F16-B370-C056B477B21F}</ProjectGuid>
+    <RootNamespace>Samples.ReadingList</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>ReadingList</AssemblyName>
+    <StartupClass>Samples.ReadingList.ReadingListProgram</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <Architecture>arm64</Architecture>
+    <SDK>macOS</SDK>
+    <CodeSign>False</CodeSign>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Foundation">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="rtl">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="libToffee">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="libElements">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\All\Command Line\Reading List\Program.myth" />
+    <None Include="..\..\..\All\Command Line\Reading List\expected-output.txt" />
+    <Compile Include="..\..\..\All\Console.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Toffee.targets" />
+</Project>

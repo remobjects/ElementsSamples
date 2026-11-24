@@ -1,0 +1,11 @@
+// Positive integration guard: subscribe through Myth's explicit event accessor
+// and verify that the real controller's Notify aspect reaches the Oxygene harness.
+version 1;
+namespace SharedUI.Shared;
+use System.ComponentModel;
+
+type MainWindowController: partial class {
+  method Observe(retained _handler: PropertyChangedEventHandler!) mutates sometimes; {
+    (self as INotifyPropertyChanged!).add_PropertyChanged(retained _handler);
+  }
+}

@@ -1,0 +1,7 @@
+version 1;
+namespace SharedUI.Shared;
+
+// IBAction marks the same shared action on non-Cocoa targets.
+type IBAction: class extends Attribute {
+  constructor() { inherited.constructor(); }
+}

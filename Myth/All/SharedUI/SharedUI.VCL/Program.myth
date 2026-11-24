@@ -1,0 +1,19 @@
+version 1;
+namespace SharedUI.Shared;
+use Vcl.Forms;
+
+type Program: class {
+  private constructor() {}
+  // Retain the shared controller while VCL owns the form.
+  private static field _delegate: AppDelegate?;
+
+  static method Main() {
+    readonly var _application = check not null(~Application);
+    _application.Initialize();
+    _application.MainFormOnTaskBar = true;
+    readonly var _delegate = new AppDelegate();
+    Program._delegate = _delegate;
+    _delegate.Start();
+    _application.Run();
+  }
+}

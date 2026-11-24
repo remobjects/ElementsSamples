@@ -1,0 +1,12 @@
+version 1;
+namespace SharedUI.Shared;
+
+type AppDelegate: partial class {
+  property MainWindowController: MainWindowController? { read; private write; }
+
+  method Start() mutates sometimes; {
+    var _controller = new MainWindowController();
+    self.MainWindowController = _controller;
+    _controller.Show(borrowed null);
+  }
+}

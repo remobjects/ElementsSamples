@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "BinaryRecord", "Binary Record\BinaryRecord.elements", "{2005456F-03D5-4C1E-A4CF-1D990698A4E2}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "DependencyPlan", "Dependency Plan\DependencyPlan.elements", "{DFEC3567-70C9-4EFB-9C39-D58476DD8FCC}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "ReadingList", "Reading List\ReadingList.elements", "{0D5A571B-1662-4F16-B370-C056B477B21F}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "SensorSummary", "Sensor Summary\SensorSummary.elements", "{695B6420-E54F-4A3C-85C5-0AE81CBA2375}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "TripBudget", "Trip Budget\TripBudget.elements", "{7E2A4DCB-46B8-410F-BC86-3DDF47851E66}"
+EndProject
+Project("{EC62B7CB-F2DF-4AB9-8544-327F6DAD307D}") = "WordFrequency", "Word Frequency\WordFrequency.elements", "{91690E3A-3A89-4145-A0FC-29221F3F2AF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2005456F-03D5-4C1E-A4CF-1D990698A4E2}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{2005456F-03D5-4C1E-A4CF-1D990698A4E2}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{2005456F-03D5-4C1E-A4CF-1D990698A4E2}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{2005456F-03D5-4C1E-A4CF-1D990698A4E2}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{DFEC3567-70C9-4EFB-9C39-D58476DD8FCC}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{DFEC3567-70C9-4EFB-9C39-D58476DD8FCC}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{DFEC3567-70C9-4EFB-9C39-D58476DD8FCC}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{DFEC3567-70C9-4EFB-9C39-D58476DD8FCC}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{0D5A571B-1662-4F16-B370-C056B477B21F}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{0D5A571B-1662-4F16-B370-C056B477B21F}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{0D5A571B-1662-4F16-B370-C056B477B21F}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0D5A571B-1662-4F16-B370-C056B477B21F}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{695B6420-E54F-4A3C-85C5-0AE81CBA2375}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{695B6420-E54F-4A3C-85C5-0AE81CBA2375}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{695B6420-E54F-4A3C-85C5-0AE81CBA2375}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{695B6420-E54F-4A3C-85C5-0AE81CBA2375}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{7E2A4DCB-46B8-410F-BC86-3DDF47851E66}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{7E2A4DCB-46B8-410F-BC86-3DDF47851E66}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{7E2A4DCB-46B8-410F-BC86-3DDF47851E66}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{7E2A4DCB-46B8-410F-BC86-3DDF47851E66}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{91690E3A-3A89-4145-A0FC-29221F3F2AF3}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{91690E3A-3A89-4145-A0FC-29221F3F2AF3}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{91690E3A-3A89-4145-A0FC-29221F3F2AF3}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{91690E3A-3A89-4145-A0FC-29221F3F2AF3}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+EndGlobal

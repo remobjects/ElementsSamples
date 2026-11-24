@@ -1,0 +1,62 @@
+// Stable topological ordering with cycle and missing-dependency checks.
+version 1;
+namespace Samples.DependencyPlan;
+use RemObjects.Elements.RTL;
+
+type BuildStep: class {
+  readonly property Name: String!;
+  readonly property Dependencies: String![]!;
+  constructor(_name: String!, retained _dependencies: String![]!) {
+    self.Name = _name;
+    self.Dependencies = _dependencies;
+  }
+}
+
+type Plan: class {
+  private constructor() {}
+
+  static method Find(_steps: BuildStep![]!, _name: String!): BuildStep! throws Exception!; {
+    for _step in _steps { if global.RemObjects.Elements.RTL.String.Compare(_step.Name, _name) == 0 { return _step; } }
+    throw new Exception(check not null("Unknown dependency: " + _name));
+  }
+
+  static method Visit(_step: BuildStep!, _steps: BuildStep![]!,
+    _state: global.RemObjects.Elements.RTL.Dictionary<String!, Int32!>!, _ordered: global.RemObjects.Elements.RTL.List<String!>!) throws Exception!; {
+    var _mark = _state[_step.Name] ?? 0;
+    if _mark == 2 { return; }
+    if _mark == 1 { throw new Exception(check not null("Dependency cycle at " + check not null(_step.Name))); }
+    _state[_step.Name] = 1;
+    for _name in _step.Dependencies {
+      Plan.Visit(Plan.Find(_steps, _name), _steps, _state, _ordered);
+    }
+    _state[_step.Name] = 2;
+    _ordered.Add(_step.Name);
+  }
+
+  static method Order(_steps: BuildStep![]!): global.RemObjects.Elements.RTL.List<String!>! throws Exception!; {
+    var _state = check not null(new global.RemObjects.Elements.RTL.Dictionary<String!, Int32!>());
+    var _ordered = check not null(new global.RemObjects.Elements.RTL.List<String!>());
+    for _step in _steps { Plan.Visit(_step, _steps, _state, _ordered); }
+    return _ordered;
+  }
+}
+
+type DependencyPlanProgram: class {
+  private constructor() {}
+
+  static method Main(): Int32! {
+    try { return DependencyPlanProgram.Run(); }
+    catch _error: Exception! {
+      global.Samples.Console.WriteLine("Sample failed.");
+      return 1;
+    }
+  }
+
+  static method Run(): Int32! throws Exception!; {
+    var _steps: BuildStep![]! = [new BuildStep("download", []),
+      new BuildStep("unpack", ["download"]), new BuildStep("compile", ["unpack"]),
+      new BuildStep("package", ["compile"])];
+    for _name in Plan.Order(_steps) { global.Samples.Console.WriteLine(check not null(_name)); }
+    return 0;
+  }
+}

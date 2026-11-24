@@ -1,0 +1,48 @@
+// Encode/decode a network-order unsigned 16-bit value without platform endianness assumptions.
+version 1;
+namespace Samples.BinaryRecord;
+use RemObjects.Elements.RTL;
+
+type BinaryCodec: class {
+  private constructor() {}
+
+  static method Encode(_value: UInt16!): Byte![]! throws Exception!; {
+    var _wide: UInt32! = _value as UInt32!;
+    var _high: Byte! = (_wide >> 8) as Byte!;
+    var _mask: UInt32! = 255;
+    var _low: Byte! = (_wide & _mask) as Byte!;
+    return [_high, _low];
+  }
+
+  static method Decode(_bytes: Byte![]!): UInt16! throws Exception!; {
+    if ~length(_bytes) != 2 { throw new Exception("The record must contain exactly two bytes."); }
+    var _high: UInt32! = _bytes[0] as UInt32!;
+    var _low: UInt32! = _bytes[1] as UInt32!;
+    return ((_high << 8) | _low) as UInt16!;
+  }
+}
+
+type BinaryRecordProgram: class {
+  private constructor() {}
+
+  static method Main(): Int32! {
+    try { return BinaryRecordProgram.Run(); }
+    catch _error: Exception! {
+      global.Samples.Console.WriteLine("Sample failed.");
+      return 1;
+    }
+  }
+
+  static method Run(): Int32! throws Exception!; {
+    var _payload = BinaryCodec.Encode(513);
+    global.Samples.Console.WriteLine(
+      check not null("Hex: " + check not null(global.RemObjects.Elements.RTL.Convert.ToHexString(_payload))));
+    var _decoded: Int32! = BinaryCodec.Decode(_payload) as Int32!;
+    global.Samples.Console.WriteLine(
+      check not null("Value: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(_decoded))));
+    var _length: Int32! = ~length(_payload) as Int32!;
+    global.Samples.Console.WriteLine(
+      check not null("Bytes: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(_length))));
+    return 0;
+  }
+}

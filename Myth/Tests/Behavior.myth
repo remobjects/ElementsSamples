@@ -1,0 +1,110 @@
+// Positive guards exercise the real sample helpers beyond their printed examples;
+// negative guards verify malformed binary records, empty readings and invalid dependency graphs.
+version 1;
+namespace Samples.Tests;
+use RemObjects.Elements.RTL;
+use Samples.ReadingList;
+use Samples.TripBudget;
+use Samples.SensorSummary;
+use Samples.DependencyPlan;
+use Samples.BinaryRecord;
+
+type Behavior: class {
+  private constructor() {}
+
+  static method Main(): Int32! {
+    try { return Behavior.Run(); }
+    catch _error: Exception! {
+      global.Samples.Console.WriteLine(check not null(_error.Message));
+      return 1;
+    }
+  }
+
+  static method Run(): Int32! throws Exception!; {
+    var _words = global.Samples.WordFrequency.WordFrequencyProgram.CountWords("a b a");
+    var _case1: Boolean! = _words["a"] == 2 and _words["b"] == 1;
+    assert (_case1) "Repeated words";
+    var _book = new Book("Maps", 25);
+    var _case2: Boolean! = not _book.Finished and global.RemObjects.Elements.RTL.String.Compare(_book.Label, "Maps (25 pages)") == 0;
+    assert (_case2) "Constructor overload and computed label";
+    var _case3: Boolean! = Budget.Total([]) == 0 and Budget.Total([25, 40, 10]) == 75;
+    assert (_case3) "Empty and nonempty totals";
+    var _case4: Boolean! = Budget.WithTax(75) == 75 and Budget.WithTax(75, 8) == 81;
+    assert (_case4) "Tax overloads";
+
+    var _readings: Int32![]! = [9, 1, 7, 3];
+    var _case5: Boolean! = Statistics.MedianLow(_readings) == 3;
+    assert (_case5) "Even lower median";
+    var _case6: Boolean! = _readings[0] == 9 and _readings[1] == 1;
+    assert (_case6) "Median preserves input";
+    var _case7: Boolean! = Statistics.MedianLow([5]) == 5;
+    assert (_case7) "Single reading";
+    var _case8: Boolean! = Statistics.IntegerSquareRoot(0) == 0 and Statistics.IntegerSquareRoot(2) == 1;
+    assert (_case8) "Square-root floor";
+    var _case9: Boolean! = Statistics.IntegerSquareRoot(2147483647) == 46340;
+    assert (_case9) "Square root avoids overflow";
+    var _case10: Boolean! = Statistics.GreatestCommonDivisor(0, 0) == 0;
+    assert (_case10) "Zero intervals";
+    var _case11: Boolean! = Statistics.GreatestCommonDivisor(18, 24) == 6;
+    assert (_case11) "Common interval";
+    var _rejected: Boolean! = false;
+    try { Statistics.MedianLow([]); } catch _e: Exception! { _rejected = true; }
+    var _case12: Boolean! = _rejected;
+    assert (_case12) "Empty readings rejected";
+    _rejected = false;
+    try { Statistics.IntegerSquareRoot(-1); } catch _e: Exception! { _rejected = true; }
+    var _case13: Boolean! = _rejected;
+    assert (_case13) "Negative square root rejected";
+    _rejected = false;
+    try { Statistics.GreatestCommonDivisor(-1, 2); } catch _e: Exception! { _rejected = true; }
+    var _case14: Boolean! = _rejected;
+    assert (_case14) "Negative interval rejected";
+
+    var _dynamicBase = check not null(global.RemObjects.Elements.RTL.String.Join("", ["ba", "se"]));
+    var _steps: BuildStep![]! = [new BuildStep("package", ["left", "right"]),
+      new BuildStep("left", [_dynamicBase]), new BuildStep("right", ["base"]), new BuildStep("base", [])];
+    var _order = Plan.Order(_steps);
+    var _case15: Boolean! = _order.Count == 4 and global.RemObjects.Elements.RTL.String.Compare(_order[0], "base") == 0 and global.RemObjects.Elements.RTL.String.Compare(_order[1], "left") == 0
+      and global.RemObjects.Elements.RTL.String.Compare(_order[2], "right") == 0 and global.RemObjects.Elements.RTL.String.Compare(_order[3], "package") == 0;
+    assert (_case15) "Stable diamond order without duplicates";
+    var _case16: Boolean! = Plan.Order([]).Count == 0;
+    assert (_case16) "Empty dependency graph";
+    _rejected = false;
+    try { Plan.Order([new BuildStep("a", ["missing"])]); } catch _e: Exception! { _rejected = true; }
+    var _case17: Boolean! = _rejected;
+    assert (_case17) "Missing dependency rejected";
+    _rejected = false;
+    try { Plan.Order([new BuildStep("a", ["b"]), new BuildStep("b", ["a"])]); }
+    catch _e: Exception! { _rejected = true; }
+    var _case18: Boolean! = _rejected;
+    assert (_case18) "Cycle rejected";
+
+    var _zero = BinaryCodec.Encode(0);
+    var _maximum = BinaryCodec.Encode(65535);
+    var _value = BinaryCodec.Encode(513);
+    var _zero0: Int32! = _zero[0] as Int32!;
+    var _zero1: Int32! = _zero[1] as Int32!;
+    var _zero2: Int32! = BinaryCodec.Decode(_zero) as Int32!;
+    var _case19: Boolean! = _zero0 == 0 and _zero1 == 0 and _zero2 == 0;
+    assert (_case19) "Zero encoding";
+    var _maximum0: Int32! = _maximum[0] as Int32!;
+    var _maximum1: Int32! = _maximum[1] as Int32!;
+    var _maximum2: Int32! = BinaryCodec.Decode(_maximum) as Int32!;
+    var _case20: Boolean! = _maximum0 == 255 and _maximum1 == 255 and _maximum2 == 65535;
+    assert (_case20) "Unsigned boundary";
+    var _value0: Int32! = _value[0] as Int32!;
+    var _value1: Int32! = _value[1] as Int32!;
+    var _value2: Int32! = BinaryCodec.Decode(_value) as Int32!;
+    var _case21: Boolean! = _value0 == 2 and _value1 == 1 and _value2 == 513;
+    assert (_case21) "Network byte order";
+    _rejected = false;
+    try { BinaryCodec.Decode([1]); } catch _e: Exception! { _rejected = true; }
+    var _case22: Boolean! = _rejected;
+    assert (_case22) "Short record rejected";
+    _rejected = false;
+    try { BinaryCodec.Decode([1, 2, 3]); } catch _e: Exception! { _rejected = true; }
+    var _case23: Boolean! = _rejected;
+    assert (_case23) "Long record rejected";
+    return 0;
+  }
+}

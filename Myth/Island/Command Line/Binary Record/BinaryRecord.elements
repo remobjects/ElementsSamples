@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{DCB7D70C-DA5A-4DDA-97CC-5B0E6F8E0A59}</ProjectGuid>
+    <RootNamespace>Samples.BinaryRecord</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>BinaryRecord</AssemblyName>
+    <StartupClass>Samples.BinaryRecord.BinaryRecordProgram</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <Architecture>arm64</Architecture>
+    <SDK>macOS</SDK>
+    <CodeSign>False</CodeSign>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rtl">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="gc">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Island">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\All\Command Line\Binary Record\Program.myth" />
+    <None Include="..\..\..\All\Command Line\Binary Record\expected-output.txt" />
+    <Compile Include="..\..\..\All\Console.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Island.Darwin.targets" />
+</Project>

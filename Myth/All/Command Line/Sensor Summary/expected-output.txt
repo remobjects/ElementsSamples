@@ -1,0 +1,4 @@
+Median low: 22
+Pair comparisons: 3
+Grid width: 12
+Shared sampling interval: 6

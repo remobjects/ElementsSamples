@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{F6B61A85-C94F-496F-B5C1-28234EDD8E6B}</ProjectGuid>
+    <RootNamespace>Samples.ReadingList</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>ReadingList</AssemblyName>
+    <StartupClass>Samples.ReadingList.ReadingListProgram</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <TargetFramework>.NETCore10.0</TargetFramework>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Console" />
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Echoes">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\All\Command Line\Reading List\Program.myth" />
+    <None Include="..\..\..\All\Command Line\Reading List\expected-output.txt" />
+    <Compile Include="..\..\..\Echoes\Console.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+</Project>

@@ -1,0 +1,71 @@
+// Summarize the original readings with explicit, portable integer algorithms.
+version 1;
+namespace Samples.SensorSummary;
+use RemObjects.Elements.RTL;
+
+type Statistics: class {
+  private constructor() {}
+
+  static method MedianLow(_values: Int32![]!): Int32! throws Exception!; {
+    var _count = ~length(_values) as Int32!;
+    if _count == 0 { throw new Exception("At least one reading is required."); }
+    var _sorted = new Int32![_count];
+    var _i: Int32! = 0;
+    while _i < _count { _sorted[_i] = _values[_i]; _i = _i + 1; }
+    _i = 1;
+    while _i < _count {
+      var _value = _sorted[_i];
+      var _j = _i;
+      while _j > 0 and _sorted[_j - 1] > _value {
+        _sorted[_j] = _sorted[_j - 1];
+        _j = _j - 1;
+      }
+      _sorted[_j] = _value;
+      _i = _i + 1;
+    }
+    return _sorted[(_count - 1) / 2];
+  }
+
+  static method IntegerSquareRoot(_value: Int32!): Int32! throws Exception!; {
+    if _value < 0 { throw new Exception("The square root input must be nonnegative."); }
+    var _root: Int32! = 0;
+    while _root < 46340 and _root + 1 <= _value / (_root + 1) { _root = _root + 1; }
+    return _root;
+  }
+
+  static method GreatestCommonDivisor(_a: Int32!, _b: Int32!): Int32! throws Exception!; {
+    if _a < 0 or _b < 0 { throw new Exception("Sampling intervals must be nonnegative."); }
+    while _b != 0 {
+      var _remainder = _a % _b;
+      _a = _b;
+      _b = _remainder;
+    }
+    return _a;
+  }
+}
+
+type SensorSummaryProgram: class {
+  private constructor() {}
+
+  static method Main(): Int32! {
+    try { return SensorSummaryProgram.Run(); }
+    catch _error: Exception! {
+      global.Samples.Console.WriteLine("Sample failed.");
+      return 1;
+    }
+  }
+
+  static method Run(): Int32! throws Exception!; {
+    var _readings: Int32![]! = [20, 24, 22];
+    var _count = ~length(_readings) as Int32!;
+    global.Samples.Console.WriteLine(
+      check not null("Median low: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(Statistics.MedianLow(_readings)))));
+    global.Samples.Console.WriteLine(
+      check not null("Pair comparisons: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(_count * (_count - 1) / 2))));
+    global.Samples.Console.WriteLine(
+      check not null("Grid width: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(Statistics.IntegerSquareRoot(144)))));
+    global.Samples.Console.WriteLine(
+      check not null("Shared sampling interval: " + check not null(global.RemObjects.Elements.RTL.Convert.ToString(Statistics.GreatestCommonDivisor(18, 24)))));
+    return 0;
+  }
+}

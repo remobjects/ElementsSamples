@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{36128A53-EA59-426B-AD98-E2E65A858C52}</ProjectGuid>
+    <RootNamespace>Samples.SensorSummary</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SensorSummary</AssemblyName>
+    <StartupClass>Samples.SensorSummary.SensorSummaryProgram</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <TargetFramework>.NETCore10.0</TargetFramework>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Console" />
+    <Reference Include="Elements">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Echoes">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\All\Command Line\Sensor Summary\Program.myth" />
+    <None Include="..\..\..\All\Command Line\Sensor Summary\expected-output.txt" />
+    <Compile Include="..\..\..\Echoes\Console.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+</Project>

@@ -1,0 +1,11 @@
+version 1;
+namespace SharedUI.Shared;
+use AppKit;
+use Foundation;
+
+[NSApplicationMain, IBObject]
+type AppDelegate: partial class implements INSApplicationDelegate {
+  method ~applicationDidFinishLaunching(_notification: NSNotification!) mutates sometimes; {
+    self.Start();
+  }
+}

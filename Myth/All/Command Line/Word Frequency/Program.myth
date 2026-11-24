@@ -1,0 +1,27 @@
+// Count the same input words with Elements RTL's dictionary and string splitting.
+version 1;
+namespace Samples.WordFrequency;
+use RemObjects.Elements.RTL;
+
+type WordFrequencyProgram: class {
+  private constructor() {}
+
+  static method CountWords(_text: global.RemObjects.Elements.RTL.String!): global.RemObjects.Elements.RTL.Dictionary<String!, Int32!>! {
+    var _counts = check not null(new global.RemObjects.Elements.RTL.Dictionary<String!, Int32!>());
+    for _word in _text.Split(" ") {
+      var _key = check not null(_word);
+      _counts[_key] = (_counts[_key] ?? 0) + 1;
+    }
+    return _counts;
+  }
+
+  static method Main(): Int32! {
+    var _counts = WordFrequencyProgram.CountWords("sun sand sea sun sea sun");
+    var _order: String![]! = ["sun", "sea", "sand"];
+    for _word in _order {
+      global.Samples.Console.WriteLine(
+        check not null(check not null(_word + ": ") + check not null(global.RemObjects.Elements.RTL.Convert.ToString(_counts[_word] ?? 0))));
+    }
+    return 0;
+  }
+}

@@ -1,0 +1,31 @@
+version 1;
+namespace SharedUI.Shared;
+use RemObjects.Elements.RTL;
+
+type MainWindowController: partial class {
+  [Notify] property ValueA: String?;
+  [Notify] property ValueB: String?;
+  [Notify] property Result: String? { read; private write; }
+
+  [IBAction]
+  method CalculateResult(borrowed _sender: Object?) mutates sometimes; {
+    var _valueA = self.ValueA ?? "";
+    var _valueB = self.ValueB ?? "";
+    if ~length(_valueA) == 0 or ~length(_valueB) == 0 {
+      self.Result = "(value required)";
+      return;
+    }
+    var _a = global.RemObjects.Elements.RTL.Convert.TryToDoubleInvariant(_valueA);
+    var _b = global.RemObjects.Elements.RTL.Convert.TryToDoubleInvariant(_valueB);
+    if _a != null and _b != null {
+      var _sum: Double! = check not null(_a) + check not null(_b);
+      self.Result = global.RemObjects.Elements.RTL.Convert.ToString(_sum);
+    } else {
+      self.Result = _valueA + _valueB;
+    }
+  }
+
+  private method Setup() mutates sometimes; {
+    self.Result = "N/A";
+  }
+}

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{DC8166F6-3D01-4CF7-B38A-2566142888D7}</ProjectGuid>
+    <RootNamespace>Samples.BinaryRecord</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>BinaryRecord</AssemblyName>
+    <StartupClass>Samples.BinaryRecord.BinaryRecordProgram</StartupClass>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <OutputPath>.\bin\$(Configuration)</OutputPath>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>True</GenerateDebugInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <EnableAsserts>True</EnableAsserts>
+    <GenerateDebugInfo>False</GenerateDebugInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rt.jar">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="cooper.jar">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="elements.jar">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\All\Command Line\Binary Record\Program.myth" />
+    <None Include="..\..\..\All\Command Line\Binary Record\expected-output.txt" />
+    <Compile Include="..\..\..\All\Console.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.targets" />
+</Project>

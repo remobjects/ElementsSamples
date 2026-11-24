@@ -1,0 +1,21 @@
+// A two-file sample: call typed budget helpers in the same namespace.
+version 1;
+namespace Samples.TripBudget;
+use RemObjects.Elements.RTL;
+
+type TripBudgetProgram: class {
+  private constructor() {}
+
+  static method Main(): Int32! {
+    var _costs: Int32![]! = [25, 40, 10];
+    var _subtotal = Budget.Total(_costs);
+    var _subtotalText = check not null(global.RemObjects.Elements.RTL.Convert.ToString(_subtotal));
+    var _first = check not null("Subtotal: " + _subtotalText);
+    global.Samples.Console.WriteLine(_first);
+    var _tax = Budget.WithTax(_subtotal, 8);
+    var _taxText = check not null(global.RemObjects.Elements.RTL.Convert.ToString(_tax));
+    var _second = check not null("With tax: " + _taxText);
+    global.Samples.Console.WriteLine(_second);
+    return 0;
+  }
+}

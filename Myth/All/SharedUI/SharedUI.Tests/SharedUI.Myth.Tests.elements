@@ -1,0 +1,24 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{6F40CFFF-6CE6-43B5-A6C2-7168D3F74338}</ProjectGuid>
+    <RootNamespace>SharedUI.Shared</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <AssemblyName>SharedUI.Tests</AssemblyName>
+    <TargetFramework>.NETCore10.0</TargetFramework>
+    <DefaultUses>RemObjects.Elements.RTL</DefaultUses>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><Optimize>False</Optimize></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' "><Optimize>True</Optimize></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Console" />
+    <Reference Include="Elements"><Private>True</Private></Reference>
+    <Reference Include="Echoes"><Private>True</Private></Reference>
+    <Compile Include="Program.pas" />
+    <Compile Include="Notifications.myth" />
+    <Compile Include="..\SharedUI.Shared\MainWindowController.myth" />
+    <Compile Include="..\SharedUI.Shared\Aliases.myth" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Echoes.targets" />
+</Project>

@@ -1,0 +1,26 @@
+version 1;
+namespace SharedUI.Shared;
+use Vcl.Forms;
+
+type MainWindowController: partial class {
+  private field _window: MainWindow?;
+
+  constructor() {
+    self.Setup();
+    readonly var _formClass = check not null(~typeOf(MainWindow));
+    check not null(~Application).CreateForm(borrowed _formClass, in borrowed out retained self._window);
+    readonly var _window = check not null(self._window);
+    _window.Controller = self;
+    check not null(_window._resultLabel).Caption = self.Result ?? "";
+    (self as global.RemObjects.Elements.System.INotifyPropertyChanged!).add_PropertyChanged(
+      retained new block(_sender: Object?, _name: String?) mutates sometimes; {
+        if global.RemObjects.Elements.RTL.String.Compare(_name ?? "", "Result") == 0 {
+          check not null(_window._resultLabel).Caption = self.Result ?? "";
+        }
+      });
+  }
+
+  method Show(borrowed _sender: Object?) mutates sometimes; {
+    check not null(self._window).Show();
+  }
+}

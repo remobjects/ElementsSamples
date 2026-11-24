@@ -1,0 +1,51 @@
+version 1;
+namespace SharedUI.Shared;
+use System.ComponentModel;
+
+type MainWindowController: partial class {
+  readonly property Window: global.Gtk.ApplicationWindow!;
+
+  constructor() {
+    self.Setup();
+    readonly var _type = check not null(~typeOf(MainWindowController));
+    readonly var _assembly = check not null(_type.Assembly);
+    readonly var _stream = check not null(_assembly.GetManifestResourceStream("MainWindow.ui"));
+    readonly var _reader = new global.System.IO.StreamReader(retained _stream);
+    var _builder: global.Gtk.Builder!;
+    try {
+      _builder = check not null(global.Gtk.Builder.NewFromString(_reader.ReadToEnd(), -1));
+    } finally {
+      _reader.Dispose();
+    }
+    self.Window = check not null(_builder.GetObject("MainWindow") as global.Gtk.ApplicationWindow?);
+    self.Window.SetApplication(retained check not null(Program.Application));
+
+    readonly var _valueA = check not null(_builder.GetObject("ValueAEntry") as global.Gtk.Entry?);
+    _valueA.SetText(self.ValueA ?? "");
+    _valueA.add_OnChanged(retained new block(_sender: global.Gtk.Editable?, _event: global.System.EventArgs?) mutates sometimes; {
+      self.ValueA = _valueA.GetText();
+    });
+    readonly var _valueB = check not null(_builder.GetObject("ValueBEntry") as global.Gtk.Entry?);
+    _valueB.SetText(self.ValueB ?? "");
+    _valueB.add_OnChanged(retained new block(_sender: global.Gtk.Editable?, _event: global.System.EventArgs?) mutates sometimes; {
+      self.ValueB = _valueB.GetText();
+    });
+    readonly var _button = check not null(_builder.GetObject("CalculateButton") as global.Gtk.Button?);
+    _button.add_OnClicked(retained new block(_sender: global.Gtk.Button?, _event: global.System.EventArgs?) mutates sometimes; {
+      self.CalculateResult(borrowed _sender);
+    });
+    readonly var _result = check not null(_builder.GetObject("ResultLabel") as global.Gtk.Label?);
+    _result.SetText(self.Result ?? "");
+
+    (self as INotifyPropertyChanged!).add_PropertyChanged(
+      retained new block(_sender: Object?, _event: PropertyChangedEventArgs!) mutates sometimes; {
+        if global.RemObjects.Elements.RTL.String.Compare(_event.PropertyName ?? "", "Result") == 0 {
+          _result.SetText(self.Result ?? "");
+        }
+      });
+  }
+
+  method Show(borrowed _sender: Object?) mutates sometimes; {
+    self.Window.Present();
+  }
+}

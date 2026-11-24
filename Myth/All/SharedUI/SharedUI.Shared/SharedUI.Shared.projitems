@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{70939089-BA54-4952-8115-FB953ACAA3F0}</SharedGUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MainWindowController.myth" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppDelegate.myth" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)MainWindowController.Cocoa.myth" />
+    <None Include="$(MSBuildThisFileDirectory)AppDelegate.Cocoa.myth" />
+    <None Include="$(MSBuildThisFileDirectory)MainWindow.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)MainWindowController.WPF.myth" />
+    <None Include="$(MSBuildThisFileDirectory)Aliases.myth" />
+    <None Include="$(MSBuildThisFileDirectory)MainWindow.xaml" />
+    <None Include="$(MSBuildThisFileDirectory)MainWindow.xaml.myth" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)MainWindowController.GTK.myth" />
+    <None Include="$(MSBuildThisFileDirectory)MainWindow.ui">
+      </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)MainWindowController.VCL.myth" />
+    <None Include="$(MSBuildThisFileDirectory)MainWindow.dfm" />
+    <None Include="$(MSBuildThisFileDirectory)MainWindow.dfm.myth" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+// Integer totals and tax overloads; amounts in this example are whole units.
+version 1;
+namespace Samples.TripBudget;
+
+type Budget: class {
+  private constructor() {}
+
+  static method Total(_costs: Int32![]!): Int32! {
+    var _total: Int32! = 0;
+    for _cost in _costs { _total = _total + _cost; }
+    return _total;
+  }
+
+  static method WithTax(_amount: Int32!): Int32! { return _amount; }
+
+  static method WithTax(_amount: Int32!, _percent: Int32!): Int32! {
+    return _amount + _amount * _percent / 100;
+  }
+}
