@@ -1,39 +1,95 @@
 version 1;
 namespace NewtonObservatory;
+use RemObjects.Elements.RTL;
 
 type Explorer: class {
-  static method Navigate(borrowed _screen: TerminalExplorer!): Int32! {
+  static method Draw(borrowed _frame: TerminalFrame!, _x: Double!, _y: Double!, _zoom: Double!) {
+    if _frame.Columns < 16 or _frame.Rows < 7 {
+      _frame.Clear();
+      if _frame.Columns >= 24 {
+        _frame.WriteLine(1, "Enlarge window; Q quits.");
+        return;
+      }
+      _frame.WriteLine(1, "Resize / Q");
+      return;
+    }
+    var _width = _frame.Columns - 2;
+    var _height = _frame.Rows - 4;
+    var _plate = Observatory.RenderViewport(_width, _height, _x, _y, _zoom);
+    var _controls = "Arrows: pan  +/-: zoom  R: reset  Q: quit";
+    var _title = "NEWTON OBSERVATORY / z^3 - 1  |  ";
+    if _frame.Columns >= _title.Length + _controls.Length {
+      _controls = _title + _controls;
+    }
+    if _frame.Columns < _controls.Length {
+      _controls = "Arrows +/- R Q";
+    }
+    _frame.WriteLine(1, _controls);
+    var _rule = (#"{"+".PadEnd(_width + 1, "-"[0])}+") ?? "";
+    _frame.WriteLine(2, _rule);
+    var _row = 0;
+    while _row < _height {
+      readonly var _text: String! = _plate.Rows[_row] ?? "";
+      _frame.WriteLine(_row + 3, (#"|{_text}|") ?? "");
+      _row = _row + 1;
+    }
+    _frame.WriteLine(_frame.Rows - 1, _rule);
+    var _percent = (_zoom * 100.0) as Int32!;
+    var _view = (#"{_width}x{_height}  Zoom {_percent}%") ?? "";
+    readonly var _east = _plate.RootCounts[0];
+    readonly var _north = _plate.RootCounts[1];
+    readonly var _south = _plate.RootCounts[2];
+    readonly var _missing = _plate.UnresolvedCount;
+    var _status = (#"{_view}  |  @E {_east}  ON {_north}  WS {_south}  ? {_missing}") ?? "";
+    if _status.Length > _frame.Columns { _status = _view; }
+    if _status.Length > _frame.Columns { _status = (#"{_width}x{_height} {_percent}%") ?? ""; }
+    _frame.WriteLine(_frame.Rows, _status);
+  }
+
+  static method Navigate() {
     var _x = 0.0;
     var _y = 0.0;
     var _zoom = 1.0;
     while true {
-      readonly var _action = _screen.NextAction(_x, _y, _zoom);
-      if _action == ExplorerAction.Left {
-        _x = _x - 0.36 / _zoom;
-      }
-      if _action == ExplorerAction.Right {
-        _x = _x + 0.36 / _zoom;
-      }
-      if _action == ExplorerAction.Up {
+      var _key = Terminal.ReadKey(borrowed new block(borrowed _frame: TerminalFrame?) { if _frame != null { Explorer.Draw(borrowed _frame, _x, _y, _zoom); } });
+      if _key == Terminal.UpArrow {
         _y = _y + 0.42 / _zoom;
       }
-      if _action == ExplorerAction.Down {
+      if _key == Terminal.DownArrow {
         _y = _y - 0.42 / _zoom;
       }
-      if _action == ExplorerAction.ZoomIn and _zoom < 100 {
+      if _key == Terminal.LeftArrow {
+        _x = _x - 0.36 / _zoom;
+      }
+      if _key == Terminal.RightArrow {
+        _x = _x + 0.36 / _zoom;
+      }
+      // + or = zooms in.
+      if (_key == 43 or _key == 61) and _zoom < 100 {
         _zoom = _zoom * 1.25;
       }
-      if _action == ExplorerAction.ZoomOut and _zoom > 0.125 {
+      // - or _ zooms out.
+      if (_key == 45 or _key == 95) and _zoom > 0.125 {
         _zoom = _zoom / 1.25;
       }
-      if _action == ExplorerAction.Reset {
+      // R resets the view.
+      if _key == 82 or _key == 114 {
         _x = 0.0;
         _y = 0.0;
         _zoom = 1.0;
       }
-      if _action == ExplorerAction.Quit {
-        return 0;
+      // Q, Ctrl+C, Ctrl+D or end of input closes the view.
+      if _key == 81 or _key == 113 or _key == 3 or _key == 4 or _key == Terminal.EndOfInput {
+        return;
       }
     }
+  }
+
+  static method Run(): Int32! {
+    if ConsoleSession.Run() {
+      return 0;
+    }
+    ~writeLn("--explore requires interactive terminal input and output.");
+    return 1;
   }
 }

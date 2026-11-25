@@ -46,6 +46,7 @@
     <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
+    <Compile Include="JvmConsole.pas" />
     <GradleReference Include="org.jline:jline-terminal:4.7.0">
       <Private>True</Private>
     </GradleReference>
@@ -114,7 +115,6 @@
     <Compile Include="Observatory.pas" />
     <Compile Include="Program.pas" />
     <Compile Include="RootPalette.pas" />
-    <Compile Include="Terminal.pas" />
     <Compile Include="TerminalExplorer.pas" />
     <None Include="readme.md" />
   </ItemGroup>

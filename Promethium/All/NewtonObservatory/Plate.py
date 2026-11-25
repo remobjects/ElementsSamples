@@ -1,3 +1,22 @@
+class Exposure:
+    Rows: RemObjects.Elements.RTL.List[str]
+    RootCounts: RemObjects.Elements.RTL.List[int]
+    UnresolvedCount: int
+
+    def __init__(self):
+        self.Rows = RemObjects.Elements.RTL.List[str]()
+        self.RootCounts = RemObjects.Elements.RTL.List[int]()
+        for index in range(3):
+            self.RootCounts.Add(0)
+        self.UnresolvedCount = 0
+
+    def Mark(self, root: int):
+        if root < 0:
+            self.UnresolvedCount += 1
+        else:
+            self.RootCounts[root] = self.RootCounts[root] + 1
+
+
 # Each character identifies the root and how quickly the point reached it.
 def near_root(x: float, y: float, root_x: float, root_y: float) -> bool:
     dx: float = x - root_x
@@ -37,14 +56,14 @@ def sample(plate: Exposure, x: float, y: float) -> str:
 
 
 def RenderRegion(width: int, height: int, left: int, top: int, center_x: float, center_y: float, zoom: float) -> Exposure:
-    plate: Exposure = Exposure(height)
+    plate: Exposure = Exposure()
     for row in range(height):
         y: float = center_y - (row + top) * 0.105 / zoom
         line: StringBuilder = StringBuilder()
         for column in range(width):
             x: float = center_x + (column + left) * 0.045 / zoom
             line.Append(sample(plate, x, y))
-        plate.Rows[row] = line.ToString()
+        plate.Rows.Add(line.ToString())
     return plate
 
 
@@ -62,3 +81,13 @@ def PrintSurvey():
     print("")
     print("  [02 / CALIBRATION] Developing SOUTH-03 with calibration/3-ramp...")
     RenderRegion(9, 4, -14, 8, 0.0, 0.0, 1.0)
+
+
+class Program:
+    @staticmethod
+    def Main(args: str[]) -> int:
+        for argument in args:
+            if argument == "--explore":
+                return Run()
+        PrintSurvey()
+        return 0

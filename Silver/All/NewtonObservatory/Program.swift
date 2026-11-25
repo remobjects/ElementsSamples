@@ -3,7 +3,7 @@ class Program {
   public static func main(_ args: java.lang.String[]) {
     for argument in args {
       if argument == "--explore" {
-        java.lang.System.exit(TerminalExplorer.Run())
+        java.lang.System.exit(Explorer.Run())
         return
       }
     }
@@ -13,7 +13,7 @@ class Program {
   public static func Main(_ args: String[]) -> Int32 {
     for argument in args {
       if argument == "--explore" {
-        return TerminalExplorer.Run()
+        return Explorer.Run()
       }
     }
     Observatory.Run()

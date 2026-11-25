@@ -2,6 +2,26 @@ version 1;
 namespace NewtonObservatory;
 use RemObjects.Elements.RTL;
 
+type Exposure: class {
+  property Rows: String?[]!;
+  property RootCounts: Int32![]!;
+  property UnresolvedCount: Int32!;
+
+  constructor(_height: Int32!) {
+    self.Rows = new String?[_height];
+    self.RootCounts = new Int32![3];
+    self.UnresolvedCount = 0;
+  }
+
+  method Mark(_root: Int32!) mutates always {
+    if _root < 0 {
+      self.UnresolvedCount = self.UnresolvedCount + 1;
+    } else {
+      self.RootCounts[_root] = self.RootCounts[_root] + 1;
+    }
+  }
+}
+
 type Observatory: class {
   private static method NearRoot(_x: Double!, _y: Double!, _rootX: Double!, _rootY: Double!): Boolean! {
     readonly var _dx = _x - _rootX;
@@ -95,7 +115,7 @@ type Observatory: class {
 type Program: class {
   static method Main(borrowed _args: String![]!): Int32! {
     for _arg in _args {
-      if _arg == "--explore" { return TerminalExplorer.Run(); }
+      if _arg == "--explore" { return Explorer.Run(); }
     }
     Observatory.Run();
     return 0;

@@ -5,7 +5,7 @@ Namespace Global.NewtonObservatory
     Public Shared Function Main(aArgs As String()) As Int32
       For Each lArgument In aArgs
         If lArgument = "--explore" Then
-          Return TerminalExplorer.Run
+          Return Explorer.Run
         End If
       Next
       Observatory.Run

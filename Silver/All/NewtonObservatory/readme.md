@@ -22,8 +22,8 @@ Pass `--explore` as a command-line argument and run in an interactive terminal. 
 
 ## Build targets
 
-The project includes .NET 10 (Echoes), JVM (Cooper), Cocoa for macOS (Toffee), and native macOS, Linux, and Windows (Island). Choose a target with its SDK installed. EBuild fetches JLine for the JVM terminal. The default plate also works when you redirect the output to a file.
+The project includes .NET 10 (Echoes), JVM (Cooper), Cocoa for macOS (Toffee), and native macOS, Linux, and Windows (Island). Build with a version of Elements RTL that includes `Terminal` and `TerminalFrame`. Choose a target with its SDK installed. On the JVM, the sample uses JLine to read raw keys and get the window size for `--explore`. EBuild fetches JLine when you build the Cooper target. The default plate also works when you redirect the output to a file.
 
 ## In the source
 
-Start with `NewtonSolver` to follow one point through the calculation, then look at `RootPalette` to see how the root and step count select a character. The `Explorer` file handles panning and zooming. The projects share the Oxygene terminal code that reads keys, detects resizes, and draws the frame.
+Start with `NewtonSolver` to follow one point through the calculation, then look at `RootPalette` to see how the root and step count select a character. The `Explorer` file handles panning and zooming. The sample draws the frame in Silver. Elements RTL reads the keys, watches for resizes, and restores the terminal when you quit.

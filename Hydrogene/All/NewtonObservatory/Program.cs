@@ -6,7 +6,7 @@ namespace NewtonObservatory
     {
       foreach (var lArgument in aArgs)
         if (lArgument == "--explore")
-          return TerminalExplorer.Run();
+          return Explorer.Run();
       Observatory.Run();
       return 0;
     }

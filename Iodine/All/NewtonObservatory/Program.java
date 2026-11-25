@@ -6,7 +6,7 @@ class Program
   {
     for (String lArgument: aArgs)
       if (lArgument == "--explore")
-        return TerminalExplorer.Run();
+        return Explorer.Run();
     Observatory.Run();
     return 0;
   }

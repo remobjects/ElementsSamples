@@ -25,6 +25,7 @@
     <TargetFramework>.NETCore10.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup Condition="'$(Target)' == 'Echoes'">
+    <Compile Include="ConsoleSession.py" />
     <Reference Include="Promethium">
       <Private>True</Private>
     </Reference>
@@ -52,6 +53,7 @@
     <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
+    <Compile Include="JvmConsole.py" />
     <GradleReference Include="org.jline:jline-terminal:4.7.0">
       <Private>True</Private>
     </GradleReference>
@@ -69,6 +71,7 @@
     <SDK>macOS</SDK>
   </PropertyGroup>
   <ItemGroup Condition="'$(Target)' == 'Toffee'">
+    <Compile Include="ConsoleSession.py" />
     <Reference Include="libPromethium" />
     <Reference Include="Foundation" />
     <Reference Include="rtl" />
@@ -82,6 +85,7 @@
     <SDK>macOS</SDK>
   </PropertyGroup>
   <ItemGroup Condition="'$(Target)' == 'Island.macOS'">
+    <Compile Include="ConsoleSession.py" />
     <Reference Include="Island" />
     <Reference Include="Promethium" />
     <Reference Include="gc" />
@@ -96,6 +100,7 @@
     <SubMode>Linux</SubMode>
   </PropertyGroup>
   <ItemGroup Condition="'$(Target)' == 'Island.Linux'">
+    <Compile Include="ConsoleSession.py" />
     <Reference Include="Island" />
     <Reference Include="Promethium" />
     <Reference Include="gc" />
@@ -110,6 +115,7 @@
     <SubMode>Windows</SubMode>
   </PropertyGroup>
   <ItemGroup Condition="'$(Target)' == 'Island.Windows'">
+    <Compile Include="ConsoleSession.py" />
     <Reference Include="Island" />
     <Reference Include="Promethium" />
     <Reference Include="gc" />
@@ -121,21 +127,6 @@
   <ItemGroup>
     <Compile Include="Explorer.py" />
     <Compile Include="Plate.py" />
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/Exposure.pas">
-      <Link>Exposure.pas</Link>
-    </Compile>
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/PlateAdapter.pas">
-      <Link>PlateAdapter.pas</Link>
-    </Compile>
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/Program.pas">
-      <Link>Program.pas</Link>
-    </Compile>
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/Terminal.pas">
-      <Link>Terminal.pas</Link>
-    </Compile>
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/TerminalExplorer.pas">
-      <Link>TerminalExplorer.pas</Link>
-    </Compile>
     <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />

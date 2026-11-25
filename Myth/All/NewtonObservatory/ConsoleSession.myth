@@ -1,0 +1,9 @@
+version 1;
+namespace NewtonObservatory;
+use RemObjects.Elements.RTL;
+
+type ConsoleSession: class {
+  static method Run(): Boolean! {
+    return Terminal.RunFullScreen(borrowed new block { Explorer.Navigate(); });
+  }
+}

@@ -46,6 +46,7 @@
     <Reference Include="cooper">
       <Private>True</Private>
     </Reference>
+    <Compile Include="JvmConsole.swift" />
     <GradleReference Include="org.jline:jline-terminal:4.7.0">
       <Private>True</Private>
     </GradleReference>
@@ -114,12 +115,6 @@
     <Compile Include="Observatory.swift" />
     <Compile Include="Program.swift" />
     <Compile Include="RootPalette.swift" />
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/Terminal.pas">
-      <Link>Terminal.pas</Link>
-    </Compile>
-    <Compile Include="../../../Oxygene/All/NewtonObservatory/TerminalExplorer.pas">
-      <Link>TerminalExplorer.pas</Link>
-    </Compile>
     <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.targets" />
