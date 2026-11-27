@@ -4,11 +4,11 @@ use RemObjects.Elements.RTL;
 
 type ConsoleSession: class {
   static method Run(): Boolean! {
-    if global.java.lang.System.~console() == null { return false; }
+    if global.java.lang.System.console() == null { return false; }
     try {
-      readonly var _builder = global.org.jline.terminal.TerminalBuilder.~builder();
+      readonly var _builder = global.org.jline.terminal.TerminalBuilder.builder();
       if _builder == null { return false; }
-      readonly var _device = _builder.~system(true)?.~dumb(false)?.~build();
+      readonly var _device = _builder.system(true)?.dumb(false)?.build() as owned because("Because the builder returns owned new instance");
       if _device == null { return false; }
       return ConsoleSession.UseDevice(owned _device);
     } catch _error: global.java.io.IOException! {
@@ -19,16 +19,16 @@ type ConsoleSession: class {
   private static method UseDevice(owned _device: global.org.jline.terminal.Terminal!): Boolean! throws global.java.io.IOException {
     var _opened = false;
     try {
-      _device.~enterRawMode();
-      readonly var _writer = _device.~writer();
-      readonly var _reader = _device.~reader();
+      _device.enterRawMode();
+      readonly var _writer = _device.writer();
+      readonly var _reader = _device.reader();
       if _writer != null and _reader != null {
         _opened = Terminal.RunFullScreen(borrowed _writer,
-          borrowed new block(): retained Int32! { return _device.~getRows(); },
-          borrowed new block(): retained Int32! { return _device.~getColumns(); },
+          borrowed new block(): retained Int32! { return _device.getRows(); },
+          borrowed new block(): retained Int32! { return _device.getColumns(); },
           borrowed new block(): retained Int32! {
             try {
-              return _reader.~read(100);
+              return _reader.read(100);
             } catch _error: global.java.io.IOException! {
               return Terminal.EndOfInput;
             }
@@ -36,7 +36,7 @@ type ConsoleSession: class {
           borrowed new block { Explorer.Navigate(); });
       }
     } finally {
-      _device.~close();
+      _device.close();
     }
     return _opened;
   }
